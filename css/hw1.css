@@ -1,22 +1,23 @@
 body{
 	background: url(../img/background.gif) repeat;
 }
-.nav{ float:left;
-      margin-top: 1em;
-	  margin-left: 1em;
+.nav{
+    float:left;
+    margin-top: 1em;
+    margin-left: 1em;
 }
 .lin{
 	margin-right: 1em;
 	text-decoration:none;
-	font:24px, "Arial Black", Gadget, sans-serif;
+	font: 24px "Arial Black", Gadget, sans-serif;
 }
 .right{ float: right;
-margin-top: 15px;
- margin-right: 1em;
+    margin-top: 15px;
+    margin-right: 1em;
 }
 .enter{
 	text-decoration: none;
-	font:14px, "Arial Black";
+	font: 14px "Arial Black";
     border-bottom: 1px dashed #000080;
 }
 .enter:hover{
@@ -28,15 +29,76 @@ margin-top: 15px;
 h1 {
 	margin-top: 100px;
 	text-align:center;
-	font: 72px Arial, Helvetica, sans-serif
+	font: 72px Arial, Helvetica, sans-serif;
 }
-
-
-.copyright{ 
+.nav2 {
+    margin-top: -30px;
+    margin-bottom: 80px;
+    padding: 0;
+    text-align: center;
+}
+.nav2 a{
+    text-decoration: none;
+    font: 18px Arial, Helvetica, sans-serif;
+}
+.nav2 li {
+    margin-left: 0;
+    padding-left: 2px;
+    border: none;
+    display: inline;
+}
+.content{
+    width: 800px;
+    padding-top: 81px;
+    margin: 0 auto;
+}
+.text{
+    float: right;
+    width: 600px;
+    font: 14px Arial, Helvetica;
+}
+.photo{
+    margin-right: 620px;
+}
+.title{
+    font: 18px Arial, Helvetica, sans-serif;
+}
+.lorem{
+    background-color: #ff6666;
+    float: left;
+    position: absolute;
+    margin-left: -220px;
+    margin-top: -10px;
+    padding: 5px;
+    font: 14px Arial, Helvetica, regular;
+    color: #FFF;
+}
+.ipsum{
+    background-color: #99cc66;
+    float: left;
+    position: absolute;
+    margin-left: -220px;
+    margin-top: -10px;
+    padding: 5px;
+    font: 14px Arial, Helvetica, regular;
+    color: #FFF;
+}
+.news{
+    background-color: #6699cc;
+    float: left;
+    position: absolute;
+    margin-left: -220px;
+    margin-top: -10px;
+    padding: 5px;
+    font: 14px Arial, Helvetica, regular;
+    color: #FFF;
+}
+hr{
+    margin-top: 165px;
+}
+.copyright{
     width: 800px;
 	margin: 0 auto;
-}
-h6 {
-	text-decoration:none;
-	font: 12px/0, Verdana, Geneva, sans-serif;
+    font: 12px/0 Verdana, Geneva, sans-serif;
+    padding-bottom: 85px;
 }
