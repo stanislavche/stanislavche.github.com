@@ -1,15 +1,22 @@
 body{
 	background: url(../img/background.gif) repeat;
 }
+.line{
+    padding: 0;
+    border: 3px solid #000;
+    margin: 0;
+    width: 100%;
+}
 .nav{
     float:left;
-    margin-top: 1em;
+    padding-top: 8px;
     margin-left: 1em;
 }
 .lin{
-	margin-right: 1em;
+	margin-right: 9px;
 	text-decoration:none;
-	font: 24px "Arial Black", Gadget, sans-serif;
+    text-transform: uppercase;
+	font: 24px PTSansBold;
 }
 .right{ float: right;
     margin-top: 15px;
@@ -17,8 +24,8 @@ body{
 }
 .enter{
 	text-decoration: none;
-	font: 14px "Arial Black";
-    border-bottom: 1px dashed #000080;
+	font: 14px PTSansRegular;
+    border-bottom: 1.5px dotted #000080;
 }
 .enter:hover{
 	border: none;
@@ -27,9 +34,9 @@ body{
 	clear:both;
 	}
 h1 {
-	margin-top: 100px;
+	margin-top: 80px;
 	text-align:center;
-	font: 72px Arial, Helvetica, sans-serif;
+	font: 72px PTSerif;
 }
 .nav2 {
     margin-top: -30px;
@@ -39,7 +46,7 @@ h1 {
 }
 .nav2 a{
     text-decoration: none;
-    font: 18px Arial, Helvetica, sans-serif;
+    font: 18px PTSansRegular;
 }
 .nav2 li {
     margin-left: 0;
@@ -55,13 +62,13 @@ h1 {
 .text{
     float: right;
     width: 600px;
-    font: 14px Arial, Helvetica;
+    font: 14px PTSansRegular;
 }
 .photo{
     margin-right: 620px;
 }
 .title{
-    font: 18px Arial, Helvetica, sans-serif;
+    font: 18px PTSansRegular;
 }
 .lorem{
     background-color: #ff6666;
@@ -69,8 +76,8 @@ h1 {
     position: absolute;
     margin-left: -220px;
     margin-top: -10px;
-    padding: 5px;
-    font: 14px Arial, Helvetica, regular;
+    padding: 3px 8px 3px;
+    font: 14px PTSansItalic;
     color: #FFF;
 }
 .ipsum{
@@ -79,8 +86,8 @@ h1 {
     position: absolute;
     margin-left: -220px;
     margin-top: -10px;
-    padding: 5px;
-    font: 14px Arial, Helvetica, regular;
+    padding: 3px 8px 3px;
+    font: 14px PTSansItalic;
     color: #FFF;
 }
 .news{
@@ -89,16 +96,17 @@ h1 {
     position: absolute;
     margin-left: -220px;
     margin-top: -10px;
-    padding: 5px;
-    font: 14px Arial, Helvetica, regular;
+    padding: 3px 8px 3px;
+    font: 14px PTSansItalic;
     color: #FFF;
 }
 hr{
     margin-top: 165px;
 }
 .copyright{
+    padding-top: 1em;
     width: 800px;
 	margin: 0 auto;
-    font: 12px/0 Verdana, Geneva, sans-serif;
+    font: 12px PTSansRegular;
     padding-bottom: 85px;
 }
