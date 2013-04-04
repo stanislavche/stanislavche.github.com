@@ -1,0 +1,42 @@
+body{
+	background: url(../img/background.gif) repeat;
+}
+.nav{ float:left;
+      margin-top: 1em;
+	  margin-left: 1em;
+}
+.lin{
+	margin-right: 1em;
+	text-decoration:none;
+	font:24px, "Arial Black", Gadget, sans-serif;
+}
+.right{ float: right;
+margin-top: 15px;
+ margin-right: 1em;
+}
+.enter{
+	text-decoration: none;
+	font:14px, "Arial Black";
+    border-bottom: 1px dashed #000080;
+}
+.enter:hover{
+	border: none;
+}
+.clearfix {
+	clear:both;
+	}
+h1 {
+	margin-top: 100px;
+	text-align:center;
+	font: 72px Arial, Helvetica, sans-serif
+}
+
+
+.copyright{ 
+    width: 800px;
+	margin: 0 auto;
+}
+h6 {
+	text-decoration:none;
+	font: 12px/0, Verdana, Geneva, sans-serif;
+}
