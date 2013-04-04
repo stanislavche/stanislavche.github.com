@@ -2,10 +2,8 @@ body{
 	background: url(../img/background.gif) repeat;
 }
 .line{
-    padding: 0;
     border: 3px solid #000;
     margin: 0;
-    width: 100%;
 }
 .nav{
     float:left;
