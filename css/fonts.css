@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'PTSansRegular';
-    src: url url(../fonts/PTS56F-webfont.eot);
+    src: url('../fonts/PTS55F-webfont.eot');
     src: url('../fonts/PTS55F-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/PTS55F-webfont.woff') format('woff'),
          url('../fonts/PTS55F-webfont.ttf') format('truetype'),

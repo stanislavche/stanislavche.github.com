@@ -23,7 +23,7 @@
       <file leaf-file-name="hw_1.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hw_1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="14" selection-start="2480" selection-end="2480" vertical-scroll-proportion="1.3730769">
+            <state line="28" column="14" selection-start="856" selection-end="856" vertical-scroll-proportion="0.9153846">
               <folding />
             </state>
           </provider>
@@ -41,7 +41,7 @@
       <file leaf-file-name="hw1.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/hw1.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="6" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+            <state line="15" column="1" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -50,7 +50,7 @@
       <file leaf-file-name="fonts.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/fonts.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="63" selection-start="1135" selection-end="1135" vertical-scroll-proportion="0.0">
+            <state line="14" column="44" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -70,8 +70,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/css/hw1.css" />
+        <option value="$PROJECT_DIR$/css/fonts.css" />
         <option value="$PROJECT_DIR$/hw_1.html" />
+        <option value="$PROJECT_DIR$/css/hw1.css" />
       </list>
     </option>
   </component>
@@ -331,23 +332,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/hw1.css">
+    <entry file="file://$PROJECT_DIR$/css/fonts.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+        <state line="14" column="44" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/fonts.css">
+    <entry file="file://$PROJECT_DIR$/css/hw1.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="63" selection-start="1135" selection-end="1135" vertical-scroll-proportion="0.0">
+        <state line="15" column="1" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hw_1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="14" selection-start="2480" selection-end="2480" vertical-scroll-proportion="1.3730769">
+        <state line="28" column="14" selection-start="856" selection-end="856" vertical-scroll-proportion="0.9153846">
           <folding />
         </state>
       </provider>
