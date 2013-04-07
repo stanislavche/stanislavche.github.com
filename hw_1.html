@@ -6,18 +6,32 @@
    <link rel="stylesheet" type="text/css" href="css/normalize.css">
    <link rel="stylesheet" type="text/css" href="css/hw1.css">
    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+   <style type="text/css">
+         #openning{
+             position: relative;
+             visibility: hidden;
+         }
+   </style>
+   <script type="text/javascript">
+         function hiddenLayer() {
+             document.getElementById("openning").style.visibility = "hidden";
+         }
+         function showLayer() {
+             document.getElementById("openning").style.visibility = "visible";
+         }
+   </script>
  </head>
  <body>
  <!---шапка-->
- <hr class="line">
+ <nav id="shlyapa"><hr class="line">
  <div class="right">
-        <a class="enter" href="#3">Войти</a>
+        <a class="enter" href="#3" onclick="showLayer()">Войти</a>
  </div>
  <div class="nav">
         <a class="lin" href="#">lorem</a>
         <a class="lin" href="#1">ipsum</a>
         <a class="lin" href="#2">news</a> </div>
- <div class="clearfix"></div>
+ <div class="clearfix"></div></nav>
  <!--Заголовок-->
  <header><h1><strong>Новости</strong></h1>
    <ul class="nav2">
@@ -42,5 +56,16 @@
  </div>
  <!--Copyright-->
  <footer class="copyright">© ЗАО &quot;Лорем ипсум ньюс&quot;</footer>
+ <!--Всплывающее окно-->
+ <div id="openning">
+     <div class="back"></div>
+     <div class="window">
+         <form id="data"></form>
+         <div class="acount"><input class="login" name="login" type="text" required placeholder="Логин" form="data" size="28"></div>
+         <div class="acount"><input class="password" name="password" required type="password" placeholder="Пароль" form="data" size="28"></div>
+         <input id="send" class="send" type="submit" value="Войти" form="data"><a class="enter" href="#3" onclick="hiddenLayer()">Отмена</a>
+ </div>
+ </div>
+ <!--Было приятно поверстать-->
  </body> 
 </html>
