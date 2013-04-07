@@ -165,11 +165,11 @@ hr{
     border-radius: 5px;
 }
 .send:hover {
-    background: #ee7d69;
-    background: -moz-linear-gradient(top, #ffffff, #ee7d69);
-    background: -webkit-gradient(linear, top, bottom,color-stop(0%, #ffffff), color-stop(100%, #ee7d69));
-    background: -webkit-linear-gradient(top, #ffffff, #ee7d69);
-    background: -o-linear-gradient(top, #ffffff, #ee7d69);
-    background: -ms-linear-gradient(top, #ffffff, #ee7d69);
-    background: linear-gradient(top, #ffffff, #ee7d69);
+    background: #d6d6d6;
+    background: -moz-linear-gradient(top, #d6d6d6, #ffffff);
+    background: -webkit-gradient(linear, top, bottom,color-stop(0%, #d6d6d6), color-stop(100%, #ffffff));
+    background: -webkit-linear-gradient(top, #d6d6d6, #ffffff);
+    background: -o-linear-gradient(top, #d6d6d6, #ffffff);
+    background: -ms-linear-gradient(top, #d6d6d6, #ffffff);
+    background: linear-gradient(top, #d6d6d6, #ffffff);
 }

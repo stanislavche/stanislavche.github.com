@@ -29,15 +29,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hw_1.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hw_1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="17" selection-start="776" selection-end="776" vertical-scroll-proportion="-8.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="fonts.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/fonts.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -50,7 +41,16 @@
       <file leaf-file-name="hw1.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/hw1.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="1" selection-start="341" selection-end="341" vertical-scroll-proportion="0.7478849">
+            <state line="167" column="0" selection-start="3012" selection-end="3012" vertical-scroll-proportion="0.5972927">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hw_1.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hw_1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="44" selection-start="1291" selection-end="1291" vertical-scroll-proportion="2.9615386">
               <folding />
             </state>
           </provider>
@@ -97,7 +97,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -108,43 +108,7 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stanislavche.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stanislavche.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stanislavche.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stanislavche.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stanislavche.github.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -249,6 +213,34 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/css/normalize.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="17" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/fonts.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="18" selection-start="31" selection-end="44" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/hw1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="1" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/fonts.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="24" selection-start="1230" selection-end="1230" vertical-scroll-proportion="0.0">
@@ -296,13 +288,6 @@
         <state line="55" column="22" selection-start="1224" selection-end="1224" vertical-scroll-proportion="-20.076923" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw_2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="25" selection-start="3109" selection-end="3109" vertical-scroll-proportion="1.5543479">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/normalize.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -319,14 +304,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hw_1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="17" selection-start="776" selection-end="776" vertical-scroll-proportion="-8.5">
+        <state line="39" column="44" selection-start="1291" selection-end="1291" vertical-scroll-proportion="2.9615386">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/hw1.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="1" selection-start="341" selection-end="341" vertical-scroll-proportion="0.7478849">
+        <state line="167" column="0" selection-start="3012" selection-end="3012" vertical-scroll-proportion="0.5972927">
           <folding />
         </state>
       </provider>
