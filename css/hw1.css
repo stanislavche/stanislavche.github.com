@@ -299,6 +299,7 @@ h2 {
 }
 .information li{
     display: inline-block;
+    vertical-align: top;
     width: 186px;
     margin-right: 16px;
 }

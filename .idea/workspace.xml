@@ -38,19 +38,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hw1.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="hw1.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/hw1.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="262" column="1" selection-start="5377" selection-end="5377" vertical-scroll-proportion="0.0">
+            <state line="301" column="23" selection-start="6041" selection-end="6041" vertical-scroll-proportion="0.7123519">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hw_1_1.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="hw_1_1.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/homework/hw_1_1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="29" selection-start="985" selection-end="985" vertical-scroll-proportion="0.92391306">
+            <state line="60" column="27" selection-start="4050" selection-end="4050" vertical-scroll-proportion="-11.115385">
               <folding />
             </state>
           </provider>
@@ -312,16 +312,16 @@
         <state line="36" column="16" selection-start="1514" selection-end="1514" vertical-scroll-proportion="0.73913044" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/hw1.css">
+    <entry file="file://$PROJECT_DIR$/homework/hw_1_1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="262" column="1" selection-start="5377" selection-end="5377" vertical-scroll-proportion="0.0">
+        <state line="60" column="27" selection-start="4050" selection-end="4050" vertical-scroll-proportion="-11.115385">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homework/hw_1_1.html">
+    <entry file="file://$PROJECT_DIR$/css/hw1.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="29" selection-start="985" selection-end="985" vertical-scroll-proportion="0.92391306">
+        <state line="301" column="23" selection-start="6041" selection-end="6041" vertical-scroll-proportion="0.7123519">
           <folding />
         </state>
       </provider>
