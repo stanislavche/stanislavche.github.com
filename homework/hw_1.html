@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+   <title>Домашняя работа №1</title>
+   <meta charset="utf-8">
+   <link rel="stylesheet" type="text/css" href="../css/fonts.css">
+   <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+   <link rel="stylesheet" type="text/css" href="../css/hw1.css">
+   <link rel="shortcut icon" href="../icon/favicon2.ico">
+   <script>
+       function hiddenLayer() {
+           document.getElementById("openning").style.visibility = "hidden";
+           document.getElementsByClassName('blur')[0].setAttribute('style', '-webkit-filter: none;');
+           return false;
+
+       }
+       function showLayer() {
+           document.getElementById("openning").style.visibility = "visible";
+           document.getElementsByClassName('blur')[0].setAttribute('style', '-webkit-filter: blur(2px);');
+           return false;
+       }
+   </script>
+ </head>
+ <body>
+ <!--Всплывающее окно-->
+ <div id="openning">
+     <div class="back"></div>
+     <div class="window">
+         <form action="#">
+             <div class="acount"><input class="login" name="login" type="text" required placeholder="Логин" size="28"></div>
+             <div class="acount"><input class="password" name="password" required type="password" placeholder="Пароль" size="28"></div>
+             <input id="send" class="send" type="submit" value="Войти"><a class="linkcolor" id="exit" href="#" onclick="hiddenLayer()">Отмена</a></form>
+     </div>
+ </div>
+ <!---шапка-->
+ <div class="blur">
+     <nav id="head">
+         <div class="clearfix">
+             <div class="right">
+             <a class="linkcolor" id="enter" href="#" onclick="showLayer()">Войти</a>
+             </div>
+             <div class="nav">
+                 <a id="lin"  class="linkcolor" href="#">lorem ipsum news</a>
+             </div>
+     </nav>
+ <!--Заголовок-->
+     <header><h1><strong>Новости</strong></h1>
+       <ul class="nav2">
+           <li><a class="linkcolor" href="../homework/hw_1_1.html">скандалы</a></li>
+           <li><a class="linkcolor" href="#">• интриги</a></li>
+           <li><a class="linkcolor" href="#">• расследования</a></li>
+       </ul>
+     </header>
+<!--Контент-->
+     <section class="content">
+         <article class="text"><a href="../homework/hw_1_1.html" class="title">Страны Евросоюза могут ввести санкции против Google</a><br>Европейские власти обеспокоены политикой конфиденциальности компании Google. Google хранит личные данные пользователей в&nbsp;одном профиле, в&nbsp;котором может объединяться информация с&nbsp;нескольких десятков разных сайтов.</article>
+         <div class="photo"><img src="../img/new1.jpg" alt="скандал"><span id="lorem" class="help"><em>Скандал</em></span> </div>
+     </section>
+     <section class="content">
+         <article class="text"><a href="#" class="title">ФАС уличила ВГТРК в&nbsp;рекламе алкоголя при трансляции футбольного матча</a> <br>Проверка фотографий и&nbsp;видео-записей показала, что на&nbsp;рекламных стендах стадиона &laquo;Стэмфорд Бридж&raquo; во&nbsp;время указанного матча не&nbsp;были размещены рекламные плакаты данных производителей алкогольной продукции. Рассмотрение данного дела ФАС России назначил на&nbsp;15&nbsp;мая 2013&nbsp;года.</article>
+         <div class="photo"><img src="../img/new2.jpg" alt="интрига"><span id="ipsum" class="help"><em>Интрига</em></span> </div>
+     </section>
+     <section class="content">
+         <article class="text"><a href="#" class="title">Возобновление борьбы за домены в зоне .рф маловероятно, считают юристы</a><br>&laquo;По&nbsp;всем 70914 доменным именам поступили заявки от&nbsp;клиентов, желающих их&nbsp;приобрести в&nbsp;указанном порядке&raquo;,&nbsp;&mdash; говорится в&nbsp;тексте судебного решения от&nbsp;16&nbsp;ноября 2011&nbsp;г. Апелляционная инстанция частично удовлетворила иск ФАС, а&nbsp;кассационная передала дело на&nbsp;рассмотрение в&nbsp;президиум ВАС.</article>
+         <div class="photo"><img src="../img/new3.jpg" alt="расследование"><span id="news" class="help"><em>Расследование</em></span> </div>
+        <hr>
+     </section>
+ <!--Copyright-->
+     <footer class="copyright">© ЗАО &quot;Лорем ипсум ньюс&quot;</footer>
+ </div>
+ <!--Было приятно поверстать-->
+ </body> 
+</html>
