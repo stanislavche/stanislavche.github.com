@@ -38,10 +38,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hw_1_1.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="hw_1_1.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/homework/hw_1_1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="17" selection-start="4048" selection-end="4048" vertical-scroll-proportion="0.58514494">
+            <state line="60" column="79" selection-start="4348" selection-end="4348" vertical-scroll-proportion="-25.461538">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="24" selection-start="837" selection-end="837" vertical-scroll-proportion="0.23007247">
               <folding />
             </state>
           </provider>
@@ -50,7 +59,7 @@
       <file leaf-file-name="hw_1.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/homework/hw_1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="40" selection-start="1761" selection-end="1761" vertical-scroll-proportion="-9.807693">
+            <state line="42" column="40" selection-start="1761" selection-end="1761" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -78,7 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/hw_2.html" />
         <option value="$PROJECT_DIR$/hw_1.html" />
         <option value="$PROJECT_DIR$/js/hw_1.js.txt" />
@@ -87,6 +95,7 @@
         <option value="$PROJECT_DIR$/homework/hw_1.html" />
         <option value="$PROJECT_DIR$/css/hw1.css" />
         <option value="$PROJECT_DIR$/homework/hw_1_1.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -128,8 +137,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="xml.catalog" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/homework/hw_1.html" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -319,11 +328,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="22" selection-start="1224" selection-end="1224" vertical-scroll-proportion="-20.076923" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/normalize.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -340,7 +344,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/homework/hw_1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="40" selection-start="1761" selection-end="1761" vertical-scroll-proportion="-9.807693">
+        <state line="42" column="40" selection-start="1761" selection-end="1761" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -354,7 +358,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/homework/hw_1_1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="17" selection-start="4048" selection-end="4048" vertical-scroll-proportion="0.58514494">
+        <state line="60" column="79" selection-start="4348" selection-end="4348" vertical-scroll-proportion="-25.461538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="24" selection-start="837" selection-end="837" vertical-scroll-proportion="0.23007247">
           <folding />
         </state>
       </provider>
