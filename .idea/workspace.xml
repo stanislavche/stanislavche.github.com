@@ -20,19 +20,19 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.less" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="style.less" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/less/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="352" column="27" selection-start="6722" selection-end="6722" vertical-scroll-proportion="0.0">
+            <state line="289" column="1" selection-start="5034" selection-end="5482" vertical-scroll-proportion="0.7338552">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hw_1.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="hw_1.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/homework/hw_1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="31" selection-start="487" selection-end="487" vertical-scroll-proportion="0.39618644">
+            <state line="11" column="31" selection-start="487" selection-end="487" vertical-scroll-proportion="-0.65384614">
               <folding />
             </state>
           </provider>
@@ -41,7 +41,7 @@
       <file leaf-file-name="hw1.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/hw1.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="22" selection-start="0" selection-end="7257" vertical-scroll-proportion="0.0">
+            <state line="355" column="1" selection-start="6748" selection-end="7196" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -50,7 +50,7 @@
       <file leaf-file-name="hw_1_1.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/homework/hw_1_1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="61" selection-start="305" selection-end="305" vertical-scroll-proportion="-4.576923">
+            <state line="7" column="61" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -153,8 +153,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="xml.catalog" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/homework/hw_1.html" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -339,6 +339,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/homework/hw_1_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="61" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework/hw_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="31" selection-start="487" selection-end="487" vertical-scroll-proportion="-0.65384614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/hw1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="355" column="1" selection-start="6748" selection-end="7196" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/less/less.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
@@ -348,28 +369,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/less/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="352" column="27" selection-start="6722" selection-end="6722" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homework/hw_1_1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="61" selection-start="305" selection-end="305" vertical-scroll-proportion="-4.576923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/hw1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="22" selection-start="0" selection-end="7257" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homework/hw_1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="31" selection-start="487" selection-end="487" vertical-scroll-proportion="0.39618644">
+        <state line="289" column="1" selection-start="5034" selection-end="5482" vertical-scroll-proportion="0.7338552">
           <folding />
         </state>
       </provider>
