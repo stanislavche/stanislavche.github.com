@@ -29,10 +29,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hw_1.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="hw_1.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/homework/hw_1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="2" selection-start="244" selection-end="383" vertical-scroll-proportion="-4.576923">
+            <state line="8" column="40" selection-start="350" selection-end="350" vertical-scroll-proportion="0.2881356">
               <folding />
             </state>
           </provider>
@@ -47,11 +47,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hw_1_1.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="hw_1_1.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/homework/hw_1_1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="29" selection-start="415" selection-end="415" vertical-scroll-proportion="0.32415253">
+            <state line="8" column="40" selection-start="352" selection-end="352" vertical-scroll-proportion="-5.230769">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="less-1.3.3.min.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/less-1.3.3.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="34" selection-start="32809" selection-end="32809" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="less-1.4.0-beta.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/less-1.4.0-beta.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,8 +114,8 @@
         <option value="$PROJECT_DIR$/../../jiwf/style.less" />
         <option value="$PROJECT_DIR$/less/style.less" />
         <option value="$PROJECT_DIR$/homework/hw_2.html" />
-        <option value="$PROJECT_DIR$/homework/hw_1.html" />
         <option value="$PROJECT_DIR$/homework/hw_1_1.html" />
+        <option value="$PROJECT_DIR$/homework/hw_1.html" />
       </list>
     </option>
   </component>
@@ -333,6 +355,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/less-1.3.3.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="34" selection-start="32809" selection-end="32809" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/less-1.4.0-beta.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework/hw_1_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="40" selection-start="352" selection-end="352" vertical-scroll-proportion="-5.230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/hw1.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="149" column="6" selection-start="2349" selection-end="2349" vertical-scroll-proportion="0.0">
@@ -342,14 +389,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/homework/hw_1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="2" selection-start="244" selection-end="383" vertical-scroll-proportion="-4.576923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homework/hw_1_1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="29" selection-start="415" selection-end="415" vertical-scroll-proportion="0.32415253">
+        <state line="8" column="40" selection-start="350" selection-end="350" vertical-scroll-proportion="0.2881356">
           <folding />
         </state>
       </provider>
