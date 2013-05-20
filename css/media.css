@@ -1,6 +1,6 @@
 /* media queries
 ----------------------------------------------------------------------------*/
-@media screen and (max-width: 640px), screen and (max-device-width: 640px){
+@media screen and (max-width: 640px){
     /*First Page Adaptive*/
     #head{border-top: 0.175em solid #000}
     .nav{padding-top: 2.1875%;margin-left:6.25%}
@@ -20,7 +20,7 @@
     .rubric{width: 35%;float: none}
     .etc{width: 87.5%;margin: 0 auto;}
     }
-@media screen and (max-width: 320px), screen and (max-device-width: 320px){
+@media screen and (max-width: 320px){
     /*First Page Adaptive*/
     .content header{margin-top: 40%; margin-bottom: 3%; text-align: center}
     .photo{margin-left: 17%}
