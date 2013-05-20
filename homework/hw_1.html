@@ -6,20 +6,9 @@
    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
    <link rel="stylesheet" type="text/css" href="../css/normalize.css">
    <link rel="stylesheet" type="text/css" href="../css/hw1.css">
+   <link rel="stylesheet" type="text/css" href="../css/media.css">
+   <script type="text/javascript" src="js/jquery.js"></script>
    <link rel="shortcut icon" href="../icon/favicon2.ico">
-   <script>
-       function hiddenLayer() {
-           document.getElementById("openning").style.visibility = "hidden";
-           document.getElementsByClassName('blur')[0].setAttribute('style', '-webkit-filter: none;');
-           return false;
-
-       }
-       function showLayer() {
-           document.getElementById("openning").style.visibility = "visible";
-           document.getElementsByClassName('blur')[0].setAttribute('style', '-webkit-filter: blur(2px);');
-           return false;
-       }
-   </script>
  </head>
  <body>
  <!--Всплывающее окно-->
@@ -41,6 +30,7 @@
       <a class="linkcolor" id="enter" href="#" onclick="showLayer()">Войти</a>
       </div>
 </nav>
+ <script type="text/javascript" src="js/myjs.js"></script>
  <!--Заголовок-->
  <div class="blur">
      <header><h1>Новости</h1>
@@ -52,7 +42,7 @@
      </header>
 <!--Контент-->
      <section class="content">
-         <article class="text"><a class="title" href="hw_1_1.html"><div class="photo"><img src="../img/new1.jpg" alt="скандал"><span id="lorem" class="help"><em>Скандал</em></span></div><header>Страны Евросоюза могут ввести санкции против Google</a></header><br>Европейские власти обеспокоены политикой конфиденциальности компании Google. Google хранит личные данные пользователей в&nbsp;одном профиле, в&nbsp;котором может объединяться информация с&nbsp;нескольких десятков разных сайтов.</article>
+         <article class="text"><a class="title" href="hw_1_1.html"><div class="photo"><img src="../img/new1.jpg" alt="скандал"><span id="lorem" class="help"><em>Скандал</em></div></span><header>Страны Евросоюза могут ввести санкции против Google</header></a><br>Европейские власти обеспокоены политикой конфиденциальности компании Google. Google хранит личные данные пользователей в&nbsp;одном профиле, в&nbsp;котором может объединяться информация с&nbsp;нескольких десятков разных сайтов.</article>
          <article class="text"><a class="title" href="#"><div class="photo"><img src="../img/new2.jpg" alt="интрига"><span id="ipsum" class="help"><em>Интрига</em></span></div><header>ФАС уличила ВГТРК в&nbsp;рекламе алкоголя при трансляции футбольного матча</a></header><br>Проверка фотографий и&nbsp;видео-записей показала, что на&nbsp;рекламных стендах стадиона &laquo;Стэмфорд Бридж&raquo; во&nbsp;время указанного матча не&nbsp;были размещены рекламные плакаты данных производителей алкогольной продукции. Рассмотрение данного дела ФАС России назначил на&nbsp;15&nbsp;мая 2013&nbsp;года.</article>
          <article class="text"><a class="title" href="#"><div class="photo"><img src="../img/new3.jpg" alt="расследование"><span id="news" class="help"><em>Расследование</em></span></div><header>Возобновление борьбы за домены в зоне .рф маловероятно, считают юристы</a></header><br>&laquo;По&nbsp;всем 70914 доменным именам поступили заявки от&nbsp;клиентов, желающих их&nbsp;приобрести в&nbsp;указанном порядке&raquo;,&nbsp;&mdash; говорится в&nbsp;тексте судебного решения от&nbsp;16&nbsp;ноября 2011&nbsp;г. Апелляционная инстанция частично удовлетворила иск ФАС, а&nbsp;кассационная передала дело на&nbsp;рассмотрение в&nbsp;президиум ВАС.</article>
      </section>
