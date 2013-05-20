@@ -29,19 +29,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myjs.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="myjs.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/homework/js/myjs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0">
+            <state line="26" column="45" selection-start="835" selection-end="835" vertical-scroll-proportion="0.7338552">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hw_1.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="hw_1.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/homework/hw_1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="48" selection-start="228" selection-end="228" vertical-scroll-proportion="-1.0917226">
+            <state line="6" column="48" selection-start="228" selection-end="228" vertical-scroll-proportion="9.568627">
               <folding />
             </state>
           </provider>
@@ -335,9 +335,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homework/js/myjs.js">
+    <entry file="file://$PROJECT_DIR$/homework/hw_1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0">
+        <state line="6" column="48" selection-start="228" selection-end="228" vertical-scroll-proportion="9.568627">
           <folding />
         </state>
       </provider>
@@ -349,9 +349,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homework/hw_1.html">
+    <entry file="file://$PROJECT_DIR$/homework/js/myjs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="48" selection-start="228" selection-end="228" vertical-scroll-proportion="-1.0917226">
+        <state line="26" column="45" selection-start="835" selection-end="835" vertical-scroll-proportion="0.7338552">
           <folding />
         </state>
       </provider>
