@@ -23,3 +23,7 @@ $(document).ready(function(){
         });
     });
 });
+/*работа кнопки*/
+$('.userPanel').onclick('ontouchmove',function(){
+    $('.userPanel').hide();
+});
