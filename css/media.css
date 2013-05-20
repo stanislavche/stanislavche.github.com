@@ -1,5 +1,16 @@
 /* media queries
 ----------------------------------------------------------------------------*/
+@media only screen and (max-width: 768px), only screen and (max-device-width: 768px){
+    .adv{display: none}
+    .contentArticle{ width: 87.5%;margin-top: 10%}
+    .navigation{text-align: center; font: 0.6em; z-index: 1}
+    .information{width: 100%;float: none;}
+    h2{margin-top: 15%; margin-bottom: 5.5%;text-align: center}
+    .contentSection{width: 87.5%}
+    .rubric{width: 35%;float: none; margin: 0 auto}
+    .information li { width: 31%; text-align: center}
+    .etc{width: 87.5%;margin: 0 auto;}
+}
 @media only screen and (max-width: 640px), only screen and (max-device-width: 640px){
     /*First Page Adaptive*/
     #head{border-top: 0.175em solid #000}
@@ -15,9 +26,10 @@
     .adv{display: none}
     .contentArticle{ width: 87.5%;margin-top: 10%}
     .information{width: 100%;float: none;}
+    .information li { width: 29%; text-align: left}
     h2{margin-top: 15%; margin-bottom: 5.5%;}
     .contentSection{width: 87.5%}
-    .rubric{width: 35%;float: none}
+    .rubric{width: 35%;float: none; margin-left: 0}
     .etc{width: 87.5%;margin: 0 auto;}
     }
 @media only screen and (max-width: 320px), only screen and (max-device-width: 320px){
