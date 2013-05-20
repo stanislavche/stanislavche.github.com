@@ -1,7 +1,4 @@
-/* media queries
-----------------------------------------------------------------------------*/
-@media only screen and (max-width: 640px), only screen and (max-device-width: 640px){
-    /*First Page Adaptive*/
+@media screen and (max-width: 640px){
     #head{border-top: 0.175em solid #000}
     .nav{padding-top: 2.1875%;margin-left:6.25%}
     .blur{width: 90.5%}
@@ -10,7 +7,6 @@
     .right{padding-top: 0.9%;margin-right:6.25%}
     .nav2 {margin-top: -8.5%;margin-bottom:10.6666667%}
     .window{ top: 25%;left: 21.875%;width:56.25%;height:30.35%;}
-    /*Second Page Adaptive*/
     .userPanel{height: 1.66666667%; width: 20%; margin-top: 2%}
     .adv{display: none}
     .contentArticle{ width: 87.5%;margin-top: 10%}
@@ -20,14 +16,12 @@
     .rubric{width: 35%;float: none}
     .etc{width: 87.5%;margin: 0 auto;}
     }
-@media only screen and (max-width: 320px), only screen and (max-device-width: 320px){
-    /*First Page Adaptive*/
+@media screen and (max-width: 320px){
     .content header{margin-top: 40%; margin-bottom: 3%; text-align: center}
     .photo{margin-left: 17%}
     .text{text-align: center}
     .copyright{text-align: center}
     .help{left: 21.5%}
-    /*Second Page Adaptive*/
     .userPanel{height: 1.66666667%; width: 24.1875%;margin-top: 2.5%}
     .contentArticle{margin-top: 15%}
     h2{text-align: center}
