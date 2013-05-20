@@ -226,9 +226,6 @@ img{
     border-right: 0.25em solid transparent;
     border-top: 0.25em solid #666666;
 }
-.userPanel:hover{
-    height: 9.16666667%;
-}
 .userPanel:hover .triangle{
     visibility: hidden;
 }
@@ -238,19 +235,13 @@ img{
     padding-left: 4%;
     list-style-type: none;
 }
-.userPanel:hover ul {
-    margin: 0;
-    padding-left: 4%;
-    display: block;
-    list-style-type: none;
-}
-.userPanel:hover li {
+.userPanel li{
     padding-top: 7%;
 }
 .userPanel p{
     margin: 0 1px 0 0;
     display: inline-block;
-    text-shadow: 0.0625em 0.0625em #fff;
+    text-shadow: 0.125em 0.125em #fff;
     color: #666666;
 }
 .userPanel a{
