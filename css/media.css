@@ -1,8 +1,5 @@
 /* media queries
 ----------------------------------------------------------------------------*/
-@media only screen and (min-device-width: 1536px)and (max-device-width: 2048px)and (orientation : landscape)and (-webkit-min-device-pixel-ratio: 2) {
-     .window{ top: 25%;left: 20%;width:60%;height:65.35%;}
-}
 @media only screen and (max-width: 900px), only screen and (max-device-width: 900px){
     .userPanel{ width: 14%}
 }
@@ -16,7 +13,7 @@
     .rubric{width: 35%;float: none; margin: 0 auto}
     .information li { width: 31%; text-align: center}
     .etc{width: 87.5%;margin: 0 auto;}
-    .window{ top: 25%;left: 20%;width:60%;height:35.35%;}
+    .window{ top: 25%;left: 20%;width:60%;height:55.35%;}
 }
 @media only screen and (max-width: 640px), only screen and (max-device-width: 640px){
     /*First Page Adaptive*/
