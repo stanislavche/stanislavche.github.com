@@ -23,8 +23,7 @@ $(document).ready(function(){
         });
     });
 });
-/*попытки сделать выплывающее меню*/
-
+/*попытки сделать выплывающее меню - Все зашибись, кроме FF*/
 $('.userPanel').click(function() {
      $('.userPanel ul') .toggle('2s');
 });

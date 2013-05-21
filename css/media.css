@@ -1,5 +1,8 @@
 /* media queries
 ----------------------------------------------------------------------------*/
+@media only screen and (max-width: 900px), only screen and (max-device-width: 900px){
+    .userPanel{ width: 14%}
+}
 @media only screen and (max-width: 768px), only screen and (max-device-width: 768px){
     .adv{display: none}
     .contentArticle{ width: 87.5%;margin-top: 10%}
@@ -22,12 +25,12 @@
     .nav2 {margin-top: -8.5%;margin-bottom:10.6666667%}
     .window{ top: 25%;left: 21.875%;width:56.25%;height:30.35%;}
     /*Second Page Adaptive*/
-    .userPanel{height: 1.66666667%; width: 20%; margin-top: 2%}
+    .userPanel{height: 1.66666667%; width: 25%; margin-top: 2%}
     .adv{display: none}
     .contentArticle{ width: 87.5%;margin-top: 10%}
     .information{width: 100%;float: none;}
     .information li { width: 29%; text-align: left}
-    h2{margin-top: 15%; margin-bottom: 5.5%;}
+    h2{margin-top: 15%; margin-bottom: 5.5%; text-align: left}
     .contentSection{width: 87.5%}
     .rubric{width: 35%;float: none; margin-left: 0}
     .etc{width: 87.5%;margin: 0 auto;}
@@ -39,8 +42,9 @@
     .text{text-align: center}
     .copyright{text-align: center}
     .help{left: 21.5%}
+    .window{ top: 25%;left: 10%;width:80%;height:30.35%;}
     /*Second Page Adaptive*/
-    .userPanel{height: 1.66666667%; width: 24.1875%;margin-top: 2.5%}
+    .userPanel{height: 1.66666667%; width: 26.1875%;margin-top: 2.5%}
     .contentArticle{margin-top: 15%}
     h2{text-align: center}
     .description{text-align: center}
