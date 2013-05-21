@@ -1,7 +1,7 @@
 /* media queries
 ----------------------------------------------------------------------------*/
 @media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px){
-    .window{ top: 25%;left: 10%;width:40%;height:30.35%;}
+    .window{ top: 25%;left: 30%;width:40%;height:30.35%;}
 }
 @media only screen and (max-width: 900px), only screen and (max-device-width: 900px){
     .userPanel{ width: 14%}
@@ -16,6 +16,7 @@
     .rubric{width: 35%;float: none; margin: 0 auto}
     .information li { width: 31%; text-align: center}
     .etc{width: 87.5%;margin: 0 auto;}
+    .window{ top: 25%;left: 20%;width:60%;height:30.35%;}
 }
 @media only screen and (max-width: 640px), only screen and (max-device-width: 640px){
     /*First Page Adaptive*/
