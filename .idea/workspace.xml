@@ -32,10 +32,8 @@
       <file leaf-file-name="myjs.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/homework/js/myjs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="29" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="31" column="0" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -43,25 +41,25 @@
       <file leaf-file-name="hw_1.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/homework/hw_1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="5" selection-start="1643" selection-end="1655" vertical-scroll-proportion="-13.576923">
+            <state line="53" column="17" selection-start="3769" selection-end="3769" vertical-scroll-proportion="-18.961538">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hw_1_1.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="hw_1_1.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/homework/hw_1_1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="15" selection-start="15" selection-end="15" vertical-scroll-proportion="-0.0">
+            <state line="16" column="35" selection-start="708" selection-end="708" vertical-scroll-proportion="0.5762712">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="media.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="media.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/media.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="50" selection-start="2069" selection-end="2069" vertical-scroll-proportion="0.49902153">
+            <state line="45" column="50" selection-start="2069" selection-end="2069" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -80,7 +78,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/js/hw_1.js.txt" />
         <option value="$PROJECT_DIR$/js/hw_1.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/fonts.css" />
@@ -90,19 +87,20 @@
         <option value="$PROJECT_DIR$/homework/js/mysecondjs" />
         <option value="$PROJECT_DIR$/homework/js/mysecondjs.js" />
         <option value="$PROJECT_DIR$/homework/hw_2.html" />
-        <option value="$PROJECT_DIR$/homework/hw_1_1.html" />
         <option value="$PROJECT_DIR$/homework/js/mp3 css" />
-        <option value="$PROJECT_DIR$/homework/js/myjs.js" />
         <option value="$PROJECT_DIR$/css/hw1.css" />
-        <option value="$PROJECT_DIR$/homework/hw_1.html" />
         <option value="$PROJECT_DIR$/css/media.css" />
+        <option value="$PROJECT_DIR$/homework/js/less.js" />
+        <option value="$PROJECT_DIR$/homework/hw_1.html" />
+        <option value="$PROJECT_DIR$/homework/js/myjs.js" />
+        <option value="$PROJECT_DIR$/homework/hw_1_1.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="4" />
-    <option name="y" value="24" />
-    <option name="width" value="1199" />
+    <option name="x" value="-151" />
+    <option name="y" value="1" />
+    <option name="width" value="1300" />
     <option name="height" value="696" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -137,8 +135,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.VCSs.Git" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/homework/js" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -187,7 +185,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="24" width="1199" height="696" extended-state="0" />
+    <frame x="-151" y="1" width="1300" height="696" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -261,22 +259,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/homework/js/myjs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="38" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/fonts.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/hw1.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="105" column="1" selection-start="1768" selection-end="1768" vertical-scroll-proportion="0.0">
@@ -305,30 +287,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/normalize.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/homework/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="43" selection-start="64296" selection-end="64296" vertical-scroll-proportion="0.10240964">
-          <folding />
-        </state>
+        <state line="5" column="43" selection-start="64296" selection-end="64296" vertical-scroll-proportion="0.10240964" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homework/css/media.css">
+    <entry file="file://$PROJECT_DIR$/css/fonts.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="37" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homework/js/mp3 css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="754" column="48" selection-start="58106" selection-end="58106" vertical-scroll-proportion="0.8003914">
-          <folding />
-        </state>
+        <state line="48" column="23" selection-start="2023" selection-end="2023" vertical-scroll-proportion="0.7671233" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/hw1.css">
@@ -338,39 +307,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/fonts.css">
+    <entry file="file://$PROJECT_DIR$/css/media.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="23" selection-start="2023" selection-end="2023" vertical-scroll-proportion="0.7671233">
+        <state line="45" column="50" selection-start="2069" selection-end="2069" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homework/js/myjs.js">
+    <entry file="file://E:/Downloads/Программы/all.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="29" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homework/hw_1_1.html">
+    <entry file="file://$PROJECT_DIR$/homework/js/less.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="15" selection-start="15" selection-end="15" vertical-scroll-proportion="-0.0">
+        <state line="11" column="0" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/homework/hw_1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="5" selection-start="1643" selection-end="1655" vertical-scroll-proportion="-13.576923">
+        <state line="53" column="17" selection-start="3769" selection-end="3769" vertical-scroll-proportion="-18.961538">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/media.css">
+    <entry file="file://$PROJECT_DIR$/homework/js/myjs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="50" selection-start="2069" selection-end="2069" vertical-scroll-proportion="0.49902153">
+        <state line="31" column="0" selection-start="965" selection-end="965" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework/hw_1_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="35" selection-start="708" selection-end="708" vertical-scroll-proportion="0.5762712">
           <folding />
         </state>
       </provider>
