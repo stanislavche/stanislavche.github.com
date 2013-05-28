@@ -23,7 +23,9 @@ body{
 	margin-right: 0.25%;
 	text-decoration:none;
     text-transform: uppercase;
-	font: 1.2em PTSansBold;
+	font-size: 1.2em;
+    font-family: "PT_Sans";
+    font-weight: bold;
     white-space: pre;
 }
 .linkcolor{
@@ -35,7 +37,7 @@ body{
 }
 #enter{
 	text-decoration: none;
-	font: 0.875em PTSansRegular;
+	font: 0.875em PT_Sans;
     color: #666;
     border-bottom: 0.09375em dotted #666;
 }
@@ -44,7 +46,7 @@ body{
 }
 #exit{
     text-decoration: none;
-    font: 0.875em PTSansRegular;
+    font: 0.875em PT_Sans;
     border-bottom: 0.09375em dotted #000080;
 }
 #exit:hover{
@@ -68,7 +70,7 @@ body{
 h1 {
 	margin-top: 6.6666667%;
 	text-align:center;
-	font: 4.5em PTSerifBold;
+	font: 4.5em PT_Serif, bold;
     font-weight: bold;
 }
 .nav2 {
@@ -79,7 +81,7 @@ h1 {
 }
 .nav2 a{
     text-decoration: none;
-    font: 1.125em PTSansRegular;
+    font: 1.125em PT_Sans;
 }
 .nav2 li {
     margin-left: 0;
@@ -102,7 +104,7 @@ h1 {
 .text{
     padding-bottom: 6.25%;
     float: right;
-    font: 0.875em PTSansRegular;
+    font: 0.875em PT_Sans;
 }
 img{
     display: block;
@@ -119,7 +121,7 @@ img{
     margin-left: -21.6%;
     margin-top: -59%;
     padding: 2% 5% 2%;
-    font: 0.875em PTSansItalic;
+    font: 0.875em PT_Sans, italic;
     color: #FFF;
 }
 #lorem{
@@ -132,12 +134,12 @@ img{
     background-color: #6699cc;
 }
 .title{
-    font: 1.125em PTSansRegular;
+    font: 1.125em PT_Sans;
     color: #000;
 }
 .copyright{
     padding-top: 1em;
-    font: 0.75em PTSansRegular;
+    font: 0.75em PT_Sans;
     padding-bottom: 10.625%;
     border-top: 0.125em ridge #c0c0c0;
 }
@@ -198,7 +200,7 @@ img{
 }
 .userPanel{
     text-align: left;
-    font: 0.875em PTSansRegular;
+    font: 0.875em PT_Sans;
     height: 1.66666667%;
     width: 9.58333333%;
     -moz-border-radius: 0.9375em;
@@ -248,7 +250,7 @@ img{
 .userPanel a{
     color: #666666;
     text-align: left;
-    font: 0.875em PTSansRegular;
+    font: 0.875em PTS_Sans;
  }
 .userPanel a:hover{
     text-decoration: none;
@@ -269,7 +271,6 @@ img{
     width: 66.666667%;
     margin: 0 auto;
     margin-top: 2%;
-    border-bottom: 0.125em solid #c0c0c0;
 }
 .information{
     width: 75%;
@@ -281,11 +282,12 @@ h2 {
     text-decoration: none;
     display: block;
     text-align:left;
-    font: 1.5em PTSerifBold;
+    font: 1.5em PT_Serif;
+    font-weight: bold;
 }
 .adv{
     margin-top: 31.25%;
-    margin-bottom: 20.625%;
+    margin-bottom: 10.625%;
     float: left;
     width: 21.625%;
 }
@@ -303,13 +305,13 @@ h2 {
 }
 .description{
     margin: 1em 0;
-    font: 0.875em PTSansRegular;
+    font: 0.875em PT_Sans;
 }
 #other{
     border-bottom: none;
 }
 .link{
-     font: 0.875em PTSansRegular;
+     font: 0.875em PT_Sans;
      color: #003366;
      margin-right: 1.666667%;
  }
@@ -326,19 +328,20 @@ h2 {
 .activelink{
     margin-right: 1.666667%;
     text-decoration: none;
-    font: 0.875em PTSansBold;
+    font: 0.875em PT_Sans;
+    font-weight: bold;
     color: #000;
-    font-weight: bolder;
 }
 .contentSection{
+    border-top: 0.1em ridge #c0c0c0;
     width: 66.6666667%;
     margin: 0 auto;
 }
 .rubric{
-    width: 21.625%;
+    width: 20%;
     float: left;
     text-align: left;
-    font:0.875em PTSansBold;
+    font:0.875em PT_Sans;
     font-weight: bold;
 }
 .information li{
@@ -354,7 +357,7 @@ h2 {
     padding: 0;
 }
 .information li p{
-    font:0.75em PTSansRegular;
+    font:0.75em PT_Sans;
     margin-top: 0;
 }
 .information img:hover{
@@ -365,10 +368,125 @@ h2 {
     transform: scale(1.1);
 }
 .linktwo{
-    font:0.875em PTSansRegular;
+    font:0.875em PT_Sans;
     color: #003366;
 }
 .etc{
     width: 66.666667%;
     margin: 0 auto;
+}
+.commentForm{
+    display: block;
+    margin: 0 17% 1em 28.4167%;
+    background-color: #fff;
+    width: 54.5833%;
+    border: 0.1em #ccc solid;
+}
+.commentForm header{
+    margin: 1.5em 0 1.5em 5%;
+    font-family: PT_Sans;
+    font-size: 1.125em;
+    color: #000;
+}
+.commentForm textarea{
+    font: 0.75em PT_Sans;
+    color: #666;
+    resize: none;
+}
+.commentForm form{
+  margin-left: 5%;
+}
+.flud{
+    padding-left: 0.5em;
+    width: 93.9%;
+    height: 4em;
+    font: 12px PT_Sans;
+    color: #969696;
+    -webkit-transition: all 600ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transition: all 600ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.nopadding{
+    padding: 0;
+}
+.submit{
+    font: 12px PT_Sans;
+    font-weight: bold;
+    margin-right: 5%;
+    float:right;
+    width: 160px;
+    padding: 0.3em 1em;
+    color: #000;
+    background: -moz-linear-gradient(top, #ffffff, #d6d6d6);
+    background: -webkit-gradient(linear, top, bottom,color-stop(0%, #ffffff), color-stop(100%, #d6d6d6));
+    background: -webkit-linear-gradient(top, #ffffff, #d6d6d6);
+    background: -o-linear-gradient(top, #ffffff, #d6d6d6);
+    background: -ms-linear-gradient(top, #ffffff, #d6d6d6);
+    background: linear-gradient(top, #ffffff, #d6d6d6);
+    -moz-border-radius: 0.4125em;
+    -webkit-border-radius: 0.4125em;
+    border-radius: 0.4125em;
+}
+.submit:hover{
+    background: -moz-linear-gradient(top, #d6d6d6, #ffffff);
+    background: -webkit-gradient(linear, top, bottom,color-stop(0%, #d6d6d6), color-stop(100%, #ffffff));
+    background: -webkit-linear-gradient(top, #d6d6d6, #ffffff);
+    background: -o-linear-gradient(top, #d6d6d6, #ffffff);
+    background: -ms-linear-gradient(top, #d6d6d6, #ffffff);
+    background: linear-gradient(top, #d6d6d6, #ffffff);
+}
+.name{
+    padding-left: 0.5em;
+    width: 36.64%;
+    font: 12px PT_Sans;
+    color: #969696;
+}
+.flud:focus{
+    height: 10em;
+    -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.postList{
+    width: 91.623%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    display: block;
+    box-sizing: border-box;
+}
+.postList header{
+    margin: 0;
+}
+.postList p{
+    font:0.75em PT_Sans;
+    color: #333;
+    margin: 0.5em 0;
+}
+.nameaccount{
+    margin-right: 1em;
+    font:0.75em PT_Sans;
+    font-weight: bold;
+    color: #000;
+}
+.time{
+    font:0.75em PT_Sans;
+    color: #969696;
+}
+.open{
+    font-size: 0.75em;
+}
+.postList .post{
+    padding: 1em 0;
+    border-bottom: 0.1em solid #a0a0a0;
+}
+.postList li:last-child{
+    border-bottom: none;
+}
+.answer {
+    margin-top: 1em;
+    list-style-type: none;
+}
+.postList .answer .post{
+    padding-bottom: 0;
+    border-bottom: none;
+    border-top: 0.1em solid #a0a0a0;
 }

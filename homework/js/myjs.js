@@ -23,9 +23,58 @@ $(document).ready(function(){
         });
     });
 });
-/*попытки сделать выплывающее меню - Все зашибись, кроме FF*/
+/*попытки сделать выплывающее меню*/
 $(document).ready(function Open(){
-     $('.userPanel').click(function() {
+     $('.userPanel').on('click', function() {
          $('.userPanel ul') .toggle('2s');
      });
 });
+/*комментарии*/
+$(document).ready(function () {
+    $("#open1").click(function() {
+        var formContent = $("#commentwindow").html();
+        $(".post0001 .empty").html(formContent);
+        $(".post0003 .empty1").html("");
+        $(".post0004 .empty").html("");
+        $(".post0002 .empty").html("");
+    });
+});
+$(document).ready(function () {
+    $("#open2").click(function() {
+        var formContent = $("#commentwindow").html();
+        $(".post0002 .empty").html(formContent);
+        $(".post0003 .empty1").html("");
+        $(".post0004 .empty").html("");
+        $(".post0001 .empty").html("");
+    });
+});
+$(document).ready(function () {
+    $("#open3").click(function() {
+        var formContent = $("#commentwindow").html();
+        $(".post0003 .empty1").html(formContent);
+        $(".post0004 .empty").html("");
+        $(".post0002 .empty").html("");
+        $(".post0001 .empty").html("");
+    });
+});
+$(document).ready(function () {
+    $("#open4").click(function() {
+        var formContent = $("#commentwindow").html();
+        $(".post0004 .empty").html(formContent);
+        $(".post0003 .empty1").html("");
+        $(".post0002 .empty").html("");
+        $(".post0001 .empty").html("");
+    });
+});
+/*Всплывающее окно*/
+
+/*validation*/
+function Validate(id) {
+    if ('.name'.val() == "") {
+        id.addClass(".error");
+        return false;
+    } else {
+        id.removeClass(".error");
+        return true;
+    }
+}

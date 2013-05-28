@@ -5,6 +5,7 @@
 }
 @media only screen and (max-width: 900px), only screen and (max-device-width: 900px){
     .userPanel{ width: 14%}
+    .commentForm{margin: 0 11% 1em 14.4167%;width: 74.5833%}
 }
 @media only screen and (max-width: 768px), only screen and (max-device-width: 768px){
     .adv{display: none}
@@ -15,8 +16,10 @@
     .contentSection{width: 87.5%}
     .rubric{width: 35%;float: none; margin: 0 auto}
     .information li { width: 31%; text-align: center}
-    .etc{width: 87.5%;margin: 0 auto;}
-    .window{ top: 25%;left: 20%;width:60%;height:250px;}
+    .etc{width: 87.5%;margin: 0 auto}
+    .window{ top: 25%;left: 20%;width:60%;height:250px}
+    .commentForm{margin: 0 7% 1em 7%;width: 86%}
+
 }
 @media only screen and (max-width: 640px), only screen and (max-device-width: 640px){
     /*First Page Adaptive*/
@@ -27,7 +30,7 @@
     .content header{margin-top: 6%; margin-bottom: 4%}
     .right{padding-top: 0.9%;margin-right:6.25%}
     .nav2 {margin-top: -8.5%;margin-bottom:10.6666667%}
-    .window{ top: 25%;left: 21.875%;width:56.25%;height:30.35%;}
+    .window{ top: 25%;left: 21.875%;width:56.25%;height:30.35%}
     /*Second Page Adaptive*/
     .userPanel{height: 1.66666667%; width: 25%; margin-top: 2%}
     .adv{display: none}
@@ -38,6 +41,9 @@
     .contentSection{width: 87.5%}
     .rubric{width: 35%;float: none; margin-left: 0}
     .etc{width: 87.5%;margin: 0 auto;}
+    .commentForm{margin: 0 5% 1em 5%;width: 90%}
+    .name{width: 48%;padding-left: 0;}
+    .flud{padding-left: 0}
     }
 @media only screen and (max-width: 320px), only screen and (max-device-width: 320px){
     /*First Page Adaptive*/
@@ -49,6 +55,7 @@
     .help{left: 21.5%}
     .window{ top: 25%;left: 10%;width:80%;height:40.35%;}
     /*Second Page Adaptive*/
+    .nav{margin-left: 1%}
     .userPanel{height: 1.66666667%; width: 26.1875%;margin-top: 2.5%}
     .contentArticle{margin-top: 15%}
     h2{text-align: center}
@@ -57,4 +64,7 @@
     .navigation{text-align: center; font: 0.6em; z-index: 1}
     .information li {display: block; width: 100%; text-align: center}
     .information img {margin: 0 auto}
+    .commentForm{margin: 0 1% 1em 1%;width: 98%}
+    .name{width: 50%; padding-left: 0.5em;}
+    .flud{padding-left: 0.5em}
 }
