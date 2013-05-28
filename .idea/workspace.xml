@@ -23,7 +23,7 @@
       <file leaf-file-name="hw_1_1.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/homework/hw_1_1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="64" selection-start="716" selection-end="716" vertical-scroll-proportion="-7.8461537">
+            <state line="12" column="64" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -32,34 +32,7 @@
       <file leaf-file-name="less.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/homework/css/less.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="5936" selection-start="6124" selection-end="6124" vertical-scroll-proportion="0.09222423">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hw_1.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/homework/hw_1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="3" selection-start="198" selection-end="700" vertical-scroll-proportion="-3.9230769">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="normalize.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/homework/less/normalize.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="395" column="1" selection-start="7223" selection-end="7223" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fonts.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/homework/less/fonts.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="24" selection-start="2953" selection-end="2953" vertical-scroll-proportion="0.0">
+            <state line="3" column="6485" selection-start="6673" selection-end="6673" vertical-scroll-proportion="0.0882353">
               <folding />
             </state>
           </provider>
@@ -74,6 +47,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="adaptive.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/homework/less/adaptive.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="69" column="1" selection-start="2984" selection-end="2984" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="less.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/homework/less/less.less">
           <provider selected="true" editor-type-id="text-editor">
@@ -83,10 +65,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adaptive.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/homework/less/adaptive.less">
+      <file leaf-file-name="fonts.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/homework/less/fonts.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="1" selection-start="2984" selection-end="2984" vertical-scroll-proportion="0.0">
+            <state line="51" column="24" selection-start="2953" selection-end="2953" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="normalize.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/homework/less/normalize.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="395" column="1" selection-start="7223" selection-end="7223" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hw_1.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/homework/hw_1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="3" selection-start="198" selection-end="700" vertical-scroll-proportion="-0.65384614">
               <folding />
             </state>
           </provider>
@@ -163,8 +163,8 @@
     <property name="options.lastSelected" value="project.propVCSSupport.VCSs.Git" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/homework/js" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -287,72 +287,55 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/media.css">
+    <entry file="file://$PROJECT_DIR$/homework/css/less.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="1" selection-start="0" selection-end="3111" vertical-scroll-proportion="0.0">
+        <state line="3" column="5936" selection-start="6124" selection-end="6124" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework/hw_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="3" selection-start="198" selection-end="700" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework/less/normalize.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="395" column="1" selection-start="7223" selection-end="7223" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/media.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="1" selection-start="0" selection-end="3111" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/hw1.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="440" column="19" selection-start="0" selection-end="10541" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="440" column="19" selection-start="0" selection-end="10541" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/homework/less/lesshat.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="22" selection-start="491" selection-end="491" vertical-scroll-proportion="0.61764705">
-          <folding />
-        </state>
+        <state line="21" column="22" selection-start="491" selection-end="491" vertical-scroll-proportion="0.61764705" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/fonts.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="17" selection-start="0" selection-end="4086" vertical-scroll-proportion="0.029411765">
-          <folding />
-        </state>
+        <state line="13" column="17" selection-start="0" selection-end="4086" vertical-scroll-proportion="0.029411765" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/normalize.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="3" selection-start="0" selection-end="7345" vertical-scroll-proportion="0.7766498">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homework/less/myless.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="33" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homework/less/fonts.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="24" selection-start="2953" selection-end="2953" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homework/less/adaptive.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="1" selection-start="2984" selection-end="2984" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="27" column="3" selection-start="0" selection-end="7345" vertical-scroll-proportion="0.7766498" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/homework/hw_1_1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="64" selection-start="716" selection-end="716" vertical-scroll-proportion="-7.8461537">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homework/less/less.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="21" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
+        <state line="12" column="64" selection-start="716" selection-end="716" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -366,14 +349,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/homework/hw_1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="3" selection-start="198" selection-end="700" vertical-scroll-proportion="-3.9230769">
+        <state line="6" column="3" selection-start="198" selection-end="700" vertical-scroll-proportion="-0.65384614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework/less/fonts.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="24" selection-start="2953" selection-end="2953" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework/less/less.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="21" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework/less/adaptive.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="1" selection-start="2984" selection-end="2984" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework/less/myless.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="33" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/homework/css/less.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="5936" selection-start="6124" selection-end="6124" vertical-scroll-proportion="0.09222423">
+        <state line="3" column="6485" selection-start="6673" selection-end="6673" vertical-scroll-proportion="0.0882353">
           <folding />
         </state>
       </provider>
