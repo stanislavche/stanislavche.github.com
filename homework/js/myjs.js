@@ -66,15 +66,13 @@ $(document).ready(function () {
         $(".post0001 .empty").html("");
     });
 });
-/*Всплывающее окно*/
-
-/*validation*/
-function Validate(id) {
-    if ('.name'.val() == "") {
-        id.addClass(".error");
-        return false;
-    } else {
-        id.removeClass(".error");
-        return true;
-    }
-}
+/*validation2*/
+$(function() {
+    $(document).on("blur change focus keyup", "form[name=comment] input", function() {
+        if ($("form[name=comment] input").filter(function(i) { return $.trim($(this).val()) == ""; }).length)
+            $(".error").slideDown("slow");
+        else
+            $(".error").slideUp("slow");
+    });
+    $("form[name=comment] input").first().focus();
+})
