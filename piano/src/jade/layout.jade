@@ -1,0 +1,30 @@
+- var development = true;
+block vars
+	- var pagename = "default";
+	- var pagetitle = "Default";
+	- var description = "default";
+	- var keywords = "default";
+!!! 5
+html(lang="ru", class="no-js")
+	head
+		meta(charset="UTF-8")
+		title #{pagetitle} - Piano
+		meta(name="description", content="#{description}")
+		meta(name="keywords", content="#{keywords}")
+		meta(name="viewport", content="width=device-width,initial-scale=1,maximum-scale=1")
+		if development
+			link(rel="stylesheet", href="css/style.css")
+		else
+			link(rel="stylesheet", href="css/style.min.css")
+		link(res="shortcut icon", type="image/x-icon", href="icon/favicon.ico")
+		script(src="js/vendor/modernizr-latest.js")
+	body(itemscope itemtype="http://schema.org/Organization")
+		.content-wrap
+			include block/header
+			.content
+				block content
+			.footer-placeholder
+		include block/footer
+		script(src='js/vendor/jquery.1.9.1.min.js')
+		script(src="js/plugins.js")
+		script(src="js/main.js")
