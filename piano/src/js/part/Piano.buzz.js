@@ -1,4 +1,3 @@
-window.Piano = {};;
 Piano.buzz = function(){
 	buzz.defaults.formats = [ 'ogg', 'mp3' ];
 	buzz.defaults.preload = 'metadata';
@@ -52,27 +51,4 @@ Piano.buzz = function(){
 			$note2.trigger('mouseup');
 		}
 	});
-};;
-Piano.anim = function(){
-	var $glich = $('.monitor-glich');
-	setTimeout(function () {
-		$glich.addClass('active');
-	},4000);
-	setTimeout(function () {
-		$glich.removeClass('active');
-	},1000);
-};;
-jQuery(document).ready(function($) {
-	if (document.getElementById("monitor") !== null){
-		Piano.buzz();
-	// var counter = 200;
-	// var myFunction = function(){
-	// clearInterval(interval);
-	// counter *= 10;
-	// interval = setInterval(myFunction, counter);
-	// };
-	// var interval = setInterval(myFunction, counter);
-	// setInterval(function() { Piano.anim(); }, interval);
-	}
-
-});
+};
