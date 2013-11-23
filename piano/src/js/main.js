@@ -10,5 +10,7 @@ jQuery(document).ready(function($) {
 	// var interval = setInterval(myFunction, counter);
 	// setInterval(function() { Piano.anim(); }, interval);
 	}
-
+	if (document.getElementById("loadscreen") !== null){
+		Piano.typewritter();
+	}
 });

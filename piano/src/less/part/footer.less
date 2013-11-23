@@ -9,6 +9,7 @@
 	.round-corner (top-right, 4px);
 	.round-corner (top-left, 4px);
 	.transition(all 0.2s);
+	.notouch();
 	&:hover{
 		background: #DDD;
 	}
@@ -25,6 +26,7 @@
 	background: #000;
 	display: inline-block;
 	vertical-align: top;
+	.notouch();
 	.border-radius(4px);
 	.transition(all 0.2s);
 	&:hover{
@@ -38,4 +40,13 @@
 	position: relative;
 	width: 100%;
 	height: 100%;
+	.notouch();
+	p{
+		.notouch();
+	}
+}
+.unvisible-content{
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
 }
