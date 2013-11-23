@@ -8,7 +8,694 @@
  // http://jaysalvat.com/
  // ----------------------------------------------------------------------------
 
-(function(t,n,e){"undefined"!=typeof module&&module.exports?module.exports=e():"function"==typeof n.define&&n.define.amd?define(t,[],e):n[t]=e()})("buzz",this,function(){var t={defaults:{autoplay:!1,duration:5e3,formats:[],loop:!1,placeholder:"--",preload:"metadata",volume:80,document:document},types:{mp3:"audio/mpeg",ogg:"audio/ogg",wav:"audio/wav",aac:"audio/aac",m4a:"audio/x-m4a"},sounds:[],el:document.createElement("audio"),sound:function(n,e){function i(t){for(var n=[],e=t.length-1,i=0;e>=i;i++)n.push({start:t.start(i),end:t.end(i)});return n}function u(t){return t.split(".").pop()}function s(n,e){var i=r.createElement("source");i.src=e,t.types[u(e)]&&(i.type=t.types[u(e)]),n.appendChild(i)}e=e||{};var r=e.document||t.defaults.document,o=0,a=[],h={},l=t.isSupported();if(this.load=function(){return l?(this.sound.load(),this):this},this.play=function(){return l?(this.sound.play(),this):this},this.togglePlay=function(){return l?(this.sound.paused?this.sound.play():this.sound.pause(),this):this},this.pause=function(){return l?(this.sound.pause(),this):this},this.isPaused=function(){return l?this.sound.paused:null},this.stop=function(){return l?(this.setTime(0),this.sound.pause(),this):this},this.isEnded=function(){return l?this.sound.ended:null},this.loop=function(){return l?(this.sound.loop="loop",this.bind("ended.buzzloop",function(){this.currentTime=0,this.play()}),this):this},this.unloop=function(){return l?(this.sound.removeAttribute("loop"),this.unbind("ended.buzzloop"),this):this},this.mute=function(){return l?(this.sound.muted=!0,this):this},this.unmute=function(){return l?(this.sound.muted=!1,this):this},this.toggleMute=function(){return l?(this.sound.muted=!this.sound.muted,this):this},this.isMuted=function(){return l?this.sound.muted:null},this.setVolume=function(t){return l?(0>t&&(t=0),t>100&&(t=100),this.volume=t,this.sound.volume=t/100,this):this},this.getVolume=function(){return l?this.volume:this},this.increaseVolume=function(t){return this.setVolume(this.volume+(t||1))},this.decreaseVolume=function(t){return this.setVolume(this.volume-(t||1))},this.setTime=function(t){if(!l)return this;var n=!0;return this.whenReady(function(){n===!0&&(n=!1,this.sound.currentTime=t)}),this},this.getTime=function(){if(!l)return null;var n=Math.round(100*this.sound.currentTime)/100;return isNaN(n)?t.defaults.placeholder:n},this.setPercent=function(n){return l?this.setTime(t.fromPercent(n,this.sound.duration)):this},this.getPercent=function(){if(!l)return null;var n=Math.round(t.toPercent(this.sound.currentTime,this.sound.duration));return isNaN(n)?t.defaults.placeholder:n},this.setSpeed=function(t){return l?(this.sound.playbackRate=t,this):this},this.getSpeed=function(){return l?this.sound.playbackRate:null},this.getDuration=function(){if(!l)return null;var n=Math.round(100*this.sound.duration)/100;return isNaN(n)?t.defaults.placeholder:n},this.getPlayed=function(){return l?i(this.sound.played):null},this.getBuffered=function(){return l?i(this.sound.buffered):null},this.getSeekable=function(){return l?i(this.sound.seekable):null},this.getErrorCode=function(){return l&&this.sound.error?this.sound.error.code:0},this.getErrorMessage=function(){if(!l)return null;switch(this.getErrorCode()){case 1:return"MEDIA_ERR_ABORTED";case 2:return"MEDIA_ERR_NETWORK";case 3:return"MEDIA_ERR_DECODE";case 4:return"MEDIA_ERR_SRC_NOT_SUPPORTED";default:return null}},this.getStateCode=function(){return l?this.sound.readyState:null},this.getStateMessage=function(){if(!l)return null;switch(this.getStateCode()){case 0:return"HAVE_NOTHING";case 1:return"HAVE_METADATA";case 2:return"HAVE_CURRENT_DATA";case 3:return"HAVE_FUTURE_DATA";case 4:return"HAVE_ENOUGH_DATA";default:return null}},this.getNetworkStateCode=function(){return l?this.sound.networkState:null},this.getNetworkStateMessage=function(){if(!l)return null;switch(this.getNetworkStateCode()){case 0:return"NETWORK_EMPTY";case 1:return"NETWORK_IDLE";case 2:return"NETWORK_LOADING";case 3:return"NETWORK_NO_SOURCE";default:return null}},this.set=function(t,n){return l?(this.sound[t]=n,this):this},this.get=function(t){return l?t?this.sound[t]:this.sound:null},this.bind=function(t,n){if(!l)return this;t=t.split(" ");for(var e=this,i=function(t){n.call(e,t)},u=0;t.length>u;u++){var s=t[u],r=s;s=r.split(".")[0],a.push({idx:r,func:i}),this.sound.addEventListener(s,i,!0)}return this},this.unbind=function(t){if(!l)return this;t=t.split(" ");for(var n=0;t.length>n;n++)for(var e=t[n],i=e.split(".")[0],u=0;a.length>u;u++){var s=a[u].idx.split(".");(a[u].idx==e||s[1]&&s[1]==e.replace(".",""))&&(this.sound.removeEventListener(i,a[u].func,!0),a.splice(u,1))}return this},this.bindOnce=function(t,n){if(!l)return this;var e=this;return h[o++]=!1,this.bind(t+"."+o,function(){h[o]||(h[o]=!0,n.call(e)),e.unbind(t+"."+o)}),this},this.trigger=function(t){if(!l)return this;t=t.split(" ");for(var n=0;t.length>n;n++)for(var e=t[n],i=0;a.length>i;i++){var u=a[i].idx.split(".");if(a[i].idx==e||u[0]&&u[0]==e.replace(".","")){var s=r.createEvent("HTMLEvents");s.initEvent(u[0],!1,!0),this.sound.dispatchEvent(s)}}return this},this.fadeTo=function(n,e,i){function u(){setTimeout(function(){n>s&&n>o.volume?(o.setVolume(o.volume+=1),u()):s>n&&o.volume>n?(o.setVolume(o.volume-=1),u()):i instanceof Function&&i.apply(o)},r)}if(!l)return this;e instanceof Function?(i=e,e=t.defaults.duration):e=e||t.defaults.duration;var s=this.volume,r=e/Math.abs(s-n),o=this;return this.play(),this.whenReady(function(){u()}),this},this.fadeIn=function(t,n){return l?this.setVolume(0).fadeTo(100,t,n):this},this.fadeOut=function(t,n){return l?this.fadeTo(0,t,n):this},this.fadeWith=function(t,n){return l?(this.fadeOut(n,function(){this.stop()}),t.play().fadeIn(n),this):this},this.whenReady=function(t){if(!l)return null;var n=this;0===this.sound.readyState?this.bind("canplay.buzzwhenready",function(){t.call(n)}):t.call(n)},l&&n){for(var d in t.defaults)t.defaults.hasOwnProperty(d)&&(e[d]=e[d]||t.defaults[d]);if(this.sound=r.createElement("audio"),n instanceof Array)for(var c in n)n.hasOwnProperty(c)&&s(this.sound,n[c]);else if(e.formats.length)for(var f in e.formats)e.formats.hasOwnProperty(f)&&s(this.sound,n+"."+e.formats[f]);else s(this.sound,n);e.loop&&this.loop(),e.autoplay&&(this.sound.autoplay="autoplay"),this.sound.preload=e.preload===!0?"auto":e.preload===!1?"none":e.preload,this.setVolume(e.volume),t.sounds.push(this)}},group:function(t){function n(){for(var n=e(null,arguments),i=n.shift(),u=0;t.length>u;u++)t[u][i].apply(t[u],n)}function e(t,n){return t instanceof Array?t:Array.prototype.slice.call(n)}t=e(t,arguments),this.getSounds=function(){return t},this.add=function(n){n=e(n,arguments);for(var i=0;n.length>i;i++)t.push(n[i])},this.remove=function(n){n=e(n,arguments);for(var i=0;n.length>i;i++)for(var u=0;t.length>u;u++)if(t[u]==n[i]){t.splice(u,1);break}},this.load=function(){return n("load"),this},this.play=function(){return n("play"),this},this.togglePlay=function(){return n("togglePlay"),this},this.pause=function(t){return n("pause",t),this},this.stop=function(){return n("stop"),this},this.mute=function(){return n("mute"),this},this.unmute=function(){return n("unmute"),this},this.toggleMute=function(){return n("toggleMute"),this},this.setVolume=function(t){return n("setVolume",t),this},this.increaseVolume=function(t){return n("increaseVolume",t),this},this.decreaseVolume=function(t){return n("decreaseVolume",t),this},this.loop=function(){return n("loop"),this},this.unloop=function(){return n("unloop"),this},this.setTime=function(t){return n("setTime",t),this},this.set=function(t,e){return n("set",t,e),this},this.bind=function(t,e){return n("bind",t,e),this},this.unbind=function(t){return n("unbind",t),this},this.bindOnce=function(t,e){return n("bindOnce",t,e),this},this.trigger=function(t){return n("trigger",t),this},this.fade=function(t,e,i,u){return n("fade",t,e,i,u),this},this.fadeIn=function(t,e){return n("fadeIn",t,e),this},this.fadeOut=function(t,e){return n("fadeOut",t,e),this}},all:function(){return new t.group(t.sounds)},isSupported:function(){return!!t.el.canPlayType},isOGGSupported:function(){return!!t.el.canPlayType&&t.el.canPlayType('audio/ogg; codecs="vorbis"')},isWAVSupported:function(){return!!t.el.canPlayType&&t.el.canPlayType('audio/wav; codecs="1"')},isMP3Supported:function(){return!!t.el.canPlayType&&t.el.canPlayType("audio/mpeg;")},isAACSupported:function(){return!!t.el.canPlayType&&(t.el.canPlayType("audio/x-m4a;")||t.el.canPlayType("audio/aac;"))},toTimer:function(t,n){var e,i,u;return e=Math.floor(t/3600),e=isNaN(e)?"--":e>=10?e:"0"+e,i=n?Math.floor(t/60%60):Math.floor(t/60),i=isNaN(i)?"--":i>=10?i:"0"+i,u=Math.floor(t%60),u=isNaN(u)?"--":u>=10?u:"0"+u,n?e+":"+i+":"+u:i+":"+u},fromTimer:function(t){var n=(""+t).split(":");return n&&3==n.length&&(t=3600*parseInt(n[0],10)+60*parseInt(n[1],10)+parseInt(n[2],10)),n&&2==n.length&&(t=60*parseInt(n[0],10)+parseInt(n[1],10)),t},toPercent:function(t,n,e){var i=Math.pow(10,e||0);return Math.round(100*t/n*i)/i},fromPercent:function(t,n,e){var i=Math.pow(10,e||0);return Math.round(n/100*t*i)/i}};return t});;
+(function(name, context, factory) {
+    if (typeof module !== "undefined" && module.exports) {
+        module.exports = factory();
+    } else if (typeof context.define === "function" && context.define.amd) {
+        define(name, [], factory);
+    } else {
+        context[name] = factory();
+    }
+})("buzz", this, function() {
+    var buzz = {
+        defaults: {
+            autoplay: false,
+            duration: 5e3,
+            formats: [],
+            loop: false,
+            placeholder: "--",
+            preload: "metadata",
+            volume: 80,
+            document: document
+        },
+        types: {
+            mp3: "audio/mpeg",
+            ogg: "audio/ogg",
+            wav: "audio/wav",
+            aac: "audio/aac",
+            m4a: "audio/x-m4a"
+        },
+        sounds: [],
+        el: document.createElement("audio"),
+        sound: function(src, options) {
+            options = options || {};
+            var doc = options.document || buzz.defaults.document;
+            var pid = 0, events = [], eventsOnce = {}, supported = buzz.isSupported();
+            this.load = function() {
+                if (!supported) {
+                    return this;
+                }
+                this.sound.load();
+                return this;
+            };
+            this.play = function() {
+                if (!supported) {
+                    return this;
+                }
+                this.sound.play();
+                return this;
+            };
+            this.togglePlay = function() {
+                if (!supported) {
+                    return this;
+                }
+                if (this.sound.paused) {
+                    this.sound.play();
+                } else {
+                    this.sound.pause();
+                }
+                return this;
+            };
+            this.pause = function() {
+                if (!supported) {
+                    return this;
+                }
+                this.sound.pause();
+                return this;
+            };
+            this.isPaused = function() {
+                if (!supported) {
+                    return null;
+                }
+                return this.sound.paused;
+            };
+            this.stop = function() {
+                if (!supported) {
+                    return this;
+                }
+                this.setTime(0);
+                this.sound.pause();
+                return this;
+            };
+            this.isEnded = function() {
+                if (!supported) {
+                    return null;
+                }
+                return this.sound.ended;
+            };
+            this.loop = function() {
+                if (!supported) {
+                    return this;
+                }
+                this.sound.loop = "loop";
+                this.bind("ended.buzzloop", function() {
+                    this.currentTime = 0;
+                    this.play();
+                });
+                return this;
+            };
+            this.unloop = function() {
+                if (!supported) {
+                    return this;
+                }
+                this.sound.removeAttribute("loop");
+                this.unbind("ended.buzzloop");
+                return this;
+            };
+            this.mute = function() {
+                if (!supported) {
+                    return this;
+                }
+                this.sound.muted = true;
+                return this;
+            };
+            this.unmute = function() {
+                if (!supported) {
+                    return this;
+                }
+                this.sound.muted = false;
+                return this;
+            };
+            this.toggleMute = function() {
+                if (!supported) {
+                    return this;
+                }
+                this.sound.muted = !this.sound.muted;
+                return this;
+            };
+            this.isMuted = function() {
+                if (!supported) {
+                    return null;
+                }
+                return this.sound.muted;
+            };
+            this.setVolume = function(volume) {
+                if (!supported) {
+                    return this;
+                }
+                if (volume < 0) {
+                    volume = 0;
+                }
+                if (volume > 100) {
+                    volume = 100;
+                }
+                this.volume = volume;
+                this.sound.volume = volume / 100;
+                return this;
+            };
+            this.getVolume = function() {
+                if (!supported) {
+                    return this;
+                }
+                return this.volume;
+            };
+            this.increaseVolume = function(value) {
+                return this.setVolume(this.volume + (value || 1));
+            };
+            this.decreaseVolume = function(value) {
+                return this.setVolume(this.volume - (value || 1));
+            };
+            this.setTime = function(time) {
+                if (!supported) {
+                    return this;
+                }
+                var set = true;
+                this.whenReady(function() {
+                    if (set === true) {
+                        set = false;
+                        this.sound.currentTime = time;
+                    }
+                });
+                return this;
+            };
+            this.getTime = function() {
+                if (!supported) {
+                    return null;
+                }
+                var time = Math.round(this.sound.currentTime * 100) / 100;
+                return isNaN(time) ? buzz.defaults.placeholder : time;
+            };
+            this.setPercent = function(percent) {
+                if (!supported) {
+                    return this;
+                }
+                return this.setTime(buzz.fromPercent(percent, this.sound.duration));
+            };
+            this.getPercent = function() {
+                if (!supported) {
+                    return null;
+                }
+                var percent = Math.round(buzz.toPercent(this.sound.currentTime, this.sound.duration));
+                return isNaN(percent) ? buzz.defaults.placeholder : percent;
+            };
+            this.setSpeed = function(duration) {
+                if (!supported) {
+                    return this;
+                }
+                this.sound.playbackRate = duration;
+                return this;
+            };
+            this.getSpeed = function() {
+                if (!supported) {
+                    return null;
+                }
+                return this.sound.playbackRate;
+            };
+            this.getDuration = function() {
+                if (!supported) {
+                    return null;
+                }
+                var duration = Math.round(this.sound.duration * 100) / 100;
+                return isNaN(duration) ? buzz.defaults.placeholder : duration;
+            };
+            this.getPlayed = function() {
+                if (!supported) {
+                    return null;
+                }
+                return timerangeToArray(this.sound.played);
+            };
+            this.getBuffered = function() {
+                if (!supported) {
+                    return null;
+                }
+                return timerangeToArray(this.sound.buffered);
+            };
+            this.getSeekable = function() {
+                if (!supported) {
+                    return null;
+                }
+                return timerangeToArray(this.sound.seekable);
+            };
+            this.getErrorCode = function() {
+                if (supported && this.sound.error) {
+                    return this.sound.error.code;
+                }
+                return 0;
+            };
+            this.getErrorMessage = function() {
+                if (!supported) {
+                    return null;
+                }
+                switch (this.getErrorCode()) {
+                  case 1:
+                    return "MEDIA_ERR_ABORTED";
+
+                  case 2:
+                    return "MEDIA_ERR_NETWORK";
+
+                  case 3:
+                    return "MEDIA_ERR_DECODE";
+
+                  case 4:
+                    return "MEDIA_ERR_SRC_NOT_SUPPORTED";
+
+                  default:
+                    return null;
+                }
+            };
+            this.getStateCode = function() {
+                if (!supported) {
+                    return null;
+                }
+                return this.sound.readyState;
+            };
+            this.getStateMessage = function() {
+                if (!supported) {
+                    return null;
+                }
+                switch (this.getStateCode()) {
+                  case 0:
+                    return "HAVE_NOTHING";
+
+                  case 1:
+                    return "HAVE_METADATA";
+
+                  case 2:
+                    return "HAVE_CURRENT_DATA";
+
+                  case 3:
+                    return "HAVE_FUTURE_DATA";
+
+                  case 4:
+                    return "HAVE_ENOUGH_DATA";
+
+                  default:
+                    return null;
+                }
+            };
+            this.getNetworkStateCode = function() {
+                if (!supported) {
+                    return null;
+                }
+                return this.sound.networkState;
+            };
+            this.getNetworkStateMessage = function() {
+                if (!supported) {
+                    return null;
+                }
+                switch (this.getNetworkStateCode()) {
+                  case 0:
+                    return "NETWORK_EMPTY";
+
+                  case 1:
+                    return "NETWORK_IDLE";
+
+                  case 2:
+                    return "NETWORK_LOADING";
+
+                  case 3:
+                    return "NETWORK_NO_SOURCE";
+
+                  default:
+                    return null;
+                }
+            };
+            this.set = function(key, value) {
+                if (!supported) {
+                    return this;
+                }
+                this.sound[key] = value;
+                return this;
+            };
+            this.get = function(key) {
+                if (!supported) {
+                    return null;
+                }
+                return key ? this.sound[key] : this.sound;
+            };
+            this.bind = function(types, func) {
+                if (!supported) {
+                    return this;
+                }
+                types = types.split(" ");
+                var self = this, efunc = function(e) {
+                    func.call(self, e);
+                };
+                for (var t = 0; t < types.length; t++) {
+                    var type = types[t], idx = type;
+                    type = idx.split(".")[0];
+                    events.push({
+                        idx: idx,
+                        func: efunc
+                    });
+                    this.sound.addEventListener(type, efunc, true);
+                }
+                return this;
+            };
+            this.unbind = function(types) {
+                if (!supported) {
+                    return this;
+                }
+                types = types.split(" ");
+                for (var t = 0; t < types.length; t++) {
+                    var idx = types[t], type = idx.split(".")[0];
+                    for (var i = 0; i < events.length; i++) {
+                        var namespace = events[i].idx.split(".");
+                        if (events[i].idx == idx || namespace[1] && namespace[1] == idx.replace(".", "")) {
+                            this.sound.removeEventListener(type, events[i].func, true);
+                            events.splice(i, 1);
+                        }
+                    }
+                }
+                return this;
+            };
+            this.bindOnce = function(type, func) {
+                if (!supported) {
+                    return this;
+                }
+                var self = this;
+                eventsOnce[pid++] = false;
+                this.bind(type + "." + pid, function() {
+                    if (!eventsOnce[pid]) {
+                        eventsOnce[pid] = true;
+                        func.call(self);
+                    }
+                    self.unbind(type + "." + pid);
+                });
+                return this;
+            };
+            this.trigger = function(types) {
+                if (!supported) {
+                    return this;
+                }
+                types = types.split(" ");
+                for (var t = 0; t < types.length; t++) {
+                    var idx = types[t];
+                    for (var i = 0; i < events.length; i++) {
+                        var eventType = events[i].idx.split(".");
+                        if (events[i].idx == idx || eventType[0] && eventType[0] == idx.replace(".", "")) {
+                            var evt = doc.createEvent("HTMLEvents");
+                            evt.initEvent(eventType[0], false, true);
+                            this.sound.dispatchEvent(evt);
+                        }
+                    }
+                }
+                return this;
+            };
+            this.fadeTo = function(to, duration, callback) {
+                if (!supported) {
+                    return this;
+                }
+                if (duration instanceof Function) {
+                    callback = duration;
+                    duration = buzz.defaults.duration;
+                } else {
+                    duration = duration || buzz.defaults.duration;
+                }
+                var from = this.volume, delay = duration / Math.abs(from - to), self = this;
+                this.play();
+                function doFade() {
+                    setTimeout(function() {
+                        if (from < to && self.volume < to) {
+                            self.setVolume(self.volume += 1);
+                            doFade();
+                        } else if (from > to && self.volume > to) {
+                            self.setVolume(self.volume -= 1);
+                            doFade();
+                        } else if (callback instanceof Function) {
+                            callback.apply(self);
+                        }
+                    }, delay);
+                }
+                this.whenReady(function() {
+                    doFade();
+                });
+                return this;
+            };
+            this.fadeIn = function(duration, callback) {
+                if (!supported) {
+                    return this;
+                }
+                return this.setVolume(0).fadeTo(100, duration, callback);
+            };
+            this.fadeOut = function(duration, callback) {
+                if (!supported) {
+                    return this;
+                }
+                return this.fadeTo(0, duration, callback);
+            };
+            this.fadeWith = function(sound, duration) {
+                if (!supported) {
+                    return this;
+                }
+                this.fadeOut(duration, function() {
+                    this.stop();
+                });
+                sound.play().fadeIn(duration);
+                return this;
+            };
+            this.whenReady = function(func) {
+                if (!supported) {
+                    return null;
+                }
+                var self = this;
+                if (this.sound.readyState === 0) {
+                    this.bind("canplay.buzzwhenready", function() {
+                        func.call(self);
+                    });
+                } else {
+                    func.call(self);
+                }
+            };
+            function timerangeToArray(timeRange) {
+                var array = [], length = timeRange.length - 1;
+                for (var i = 0; i <= length; i++) {
+                    array.push({
+                        start: timeRange.start(i),
+                        end: timeRange.end(i)
+                    });
+                }
+                return array;
+            }
+            function getExt(filename) {
+                return filename.split(".").pop();
+            }
+            function addSource(sound, src) {
+                var source = doc.createElement("source");
+                source.src = src;
+                if (buzz.types[getExt(src)]) {
+                    source.type = buzz.types[getExt(src)];
+                }
+                sound.appendChild(source);
+            }
+            if (supported && src) {
+                for (var i in buzz.defaults) {
+                    if (buzz.defaults.hasOwnProperty(i)) {
+                        options[i] = options[i] || buzz.defaults[i];
+                    }
+                }
+                this.sound = doc.createElement("audio");
+                if (src instanceof Array) {
+                    for (var j in src) {
+                        if (src.hasOwnProperty(j)) {
+                            addSource(this.sound, src[j]);
+                        }
+                    }
+                } else if (options.formats.length) {
+                    for (var k in options.formats) {
+                        if (options.formats.hasOwnProperty(k)) {
+                            addSource(this.sound, src + "." + options.formats[k]);
+                        }
+                    }
+                } else {
+                    addSource(this.sound, src);
+                }
+                if (options.loop) {
+                    this.loop();
+                }
+                if (options.autoplay) {
+                    this.sound.autoplay = "autoplay";
+                }
+                if (options.preload === true) {
+                    this.sound.preload = "auto";
+                } else if (options.preload === false) {
+                    this.sound.preload = "none";
+                } else {
+                    this.sound.preload = options.preload;
+                }
+                this.setVolume(options.volume);
+                buzz.sounds.push(this);
+            }
+        },
+        group: function(sounds) {
+            sounds = argsToArray(sounds, arguments);
+            this.getSounds = function() {
+                return sounds;
+            };
+            this.add = function(soundArray) {
+                soundArray = argsToArray(soundArray, arguments);
+                for (var a = 0; a < soundArray.length; a++) {
+                    sounds.push(soundArray[a]);
+                }
+            };
+            this.remove = function(soundArray) {
+                soundArray = argsToArray(soundArray, arguments);
+                for (var a = 0; a < soundArray.length; a++) {
+                    for (var i = 0; i < sounds.length; i++) {
+                        if (sounds[i] == soundArray[a]) {
+                            sounds.splice(i, 1);
+                            break;
+                        }
+                    }
+                }
+            };
+            this.load = function() {
+                fn("load");
+                return this;
+            };
+            this.play = function() {
+                fn("play");
+                return this;
+            };
+            this.togglePlay = function() {
+                fn("togglePlay");
+                return this;
+            };
+            this.pause = function(time) {
+                fn("pause", time);
+                return this;
+            };
+            this.stop = function() {
+                fn("stop");
+                return this;
+            };
+            this.mute = function() {
+                fn("mute");
+                return this;
+            };
+            this.unmute = function() {
+                fn("unmute");
+                return this;
+            };
+            this.toggleMute = function() {
+                fn("toggleMute");
+                return this;
+            };
+            this.setVolume = function(volume) {
+                fn("setVolume", volume);
+                return this;
+            };
+            this.increaseVolume = function(value) {
+                fn("increaseVolume", value);
+                return this;
+            };
+            this.decreaseVolume = function(value) {
+                fn("decreaseVolume", value);
+                return this;
+            };
+            this.loop = function() {
+                fn("loop");
+                return this;
+            };
+            this.unloop = function() {
+                fn("unloop");
+                return this;
+            };
+            this.setTime = function(time) {
+                fn("setTime", time);
+                return this;
+            };
+            this.set = function(key, value) {
+                fn("set", key, value);
+                return this;
+            };
+            this.bind = function(type, func) {
+                fn("bind", type, func);
+                return this;
+            };
+            this.unbind = function(type) {
+                fn("unbind", type);
+                return this;
+            };
+            this.bindOnce = function(type, func) {
+                fn("bindOnce", type, func);
+                return this;
+            };
+            this.trigger = function(type) {
+                fn("trigger", type);
+                return this;
+            };
+            this.fade = function(from, to, duration, callback) {
+                fn("fade", from, to, duration, callback);
+                return this;
+            };
+            this.fadeIn = function(duration, callback) {
+                fn("fadeIn", duration, callback);
+                return this;
+            };
+            this.fadeOut = function(duration, callback) {
+                fn("fadeOut", duration, callback);
+                return this;
+            };
+            function fn() {
+                var args = argsToArray(null, arguments), func = args.shift();
+                for (var i = 0; i < sounds.length; i++) {
+                    sounds[i][func].apply(sounds[i], args);
+                }
+            }
+            function argsToArray(array, args) {
+                return array instanceof Array ? array : Array.prototype.slice.call(args);
+            }
+        },
+        all: function() {
+            return new buzz.group(buzz.sounds);
+        },
+        isSupported: function() {
+            return !!buzz.el.canPlayType;
+        },
+        isOGGSupported: function() {
+            return !!buzz.el.canPlayType && buzz.el.canPlayType('audio/ogg; codecs="vorbis"');
+        },
+        isWAVSupported: function() {
+            return !!buzz.el.canPlayType && buzz.el.canPlayType('audio/wav; codecs="1"');
+        },
+        isMP3Supported: function() {
+            return !!buzz.el.canPlayType && buzz.el.canPlayType("audio/mpeg;");
+        },
+        isAACSupported: function() {
+            return !!buzz.el.canPlayType && (buzz.el.canPlayType("audio/x-m4a;") || buzz.el.canPlayType("audio/aac;"));
+        },
+        toTimer: function(time, withHours) {
+            var h, m, s;
+            h = Math.floor(time / 3600);
+            h = isNaN(h) ? "--" : h >= 10 ? h : "0" + h;
+            m = withHours ? Math.floor(time / 60 % 60) : Math.floor(time / 60);
+            m = isNaN(m) ? "--" : m >= 10 ? m : "0" + m;
+            s = Math.floor(time % 60);
+            s = isNaN(s) ? "--" : s >= 10 ? s : "0" + s;
+            return withHours ? h + ":" + m + ":" + s : m + ":" + s;
+        },
+        fromTimer: function(time) {
+            var splits = time.toString().split(":");
+            if (splits && splits.length == 3) {
+                time = parseInt(splits[0], 10) * 3600 + parseInt(splits[1], 10) * 60 + parseInt(splits[2], 10);
+            }
+            if (splits && splits.length == 2) {
+                time = parseInt(splits[0], 10) * 60 + parseInt(splits[1], 10);
+            }
+            return time;
+        },
+        toPercent: function(value, total, decimal) {
+            var r = Math.pow(10, decimal || 0);
+            return Math.round(value * 100 / total * r) / r;
+        },
+        fromPercent: function(percent, total, decimal) {
+            var r = Math.pow(10, decimal || 0);
+            return Math.round(total / 100 * percent * r) / r;
+        }
+    };
+    return buzz;
+});;
 /**
  * BxSlider v4.1.1 - Fully loaded, responsive content slider
  * http://bxslider.com
@@ -19,6 +706,118 @@
  * Released under the MIT license - http://opensource.org/licenses/MIT
  */
 !function(t){var e={},s={mode:"horizontal",slideSelector:"",infiniteLoop:!0,hideControlOnEnd:!1,speed:500,easing:null,slideMargin:0,startSlide:0,randomStart:!1,captions:!1,ticker:!1,tickerHover:!1,adaptiveHeight:!1,adaptiveHeightSpeed:500,video:!1,useCSS:!0,preloadImages:"visible",responsive:!0,touchEnabled:!0,swipeThreshold:50,oneToOneTouch:!0,preventDefaultSwipeX:!0,preventDefaultSwipeY:!1,pager:!0,pagerType:"full",pagerShortSeparator:" / ",pagerSelector:null,buildPager:null,pagerCustom:null,controls:!0,nextText:"Next",prevText:"Prev",nextSelector:null,prevSelector:null,autoControls:!1,startText:"Start",stopText:"Stop",autoControlsCombine:!1,autoControlsSelector:null,auto:!1,pause:4e3,autoStart:!0,autoDirection:"next",autoHover:!1,autoDelay:0,minSlides:1,maxSlides:1,moveSlides:0,slideWidth:0,onSliderLoad:function(){},onSlideBefore:function(){},onSlideAfter:function(){},onSlideNext:function(){},onSlidePrev:function(){}};t.fn.bxSlider=function(n){if(0==this.length)return this;if(this.length>1)return this.each(function(){t(this).bxSlider(n)}),this;var o={},r=this;e.el=this;var a=t(window).width(),l=t(window).height(),d=function(){o.settings=t.extend({},s,n),o.settings.slideWidth=parseInt(o.settings.slideWidth),o.children=r.children(o.settings.slideSelector),o.children.length<o.settings.minSlides&&(o.settings.minSlides=o.children.length),o.children.length<o.settings.maxSlides&&(o.settings.maxSlides=o.children.length),o.settings.randomStart&&(o.settings.startSlide=Math.floor(Math.random()*o.children.length)),o.active={index:o.settings.startSlide},o.carousel=o.settings.minSlides>1||o.settings.maxSlides>1,o.carousel&&(o.settings.preloadImages="all"),o.minThreshold=o.settings.minSlides*o.settings.slideWidth+(o.settings.minSlides-1)*o.settings.slideMargin,o.maxThreshold=o.settings.maxSlides*o.settings.slideWidth+(o.settings.maxSlides-1)*o.settings.slideMargin,o.working=!1,o.controls={},o.interval=null,o.animProp="vertical"==o.settings.mode?"top":"left",o.usingCSS=o.settings.useCSS&&"fade"!=o.settings.mode&&function(){var t=document.createElement("div"),e=["WebkitPerspective","MozPerspective","OPerspective","msPerspective"];for(var i in e)if(void 0!==t.style[e[i]])return o.cssPrefix=e[i].replace("Perspective","").toLowerCase(),o.animProp="-"+o.cssPrefix+"-transform",!0;return!1}(),"vertical"==o.settings.mode&&(o.settings.maxSlides=o.settings.minSlides),r.data("origStyle",r.attr("style")),r.children(o.settings.slideSelector).each(function(){t(this).data("origStyle",t(this).attr("style"))}),c()},c=function(){r.wrap('<div class="bx-wrapper"><div class="bx-viewport"></div></div>'),o.viewport=r.parent(),o.loader=t('<div class="bx-loading" />'),o.viewport.prepend(o.loader),r.css({width:"horizontal"==o.settings.mode?100*o.children.length+215+"%":"auto",position:"relative"}),o.usingCSS&&o.settings.easing?r.css("-"+o.cssPrefix+"-transition-timing-function",o.settings.easing):o.settings.easing||(o.settings.easing="swing"),f(),o.viewport.css({width:"100%",overflow:"hidden",position:"relative"}),o.viewport.parent().css({maxWidth:v()}),o.settings.pager||o.viewport.parent().css({margin:"0 auto 0px"}),o.children.css({"float":"horizontal"==o.settings.mode?"left":"none",listStyle:"none",position:"relative"}),o.children.css("width",u()),"horizontal"==o.settings.mode&&o.settings.slideMargin>0&&o.children.css("marginRight",o.settings.slideMargin),"vertical"==o.settings.mode&&o.settings.slideMargin>0&&o.children.css("marginBottom",o.settings.slideMargin),"fade"==o.settings.mode&&(o.children.css({position:"absolute",zIndex:0,display:"none"}),o.children.eq(o.settings.startSlide).css({zIndex:50,display:"block"})),o.controls.el=t('<div class="bx-controls" />'),o.settings.captions&&P(),o.active.last=o.settings.startSlide==x()-1,o.settings.video&&r.fitVids();var e=o.children.eq(o.settings.startSlide);"all"==o.settings.preloadImages&&(e=o.children),o.settings.ticker?o.settings.pager=!1:(o.settings.pager&&T(),o.settings.controls&&C(),o.settings.auto&&o.settings.autoControls&&E(),(o.settings.controls||o.settings.autoControls||o.settings.pager)&&o.viewport.after(o.controls.el)),g(e,h)},g=function(e,i){var s=e.find("img, iframe").length;if(0==s)return i(),void 0;var n=0;e.find("img, iframe").each(function(){t(this).one("load",function(){++n==s&&i()}).each(function(){this.complete&&t(this).load()})})},h=function(){if(o.settings.infiniteLoop&&"fade"!=o.settings.mode&&!o.settings.ticker){var e="vertical"==o.settings.mode?o.settings.minSlides:o.settings.maxSlides,i=o.children.slice(0,e).clone().addClass("bx-clone"),s=o.children.slice(-e).clone().addClass("bx-clone");r.append(i).prepend(s)}o.loader.remove(),S(),"vertical"==o.settings.mode&&(o.settings.adaptiveHeight=!0),o.viewport.height(p()),r.redrawSlider(),o.settings.onSliderLoad(o.active.index),o.initialized=!0,o.settings.responsive&&t(window).bind("resize",B),o.settings.auto&&o.settings.autoStart&&H(),o.settings.ticker&&L(),o.settings.pager&&I(o.settings.startSlide),o.settings.controls&&W(),o.settings.touchEnabled&&!o.settings.ticker&&O()},p=function(){var e=0,s=t();if("vertical"==o.settings.mode||o.settings.adaptiveHeight)if(o.carousel){var n=1==o.settings.moveSlides?o.active.index:o.active.index*m();for(s=o.children.eq(n),i=1;i<=o.settings.maxSlides-1;i++)s=n+i>=o.children.length?s.add(o.children.eq(i-1)):s.add(o.children.eq(n+i))}else s=o.children.eq(o.active.index);else s=o.children;return"vertical"==o.settings.mode?(s.each(function(){e+=t(this).outerHeight()}),o.settings.slideMargin>0&&(e+=o.settings.slideMargin*(o.settings.minSlides-1))):e=Math.max.apply(Math,s.map(function(){return t(this).outerHeight(!1)}).get()),e},v=function(){var t="100%";return o.settings.slideWidth>0&&(t="horizontal"==o.settings.mode?o.settings.maxSlides*o.settings.slideWidth+(o.settings.maxSlides-1)*o.settings.slideMargin:o.settings.slideWidth),t},u=function(){var t=o.settings.slideWidth,e=o.viewport.width();return 0==o.settings.slideWidth||o.settings.slideWidth>e&&!o.carousel||"vertical"==o.settings.mode?t=e:o.settings.maxSlides>1&&"horizontal"==o.settings.mode&&(e>o.maxThreshold||e<o.minThreshold&&(t=(e-o.settings.slideMargin*(o.settings.minSlides-1))/o.settings.minSlides)),t},f=function(){var t=1;if("horizontal"==o.settings.mode&&o.settings.slideWidth>0)if(o.viewport.width()<o.minThreshold)t=o.settings.minSlides;else if(o.viewport.width()>o.maxThreshold)t=o.settings.maxSlides;else{var e=o.children.first().width();t=Math.floor(o.viewport.width()/e)}else"vertical"==o.settings.mode&&(t=o.settings.minSlides);return t},x=function(){var t=0;if(o.settings.moveSlides>0)if(o.settings.infiniteLoop)t=o.children.length/m();else for(var e=0,i=0;e<o.children.length;)++t,e=i+f(),i+=o.settings.moveSlides<=f()?o.settings.moveSlides:f();else t=Math.ceil(o.children.length/f());return t},m=function(){return o.settings.moveSlides>0&&o.settings.moveSlides<=f()?o.settings.moveSlides:f()},S=function(){if(o.children.length>o.settings.maxSlides&&o.active.last&&!o.settings.infiniteLoop){if("horizontal"==o.settings.mode){var t=o.children.last(),e=t.position();b(-(e.left-(o.viewport.width()-t.width())),"reset",0)}else if("vertical"==o.settings.mode){var i=o.children.length-o.settings.minSlides,e=o.children.eq(i).position();b(-e.top,"reset",0)}}else{var e=o.children.eq(o.active.index*m()).position();o.active.index==x()-1&&(o.active.last=!0),void 0!=e&&("horizontal"==o.settings.mode?b(-e.left,"reset",0):"vertical"==o.settings.mode&&b(-e.top,"reset",0))}},b=function(t,e,i,s){if(o.usingCSS){var n="vertical"==o.settings.mode?"translate3d(0, "+t+"px, 0)":"translate3d("+t+"px, 0, 0)";r.css("-"+o.cssPrefix+"-transition-duration",i/1e3+"s"),"slide"==e?(r.css(o.animProp,n),r.bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",function(){r.unbind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd"),D()})):"reset"==e?r.css(o.animProp,n):"ticker"==e&&(r.css("-"+o.cssPrefix+"-transition-timing-function","linear"),r.css(o.animProp,n),r.bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",function(){r.unbind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd"),b(s.resetValue,"reset",0),N()}))}else{var a={};a[o.animProp]=t,"slide"==e?r.animate(a,i,o.settings.easing,function(){D()}):"reset"==e?r.css(o.animProp,t):"ticker"==e&&r.animate(a,speed,"linear",function(){b(s.resetValue,"reset",0),N()})}},w=function(){for(var e="",i=x(),s=0;i>s;s++){var n="";o.settings.buildPager&&t.isFunction(o.settings.buildPager)?(n=o.settings.buildPager(s),o.pagerEl.addClass("bx-custom-pager")):(n=s+1,o.pagerEl.addClass("bx-default-pager")),e+='<div class="bx-pager-item"><a href="" data-slide-index="'+s+'" class="bx-pager-link">'+n+"</a></div>"}o.pagerEl.html(e)},T=function(){o.settings.pagerCustom?o.pagerEl=t(o.settings.pagerCustom):(o.pagerEl=t('<div class="bx-pager" />'),o.settings.pagerSelector?t(o.settings.pagerSelector).html(o.pagerEl):o.controls.el.addClass("bx-has-pager").append(o.pagerEl),w()),o.pagerEl.delegate("a","click",q)},C=function(){o.controls.next=t('<a class="bx-next" href="">'+o.settings.nextText+"</a>"),o.controls.prev=t('<a class="bx-prev" href="">'+o.settings.prevText+"</a>"),o.controls.next.bind("click",y),o.controls.prev.bind("click",z),o.settings.nextSelector&&t(o.settings.nextSelector).append(o.controls.next),o.settings.prevSelector&&t(o.settings.prevSelector).append(o.controls.prev),o.settings.nextSelector||o.settings.prevSelector||(o.controls.directionEl=t('<div class="bx-controls-direction" />'),o.controls.directionEl.append(o.controls.prev).append(o.controls.next),o.controls.el.addClass("bx-has-controls-direction").append(o.controls.directionEl))},E=function(){o.controls.start=t('<div class="bx-controls-auto-item"><a class="bx-start" href="">'+o.settings.startText+"</a></div>"),o.controls.stop=t('<div class="bx-controls-auto-item"><a class="bx-stop" href="">'+o.settings.stopText+"</a></div>"),o.controls.autoEl=t('<div class="bx-controls-auto" />'),o.controls.autoEl.delegate(".bx-start","click",k),o.controls.autoEl.delegate(".bx-stop","click",M),o.settings.autoControlsCombine?o.controls.autoEl.append(o.controls.start):o.controls.autoEl.append(o.controls.start).append(o.controls.stop),o.settings.autoControlsSelector?t(o.settings.autoControlsSelector).html(o.controls.autoEl):o.controls.el.addClass("bx-has-controls-auto").append(o.controls.autoEl),A(o.settings.autoStart?"stop":"start")},P=function(){o.children.each(function(){var e=t(this).find("img:first").attr("title");void 0!=e&&(""+e).length&&t(this).append('<div class="bx-caption"><span>'+e+"</span></div>")})},y=function(t){o.settings.auto&&r.stopAuto(),r.goToNextSlide(),t.preventDefault()},z=function(t){o.settings.auto&&r.stopAuto(),r.goToPrevSlide(),t.preventDefault()},k=function(t){r.startAuto(),t.preventDefault()},M=function(t){r.stopAuto(),t.preventDefault()},q=function(e){o.settings.auto&&r.stopAuto();var i=t(e.currentTarget),s=parseInt(i.attr("data-slide-index"));s!=o.active.index&&r.goToSlide(s),e.preventDefault()},I=function(e){var i=o.children.length;return"short"==o.settings.pagerType?(o.settings.maxSlides>1&&(i=Math.ceil(o.children.length/o.settings.maxSlides)),o.pagerEl.html(e+1+o.settings.pagerShortSeparator+i),void 0):(o.pagerEl.find("a").removeClass("active"),o.pagerEl.each(function(i,s){t(s).find("a").eq(e).addClass("active")}),void 0)},D=function(){if(o.settings.infiniteLoop){var t="";0==o.active.index?t=o.children.eq(0).position():o.active.index==x()-1&&o.carousel?t=o.children.eq((x()-1)*m()).position():o.active.index==o.children.length-1&&(t=o.children.eq(o.children.length-1).position()),"horizontal"==o.settings.mode?b(-t.left,"reset",0):"vertical"==o.settings.mode&&b(-t.top,"reset",0)}o.working=!1,o.settings.onSlideAfter(o.children.eq(o.active.index),o.oldIndex,o.active.index)},A=function(t){o.settings.autoControlsCombine?o.controls.autoEl.html(o.controls[t]):(o.controls.autoEl.find("a").removeClass("active"),o.controls.autoEl.find("a:not(.bx-"+t+")").addClass("active"))},W=function(){1==x()?(o.controls.prev.addClass("disabled"),o.controls.next.addClass("disabled")):!o.settings.infiniteLoop&&o.settings.hideControlOnEnd&&(0==o.active.index?(o.controls.prev.addClass("disabled"),o.controls.next.removeClass("disabled")):o.active.index==x()-1?(o.controls.next.addClass("disabled"),o.controls.prev.removeClass("disabled")):(o.controls.prev.removeClass("disabled"),o.controls.next.removeClass("disabled")))},H=function(){o.settings.autoDelay>0?setTimeout(r.startAuto,o.settings.autoDelay):r.startAuto(),o.settings.autoHover&&r.hover(function(){o.interval&&(r.stopAuto(!0),o.autoPaused=!0)},function(){o.autoPaused&&(r.startAuto(!0),o.autoPaused=null)})},L=function(){var e=0;if("next"==o.settings.autoDirection)r.append(o.children.clone().addClass("bx-clone"));else{r.prepend(o.children.clone().addClass("bx-clone"));var i=o.children.first().position();e="horizontal"==o.settings.mode?-i.left:-i.top}b(e,"reset",0),o.settings.pager=!1,o.settings.controls=!1,o.settings.autoControls=!1,o.settings.tickerHover&&!o.usingCSS&&o.viewport.hover(function(){r.stop()},function(){var e=0;o.children.each(function(){e+="horizontal"==o.settings.mode?t(this).outerWidth(!0):t(this).outerHeight(!0)});var i=o.settings.speed/e,s="horizontal"==o.settings.mode?"left":"top",n=i*(e-Math.abs(parseInt(r.css(s))));N(n)}),N()},N=function(t){speed=t?t:o.settings.speed;var e={left:0,top:0},i={left:0,top:0};"next"==o.settings.autoDirection?e=r.find(".bx-clone").first().position():i=o.children.first().position();var s="horizontal"==o.settings.mode?-e.left:-e.top,n="horizontal"==o.settings.mode?-i.left:-i.top,a={resetValue:n};b(s,"ticker",speed,a)},O=function(){o.touch={start:{x:0,y:0},end:{x:0,y:0}},o.viewport.bind("touchstart",X)},X=function(t){if(o.working)t.preventDefault();else{o.touch.originalPos=r.position();var e=t.originalEvent;o.touch.start.x=e.changedTouches[0].pageX,o.touch.start.y=e.changedTouches[0].pageY,o.viewport.bind("touchmove",Y),o.viewport.bind("touchend",V)}},Y=function(t){var e=t.originalEvent,i=Math.abs(e.changedTouches[0].pageX-o.touch.start.x),s=Math.abs(e.changedTouches[0].pageY-o.touch.start.y);if(3*i>s&&o.settings.preventDefaultSwipeX?t.preventDefault():3*s>i&&o.settings.preventDefaultSwipeY&&t.preventDefault(),"fade"!=o.settings.mode&&o.settings.oneToOneTouch){var n=0;if("horizontal"==o.settings.mode){var r=e.changedTouches[0].pageX-o.touch.start.x;n=o.touch.originalPos.left+r}else{var r=e.changedTouches[0].pageY-o.touch.start.y;n=o.touch.originalPos.top+r}b(n,"reset",0)}},V=function(t){o.viewport.unbind("touchmove",Y);var e=t.originalEvent,i=0;if(o.touch.end.x=e.changedTouches[0].pageX,o.touch.end.y=e.changedTouches[0].pageY,"fade"==o.settings.mode){var s=Math.abs(o.touch.start.x-o.touch.end.x);s>=o.settings.swipeThreshold&&(o.touch.start.x>o.touch.end.x?r.goToNextSlide():r.goToPrevSlide(),r.stopAuto())}else{var s=0;"horizontal"==o.settings.mode?(s=o.touch.end.x-o.touch.start.x,i=o.touch.originalPos.left):(s=o.touch.end.y-o.touch.start.y,i=o.touch.originalPos.top),!o.settings.infiniteLoop&&(0==o.active.index&&s>0||o.active.last&&0>s)?b(i,"reset",200):Math.abs(s)>=o.settings.swipeThreshold?(0>s?r.goToNextSlide():r.goToPrevSlide(),r.stopAuto()):b(i,"reset",200)}o.viewport.unbind("touchend",V)},B=function(){var e=t(window).width(),i=t(window).height();(a!=e||l!=i)&&(a=e,l=i,r.redrawSlider())};return r.goToSlide=function(e,i){if(!o.working&&o.active.index!=e)if(o.working=!0,o.oldIndex=o.active.index,o.active.index=0>e?x()-1:e>=x()?0:e,o.settings.onSlideBefore(o.children.eq(o.active.index),o.oldIndex,o.active.index),"next"==i?o.settings.onSlideNext(o.children.eq(o.active.index),o.oldIndex,o.active.index):"prev"==i&&o.settings.onSlidePrev(o.children.eq(o.active.index),o.oldIndex,o.active.index),o.active.last=o.active.index>=x()-1,o.settings.pager&&I(o.active.index),o.settings.controls&&W(),"fade"==o.settings.mode)o.settings.adaptiveHeight&&o.viewport.height()!=p()&&o.viewport.animate({height:p()},o.settings.adaptiveHeightSpeed),o.children.filter(":visible").fadeOut(o.settings.speed).css({zIndex:0}),o.children.eq(o.active.index).css("zIndex",51).fadeIn(o.settings.speed,function(){t(this).css("zIndex",50),D()});else{o.settings.adaptiveHeight&&o.viewport.height()!=p()&&o.viewport.animate({height:p()},o.settings.adaptiveHeightSpeed);var s=0,n={left:0,top:0};if(!o.settings.infiniteLoop&&o.carousel&&o.active.last)if("horizontal"==o.settings.mode){var a=o.children.eq(o.children.length-1);n=a.position(),s=o.viewport.width()-a.outerWidth()}else{var l=o.children.length-o.settings.minSlides;n=o.children.eq(l).position()}else if(o.carousel&&o.active.last&&"prev"==i){var d=1==o.settings.moveSlides?o.settings.maxSlides-m():(x()-1)*m()-(o.children.length-o.settings.maxSlides),a=r.children(".bx-clone").eq(d);n=a.position()}else if("next"==i&&0==o.active.index)n=r.find("> .bx-clone").eq(o.settings.maxSlides).position(),o.active.last=!1;else if(e>=0){var c=e*m();n=o.children.eq(c).position()}if("undefined"!=typeof n){var g="horizontal"==o.settings.mode?-(n.left-s):-n.top;b(g,"slide",o.settings.speed)}}},r.goToNextSlide=function(){if(o.settings.infiniteLoop||!o.active.last){var t=parseInt(o.active.index)+1;r.goToSlide(t,"next")}},r.goToPrevSlide=function(){if(o.settings.infiniteLoop||0!=o.active.index){var t=parseInt(o.active.index)-1;r.goToSlide(t,"prev")}},r.startAuto=function(t){o.interval||(o.interval=setInterval(function(){"next"==o.settings.autoDirection?r.goToNextSlide():r.goToPrevSlide()},o.settings.pause),o.settings.autoControls&&1!=t&&A("stop"))},r.stopAuto=function(t){o.interval&&(clearInterval(o.interval),o.interval=null,o.settings.autoControls&&1!=t&&A("start"))},r.getCurrentSlide=function(){return o.active.index},r.getSlideCount=function(){return o.children.length},r.redrawSlider=function(){o.children.add(r.find(".bx-clone")).outerWidth(u()),o.viewport.css("height",p()),o.settings.ticker||S(),o.active.last&&(o.active.index=x()-1),o.active.index>=x()&&(o.active.last=!0),o.settings.pager&&!o.settings.pagerCustom&&(w(),I(o.active.index))},r.destroySlider=function(){o.initialized&&(o.initialized=!1,t(".bx-clone",this).remove(),o.children.each(function(){void 0!=t(this).data("origStyle")?t(this).attr("style",t(this).data("origStyle")):t(this).removeAttr("style")}),void 0!=t(this).data("origStyle")?this.attr("style",t(this).data("origStyle")):t(this).removeAttr("style"),t(this).unwrap().unwrap(),o.controls.el&&o.controls.el.remove(),o.controls.next&&o.controls.next.remove(),o.controls.prev&&o.controls.prev.remove(),o.pagerEl&&o.pagerEl.remove(),t(".bx-caption",this).remove(),o.controls.autoEl&&o.controls.autoEl.remove(),clearInterval(o.interval),o.settings.responsive&&t(window).unbind("resize",B))},r.reloadSlider=function(t){void 0!=t&&(n=t),r.destroySlider(),d()},d(),this}}(jQuery);;
+/*
+ * jQuery Hotkeys Plugin
+ * Copyright 2010, John Resig
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ * Based upon the plugin by Tzury Bar Yochay:
+ * http://github.com/tzuryby/hotkeys
+ *
+ * Original idea by:
+ * Binny V A, http://www.openjs.com/scripts/events/keyboard_shortcuts/
+*/
+
+/*
+ * One small change is: now keys are passed by object { keys: '...' }
+ * Might be useful, when you want to pass some other data to your handler
+ */
+
+(function(jQuery){
+	
+	jQuery.hotkeys = {
+		version: "0.8",
+
+		specialKeys: {
+			8: "backspace", 9: "tab", 10: "return", 13: "return", 16: "shift", 17: "ctrl", 18: "alt", 19: "pause",
+			20: "capslock", 27: "esc", 32: "space", 33: "pageup", 34: "pagedown", 35: "end", 36: "home",
+			37: "left", 38: "up", 39: "right", 40: "down", 45: "insert", 46: "del", 
+			96: "0", 97: "1", 98: "2", 99: "3", 100: "4", 101: "5", 102: "6", 103: "7",
+			104: "8", 105: "9", 106: "*", 107: "+", 109: "-", 110: ".", 111 : "/", 
+			112: "f1", 113: "f2", 114: "f3", 115: "f4", 116: "f5", 117: "f6", 118: "f7", 119: "f8", 
+			120: "f9", 121: "f10", 122: "f11", 123: "f12", 144: "numlock", 145: "scroll", 186: ";", 191: "/",
+			220: "\\", 222: "'", 224: "meta"
+		},
+	
+		shiftNums: {
+			"`": "~", "1": "!", "2": "@", "3": "#", "4": "$", "5": "%", "6": "^", "7": "&", 
+			"8": "*", "9": "(", "0": ")", "-": "_", "=": "+", ";": ": ", "'": "\"", ",": "<", 
+			".": ">",  "/": "?",  "\\": "|"
+		}
+	};
+
+	function keyHandler( handleObj ) {
+		if ( typeof handleObj.data === "string" ) {
+			handleObj.data = { keys: handleObj.data };
+		}
+
+		// Only care when a possible input has been specified
+		if ( !handleObj.data || !handleObj.data.keys || typeof handleObj.data.keys !== "string" ) {
+			return;
+		}
+
+		var origHandler = handleObj.handler,
+			keys = handleObj.data.keys.toLowerCase().split(" "),
+			textAcceptingInputTypes = ["text", "password", "number", "email", "url", "range", "date", "month", "week", "time", "datetime", "datetime-local", "search", "color", "tel"];
+	
+		handleObj.handler = function( event ) {
+			// Don't fire in text-accepting inputs that we didn't directly bind to
+			if ( this !== event.target && (/textarea|select/i.test( event.target.nodeName ) ||
+				jQuery.inArray(event.target.type, textAcceptingInputTypes) > -1 ) ) {
+				return;
+			}
+
+			var special = jQuery.hotkeys.specialKeys[ event.keyCode ],
+				// character codes are available only in keypress
+				character = event.type === "keypress" && String.fromCharCode( event.which ).toLowerCase(),
+				modif = "", possible = {};
+
+			// check combinations (alt|ctrl|shift+anything)
+			if ( event.altKey && special !== "alt" ) {
+				modif += "alt+";
+			}
+
+			if ( event.ctrlKey && special !== "ctrl" ) {
+				modif += "ctrl+";
+			}
+			
+			// TODO: Need to make sure this works consistently across platforms
+			if ( event.metaKey && !event.ctrlKey && special !== "meta" ) {
+				modif += "meta+";
+			}
+
+			if ( event.shiftKey && special !== "shift" ) {
+				modif += "shift+";
+			}
+
+			if ( special ) {
+				possible[ modif + special ] = true;
+			}
+
+			if ( character ) {
+				possible[ modif + character ] = true;
+				possible[ modif + jQuery.hotkeys.shiftNums[ character ] ] = true;
+
+				// "$" can be triggered as "Shift+4" or "Shift+$" or just "$"
+				if ( modif === "shift+" ) {
+					possible[ jQuery.hotkeys.shiftNums[ character ] ] = true;
+				}
+			}
+
+			for ( var i = 0, l = keys.length; i < l; i++ ) {
+				if ( possible[ keys[i] ] ) {
+					return origHandler.apply( this, arguments );
+				}
+			}
+		};
+	}
+
+	jQuery.each([ "keydown", "keyup", "keypress" ], function() {
+		jQuery.event.special[ this ] = { add: keyHandler };
+	});
+
+})( this.jQuery );
+;
 /*mousewheel*/
 (function(a){function d(b){var c=b||window.event,d=[].slice.call(arguments,1),e=0,f=!0,g=0,h=0;return b=a.event.fix(c),b.type="mousewheel",c.wheelDelta&&(e=c.wheelDelta/120),c.detail&&(e=-c.detail/3),h=e,c.axis!==undefined&&c.axis===c.HORIZONTAL_AXIS&&(h=0,g=-1*e),c.wheelDeltaY!==undefined&&(h=c.wheelDeltaY/120),c.wheelDeltaX!==undefined&&(g=-1*c.wheelDeltaX/120),d.unshift(b,e,g,h),(a.event.dispatch||a.event.handle).apply(this,d)}var b=["DOMMouseScroll","mousewheel"];if(a.event.fixHooks)for(var c=b.length;c;)a.event.fixHooks[b[--c]]=a.event.mouseHooks;a.event.special.mousewheel={setup:function(){if(this.addEventListener)for(var a=b.length;a;)this.addEventListener(b[--a],d,!1);else this.onmousewheel=d},teardown:function(){if(this.removeEventListener)for(var a=b.length;a;)this.removeEventListener(b[--a],d,!1);else this.onmousewheel=null}},a.fn.extend({mousewheel:function(a){return a?this.bind("mousewheel",a):this.trigger("mousewheel")},unmousewheel:function(a){return this.unbind("mousewheel",a)}})})(jQuery);
 /*custom scrollbar*/
