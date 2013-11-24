@@ -393,8 +393,12 @@ Piano.anim = function(){
 		$glich.stop().removeClass('active');
 	});
 };;
-$(window).load(function() {
+window.onload = function() {
 	Piano.typewritter();
+	$('.content-wrap').css("display","none");
+};
+$(window).load(function() {
+	$('.content-wrap').css("display","block");
 	$('#loadscreen').fadeOut(300);
 });
 $(document).ready(function() {
