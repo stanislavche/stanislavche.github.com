@@ -393,9 +393,9 @@ Piano.anim = function(){
 		$glich.stop().removeClass('active');
 		$breaksound.currentTime=0;
 		$breaksound.play();
-		if(n==3){
-			n=0;
+		if(n==10){
 			setInterval(Piano.glich, 100);
+			n=0;
 		}
 	});
 };
