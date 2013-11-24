@@ -1,7 +1,7 @@
 window.Piano = {};;
 Piano.buzz = function(){
 	buzz.defaults.formats = [ 'ogg', 'mp3' ];
-	buzz.defaults.preload = 'metadata';
+	buzz.defaults.preload = 'auto';
 	buzz.defaults.loop = false;
 
 	var alphabetSounds  = {},
@@ -381,24 +381,16 @@ Piano.typewritter = function () {
 ;
 Piano.anim = function(){
 	var monitorGlich = true;
-	var interval = 100;
 	var $glich = $('.monitor-glich');
-	if(monitorGlich){
-		setInterval(function() {
-			setTimeout(function () {
-				$glich.addClass('active');
-			},4000);
-			setTimeout(function () {
-				$glich.removeClass('active');
-			},1000);
-		}, interval);
-	}else{
-		$glich.removeClass('active');
-	}
+	myIntVal = setInterval(function(e) {
+		setTimeout(function () {
+			$glich.removeClass('active');
+		},50);
+		$glich.addClass('active');
+	}, 100);
 	$(".monitor").click(function(){
-		interval = 200000;
-		monitorGlich = false;
-		console.log(interval);
+		clearInterval(myIntVal);
+		$glich.stop().removeClass('active');
 	});
 };;
 $(window).load(function() {
@@ -407,8 +399,7 @@ $(window).load(function() {
 });
 $(document).ready(function() {
 	if (document.getElementById("monitor") !== null){
-		Piano.buzz();
 		Piano.anim();
+		Piano.buzz();
 	}
-	
 });

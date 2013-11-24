@@ -4,8 +4,7 @@ $(window).load(function() {
 });
 $(document).ready(function() {
 	if (document.getElementById("monitor") !== null){
-		Piano.buzz();
 		Piano.anim();
+		Piano.buzz();
 	}
-	
 });
