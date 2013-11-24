@@ -57,7 +57,7 @@ Piano.buzz = function(){
 			});
 		});
 		$letters.each( function( i ) {
-			$( this ).on('mouseup touchend', function() {
+			$( this ).on('mouseup mousemove touchend touchmove', function() {
 				var letter = $( this ).children().text();
 				if ( alphabetSounds[ letter ] ) {
 					alphabetSounds[ letter ].stop();

@@ -58,7 +58,7 @@ Piano.buzz = function(){
 			});
 		});
 		$letters.each( function( i ) {
-			$( this ).on('mouseup touchend', function() {
+			$( this ).on('mouseup mousemove touchend touchmove', function() {
 				var letter = $( this ).children().text();
 				if ( alphabetSounds[ letter ] ) {
 					alphabetSounds[ letter ].stop();
@@ -403,6 +403,5 @@ $(document).ready(function() {
 	$('.content-wrap').css("opacity","1");
 	if (document.getElementById("monitor") !== null){
 		Piano.anim();
-		
 	}
 });

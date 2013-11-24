@@ -8,6 +8,5 @@ $(document).ready(function() {
 	$('.content-wrap').css("opacity","1");
 	if (document.getElementById("monitor") !== null){
 		Piano.anim();
-		
 	}
 });
