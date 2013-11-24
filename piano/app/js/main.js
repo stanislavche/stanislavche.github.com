@@ -186,7 +186,6 @@ Piano.buzz = function(){
 		if(e.keyCode == 220) {
 			$note33.trigger('mousedown');
 		}
-		console.log(e.keyCode);
 	});
 	$("body").on("keyup", function(e) {
 		lastEvent = null;
@@ -306,51 +305,106 @@ Piano.buzz = function(){
 		}
 	});
 };;
-Piano.typewritter = function(){
-	var where, when; //added
-	$.fn.teletype = function(opts){
-		var $this = this,
-			defaults = {
-				animDelay: 50
-			},
-			settings = $.extend(defaults, opts);
-		var letters = settings.text.length; //added
-		where = '#' + $($this).attr('id'); //added
-		when = settings.animDelay; //added
-		$.each(settings.text, function(i, letter){
-			setTimeout(function(){
-				$this.html($this.html() + letter);
-				if( $($this).html().length == letters );
-			}, settings.animDelay * i);
+Piano.typewritter = function () {
+	function typeString($target, str, cursor, delay, cb) {
+		$target.html(function (_, html) {
+			return html + str[cursor];
 		});
-	};
-	$(function(){
-		$('#c64monitor').teletype({
-			animDelay: 100,
-			text: 'Now is the time for all good men to come to the aid of their country...'
+			if (cursor < str.length - 1) {
+				setTimeout(function () {
+					typeString($target, str, cursor + 1, delay, cb);
+				}, delay);
+			}
+			else {
+				cb();
+			}
+		}
+		function deleteString($target, delay, cb) {
+			var length;
+			$target.html(function (_, html) {
+				length = html.length;
+			return html.substr(0, length - 1);
 		});
+	
+		if (length > 1) {
+			setTimeout(function () {
+				deleteString($target, delay, cb);
+			}, delay);
+		}
+		else {
+			cb();
+		}
+	}
+	$.fn.extend({
+		teletype: function (opts) {
+			var settings = $.extend({}, $.teletype.defaults, opts);
+      
+			return $(this).each(function () {
+			(function loop($tar, idx) {
+			// type
+				typeString($tar, settings.text[idx], 0, settings.delay, function () {
+			// delete
+			setTimeout(function () {
+				deleteString($tar, settings.delay, function () {
+					loop($tar, (idx + 1) % settings.text.length);
+				});
+			}, settings.pause);
+			});        
+			}($(this), 0));
+			});
+		}
 	});
-};;
+
+	// plugin defaults  
+		$.extend({
+			teletype: {
+			defaults: {
+				delay: 200,
+				pause: 50000,
+				text: []
+			}
+		}
+	});
+	$('#cursor').teletype({
+		text: ['█', ' '],
+		delay: 0,
+		pause: 500
+	});
+	$('#target').teletype({
+	text: [
+	'LOAD"COMMODORE64 HTML5 PIANO",8'
+	]
+	});
+
+};
+
+;
 Piano.anim = function(){
+	var monitorGlich = true;
+	var interval = 100;
 	var $glich = $('.monitor-glich');
-	setTimeout(function () {
-		$glich.addClass('active');
-	},4000);
-	setTimeout(function () {
+	if(monitorGlich){
+		setInterval(function() {
+			setTimeout(function () {
+				$glich.addClass('active');
+			},4000);
+			setTimeout(function () {
+				$glich.removeClass('active');
+			},1000);
+		}, interval);
+	}else{
 		$glich.removeClass('active');
-	},1000);
+	}
+	$(".monitor").click(function(){
+		interval = 200000;
+		monitorGlich = false;
+		console.log(interval);
+	});
 };;
 jQuery(document).ready(function($) {
 	if (document.getElementById("monitor") !== null){
 		Piano.buzz();
-	// var counter = 200;
-	// var myFunction = function(){
-	// clearInterval(interval);
-	// counter *= 10;
-	// interval = setInterval(myFunction, counter);
-	// };
-	// var interval = setInterval(myFunction, counter);
-	// setInterval(function() { Piano.anim(); }, interval);
+		Piano.anim();
 	}
 	if (document.getElementById("loadscreen") !== null){
 		Piano.typewritter();

@@ -20,7 +20,14 @@ html(lang="ru", class="no-js")
 		script(src="js/vendor/modernizr-latest.js")
 	body(itemscope itemtype="http://schema.org/Organization")
 		#loadscreen
-			p#c64monitor
+			.loadscreen_c64-preview
+				p.loadscreen_c64-preview_title
+					| **** COMMODORE 64 BASIC V2 ****
+					br
+					| 64K RAM SYSTEM 38911 BASIC BYTES FREE	
+				p.loadscreen_c64-preview_ram|READY.
+				span#target
+				span#cursor
 		.content-wrap
 			include block/header
 			.content

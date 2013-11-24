@@ -25,7 +25,7 @@
             loop: false,
             placeholder: "--",
             preload: "metadata",
-            volume: 80,
+            volume: 60,
             document: document
         },
         types: {

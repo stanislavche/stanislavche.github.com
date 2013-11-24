@@ -185,7 +185,6 @@ Piano.buzz = function(){
 		if(e.keyCode == 220) {
 			$note33.trigger('mousedown');
 		}
-		console.log(e.keyCode);
 	});
 	$("body").on("keyup", function(e) {
 		lastEvent = null;
