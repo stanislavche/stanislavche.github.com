@@ -393,15 +393,13 @@ Piano.anim = function(){
 		$glich.stop().removeClass('active');
 	});
 };;
-window.onload = function() {
+$(".content-wrap").load(function() {
+	$('.content-wrap').css("opacity","0");
 	Piano.typewritter();
-	$('.content-wrap').css("display","none");
-};
-$(window).load(function() {
-	$('.content-wrap').css("display","block");
-	$('#loadscreen').fadeOut(300);
 });
 $(document).ready(function() {
+	$('#loadscreen').fadeOut(300);
+	$('.content-wrap').css("opacity","1");
 	if (document.getElementById("monitor") !== null){
 		Piano.anim();
 		Piano.buzz();
