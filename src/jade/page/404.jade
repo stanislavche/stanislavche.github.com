@@ -11,11 +11,11 @@ html(lang="ru", class="no-js")
 		meta(name="keywords", content="#{keywords}")
 		meta(name="viewport", content="width=device-width,initial-scale=1,maximum-scale=1")
 		if development
-			link(rel="stylesheet", href="css/style.css")
+			link(rel="stylesheet", href="/css/style.css")
 		else
-			link(rel="stylesheet", href="css/style.min.css")
+			link(rel="stylesheet", href="/css/style.min.css")
 		link(res="shortcut icon", type="image/x-icon", href="favicon.ico")
-		script(src="js/vendor/modernizr-latest.js")
+		script(src="/js/vendor/modernizr-latest.js")
 	body(itemscope itemtype="http://schema.org/Organization")
 		#loadscreen
 			.loadscreen_c64-preview
@@ -26,6 +26,6 @@ html(lang="ru", class="no-js")
 				p.loadscreen_c64-preview_ram|READY.
 				p.loadscreen_c64-preview_ram|ERROR #!()%^?
 				p.loadscreen_c64-preview_ram|GOTO MAIN PAGE
-script(src='js/vendor/jquery.1.9.1.min.js')
-		script(src="js/plugins.js")
-		script(src="js/main.js")
+script(src='/js/vendor/jquery.1.9.1.min.js')
+		script(src="/js/plugins.js")
+		script(src="/js/main.js")
