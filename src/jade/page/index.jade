@@ -1,12 +1,12 @@
 block vars
-	- var description = "Piano for your fun";
-	- var keywords = "Piano";
-	- var pagename = "piano";
-	- var pagetitle = "Stress_TN Piano";
+	- var description = "Stress_TN Home Page";
+	- var keywords = "Stress_TN, Chiptune, LSDJ, Commodore 64, Mssiah";
+	- var pagename = "Stress_TN";
+	- var pagetitle = "Stress_TN Home Page";
 html(lang="ru", class="no-js")
 	head
 		meta(charset="UTF-8")
-		title #{pagetitle} - Piano
+		title #{pagetitle} - Stress_TN
 		meta(name="description", content="#{description}")
 		meta(name="keywords", content="#{keywords}")
 		meta(name="viewport", content="width=device-width,initial-scale=1,maximum-scale=1")
@@ -16,16 +16,28 @@ html(lang="ru", class="no-js")
 			link(rel="stylesheet", href="css/style.min.css")
 		link(res="shortcut icon", type="image/x-icon", href="favicon.ico")
 		script(src="js/vendor/modernizr-latest.js")
-	body(itemscope itemtype="http://schema.org/Organization")
-		#loadscreen
-			.loadscreen_c64-preview
-				p.loadscreen_c64-preview_title
-					| **** COMMODORE 64 BASIC V2 ****
-					br
-					| 64K RAM SYSTEM 38911 BASIC BYTES FREE	
-				p.loadscreen_c64-preview_ram|READY.
-				p.loadscreen_c64-preview_ram|ERROR #!()%^?
-				p.loadscreen_c64-preview_ram|GOTO MAIN PAGE
-script(src='js/vendor/jquery.1.9.1.min.js')
+	body.home(itemscope itemtype="http://schema.org/Organization")
+		.content-wrap
+			.content
+				nav.home__navigation
+					ul.home__navigation_list
+						li
+							a.active(href="#") Bio
+						li
+							a(href="#") Music
+						li
+							a(href="#") Video
+						li
+							a(href="#") Games
+						li
+							a(href="#") Contact
+						li
+							a(href="#") Load Rom
+						li
+							a(href="#") Buy It!
+				.home__screen
+			.footer-placeholder
+		footer.sticky-footer
+		script(src='js/vendor/jquery.1.9.1.min.js')
 		script(src="js/plugins.js")
 		script(src="js/main.js")

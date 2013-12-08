@@ -9,4 +9,7 @@ $(document).ready(function() {
 	if (document.getElementById("monitor") !== null){
 		Piano.anim();
 	}
+	if (document.getElementById("error") !== null){
+		Piano.Error();
+	}
 });

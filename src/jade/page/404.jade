@@ -2,11 +2,11 @@ block vars
 	- var description = "**** COMMODORE 64 BASIC V2 ****";
 	- var keywords = "ERROR";
 	- var pagename = "ERROR PAGE";
-	- var pagetitle = "Stress-TN.ORG | ERROR PAGE | GOTO MAIN PAGE ";
+	- var pagetitle = " ERROR PAGE | GOTO MAIN PAGE ";
 html(lang="ru", class="no-js")
 	head
 		meta(charset="UTF-8")
-		title #{pagetitle} - Piano
+		title #{pagetitle} - Stress_TN
 		meta(name="description", content="#{description}")
 		meta(name="keywords", content="#{keywords}")
 		meta(name="viewport", content="width=device-width,initial-scale=1,maximum-scale=1")
@@ -16,16 +16,17 @@ html(lang="ru", class="no-js")
 			link(rel="stylesheet", href="/css/style.min.css")
 		link(res="shortcut icon", type="image/x-icon", href="favicon.ico")
 		script(src="/js/vendor/modernizr-latest.js")
-	body(itemscope itemtype="http://schema.org/Organization")
-		#loadscreen
+	body.piano(itemscope itemtype="http://schema.org/Organization")
+		.loadscreen#error
 			.loadscreen_c64-preview
 				p.loadscreen_c64-preview_title
 					| **** COMMODORE 64 BASIC V2 ****
 					br
 					| 64K RAM SYSTEM 38911 BASIC BYTES FREE	
 				p.loadscreen_c64-preview_ram|READY.
-				p.loadscreen_c64-preview_ram|ERROR #!()%^?
+				p.loadscreen_c64-preview_ram.error-text
+				p.loadscreen_c64-preview_ram|FILE NOT FOUND
 				p.loadscreen_c64-preview_ram|GOTO MAIN PAGE
-script(src='/js/vendor/jquery.1.9.1.min.js')
+		script(src='/js/vendor/jquery.1.9.1.min.js')
 		script(src="/js/plugins.js")
 		script(src="/js/main.js")

@@ -787,10 +787,8 @@ html table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-body {
+.piano {
   background: url(../img/background.jpg);
-}
-body {
   cursor: url(../img/cursor.png), auto;
 }
 .sticky-footer > .black-note,
@@ -803,6 +801,7 @@ body {
 }
 .content-wrap {
   min-height: 100%;
+  position: relative;
 }
 .footer-placeholder {
   overflow: auto;
@@ -832,7 +831,7 @@ body {
   width: 90%;
   margin: 0 auto;
 }
-.content {
+.piano .content {
   margin: 0 auto;
   margin-top: 50px;
   width: 1050px;
@@ -859,11 +858,11 @@ body {
   border-radius: 10px;
 }
 @media only screen and (max-width: 1000px) {
-  .content {
+  .piano .content {
     width: 80%;
   }
 }
-#loadscreen {
+.loadscreen {
   top: 0;
   left: 0;
   position: fixed;
@@ -914,6 +913,10 @@ body {
   text-align: left;
   font-size: 24px;
   font-family: 'C64 User';
+}
+a {
+  text-decoration: none;
+  color: #000;
 }
 .monitor {
   position: relative;
@@ -978,4 +981,59 @@ body {
   .title-font {
     font-size: 18px;
   }
+}
+.home {
+  font-family: Verdana;
+  font-family: normal;
+  font-size: 16px;
+  background: #c2bebb;
+  color: #989ba2;
+}
+.home .content {
+  background: #595866;
+  margin: 0 auto;
+  position: relative;
+  width: 80%;
+  margin-top: 20px;
+  padding-bottom: 54.2%;
+  height: 0;
+  overflow: hidden;
+  border: 2px solid #302222;
+  -webkit-border-radius: 4% 4% 17% 4%;
+  -moz-border-radius: 4% 4% 17% 4%;
+  border-radius: 4% 4% 17% 4%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.home__screen {
+  position: absolute;
+  left: 50%;
+  margin-left: -30%;
+  width: 60%;
+  margin-top: 8.5%;
+  padding-bottom: 50%;
+  height: 0;
+  border: 2px solid #0e1b07;
+  background: #4d631a;
+  -webkit-border-radius: 1%;
+  -moz-border-radius: 1%;
+  border-radius: 1%;
+}
+.home__navigation {
+  margin-top: 8.5%;
+  position: absolute;
+  width: 20%;
+  left: 0;
+  height: 87.5%;
+}
+.home__navigation_list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.home__navigation_list li:before {
+  content: '●';
+  color: red;
+  font-size: 20px;
 }
