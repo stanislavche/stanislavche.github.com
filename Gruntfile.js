@@ -10,11 +10,11 @@ module.exports = function(grunt) {
 			},
 			plugins:{
 				src: ["src/js/plugin/*.js"],
-				dest: "app/js/plugins.js"
+				dest: "js/plugins.js"
 			},
 			main:{
 				src: ["src/js/definition.js", "src/js/part/*.js", "src/js/main.js"],
-				dest: "app/js/main.js"
+				dest: "js/main.js"
 			}
 		},
 		jshint:{
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 		uglify:{
 			main:{
 				files: {
-					"app/js/main.min.js": ['app/js/main.js']
+					"js/main.min.js": ['app/js/main.js']
 				}
 			},
 			plugins:{
@@ -40,14 +40,14 @@ module.exports = function(grunt) {
 		less: {
 			live: {
 				files: {
-					"app/css/style.css": "src/less/style.less"
+					"css/style.css": "src/less/style.less"
 				}
 			}
 		},
 		csso:{
 			dist: {
 				files: {
-					'app/css/style.min.css': ['app/css/style.css']
+					'css/style.min.css': ['css/style.css']
 				}
 			}
 		},
@@ -59,6 +59,8 @@ module.exports = function(grunt) {
 				},
 				files: {
 					"404.html": ["src/jade/page/404.jade"],
+					"piano.html": ["src/jade/page/piano.jade"],
+					"index.html": ["src/jade/page/index.jade"]
 				}
 			},
 			build:{
@@ -67,6 +69,8 @@ module.exports = function(grunt) {
 				},
 				files: {
 					"404.html": ["src/jade/page/404.jade"],
+					"piano.html": ["src/jade/page/piano.jade"],
+					"index.html": ["src/jade/page/index.jade"]
 				}
 			}
 		},
@@ -83,7 +87,7 @@ module.exports = function(grunt) {
 				}
 			},
 			css:{
-				files: ['app/css/style.css'],
+				files: ['css/style.css'],
 				tasks: ['csso']
 			},
 			scripts:{
