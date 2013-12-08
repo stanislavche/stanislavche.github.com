@@ -1,0 +1,56 @@
+.white-note{
+	position: relative;
+	width: 6%;
+	border: 1px solid #000;
+	height: 150px;
+	background: #FFF;
+	display: inline-block;
+	border-bottom: none;
+	.round-corner (top-right, 4px);
+	.round-corner (top-left, 4px);
+	.transition(all 0.2s);
+	.notouch();
+	&:hover{
+		background: #DDD;
+	}
+}
+.black-note{
+	position: relative;
+	top:-10px;
+	z-index: 2;
+	height: 100px;
+	width: 6%;
+	margin-left: -3%;
+	margin-right: -3%;
+	border: 1px solid #000;
+	background: #000;
+	display: inline-block;
+	vertical-align: top;
+	.notouch();
+	.border-radius(4px);
+	.transition(all 0.2s);
+	&:hover{
+		background: #555;
+	}
+}
+.note{
+	font-size: 14px;
+	font-family: 'C64 Pro';
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	.notouch();
+	p{
+		.notouch();
+		margin: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+}
+.unvisible-content{
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+}
