@@ -66,12 +66,12 @@ Piano.buzz = function(){
 			});
 		});
 	});
-	$("body").on("keydown", function(event) {
-		if (lastEvent && lastEvent.keyCode == event.keyCode) {
+	$("body").on("keydown", function(e) {
+		if (lastEvent && lastEvent.keyCode == e.keyCode) {
 			return;
 		}
-		lastEvent = event;
-		heldKeys[event.keyCode] = true;
+		lastEvent = e;
+		heldKeys[e.keyCode] = true;
 		if(e.keyCode == 90) {
 			$note1.trigger('mousedown');
 		}
@@ -187,7 +187,7 @@ Piano.buzz = function(){
 			$note33.trigger('mousedown');
 		}
 	});
-	$("body").on("keyup", function(event) {
+	$("body").on("keyup", function(e) {
 		lastEvent = null;
 		if(e.keyCode == 90) {
 			$note1.trigger('mouseup');
@@ -304,7 +304,8 @@ Piano.buzz = function(){
 			$note33.trigger('mouseup');
 		}
 	});
-};;
+};
+;
 Piano.typewritter = function () {
 	function typeString($target, str, cursor, delay, cb) {
 		$target.html(function (_, html) {

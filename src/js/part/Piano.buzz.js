@@ -65,12 +65,12 @@ Piano.buzz = function(){
 			});
 		});
 	});
-	$("body").on("keydown", function(event) {
-		if (lastEvent && lastEvent.keyCode == event.keyCode) {
+	$("body").on("keydown", function(e) {
+		if (lastEvent && lastEvent.keyCode == e.keyCode) {
 			return;
 		}
-		lastEvent = event;
-		heldKeys[event.keyCode] = true;
+		lastEvent = e;
+		heldKeys[e.keyCode] = true;
 		if(e.keyCode == 90) {
 			$note1.trigger('mousedown');
 		}
