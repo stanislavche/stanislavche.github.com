@@ -65,7 +65,7 @@ Piano.buzz = function(){
 			});
 		});
 	});
-	$("body").on("keydown", function(e) {
+	$("body").on("keydown", function(event) {
 		if (lastEvent && lastEvent.keyCode == event.keyCode) {
 			return;
 		}
