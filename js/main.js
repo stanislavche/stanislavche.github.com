@@ -45,6 +45,7 @@ Piano.buzz = function(){
 	var $note31 = $(".5ff");
 	var $note32 = $(".5g");
 	var $note33 = $(".5gg");
+	var keyAllowed = {};
 	}
 	$( function() {
 		var idx = 0,
@@ -67,6 +68,8 @@ Piano.buzz = function(){
 		});
 	});
 	$("body").on("keydown", function(e) {
+		if (keyAllowed [e.which] === false) return;
+			keyAllowed [e.which] = false;
 		if (lastEvent && lastEvent.keyCode == e.keyCode) {
 			return;
 		}
@@ -188,6 +191,7 @@ Piano.buzz = function(){
 		}
 	});
 	$("body").on("keyup", function(e) {
+		keyAllowed [e.which] = true;
 		lastEvent = null;
 		if(e.keyCode == 90) {
 			$note1.trigger('mouseup');
