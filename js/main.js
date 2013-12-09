@@ -66,7 +66,7 @@ Piano.buzz = function(){
 			});
 		});
 	});
-	$("body").on("keydown", function(e) {
+	$("body").on("keydown", function(event) {
 		if (lastEvent && lastEvent.keyCode == event.keyCode) {
 			return;
 		}
@@ -187,7 +187,7 @@ Piano.buzz = function(){
 			$note33.trigger('mousedown');
 		}
 	});
-	$("body").on("keyup", function(e) {
+	$("body").on("keyup", function(event) {
 		lastEvent = null;
 		if(e.keyCode == 90) {
 			$note1.trigger('mouseup');
