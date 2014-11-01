@@ -4,7 +4,7 @@ block vars
 	- var pagetitle = "Default";
 	- var description = "default";
 	- var keywords = "default";
-!!! 5
+doctype html
 html(lang="ru", class="no-js")
 	head
 		meta(charset="UTF-8")
@@ -12,6 +12,7 @@ html(lang="ru", class="no-js")
 		meta(name="description", content="#{description}")
 		meta(name="keywords", content="#{keywords}")
 		meta(name="viewport", content="width=device-width,initial-scale=1,maximum-scale=1")
+		script(src='js/vendor/jquery.1.9.1.min.js')
 		if development
 			link(rel="stylesheet", href="css/style.css")
 		else
@@ -25,7 +26,7 @@ html(lang="ru", class="no-js")
 					| **** COMMODORE 64 BASIC V2 ****
 					br
 					| 64K RAM SYSTEM 38911 BASIC BYTES FREE	
-				p.loadscreen_c64-preview_ram|READY.
+				p.loadscreen_c64-preview_ram|Loading...
 				span#target
 				span#cursor
 		.content-wrap
@@ -34,6 +35,6 @@ html(lang="ru", class="no-js")
 				block content
 			.footer-placeholder
 		include block/footer
-		script(src='js/vendor/jquery.1.9.1.min.js')
+		
 		script(src="js/plugins.js")
 		script(src="js/main.js")

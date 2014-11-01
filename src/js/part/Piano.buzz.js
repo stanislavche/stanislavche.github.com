@@ -1,6 +1,6 @@
 Piano.buzz = function(){
 	buzz.defaults.formats = [ 'ogg', 'mp3' ];
-	buzz.defaults.preload = 'auto';
+	buzz.defaults.preload = true;
 	buzz.defaults.loop = false;
 
 	var alphabetSounds  = {},

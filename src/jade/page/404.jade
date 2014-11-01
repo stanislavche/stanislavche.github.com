@@ -3,7 +3,7 @@ block vars
 	- var keywords = "ERROR";
 	- var pagename = "ERROR PAGE";
 	- var pagetitle = " ERROR PAGE | GOTO MAIN PAGE ";
-!!! 5
+doctype html
 html(lang="ru", class="no-js")
 	head
 		meta(charset="UTF-8")
@@ -27,7 +27,7 @@ html(lang="ru", class="no-js")
 				p.loadscreen_c64-preview_ram|READY.
 				p.loadscreen_c64-preview_ram.error-text
 				p.loadscreen_c64-preview_ram|FILE NOT FOUND
-				p.loadscreen_c64-preview_ram|GOTO MAIN PAGE
+				a(href="/").loadscreen_c64-preview_ram.errorLink|GOTO MAIN PAGE
 		script(src='/js/vendor/jquery.1.9.1.min.js')
 		script(src="/js/plugins.js")
 		script(src="/js/main.js")

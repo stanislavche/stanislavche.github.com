@@ -1,7 +1,7 @@
 window.Piano = {};;
 Piano.buzz = function(){
 	buzz.defaults.formats = [ 'ogg', 'mp3' ];
-	buzz.defaults.preload = 'auto';
+	buzz.defaults.preload = true;
 	buzz.defaults.loop = false;
 
 	var alphabetSounds  = {},
@@ -416,18 +416,62 @@ Piano.Error = function() {
 	var currenturl = $(location).attr('href');
 	$text.text(currenturl);
 };;
+Piano.homeAnimation = function(){
+	$(".js-destination").mCustomScrollbar({
+		advanced:{
+			autoExpandHorizontalScroll: true,
+			updateOnContentResize: true,
+			updateOnSelectorChange: ".js-destination"
+		}
+	});
+	$('.js-link').on('click', function(e){
+		e.preventDefault();
+		var itemId = $(this).attr('data-id');
+		$('.js-link').removeClass('active');
+		$(this).addClass('active');
+		$('.js-destination').each(function(){
+			var $destination = $(this);
+			if ($destination.attr('data-id') === itemId){
+				$('.js-destination').removeClass('active');
+				$destination.addClass('active');
+			}
+		});
+	});
+	$('.js-mailForm').on('submit', function(e){
+		e.preventDefault();
+		$.ajax({
+			url: "//forms.brace.io/stress_tn@yahoo.com", 
+			method: "POST",
+			data: $('.js-mailForm').serialize(),
+			dataType: "json",
+			error: function () {
+				$('.js-mailForm').remove();
+				$('.js-changeTitle').text('Try later');
+			},
+			success: function (response) {
+				$('.js-changeTitle').text('Thank you');
+				$('#formTosend')[0].reset();
+			}
+		});
+	});
+};;
 $(document).load(function() {
 	$('.content-wrap').css("opacity","0");
 	Piano.typewritter();
 });
 $(document).ready(function() {
 	Piano.buzz();
-	$('#loadscreen').fadeOut(300);
-	$('.content-wrap').css("opacity","1");
+	setTimeout(function(){
+		$('#loadscreen').fadeOut(300);
+		$('.content-wrap').css("opacity","1");
+	}, 2000);
 	if (document.getElementById("monitor") !== null){
 		Piano.anim();
 	}
 	if (document.getElementById("error") !== null){
 		Piano.Error();
+	}
+	if ($('.home').length){
+		Piano.homeAnimation();
 	}
 });
