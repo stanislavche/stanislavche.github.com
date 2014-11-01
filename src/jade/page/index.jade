@@ -59,9 +59,9 @@ html(lang="ru", class="no-js")
 							h2.home__title-block.js-changeTitle
 								| Contact me
 							form(action="#", method="POST")#formTosend.js-mailForm.home__form
-								input(type="email", name="_replyto", placeholder="Your email").home__inputEmail
-								input(type="text", name="name", placeholder="Your name").home__inputEmail
-								textarea(name="message" rows="3").home__textarea
+								input(type="email", name="_replyto", placeholder="Your email" required).home__inputEmail
+								input(type="text", name="name", placeholder="Your name" required).home__inputEmail
+								textarea(name="message" rows="3" required).home__textarea
 								input(type="submit", value="Send").home__submit
 					table.home__down-table
 						thead.home__table-row
