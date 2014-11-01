@@ -10,3 +10,22 @@ block content
 			img(src="img/monitor.png", alt="monitor")
 			.monitor-glich
 			.monitor-screen
+		form(action="https://www.paypal.com/cgi-bin/webscr" method="post").glith__form
+			h3.glith__title Buy me a beer:
+			input(type="text", size="5", name="amount", value="1.00").glith__input
+			select(name="currency_code").glith__select
+				option(value="USD")
+					| $
+				option(value="EUR")
+					| €
+				
+			input(type="submit" value="Paypal").glith__submit
+			input(type="hidden" name="cmd" value="_xclick")
+			input(type="hidden" name="business" value="stress_tn@yahoo.com")
+			input(type="hidden" name="item_name" value="Stress_TN C64 Piano")
+			input(type="hidden" name="item_number" value="StressC64-DONATE")
+			input(type="hidden" name="no_shipping" value="1")
+			input(type="hidden" name="no_note" value="1")
+			input(type="hidden" name="tax" value="0")
+			input(type="hidden" name="bn" value="PP-DonationsBF")
+			input(type="hidden" name="lc" value="RU")

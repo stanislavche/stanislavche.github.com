@@ -994,6 +994,29 @@ a {
     font-size: 18px;
   }
 }
+.glith__form {
+  position: relative;
+  font-family: 'C64 User';
+  text-align: center;
+  padding-bottom: 20px;
+}
+.glith__title {
+  margin: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 20px;
+}
+.glith__input {
+  padding: 10px 20px;
+  margin-right: 10px;
+}
+.glith__select {
+  padding: 10px 20px;
+  margin-right: 10px;
+}
+.glith__submit {
+  padding: 10px 20px;
+}
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
