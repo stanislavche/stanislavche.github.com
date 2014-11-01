@@ -944,6 +944,23 @@ a {
   margin-top: 20px;
   max-width: 100%;
 }
+.share-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.share-container .a2a_default_style {
+  display: table;
+}
+.share-container .a2a_default_style a {
+  display: block;
+  float: none;
+  margin-bottom: 5px;
+}
+.share-container .a2a_default_style a > span {
+  float: none;
+}
 .monitor-screen {
   position: absolute;
   width: 80%;

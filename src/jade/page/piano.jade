@@ -3,8 +3,17 @@ block vars
 	- var description = "Piano for your fun";
 	- var keywords = "Piano";
 	- var pagename = "piano";
-	- var pagetitle = "Stress_TN Piano";
+	- var pagetitle = "Stress_TN c64 Piano";
 block content
+	.share-container
+		.a2a_kit.a2a_kit_size_32.a2a_default_style
+			a.a2a_button_facebook
+			a.a2a_button_twitter
+			a.a2a_button_google_plus
+			a.a2a_button_vk
+		script(type="text/javascript")
+			| var a2a_config = a2a_config || {}; a2a_config.color_main = "undefined"; a2a_config.color_border = "undefined"; a2a_config.color_link_text = "undefined"; a2a_config.color_link_text_hover = "undefined"; a2a_config.color_bg = "undefined"; a2a_config.color_arrow = "undefined"; a2a_config.color_arrow_hover = "undefined";
+		script(type="text/javascript" src="//static.addtoany.com/menu/page.js")
 	.wrapper
 		.monitor#monitor
 			img(src="img/monitor.png", alt="monitor")
@@ -18,7 +27,6 @@ block content
 					| $
 				option(value="EUR")
 					| €
-				
 			input(type="submit" value="Paypal").glith__submit
 			input(type="hidden" name="cmd" value="_xclick")
 			input(type="hidden" name="business" value="stress_tn@yahoo.com")
