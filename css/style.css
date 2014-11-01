@@ -1198,6 +1198,16 @@ a {
 .home__contact-item > a {
   font-size: 40px;
   color: #4d631a;
+  padding: 0 10px;
+  display: inline-block;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+.home__contact-item > a:hover {
+  opacity: 0.8;
+}
+.home__contact-item > a:active {
+  opacity: 0.5;
 }
 .home__information-img {
   display: block;
