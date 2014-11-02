@@ -2,6 +2,7 @@ Piano.buzz = function(){
 	buzz.defaults.formats = [ 'ogg', 'mp3' ];
 	buzz.defaults.preload = true;
 	buzz.defaults.loop = false;
+	buzz.defaults.volume = 40;
 
 	var alphabetSounds  = {},
 	alphabet        = '3c,3c$,3d,3d$,3e,3f,3f$,3g,3g$,3a,3a$,3b,4c,4c$,4d,4d$,4e,4f,4f$,4g,4g$,4a,4a$,4b,5c,5c$,5d,5d$,5e,5f,5f$,5g,5g$,5a,5a$,5b'.split(',');
