@@ -2616,13 +2616,14 @@ h2 {
   width: 100vw;
   background: #334c5d;
   display: block;
-  height: 100vh;
+  height: 0;
   z-index: 2;
   opacity: 0;
   -webkit-transition: opacity 0.6s;
   transition: opacity 0.6s;
 }
 .drodown-mask.active {
+  height: 100vh;
   opacity: 0.8;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 }
