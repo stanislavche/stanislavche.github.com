@@ -50,67 +50,667 @@
         <!-- Menu-->
         <nav class="main-menu">
           <h2 class="main-menu__title">Выберите категорию инструментов</h2>
-          <div class="main-menu__container">
+          <div class="drodown-mask js-mask"></div>
+          <div class="main-menu__container js-menu">
             <ul class="main-menu__list">
               <li class="main-menu__item main-menu__item_dj"><a href="dj" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/dj.png'" src="img/icons/dj.svg" alt="" class="main-menu__img"><span class="main-menu__text">Dj</span></a></li>
               <li class="main-menu__item main-menu__item_gt"><a href="guitar" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/guitar.png'" src="img/icons/guitar.svg" alt="" class="main-menu__img"><span class="main-menu__text">Гитары</span></a></li>
-              <li class="main-menu__item main-menu__item_dh"><a href="catalog.html" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/wind.png'" src="img/icons/wind.svg" alt="" class="main-menu__img"><span class="main-menu__text">Духовные</span></a></li>
-              <li class="main-menu__item main-menu__item_pi"><a href="catalog.html" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/keyboard.png'" src="img/icons/keyboard.svg" alt="" class="main-menu__img"><span class="main-menu__text">Клавишные</span></a></li>
-              <li class="main-menu__item main-menu__item_sm"><a href="catalog.html" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/bow.png'" src="img/icons/bow.svg" alt="" class="main-menu__img"><span class="main-menu__text">Смычковые</span></a></li>
-              <li class="main-menu__item main-menu__item_ud"><a href="catalog.html" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/beat.png'" src="img/icons/beat.svg" alt="" class="main-menu__img"><span class="main-menu__text">Ударные</span></a></li>
-              <li class="main-menu__item main-menu__item_zv"><a href="catalog.html" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/sound.png'" src="img/icons/sound.svg" alt="" class="main-menu__img"><span class="main-menu__text">Звук</span></a></li>
-              <li class="main-menu__item main-menu__item_et"><a href="catalog.html" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/folk.png'" src="img/icons/folk.svg" alt="" class="main-menu__img"><span class="main-menu__text">Этно</span></a></li>
-              <li class="main-menu__item main-menu__item_sv"><a href="catalog.html" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/light.png'" src="img/icons/light.svg" alt="" class="main-menu__img"><span class="main-menu__text">Свет</span></a></li>
+              <li class="main-menu__item main-menu__item_dh"><a href="wind" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/wind.png'" src="img/icons/wind.svg" alt="" class="main-menu__img"><span class="main-menu__text">Духовные</span></a></li>
+              <li class="main-menu__item main-menu__item_pi"><a href="keyboard" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/keyboard.png'" src="img/icons/keyboard.svg" alt="" class="main-menu__img"><span class="main-menu__text">Клавишные</span></a></li>
+              <li class="main-menu__item main-menu__item_sm"><a href="bow" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/bow.png'" src="img/icons/bow.svg" alt="" class="main-menu__img"><span class="main-menu__text">Смычковые</span></a></li>
+              <li class="main-menu__item main-menu__item_ud"><a href="beat" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/beat.png'" src="img/icons/beat.svg" alt="" class="main-menu__img"><span class="main-menu__text">Ударные</span></a></li>
+              <li class="main-menu__item main-menu__item_zv"><a href="sound" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/sound.png'" src="img/icons/sound.svg" alt="" class="main-menu__img"><span class="main-menu__text">Звук</span></a></li>
+              <li class="main-menu__item main-menu__item_et"><a href="folk" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/folk.png'" src="img/icons/folk.svg" alt="" class="main-menu__img"><span class="main-menu__text">Этно</span></a></li>
+              <li class="main-menu__item main-menu__item_sv"><a href="light" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/light.png'" src="img/icons/light.svg" alt="" class="main-menu__img"><span class="main-menu__text">Свет</span></a></li>
             </ul>
             <div class="menu-dropdown js-dropdown">
-              <div data-type="dj" class="menu-dropdown__container">
-                <div class="menu-dropdown__genre">
+              <div data-type="dj" class="menu-dropdown__container js-dropdown-container">
+                <div class="menu-dropdown__genre col-2">
                   <h3 class="menu-dropdown__title">DJ ОБОРУДОВАНИЕ</h3>
-                  <ul class="menu-dropdown__list">
-                    <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">DJ-Микшеры настольные</a></li>
-                    <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">DJ-Микшеры рэковые</a></li>
-                    <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">DJ-Контроллеры</a></li>
-                    <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">DJ-Наушники</a></li>
-                  </ul>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">DJ-Микшеры настольные</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">DJ-Микшеры рэковые</a></li>
+                    </ul>
+                  </div>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">DJ-Контроллеры</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">DJ-Наушники</a></li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="menu-dropdown__genre">
+                <div class="menu-dropdown__genre col-1">
                   <h3 class="menu-dropdown__title">ПРОИГРЫВАТЕЛИ</h3>
-                  <ul class="menu-dropdown__list">
-                    <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Для CD-дисков</a></li>
-                    <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Для Виниловых дисков</a></li>
-                  </ul>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Для CD-дисков</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Для Виниловых дисков</a></li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="menu-dropdown__genre">
+                <div class="menu-dropdown__genre col-1">
                   <h3 class="menu-dropdown__title">АКСЕССУАРЫ ДЛЯ DJ</h3>
-                  <ul class="menu-dropdown__list">
-                    <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Кейсы</a></li>
-                    <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Чехлы</a></li>
-                  </ul>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Кейсы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">ехлы</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre menu-dropdown__genre_last col-1"></div>
+              </div>
+              <div data-type="guitar" class="menu-dropdown__container js-dropdown-container">
+                <div class="menu-dropdown__genre col-1">
+                  <h3 class="menu-dropdown__title">Инструменты</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Акустические гитары</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Класические гитары (Нейлоновые струны)</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Электроакустические</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Полуакустические</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Электрогитары</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Бас-гитары</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">7-ми струнные</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">12-ти струнные</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Гавайские гитары (укулеле)</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Добро (резонатор)</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre col-1">
+                  <h3 class="menu-dropdown__title">обработка звука</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Басовые кабинеты</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Басовые педали</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Басовые процессоры</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Басовые усилители</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Гитарные кабинеты</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Гитарные педали</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Гитарные процессоры</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Гитарные усилители</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Комбики басовые</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Комбики гитарные</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre col-1">
+                  <h3 class="menu-dropdown__title">Аксессуары для гитар</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Вертушки для струн</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Гитарные стойки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Гитарные кабели</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Камертоны</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Каподастры</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Лампы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Медиаторы, копилки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Педалборды</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Полироли, средства ухода</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Ремни</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Слайды</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Тренажеры для пальцев</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Звукосниматели и темброблоки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Тюнеры и метрономы</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre col-1">
+                  <div class="col-element">
+                    <h3 class="menu-dropdown__title">Струны</h3>
+                    <div class="menu-dropdown__column">
+                      <ul class="menu-dropdown__list">
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Для 12-ти струнных гитар</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Для акустических гитар</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Для бас-гитар</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Для классических гитар</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Для электрогитар</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Для гавайских гитар (укулеле)</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Одиночные</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-element">
+                    <h3 class="menu-dropdown__title">Чехлы И кейсы</h3>
+                    <div class="menu-dropdown__column">
+                      <ul class="menu-dropdown__list">
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Для акустических гитар</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Чехлы для бас-гитар</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Для классических гитар</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Чехлы для электрогитар</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Кейсы</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre menu-dropdown__genre_last col-1">
+                  <h3 class="menu-dropdown__title">фурнитура</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Колки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Крепеж</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Крышки/Рамки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Лады</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Машинки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Переключатели, разъёмы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Порожки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Потенциометры</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Ручки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Стреплоки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Струнодержатели</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-              <div data-type="guitar" class="menu-dropdown__container">
-                <div class="menu-dropdown__genre">
-                  <h3 class="menu-dropdown__title">DJ ОБОРУДОВАНИЕ</h3>
-                  <ul class="menu-dropdown__list">
-                    <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">DJ-Микшеры настольные</a></li>
-                    <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">DJ-Микшеры рэковые</a></li>
-                    <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">DJ-Контроллеры</a></li>
-                    <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">DJ-Наушники</a></li>
-                  </ul>
+              <div data-type="wind" class="menu-dropdown__container js-dropdown-container">
+                <div class="menu-dropdown__genre col-3">
+                  <h3 class="menu-dropdown__title">Духовые Инструменты</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Альты и теноры</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Баритоны и эфониумы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Блок-флейты</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Валторны</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Гобои</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Охотничьи рожки</a></li>
+                    </ul>
+                  </div>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Кларнеты</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Корнеты</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Пианики</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Саксофоны</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Сузафоны</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Тромбоны</a></li>
+                    </ul>
+                  </div>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Трубы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Тубы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Флейты пикколо</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Флейты</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Флюгельгорны</a></li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="menu-dropdown__genre">
-                  <h3 class="menu-dropdown__title">ПРОИГРЫВАТЕЛИ</h3>
-                  <ul class="menu-dropdown__list">
-                    <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Для CD-дисков</a></li>
-                    <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Для Виниловых дисков</a></li>
-                  </ul>
+                <div class="menu-dropdown__genre menu-dropdown__genre_last col-2">
+                  <h3 class="menu-dropdown__title">Аксессуары для духовых</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Ремни</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Сурдины</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Трости</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Чехлы и кейсы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Мундштуки, лигатуры, колпачки</a></li>
+                    </ul>
+                  </div>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Стойки и держатели</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Запасные части</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Средства для ухода</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Тюнеры для духовых</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Сайлент-системы</a></li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="menu-dropdown__genre">
-                  <h3 class="menu-dropdown__title">АКСЕССУАРЫ ДЛЯ DJ</h3>
-                  <ul class="menu-dropdown__list">
-                    <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Кейсы</a></li>
-                    <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Чехлы</a></li>
-                  </ul>
+              </div>
+              <div data-type="keyboard" class="menu-dropdown__container js-dropdown-container">
+                <div class="menu-dropdown__genre col-2">
+                  <h3 class="menu-dropdown__title">Клавишные инструменты</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Синтезаторы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Пианино и рояли</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Midi-клавиатуры</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Midi-контроллеры</a></li>
+                    </ul>
+                  </div>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Электропиано</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Электроорганы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Электророяли</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre col-2">
+                  <h3 class="menu-dropdown__title">Аксессуары для клавишных</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Банкетки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Блоки питания</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Педали</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Подставки под клавишные</a></li>
+                    </ul>
+                  </div>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Чехлы и кейсы</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre menu-dropdown__genre_last col-1">
+                  <h3 class="menu-dropdown__title">Обработка звука</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Комбо усилители для клавишных</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div data-type="bow" class="menu-dropdown__container js-dropdown-container">
+                <div class="menu-dropdown__genre col-1">
+                  <h3 class="menu-dropdown__title">инструменты</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Альты</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Виолончели</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Контрабасы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Скрипки</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre col-1">
+                  <h3 class="menu-dropdown__title">Струны</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Струны для альта</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Струны для виолончели</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Струны для контробаса</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Струны для скрипки</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre col-1">
+                  <h3 class="menu-dropdown__title">Смычки</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Смычки для виолончели</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Смычки для контробаса</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Смычки для скрипки</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre menu-dropdown__genre_last col-2">
+                  <h3 class="menu-dropdown__title">Аксессуары для смычковых</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Канифоль</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Колки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Машинки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Мостики</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Подбородники</a></li>
+                    </ul>
+                  </div>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Струнодержатели</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Чехлы и кейсы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Пьезосистемы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Стойки</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div data-type="beat" class="menu-dropdown__container js-dropdown-container">
+                <div class="menu-dropdown__genre col-1">
+                  <div class="col-element">
+                    <h3 class="menu-dropdown__title">Ударные инструменты</h3>
+                    <div class="menu-dropdown__column">
+                      <ul class="menu-dropdown__list">
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Бас-барабаны</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Малые барабаны</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Томы</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Тарелки</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Ударные установки</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Электронные ударные установки</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Детские барабаны</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-element">
+                    <h3 class="menu-dropdown__title">Маршевые барабаны</h3>
+                    <div class="menu-dropdown__column">
+                      <ul class="menu-dropdown__list">
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Маршевые бас-барабаны</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Маршевые малые барабаны</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Маршевые тарелки</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Маршевые томы</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre col-2">
+                  <h3 class="menu-dropdown__title">Перкуссия</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Тимбалес</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Тамбурины</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Маракасы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Конги, бонги</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Дарбуки, джембе, кпанлого</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Кастаньеты</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Ковбелы, агого</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Блоки и тон-блоки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Кабасы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Чимесы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Наборы перкуссии</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Трещотки, кокирико, гуиро</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Вибраслэп</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Стомпбокс</a></li>
+                    </ul>
+                  </div>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Кахоны</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Шейкеры</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Вибрафоны</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Гонги</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Колокола, треугольники, колокольчики</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Металлофоны</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Ксилофоны</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Литавры</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Маримбы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Оркестровые бас-барабаны</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Оркестровые малые барабаны</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Оркестровые томы</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre col-2">
+                  <h3 class="menu-dropdown__title">Аксессуары</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Винты</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Заглушки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Ключи</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Метрономы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Микрофоны</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Наушники</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Наклейки на пластик</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Обода</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Палочки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Педали</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Перчатки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Пластики</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Ремни</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Стулья для барабанщика</a></li>
+                    </ul>
+                  </div>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Стойки, подставки, держатели</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Средства для ухода</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Струны для малого барабана</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Тарелки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Тренировочные пэды</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Цепочки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Чехлы, сумки и кейсы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Щетки и руты</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div data-type="sound" class="menu-dropdown__container js-dropdown-container">
+                <div class="menu-dropdown__genre col-1">
+                  <div class="col-element">
+                    <h3 class="menu-dropdown__title">Акустические системы</h3>
+                    <div class="menu-dropdown__column">
+                      <ul class="menu-dropdown__list">
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Акустические системы</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Сабвуферы</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Сценические мониторы</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Линейные массивы</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Звукоусилительные комплекты</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Аксессуары, стойки и крепления</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Компоненты</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-element">
+                    <h3 class="menu-dropdown__title">Микшерные пульты</h3>
+                    <div class="menu-dropdown__column">
+                      <ul class="menu-dropdown__list">
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Аналоговые</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Цифровые</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Со встроенным усилителем</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Аксессуары и стойки</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre col-1">
+                  <h3 class="menu-dropdown__title">Для студии</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Звуковые платы FireWire</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Звуковые платы PCI</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Звуковые платы PCIe</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Звуковые платы USB</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Синтезаторы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Студийные мониторы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">MIDI-Клавиатуры</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">MIDI-Контроллеры</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">MIDI-Интерфейсы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Динамические процессоры</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Рекордеры, аксессуары</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Портастудии, аксессуары</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre col-1">
+                  <h3 class="menu-dropdown__title">Микрофоны</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Гусиная шея</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Пушка</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Вокальные</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Измерительные</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Инструментальные</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Ленточные</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Наборы микрофонов</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Подвесные</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Репортерские</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Студийные</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Петличные и головные</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Радиосистемы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Аксессуары</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Стойки</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre col-1">
+                  <div class="col-element">
+                    <h3 class="menu-dropdown__title">Обработка звука</h3>
+                    <div class="menu-dropdown__column">
+                      <ul class="menu-dropdown__list">
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Процессор эффектов</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Компрессор</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Кроссовер</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Анализатор</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Подавитель обратной связи</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Директ бокс</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Эквалайзер</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Микшер-Сплиттер</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Разное</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-element">
+                    <h3 class="menu-dropdown__title">Усилители</h3>
+                    <div class="menu-dropdown__column">
+                      <ul class="menu-dropdown__list">
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Предусилиели</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Усилители мощности</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Усилители для наушников</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre menu-dropdown__genre_last col-1">
+                  <div class="col-element">
+                    <h3 class="menu-dropdown__title">Наушники и гарнитуры</h3>
+                    <div class="menu-dropdown__column">
+                      <ul class="menu-dropdown__list">
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">DJ-Наушники</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Наушники с микрофоном</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Наушники HI-FI, HI-END</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Для конференций</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Наушники портативные</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Наушники студийные</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Радионаушники</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-element">
+                    <h3 class="menu-dropdown__title">Для Трансляций</h3>
+                    <div class="menu-dropdown__column">
+                      <ul class="menu-dropdown__list">
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Мегафоны</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Громкоговорители</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Усилители мощности</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Конференц-системы</a></li>
+                        <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Разное для трансляций</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-type="folk" class="menu-dropdown__container js-dropdown-container">
+                <div class="menu-dropdown__genre col-1">
+                  <h3 class="menu-dropdown__title">Народные инструменты</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Аккордеоны, цифровые аккордеоны и баяны</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Банджо</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Гавайские гитары (укулеле)</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Губные гармошки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Добро (резонатор)</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Балалайки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Мандолины, электромандолины</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Другие струнные инструменты</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Домры</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Колокола</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre col-3">
+                  <h3 class="menu-dropdown__title">Экзотические инструменты</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Алтайские варганы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Башкирские кубызы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Белорусские варганы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Венгерские доромбы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Вьетнамские дан мои</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Вьетнамские литые варганы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Индийские морсинги</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Итальянские маранзано</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Киргизские темир-комусы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Китайские коу сяны</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Непальские мурчунги</a></li>
+                    </ul>
+                  </div>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Русские варганы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Словацкие варганы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Американские варганы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Татарские кубызы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Украинские дрымбы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Хакаские темир-комусы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Эстонские пармупилли</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Якутские хомусы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Редкие варганы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Варганные примочки</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Диджериду</a></li>
+                    </ul>
+                  </div>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Поющие чаши и колокола</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Дрим-Драм</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Филиппинские кулифао</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Хэнг Драм (Hang Drum)</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Бубны и гонги</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Духовые инструменты</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Калимбы, сансулы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Струнные и смычковые</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Разное</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre menu-dropdown__genre_last col-1">
+                  <h3 class="menu-dropdown__title">Аксессуары</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Струны для народных инструментов</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Чехлы и кейсы</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div data-type="light" class="menu-dropdown__container js-dropdown-container">
+                <div class="menu-dropdown__genre col-3">
+                  <h3 class="menu-dropdown__title">Световые приборы</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">LED эффекты</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">LED PAR</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Лазерный эффект</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Колорченджер</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Вращающаяся голова</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Прожектор PAR</a></li>
+                    </ul>
+                  </div>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Стробоскоп</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">LED панели</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Сканер</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Световые эффекты разные</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Архитектурная подсветка</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Cветодиодные экраны</a></li>
+                    </ul>
+                  </div>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Имитатор пламени</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Ультрафиолетовый светильник</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Световой пульт, контроллер DMX</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Театральный прожектор</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Световые шнуры</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre col-1">
+                  <h3 class="menu-dropdown__title">спец-эффекты</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Генератор дыма</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Генератор снега</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Генератор мыльных пузырей</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Генератор конфетти</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Зеркальные шары и моторы</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="menu-dropdown__genre menu-dropdown__genre_last col-1">
+                  <h3 class="menu-dropdown__title">Расходный материал</h3>
+                  <div class="menu-dropdown__column">
+                    <ul class="menu-dropdown__list">
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Светофильтр и краска</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Жидкости</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Конфетти</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Лампы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Фермы</a></li>
+                      <li class="menu-dropdown__item"><a href="catalog.html#1" class="menu-dropdown__goTo">Крепежные элементы</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>

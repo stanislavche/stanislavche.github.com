@@ -12,35 +12,56 @@ window.ss.views.App = Backbone.View.extend({
 			'click .js-cancelWish': 'cancelWish',
 			'click .js-next-buton': 'webkitIt',
 			'click .js-menuShow': 'showHideMenu'
-		} :
-		{
+		} : {
 			'click .js-wishBtnCheckbox': 'wish',
 			'click .js-cancelWish': 'cancelWish',
 			'click .js-next-buton': 'webkitIt',
-			//'click .js-menuShow': 'preventDefault',
-			'mouseenter .js-menuShow': 'showMenu',
-			'mouseleave .js-menuShow': 'hideMenu'
+			'click .js-menuShow': 'preventDef',
+			'mouseenter .js-menu': 'showHideMenu',
+			'mouseleave .js-menu': 'showHideMenu',
+			'mouseenter .js-menuShow': 'showHideMenu',
+			'mouseleave .js-menuShow': 'showHideMenu'
+		}
+		
+	},
+
+	preventDef: function(e) {
+		e.preventDefault();
+	},
+
+	showHideMenu: function(e) {
+		var $dropdown = $('.js-dropdown'),
+			$backMask = $('.js-mask');
+		if ($(e.currentTarget).hasClass('js-menu')){
+			if ($dropdown.hasClass('active')){
+				$dropdown.removeClass('active');
+				$backMask.removeClass('active');
+				$('.js-menuShow').removeClass('active');
+			} else {
+				$dropdown.addClass('active');
+				$backMask.addClass('active');
+			}
+		} else if ($(e.currentTarget).hasClass('js-menuShow')){
+			var currentMenuName = e.currentTarget.attributes.href.nodeValue,
+				$link = $(e.currentTarget),
+				$currentMenu = $dropdown.find('.js-dropdown-container[data-type="' + currentMenuName + '"]');
+			
+			$('.js-menuShow').removeClass('active');
+			$link.addClass('active');
+			$('.js-dropdown-container').removeClass('active');
+			$currentMenu.addClass('active');
 		}
 	},
 
-	//preventDefault: function(e) {
-	//	e.preventDefault();
-	//},
+	// showMenu: function(e) {
+	// 	$('.js-dropdown').addClass('active');
+	// 	console.log($(e.currentTarget));
+	// },
 
-	showHideMenu: function(e) {
-		e.preventDefault();
-		var $currentTarget = $(e.currentTarget);
-	},
-
-	showMenu: function(e) {
-		$('.js-dropdown').addClass('active');
-		console.log($(e.currentTarget));
-	},
-
-	hideMenu: function(e) {
-		$('.js-dropdown').removeClass('active');
-		console.log(e);
-	},
+	// hideMenu: function(e) {
+	// 	$('.js-dropdown').removeClass('active');
+	// 	console.log(e);
+	// },
 
 	cancelWish: function (e) {
 		e.preventDefault();
@@ -102,6 +123,7 @@ window.ss.views.App = Backbone.View.extend({
 		}
 		// 
 		this.fancybox();
+
 	},
 	webkitIt: function (e) {
 		e.preventDefault();
