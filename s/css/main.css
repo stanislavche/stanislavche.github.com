@@ -2231,15 +2231,20 @@ h2 {
   font-weight: 300;
   color: #333;
 }
-.photoview__current {
+.photoview__gallery {
   position: relative;
+  padding-bottom: 99%;
+}
+.photoview__current {
+  position: absolute;
   border: none;
   background: none;
   padding: 0;
-  display: table;
   text-align: center;
   margin: 0 -30px 10px;
   display: none;
+  top: 0;
+  left: 0;
 }
 .photoview__current.active {
   display: block;
@@ -2254,6 +2259,7 @@ h2 {
   color: #374147;
   -webkit-transition: opacity 0.2s ease-in-out;
           transition: opacity 0.2s ease-in-out;
+  height: 500px;
 }
 .photoview__expand span {
   font-size: 14px;
@@ -2278,6 +2284,10 @@ h2 {
   padding: 0;
   text-align: center;
   font-size: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 .photoview__item {
   display: inline-block;

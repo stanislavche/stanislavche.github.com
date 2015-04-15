@@ -224,11 +224,24 @@ window.ss.views.Gallery = Backbone.View.extend({
 		'click .js-listItem': 'showImage'
 	},
 	initialize: function(){
-		console.log('init gallery');
+		var self = this;
+		setInterval(function(){
+			if (parseInt($(self.el).find('.js-listItem.active').index()) + 1 !== parseInt($(self.el).find('.js-listItem').length)){
+				var index = parseInt($(self.el).find('.js-listItem.active').index()) + 2;
+				$('.js-listItem[data-slideId="'+ index +'"]').trigger('click');
+			} else {
+				$('.js-listItem').eq(0).trigger('click');
+			}
+		}, 10000);
 	},
 	showImage: function(e){
 		e.preventDefault();
-		console.log(e.currentTarget);
+		var $self = $(e.currentTarget);
+		var slideId = parseInt($(e.currentTarget).attr('data-slideId'));
+		$('.js-listItem.active').removeClass('active');
+		$self.addClass('active');
+		$('.js-fancybox').fadeOut();
+		$(this.el).find('.js-fancybox[data-slideId="' + slideId + '"]').fadeIn();
 	}
 })
 $(function () {
