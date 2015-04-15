@@ -1056,6 +1056,7 @@ h2 {
   *zoom: 1;
   padding: 25px 0 20px;
   position: relative;
+  font-size: 0;
 }
 .steps__item:before,
 .steps__item:after {
@@ -1065,8 +1066,10 @@ h2 {
 .steps__item:after {
   clear: both;
 }
-.steps__item:after {
-  content: '';
+.steps__item:last-child:after {
+  background: none;
+}
+.steps__item-arrow {
   background: url('../img/icons/big_arrow.svg');
   display: inline-block;
   width: 30px;
@@ -1076,29 +1079,28 @@ h2 {
   right: -11px;
   margin-top: -15px;
 }
-.steps__item:last-child:after {
-  background: none;
-}
 .steps__img {
+  position: absolute;
+  left: 26px;
+  top: 50%;
+  margin-top: -20px;
   width: 40px;
   height: 40px;
-  float: left;
-  margin-left: 26px;
 }
 .steps__img_cart {
   width: 50px;
   height: 50px;
-  margin-top: -5px;
+  margin-top: -25px;
 }
 .steps__img_manager {
   width: 50px;
   height: 50px;
-  margin-top: -5px;
+  margin-top: -25px;
 }
 .steps__img_rocket {
   width: 50px;
   height: 50px;
-  margin-top: -5px;
+  margin-top: -25px;
 }
 .steps__text {
   display: block;
@@ -1111,7 +1113,7 @@ h2 {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
   padding-right: 15px;
 }
-.no-svg .steps__item {
+.no-svg .steps__item-arrow {
   background: url('../img/png-icons/icons/big_arrow.png');
 }
 .product {
