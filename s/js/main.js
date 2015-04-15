@@ -17,12 +17,23 @@ window.ss.views.App = Backbone.View.extend({
 			'click .js-cancelWish': 'cancelWish',
 			'click .js-next-buton': 'webkitIt',
 			'click .js-menuShow': 'preventDef',
+			'click .js-search-field': 'resizeSearch',
 			'mouseenter .js-menu': 'showHideMenu',
 			'mouseleave .js-menu': 'showHideMenu',
 			'mouseenter .js-menuShow': 'showHideMenu',
 			'mouseleave .js-menuShow': 'showHideMenu'
 		}
 		
+	},
+
+	bodyFunc: function(e) {
+		if (!($(e.target.offsetParent).parents('.js-search-field').length)){
+			$('.js-search-field').removeClass('expand');
+		}
+	},
+
+	resizeSearch: function(e) {
+		$(e.currentTarget).addClass('expand');
 	},
 
 	preventDef: function(e) {
@@ -123,7 +134,7 @@ window.ss.views.App = Backbone.View.extend({
 		}
 		// 
 		this.fancybox();
-
+		$('body').bind('click', this.bodyFunc);
 	},
 	webkitIt: function (e) {
 		e.preventDefault();

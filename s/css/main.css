@@ -953,12 +953,15 @@ h2 {
   position: relative;
   display: inline-block;
   width: 280px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 .field_search {
   width: 280px;
   float: right;
 }
 .form {
+  z-index: 10;
   *zoom: 1;
   display: inline-block;
 }
@@ -972,6 +975,63 @@ h2 {
 }
 .form_right {
   float: right;
+  position: relative;
+}
+.form.expand .field {
+  width: 420px;
+}
+.form.expand .input_search {
+  border-bottom: solid 2px #15b287;
+}
+.form.expand .autocomplete {
+  display: block;
+}
+.autocomplete {
+  display: none;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  padding: 0;
+}
+.autocomplete__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.autocomplete__item {
+  margin: 0;
+  position: relative;
+  white-space: nowrap;
+}
+.autocomplete__item + .autocomplete__item {
+  border-top: 1px solid #e1e0e1;
+}
+.autocomplete__link {
+  height: 50px;
+  display: block;
+  background: #fff;
+  position: relative;
+  padding: 18px 70px 20px 18px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  font-size: 14px;
+  color: #000;
+}
+.autocomplete__link .icon-chevron-right {
+  background: url('../img/icons/big_arrow.svg') no-repeat;
+  position: absolute;
+  display: block;
+  top: 50%;
+  margin-top: -10px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+}
+.autocomplete__link:hover {
+  background: #f8c255;
 }
 .steps {
   background: #fff;
