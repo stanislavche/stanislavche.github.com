@@ -316,6 +316,12 @@ h2 {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+.responsive-video.activated {
+  opacity: 1;
 }
 .responsive-video iframe {
   position: absolute;
