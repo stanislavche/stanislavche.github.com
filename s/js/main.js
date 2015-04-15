@@ -27,7 +27,8 @@ window.ss.views.App = Backbone.View.extend({
 	},
 
 	bodyFunc: function(e) {
-		if (!($(e.target.offsetParent).parents('.js-search-field').length)){
+		console.log($(e.target));
+		if (!($(e.target.offsetParent).parents('.js-search-field').length) && !($(e.target).hasClass('js-listItem'))){
 			$('.js-search-field').removeClass('expand');
 		}
 	},
@@ -43,6 +44,7 @@ window.ss.views.App = Backbone.View.extend({
 	showHideMenu: function(e) {
 		var $dropdown = $('.js-dropdown'),
 			$backMask = $('.js-mask');
+		$('.js-search-field').removeClass('expand');
 		if ($(e.currentTarget).hasClass('js-menu')){
 			if ($dropdown.hasClass('active')){
 				$dropdown.removeClass('active');
@@ -139,18 +141,18 @@ window.ss.views.App = Backbone.View.extend({
 	webkitIt: function (e) {
 		e.preventDefault();
 		var $currentTarget = $(e.currentTarget),
-			$parent = $currentTarget.parents('.js-slide'),
+			$parent = $currentTarget.closest('.js-slide'),
 			index = parseInt($parent.attr('data-slide')),
-			totalSlides = $currentTarget.parents('.js-webkitContainer').find('.js-slide').length,
+			totalSlides = $currentTarget.closest('.js-webkitContainer').find('.js-slide').length,
 			$nextSlide = null,
-			$allButtons = $currentTarget.parents('.js-webkitContainer').find('.js-next-buton')
+			$allButtons = $currentTarget.closest('.js-webkitContainer').find('.js-next-buton')
 		;
 		if (!($currentTarget.hasClass('disabled'))){
 			$parent.removeClass('active');
 			if ((index + 1) > totalSlides){
-				$nextSlide = $(".js-slide[data-slide='" + 1 + "'");
+				$nextSlide = $(".js-slide[data-slide='" + 1 + "']");
 			} else {
-				$nextSlide = $(".js-slide[data-slide='" + (index + 1) + "'")
+				$nextSlide = $(".js-slide[data-slide='" + (index + 1) + "']")
 			}
 			_.delay(function(){
 				$nextSlide.addClass('active');
