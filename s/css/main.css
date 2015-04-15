@@ -1018,13 +1018,13 @@ h2 {
   background: #fff;
   position: relative;
   padding: 18px 70px 20px 18px;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
   overflow: hidden;
   text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   font-size: 14px;
-  color: #000;
+  color: #585858;
 }
 .autocomplete__link .icon-chevron-right {
   background: url('../img/icons/big_arrow.svg') no-repeat;
@@ -2678,8 +2678,8 @@ h2 {
   background-color: transparent;
   display: block;
   padding: 9px 20px;
-  -webkit-transition: background-color 0.4s;
-  transition: background-color 0.4s;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
 }
 .menu-dropdown__goTo:visited {
   color: #000;
@@ -2702,8 +2702,8 @@ h2 {
 }
 .drodown-mask.active {
   height: 100vh;
-  opacity: 0.8;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
 }
 
 /*# sourceMappingURL=main.css.map */
