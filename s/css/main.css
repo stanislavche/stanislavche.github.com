@@ -1018,8 +1018,6 @@ h2 {
   background: #fff;
   position: relative;
   padding: 18px 70px 20px 18px;
-  -webkit-transition: all 0.1s;
-  transition: all 0.1s;
   overflow: hidden;
   text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
@@ -2678,8 +2676,6 @@ h2 {
   background-color: transparent;
   display: block;
   padding: 9px 20px;
-  -webkit-transition: background-color 0.1s;
-  transition: background-color 0.1s;
 }
 .menu-dropdown__goTo:visited {
   color: #585858;
