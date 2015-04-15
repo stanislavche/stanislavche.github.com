@@ -2674,7 +2674,7 @@ h2 {
   font-size: 14px;
 }
 .menu-dropdown__goTo {
-  color: #000;
+  color: #585858;
   background-color: transparent;
   display: block;
   padding: 9px 20px;
@@ -2682,7 +2682,7 @@ h2 {
   transition: background-color 0.1s;
 }
 .menu-dropdown__goTo:visited {
-  color: #000;
+  color: #585858;
 }
 .menu-dropdown__goTo:hover {
   background-color: #f9c866;
