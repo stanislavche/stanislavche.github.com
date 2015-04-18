@@ -2239,13 +2239,24 @@ h2 {
 .to_read__link {
   display: block;
   color: #333;
-  padding: 24px 30px;
+  padding: 24px 60px 24px 30px;
   font-size: 14px;
   line-height: 1.5;
+  position: relative;
 }
 .to_read__item.active .to_read__link {
   background: #F8C255;
   color: #000;
+}
+.to_read__link .icon-chevron-right {
+  background: url('../img/icons/big_arrow.svg') no-repeat;
+  position: absolute;
+  display: block;
+  top: 50%;
+  margin-top: -10px;
+  right: 24px;
+  width: 20px;
+  height: 20px;
 }
 .realted_product__title {
   margin-bottom: 34px;
