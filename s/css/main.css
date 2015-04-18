@@ -2296,12 +2296,55 @@ h2 {
 .photoview__item {
   display: inline-block;
   vertical-align: top;
+  position: relative;
+}
+.photoview__item.active .photoview__link:after {
+  content: '';
+  position: absolute;
+  background: #334c5d;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  opacity: 0.5;
+}
+.photoview__item.active .photoview__svg {
+  -webkit-animation: loader-show 10s;
+          animation: loader-show 10s;
+  stroke: #F8C255;
+  stroke-width: 2px;
+  opacity: 1;
 }
 .photoview__link {
   display: block;
   font-size: 16px;
   line-height: 0;
   padding: 10px;
+  width: 80px;
+  position: relative;
+  height: 80px;
+}
+.photoview__img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+.photoview__svg {
+  position: absolute;
+  top: 50%;
+  margin-top: -12px;
+  margin-left: -12px;
+  left: 50%;
+  opacity: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke-width: 4px;
+  stroke: #ADB7BE;
+  stroke-dasharray: 62;
+  z-index: 10;
 }
 .prod-reviews {
   font-size: 14px;
@@ -2351,12 +2394,24 @@ h2 {
   color: #6E7C86;
   font-size: 12px;
 }
+.prod-reviews__toolbox button + button {
+  margin-left: 20px;
+}
 .prod-reviews__more-btn svg {
   fill: currentColor;
 }
 .rev-form {
   margin-top: 10px;
   font-size: 14px;
+  max-height: 0;
+  padding: 0 30px;
+  overflow: hidden;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.rev-form.active {
+  max-height: 600px;
+  padding: 30px 30px;
 }
 .rev-form__title {
   margin-top: 0;

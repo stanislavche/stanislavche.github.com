@@ -18,12 +18,25 @@ window.ss.views.App = Backbone.View.extend({
 			'click .js-next-buton': 'webkitIt',
 			'click .js-menuShow': 'preventDef',
 			'click .js-search-field': 'resizeSearch',
+			'click .js-showReview': 'reviewShow',
+			'click .js-sendReview': 'reviewHide',
 			'mouseenter .js-menu': 'showHideMenu',
 			'mouseleave .js-menu': 'showHideMenu',
 			'mouseenter .js-menuShow': 'showHideMenu',
 			'mouseleave .js-menuShow': 'showHideMenu'
 		}
 		
+	},
+
+	reviewShow: function(e){
+		$(e.currentTarget).hide();
+		$('.js-review').addClass('active');
+	},
+
+	reviewHide: function(e){
+		e.preventDefault();
+		$('.js-showReview').show();
+		$('.js-review').removeClass('active');
 	},
 
 	bodyFunc: function(e) {

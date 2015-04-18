@@ -747,10 +747,22 @@
                       <use xlink:href="img/icons.svg#enlarge"></use>
                     </svg><!--[if lt IE 9]><img class="icon photoview__expand-svg" src='img/png-icons/enlarge.png' alt=""><![endif]--><span>Увеличить</span></span><img src="img/product_slide4.jpg" class="photoview__cur-img"></a>
                 <ul class="photoview__list">
-                  <li data-slideId="1" class="photoview__item js-listItem active"><a href="/img/product_slide1.jpg" target="_blank" class="photoview__link"><img src="img/product_thumb1.jpg" class="photoview__img"></a></li>
-                  <li data-slideId="2" class="photoview__item js-listItem "><a href="/img/product_slide2.jpg" target="_blank" class="photoview__link"><img src="img/product_thumb2.jpg" class="photoview__img"></a></li>
-                  <li data-slideId="3" class="photoview__item js-listItem "><a href="/img/product_slide3.jpg" target="_blank" class="photoview__link"><img src="img/product_thumb3.jpg" class="photoview__img"></a></li>
-                  <li data-slideId="4" class="photoview__item js-listItem "><a href="/img/product_slide4.jpg" target="_blank" class="photoview__link"><img src="img/product_thumb4.jpg" class="photoview__img"></a></li>
+                  <li data-slideId="1" class="photoview__item js-listItem active"><a href="/img/product_slide1.jpg" target="_blank" class="photoview__link"><img src="img/product_thumb1.jpg" class="photoview__img">
+                      <svg viewbox="0 0 24 24" class="photoview__svg">
+                        <circle cx="12" cy="12" r="9" class="circle"></circle>
+                      </svg></a></li>
+                  <li data-slideId="2" class="photoview__item js-listItem "><a href="/img/product_slide2.jpg" target="_blank" class="photoview__link"><img src="img/product_thumb2.jpg" class="photoview__img">
+                      <svg viewbox="0 0 24 24" class="photoview__svg">
+                        <circle cx="12" cy="12" r="9" class="circle"></circle>
+                      </svg></a></li>
+                  <li data-slideId="3" class="photoview__item js-listItem "><a href="/img/product_slide3.jpg" target="_blank" class="photoview__link"><img src="img/product_thumb3.jpg" class="photoview__img">
+                      <svg viewbox="0 0 24 24" class="photoview__svg">
+                        <circle cx="12" cy="12" r="9" class="circle"></circle>
+                      </svg></a></li>
+                  <li data-slideId="4" class="photoview__item js-listItem "><a href="/img/product_slide4.jpg" target="_blank" class="photoview__link"><img src="img/product_thumb4.jpg" class="photoview__img">
+                      <svg viewbox="0 0 24 24" class="photoview__svg">
+                        <circle cx="12" cy="12" r="9" class="circle"></circle>
+                      </svg></a></li>
                 </ul>
               </div>
             </section>
@@ -881,9 +893,10 @@
                     <use xlink:href="img/icons.svg#chevron-down"></use>
                   </svg><span>показать больше</span>
                 </button>
+                <button class="rev-form__send btn btn_red js-showReview">Написать отзыв</button>
               </div>
             </section>
-            <section class="product__page-block rev-form">
+            <section class="product__page-block rev-form js-review">
               <form class="rev-form__form">
                 <h3 class="rev-form__title">Написать отзыв</h3>
                 <fieldset class="rev-form__group"><span class="rev-form__group-half">
@@ -926,7 +939,7 @@
                   <textarea class="rev-form__text"></textarea>
                 </fieldset>
                 <div class="rev-form__info">Внимание! Публикация отзыва производится только после предварительной модерации</div>
-                <button class="rev-form__send btn btn_red">Отправить отзыв</button>
+                <button class="rev-form__send btn btn_red js-sendReview">Отправить отзыв</button>
               </form>
             </section>
           </div>
