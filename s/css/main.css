@@ -680,6 +680,25 @@ h2 {
   position: relative;
   z-index: 1;
 }
+.ie-8 .articles .site-header {
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#592b1943', endColorstr='#592b1943',GradientType=0 ) progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/backarticle.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#592b1943', endColorstr='#592b1943', GradientType=0) progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/backarticle.jpg', sizingMethod='scale');
+}
+.articles .site-header {
+  background: -webkit-linear-gradient(rgba(43, 25, 67, 0.35), rgba(43, 25, 67, 0.35)), url('../img/backarticle.jpg') no-repeat;
+  background: linear-gradient(rgba(43, 25, 67, 0.35), rgba(43, 25, 67, 0.35)), url('../img/backarticle.jpg') no-repeat;
+  background-size: cover;
+  z-index: 10;
+  position: relative;
+}
+.articles .main-menu {
+  margin-top: 44px;
+  padding-bottom: 120px;
+  width: 100%;
+}
+.articles .main-menu__title {
+  display: none;
+}
 .main-menu {
   margin-top: 88px;
   padding-bottom: 240px;
@@ -2184,23 +2203,26 @@ h2 {
   background: #fff;
   padding: 36px 30px;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 20px;
+}
+.article__text p {
+  margin-bottom: 20px;
 }
 .article__text p:first-child {
   margin-top: 0;
 }
 .article__text blockquote {
-  margin: 1.6em 0;
+  margin: 36px 0;
   font-size: 1.4em;
   line-height: 1.1;
 }
 .to_read {
   background: #fff;
-  margin-bottom: 40px;
+  margin-bottom: 54px;
 }
 .to_read__title {
   margin: 0;
-  padding: 28px 30px;
+  padding: 24px 30px;
 }
 .to_read__list {
   list-style: none;
@@ -2217,13 +2239,19 @@ h2 {
 .to_read__link {
   display: block;
   color: #333;
-  padding: 16px 30px;
+  padding: 24px 30px;
   font-size: 14px;
   line-height: 1.5;
 }
 .to_read__item.active .to_read__link {
   background: #F8C255;
   color: #000;
+}
+.realted_product__title {
+  margin-bottom: 34px;
+}
+.article .container > .content__row {
+  margin-bottom: 80px;
 }
 .photoview {
   margin-bottom: 20px;
