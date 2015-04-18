@@ -27,7 +27,6 @@ window.ss.views.App = Backbone.View.extend({
 	},
 
 	bodyFunc: function(e) {
-		console.log($(e.target));
 		if (!($(e.target.offsetParent).parents('.js-search-field').length) && !($(e.target).hasClass('js-listItem'))){
 			$('.js-search-field').removeClass('expand');
 		}
@@ -93,7 +92,6 @@ window.ss.views.App = Backbone.View.extend({
 
 	wish: function (e) {
 		var $currentTarget = $(e.currentTarget);
-		console.log($currentTarget.parents('.js-product'));
 		if ($currentTarget.is(':checked')) {
 			$currentTarget.closest('.js-wishBtn').addClass('checked');
 			$currentTarget.parents('.js-product').find('.js-wishBlock').addClass('show');
@@ -248,5 +246,41 @@ window.ss.views.Gallery = Backbone.View.extend({
 })
 $(function () {
 	window.ssApp = new window.ss.views.App();
+
+	//youtube
+	if ( $('.js-video-container')){
+		var player,
+			done = false,
+			$container = $('.js-video-container'),
+			videoUrl = $('#player').attr('data-src');
+		window.onYouTubeIframeAPIReady = function() {
+			
+			player = new YT.Player('player', {
+				height: '390',
+				width: '640',
+				videoId: videoUrl,
+				events: {
+					'onReady': onPlayerReady,
+					'onStateChange': onPlayerStateChange,
+				}
+			});
+		};
+
+		function onPlayerReady(event) {
+			//event.target.playVideo();
+		};
+
+		function onPlayerStateChange(event) {
+			if (event.data == YT.PlayerState.PLAYING) {
+				$container.addClass('activated');
+			} else {
+				$container.removeClass('activated');
+			}
+		};
+
+		function stopVideo() {
+			player.stopVideo();
+		}
+	}
 });
 //# sourceMappingURL=main.js.map
