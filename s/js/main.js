@@ -6,6 +6,8 @@ window.ss = window.ss || {
 };
 window.ss.views.App = Backbone.View.extend({
 	el: '.js-app',
+	nameInput: false,
+	phoneInput: false,
 	events: function() {
 		return Modernizr.touch ? {
 			'click .js-wishBtnCheckbox': 'wish',
@@ -20,12 +22,96 @@ window.ss.views.App = Backbone.View.extend({
 			'click .js-search-field': 'resizeSearch',
 			'click .js-showReview': 'reviewShow',
 			'click .js-sendReview': 'reviewHide',
+			'click .js-order': 'showPopup',
 			'mouseenter .js-menu': 'showHideMenu',
 			'mouseleave .js-menu': 'showHideMenu',
 			'mouseenter .js-menuShow': 'showHideMenu',
-			'mouseleave .js-menuShow': 'showHideMenu'
+			'mouseleave .js-menuShow': 'showHideMenu',
+			'click .js-orderSend': 'sendOrder',
+			'click .js-orderCancel': 'orderCancel',
+			'keyup .js-inputName': 'changeName',
+			'keydown .js-inputPhone': 'changePhone',
+			'input .js-inputPhone': 'validatePhone',
+			'click .js-closePopup': 'closeFancybox'
 		}
 		
+	},
+
+	closeFancybox: function(e){
+		e.preventDefault();
+		console.log('close');
+		$.fancybox.close();
+	},
+
+	changeName: function(event){
+		var $element = $(event.currentTarget);
+		if($element.val().length == 0){
+			this.nameInput = false;
+		} else {
+			this.nameInput = true;
+		}
+	},
+
+	validatePhone: function(event){
+		var $element = $(event.currentTarget);
+		if (!isNaN($element.val())){
+			if ($element.val().length == 11){
+				$element.addClass('validate');
+				this.phoneInput = true;		
+			} else {
+				$element.removeClass('validate');
+				this.phoneInput = false;
+			}
+		} else {
+			$element.removeClass('validate');
+			event.preventDefault();
+			this.phoneInput = false;
+			_.delay(function(){
+				$element.val('');
+			}, 300);
+		}
+	},
+
+	changePhone: function(event){
+		var value = $(event.currentTarget).val(),
+			key = event.which ? event.which : event.keyCode
+		;
+		if (key < 48 || key > 57 || value.length > 10){
+			if (key !== 8){
+				event.preventDefault();
+				return false;
+			}
+		}
+	},
+
+	sendOrder: function(e){
+		e.preventDefault();
+		var 
+			$form = $(e.currentTarget).closest('.js-orderContainer'),
+			formData = $form.find('.js-order-form').serialize(),
+			self = this
+		;
+		if (this.nameInput && this.phoneInput){
+			$.ajax({
+				type: "POST",
+				url: '#',
+				data: formData,
+				success : function( response ) {
+					$form.find('.js-step1').removeClass('active');
+					$form.find('.js-popupName').text($form.find('.js-inputName').val());
+					$form.find('.js-congratContainer').addClass('active');
+					$form.find('.js-phoneTime').text($form.find('.js-callHours').val() + ':' + $form.find('.js-callMinutes').val());
+					_.delay(function(){
+						$.fancybox.resize;
+					}, 2000);
+				}
+			});
+		}
+	},
+
+	orderCancel: function(e){
+		e.preventDefault();
+		$(e.currentTarget).closest('.js-orderContainer').find('.js-order-form')[0].reset();
 	},
 
 	reviewShow: function(e){
@@ -128,6 +214,49 @@ window.ss.views.App = Backbone.View.extend({
 			}
 		});
 	},
+	showPopup: function(e){
+		e.preventDefault();
+		var $self = $(e.currentTarget);
+		var productId = $(e.currentTarget).attr('data-id');
+		$('.js-orderProduct').attr('value', productId);
+		if (new Date().getUTCHours() + 3 >= 9 && new Date().getUTCHours() + 3 < 21){
+			$('.order-popup__category').removeClass('active');
+			$('.order-popup__online').addClass('active');
+		} else {
+			$('.order-popup__category').removeClass('active');
+			$('.order-popup__offline').addClass('active');
+		}
+		$.fancybox.resize;
+
+	},
+	order: function(e){
+		var self = this;
+		$('.js-order').fancybox({
+			padding: 0,
+			tpl: {
+				wrap     : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin fancybox-skin_white"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>',
+				closeBtn : '<a title="Close" class="fancybox-item fancybox-close js-orderCancel" href="javascript:;"><svg class="icon_close_thin"><use xlink:href="/img/icons.svg#close_small" /></svg></a>'
+			},
+			afterShow: function() {
+				$('.js-callHours, .js-callMinutes').selectmenu( "refresh" );
+
+			},
+			afterClose: function() {
+				console.log('dauwidhiaw');
+				$('body').find('.js-inputName').val('');
+				$('body').find('.js-inputPhone').val('');
+				$('body').find('.js-callHours').prop('selectedIndex',0);
+				$('body').find('.js-callMinutes').prop('selectedIndex',0);
+				$('body').find('.js-step1').addClass('active');
+				$('body').find('.js-congratContainer').removeClass('active');
+				$('body').find('.js-popupName').text('');
+				$('body').find('.js-phoneTime').text('');
+				$('body').find('.js-inputPhone').removeClass('validate');
+				self.nameInput = false;
+				self.phoneInput = false;
+			}
+		});
+	},
 	initialize: function () {
 		this.views = {};
 		// Rating init
@@ -147,6 +276,8 @@ window.ss.views.App = Backbone.View.extend({
 		}
 		// 
 		this.fancybox();
+		this.order();
+		this.customSelect();
 		$('body').bind('click', this.bodyFunc);
 	},
 	webkitIt: function (e) {
@@ -175,6 +306,12 @@ window.ss.views.App = Backbone.View.extend({
 				$allButtons.removeClass('disabled');
 			}, 1000);
 		}
+	},
+
+	customSelect: function(){
+		$('.js-callHours, .js-callMinutes').selectmenu({
+			icons: { button: "custom-triangle" }
+		});
 	},
 	render: function () {
 
@@ -257,6 +394,15 @@ window.ss.views.Gallery = Backbone.View.extend({
 		$(this.el).find('.js-fancybox[data-slideId="' + slideId + '"]').fadeIn();
 	}
 })
+window.ss.views.Order = Backbone.View.extend({
+	el: '.js-orderPopup',
+	events: {
+		'click .js-sort': 'sort'
+	},
+	initialize: function(){
+		var self = this;
+	}
+});
 $(function () {
 	window.ssApp = new window.ss.views.App();
 
