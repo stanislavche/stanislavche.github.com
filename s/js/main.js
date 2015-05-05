@@ -176,9 +176,8 @@ window.ss.views.App = Backbone.View.extend({
 
 	cancelWish: function (e) {
 		e.preventDefault();
-		var $currentTarget = e.currentTarget;
 
-		$currentTarget.parents('.js-product').find('.js-wishBtnCheckbox').trigger('click');
+		$(e.currentTarget).closest('.js-product').find('.js-wishBtnCheckbox').trigger('click');
 	},
 	progressTimer: function () {
 		
@@ -274,6 +273,9 @@ window.ss.views.App = Backbone.View.extend({
 		if (this.$el.hasClass('product-page')){
 			this.views.gallery = new window.ss.views.Gallery({});
 		}
+		if (this.$el.hasClass('catalog')){
+			this.views.gallery = new window.ss.views.Catalog({});
+		}
 		// 
 		this.fancybox();
 		this.order();
@@ -365,7 +367,19 @@ window.ss.views.Catalog = Backbone.View.extend({
 		'click .js-sort': 'sort'
 	},
 	sort: function(){
-		
+
+	},
+	initialize: function(){
+		$('#slider-range').slider({
+			range: true,
+			min: 0,
+			max: 200000,
+			values: [ 0, 200000 ],
+			slide: function( event, ui ) {
+				$("#costFrom").val(ui.values[0]);
+				$("#costTo").val(ui.values[1]);
+			}
+		});
 	}
 });
 window.ss.views.Gallery = Backbone.View.extend({
@@ -393,7 +407,7 @@ window.ss.views.Gallery = Backbone.View.extend({
 		$('.js-fancybox').fadeOut();
 		$(this.el).find('.js-fancybox[data-slideId="' + slideId + '"]').fadeIn();
 	}
-})
+});
 window.ss.views.Order = Backbone.View.extend({
 	el: '.js-orderPopup',
 	events: {

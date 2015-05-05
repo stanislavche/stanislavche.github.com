@@ -13,6 +13,7 @@
     <!--[if (lt IE 9)]
     script(src="js/svg4everybody.ie8.min.js")
     script(src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js")
+    script(src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js")
     script(src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js")
     -->
     <!--<![endif]-->
@@ -725,108 +726,131 @@
             </div>
           </div>
         </nav>
+        <h3 class="information-title">Поиск в разделе: Элетрогитары</h3>
       </div>
     </header>
-    <aside class="steps">
-      <div class="container">
-        <ul class="steps__list">
-          <li class="steps__item"><img onerror="this.src='img/png-icons/icons/search_item.png'" src="img/icons/search_item.svg" alt="" class="steps__img steps__img_search">
-            <p class="steps__text">Найди нужный музыкальный инструмент</p>
-            <div class="steps__item-arrow"></div>
-          </li>
-          <li class="steps__item"><img onerror="this.src='img/png-icons/icons/cart.png'" src="img/icons/cart.svg" alt="" class="steps__img steps__img_cart">
-            <p class="steps__text">Нажмите «купить», введите свой номер телефона</p>
-            <div class="steps__item-arrow"></div>
-          </li>
-          <li class="steps__item"><img onerror="this.src='img/png-icons/icons/manager.png'" src="img/icons/manager.svg" alt="" class="steps__img steps__img_manager">
-            <p class="steps__text">Наш менеджер свяжется с вами для заказа</p>
-            <div class="steps__item-arrow"></div>
-          </li>
-          <li class="steps__item"><img onerror="this.src='img/png-icons/icons/rocket.png'" src="img/icons/rocket.svg" alt="" class="steps__img steps__img_rocket">
-            <p class="steps__text">Мы быстро доставим товар курьером</p>
-            <div class="steps__item-arrow"></div>
-          </li>
-        </ul>
-      </div>
-    </aside>
     <main class="content js-catalog">
       <div class="container">
         <div class="content__row">
           <aside class="content__column-1">
-            <h3 class="catalog__heading">Найдено 100500 товаров</h3>
+            <h3 class="catalog__heading">Найдено 1500 товаров</h3>
             <div class="price-slider">
-              <div class="price-slider__title">Диапазаон цен</div>
-              <div class="price-slider__slider"></div>
-              <div class="price-slider__footer"><span>от</span>
-                <input type="number" placeholder="1000"><span>до</span>
-                <input type="number" placeholder="10000">
+              <h4 class="type-selector__title">Диапазаон цен</h4>
+              <div class="price-slider__slider">
+                <div id="slider-range"></div>
+              </div>
+              <div class="price-slider__footer"><span class="price-slider__text">от</span>
+                <input id="costFrom" type="text" name="from" readonly value="0" class="price-slider__value"><span class="price-slider__text">до</span>
+                <input id="costTo" type="text" name="to" readonly value="200000" class="price-slider__value"><span class="price-slider__text">руб</span>
               </div>
             </div>
             <div class="type-selector">
               <h4 class="type-selector__title">Производитель</h4>
               <ul class="type-selector__list">
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Aria (56)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Aria (56)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Aria (56)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Ashtone (55)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Ashtone (55)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Ashtone (55)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>B.C.Rich (1)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="B.C.Rich (1)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">B.C.Rich (1)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Burny (2)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Burny (2)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Burny (2)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Cort (85)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Cort (85)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Cort (85)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Cruiser by Crafter (3)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Cruiser by Crafter (3)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Cruiser by Crafter (3)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Epiphone (14)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Epiphone (14)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Epiphone (14)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Fender (17)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Fender (17)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Fender (17)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Ferandes (2)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Ferandes (2)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Ferandes (2)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Greg Bennet (3)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Greg Bennet (3)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Greg Bennet (3)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Ibanez (29)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Ibanez (29)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Ibanez (29)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Lag (4)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Lag (4)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Lag (4)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>LTD by ESP (75)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="LTD by ESP (75)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">LTD by ESP (75)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Magna (35)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Magna (35)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Magna (35)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Pignose (3)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Pignose (3)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Pignose (3)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Samick (1)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Samick (1)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Samick (1)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Schester (110)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Schester (110)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Schester (110)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Stagg (35)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Stagg (35)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Stagg (35)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Washburn (1)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Washburn (1)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Washburn (1)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Yamaha (38)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Yamaha (38)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Yamaha (38)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Zombie (31)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Zombie (31)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Zombie (31)</span>
+                  </label>
                 </li>
               </ul>
             </div>
@@ -834,50 +858,94 @@
               <h4 class="type-selector__title">Тип</h4>
               <ul class="type-selector__list">
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Стратокастер (567)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Стратокастер (567)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Стратокастер (567)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Les Paul (34)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Les Paul (34)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Les Paul (34)</span>
+                  </label>
                 </li>
                 <li class="type-selector__item">
-                  <input type="checkbox"><span>Нестандартный (45)</span>
+                  <label class="cus-label">
+                    <input type="checkbox" name="Нестандартный (45)" class="cus-checkbox"><span class="checkbox-icon"></span><span class="checkbox-name type-selector__name">Нестандартный (45)</span>
+                  </label>
                 </li>
               </ul>
             </div>
             <div class="type-selector">
               <h4 class="type-selector__title">Цвет</h4>
               <ul class="type-selector__list type-selector__list_inlined">
-                <li class="type-selector__item">
-                  <input type="checkbox" title="Желтый">
+                <li class="type-selector__item type-selector__item_color">
+                  <label class="cus-label">
+                    <input type="checkbox" title="all" class="cus-checkbox"><span class="checkbox-icon-color"><span class="checkbox-icon-inside type-selector__chekbox-colored"></span></span>
+                  </label>
                 </li>
-                <li class="type-selector__item">
-                  <input type="checkbox" title="Черный">
+                <li class="type-selector__item type-selector__item_color">
+                  <label class="cus-label">
+                    <input type="checkbox" title="all" class="cus-checkbox"><span class="checkbox-icon-color"><span style="background: #bfe79e" class="checkbox-icon-inside"></span></span>
+                  </label>
                 </li>
-                <li class="type-selector__item">
-                  <input type="checkbox" title="Красный">
+                <li class="type-selector__item type-selector__item_color">
+                  <label class="cus-label">
+                    <input type="checkbox" title="all" class="cus-checkbox"><span class="checkbox-icon-color"><span style="background: #e9eae2" class="checkbox-icon-inside"></span></span>
+                  </label>
                 </li>
-                <li class="type-selector__item">
-                  <input type="checkbox" title="Зеленый">
+                <li class="type-selector__item type-selector__item_color">
+                  <label class="cus-label">
+                    <input type="checkbox" title="all" class="cus-checkbox"><span class="checkbox-icon-color"><span style="background: #5a727e" class="checkbox-icon-inside"></span></span>
+                  </label>
+                </li>
+                <li class="type-selector__item type-selector__item_color">
+                  <label class="cus-label">
+                    <input type="checkbox" title="all" class="cus-checkbox"><span class="checkbox-icon-color"><span style="background: #5a727e" class="checkbox-icon-inside"></span></span>
+                  </label>
+                </li>
+                <li class="type-selector__item type-selector__item_color">
+                  <label class="cus-label">
+                    <input type="checkbox" title="all" class="cus-checkbox"><span class="checkbox-icon-color"><span style="background: #15b287" class="checkbox-icon-inside"></span></span>
+                  </label>
+                </li>
+                <li class="type-selector__item type-selector__item_color">
+                  <label class="cus-label">
+                    <input type="checkbox" title="all" class="cus-checkbox"><span class="checkbox-icon-color"><span style="background: #f8c255" class="checkbox-icon-inside"></span></span>
+                  </label>
+                </li>
+                <li class="type-selector__item type-selector__item_color">
+                  <label class="cus-label">
+                    <input type="checkbox" title="all" class="cus-checkbox"><span class="checkbox-icon-color"><span style="background: #7dd5c9" class="checkbox-icon-inside"></span></span>
+                  </label>
+                </li>
+                <li class="type-selector__item type-selector__item_color">
+                  <label class="cus-label">
+                    <input type="checkbox" title="all" class="cus-checkbox"><span class="checkbox-icon-color"><span style="background: #6e5c5b" class="checkbox-icon-inside"></span></span>
+                  </label>
+                </li>
+                <li class="type-selector__item type-selector__item_color">
+                  <label class="cus-label">
+                    <input type="checkbox" title="all" class="cus-checkbox"><span class="checkbox-icon-color"><span style="background: #d6a775" class="checkbox-icon-inside"></span></span>
+                  </label>
+                </li>
+                <li class="type-selector__item type-selector__item_color">
+                  <label class="cus-label">
+                    <input type="checkbox" title="all" class="cus-checkbox"><span class="checkbox-icon-color"><span style="background: #e77a7b" class="checkbox-icon-inside"></span></span>
+                  </label>
+                </li>
+                <li class="type-selector__item type-selector__item_color">
+                  <label class="cus-label">
+                    <input type="checkbox" title="all" class="cus-checkbox"><span class="checkbox-icon-color"><span style="background: #464646" class="checkbox-icon-inside"></span></span>
+                  </label>
                 </li>
               </ul>
             </div>
           </aside>
           <div class="content__column-3">
             <div class="catalog">
-              <form action="#" data-action="#sorting" class="catalog__header"><span class="catalog__header-title">Сортировать по (а где направление?):</span>
-                <select name="term" class="catalog__header-select">
-                  <option value=""></option>
-                  <option value="cost"></option>
-                  <option value="rating"></option>
-                </select>
-                <select name="order" class="catalog__header-select">
-                  <option value=""></option>
-                  <option value="asc"></option>
-                  <option value="desc"></option>
-                </select>
-                <button class="catalog__sorter"><span class="catalog__sorter-text">стоимости</span><span class="catalog__sorter-icon">^</span></button>
-                <button class="catalog__sorter"><span class="catalog__sorter-text">рейтингу</span><span class="catalog__sorter-icon">^</span></button>
-              </form>
+              <div class="catalog__header"><span class="catalog__header-title">Сортировать по:</span>
+                <button class="btn btn_gray active js-sort">стоимости</button>
+                <button class="btn btn_gray js-sort">рейтингу</button>
+              </div>
               <ul class="catalog__list">
                 <li class="catalog__item">
                   <div class="product js-product"><img src="img/guitar1.png" alt="" class="product__img">
@@ -1796,13 +1864,21 @@
                 </li>
               </ul>
               <div class="catalog__footer"><span class="catalog__total">Показано 15 товаров из 300</span>
-                <button class="catalog__more">Показать еще 15 товаров</button>
+                <button class="btn btn_red">показать еще 15 товаров</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </main>
+    <div class="catalog-info">
+      <div class="catalog-info__container">
+        <div class="catalog-description">
+          <div class="catalog-description__icon-cell"><img onerror="this.src='img/png-icons/icons/guitar.png'" src="img/icons/guitar.svg" alt="" class="catalog-description__icon"></div>
+          <div class="catalog-description__title">Электрогитара - многожанровый музыкальный инструмент, подходящий для игры как в стилях рок, блюз, джаз, регги, так и в стилях поп и электро. Выбрать и купить электрогитару можно исходя из нескольких критериев таких как колличество струн, форма электрогитары, цвет дерева грифа, обечайки и деки, звукосниматели. </div>
+        </div>
+      </div>
+    </div>
     <div id="buy-popup" style="display: none" class="js-orderPopup">
       <div class="order-popup">
         <div class="order-popup__category order-popup__online js-orderContainer">
