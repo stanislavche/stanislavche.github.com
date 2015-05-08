@@ -26,13 +26,6 @@
       <div class="container">
         <div class="site-header__container">
           <!-- Logo--><a href="index.html" class="site-header__logo"><img onerror="this.src='img/png-icons/logo.png'" src="img/logo.svg" alt="" class="site-header__logo-img"></a>
-          <!-- Info-->
-          <div class="site-header__info">
-            <ul class="site-header__info-list">
-              <li class="site-header__info-item"><a href="tel:88002345687" class="site-header__info-link site-header__info-link_strong">8-800-234-56-87</a></li>
-              <li class="site-header__info-item"><a href="#" class="site-header__info-link">Как оплатить</a></li>
-            </ul>
-          </div>
           <!-- Search-->
           <div class="form form_right js-search-field">
             <form action="#">
@@ -56,6 +49,13 @@
               </ul>
             </div>
           </div>
+          <!-- Info-->
+          <div class="site-header__info">
+            <ul class="site-header__info-list">
+              <li class="site-header__info-item"><a href="tel:88002345687" class="site-header__info-link site-header__info-link_strong">8-800-234-56-87</a></li>
+              <li class="site-header__info-item"><a href="#" class="site-header__info-link">Как оплатить</a></li>
+            </ul>
+          </div>
         </div>
         <!-- Menu-->
         <nav class="main-menu">
@@ -65,7 +65,7 @@
             <ul class="main-menu__list">
               <li class="main-menu__item main-menu__item_dj"><a href="dj" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/dj.png'" src="img/icons/dj.svg" alt="" class="main-menu__img"><span class="main-menu__text">Dj</span></a></li>
               <li class="main-menu__item main-menu__item_gt"><a href="guitar" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/guitar.png'" src="img/icons/guitar.svg" alt="" class="main-menu__img"><span class="main-menu__text">Гитары</span></a></li>
-              <li class="main-menu__item main-menu__item_dh"><a href="wind" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/wind.png'" src="img/icons/wind.svg" alt="" class="main-menu__img"><span class="main-menu__text">Духовные</span></a></li>
+              <li class="main-menu__item main-menu__item_dh"><a href="wind" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/wind.png'" src="img/icons/wind.svg" alt="" class="main-menu__img"><span class="main-menu__text">Духовые</span></a></li>
               <li class="main-menu__item main-menu__item_pi"><a href="keyboard" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/keyboard.png'" src="img/icons/keyboard.svg" alt="" class="main-menu__img"><span class="main-menu__text">Клавишные</span></a></li>
               <li class="main-menu__item main-menu__item_sm"><a href="bow" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/bow.png'" src="img/icons/bow.svg" alt="" class="main-menu__img"><span class="main-menu__text">Смычковые</span></a></li>
               <li class="main-menu__item main-menu__item_ud"><a href="beat" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/beat.png'" src="img/icons/beat.svg" alt="" class="main-menu__img"><span class="main-menu__text">Ударные</span></a></li>
@@ -728,10 +728,10 @@
         </nav>
       </div>
     </header>
-    <main class="content">
+    <main class="content tb">
       <div class="container">
-        <div class="content__row">
-          <div class="content__column-3">
+        <div class="content__row tb__row">
+          <div class="content__column-3 tb__col-2">
             <article class="article">
               <header class="article__heading"><img src="img/article.jpg" class="article__head_img">
                 <div class="article__head_main">
@@ -754,7 +754,7 @@
               </section>
             </article>
           </div>
-          <div class="content__column-1">
+          <div class="content__column-1 tb__col-1">
             <aside class="to_read">
               <h3 class="to_read__title">Интересные статьи</h3>
               <ul class="to_read__list">
@@ -905,9 +905,9 @@
     <footer class="site-footer">
       <div class="content">
         <div class="site-footer__menu">
-          <div class="container">
-            <div class="content__row">
-              <div class="content__column-1">
+          <div class="container tb">
+            <div class="content__row tb__row">
+              <div class="content__column-1 tb__col-1">
                 <!-- Footer section-->
                 <div class="site-footer__section">
                   <h3 class="site-footer__section-title">Обратная связь</h3>
@@ -922,7 +922,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="content__column-1">
+              <div class="content__column-1 tb__col-1">
                 <!-- Footer section-->
                 <div class="site-footer__section">
                   <h3 class="site-footer__section-title">Категории инструментов</h3>
@@ -938,7 +938,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="content__column-1">
+              <div class="content__column-1 tb__col-1">
                 <!-- Footer section-->
                 <div class="site-footer__section">
                   <h3 class="site-footer__section-title">Возможности оплаты</h3>
@@ -970,15 +970,15 @@
                   </ul>
                 </div>
               </div>
-              <div class="content__column-1">
+              <div class="content__column-1 tb__col-3 tb__footer-padding-line">
                 <!-- Footer section-->
-                <div class="site-footer__section site-footer__section_contacts">
+                <div class="site-footer__section site-footer__section_contacts tb__col-1">
                   <h3 class="site-footer__section-title">Контакты</h3>
                   <p class="site-footer__text">тел.<a href="tel:8-800-345-34-21" class="site-footer__section-link">8-800-345-34-21</a></p>
                   <p class="site-footer__text">Пункт выдачи товара:<br>Таганрог, пер. Спартаковский 5</p>
                 </div>
                 <!-- Footer section-->
-                <div class="site-footer__section">
+                <div class="site-footer__section tb__col-1">
                   <h3 class="site-footer__section-title">Следите за нами</h3>
                   <!-- Social buttons-->
                   <div class="social-btn">

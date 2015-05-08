@@ -27,13 +27,6 @@
         <div class="site-header__container">
           <!-- Logo-->
           <div class="site-header__logo"><img onerror="this.src='img/png-icons/logo.png'" src="img/logo.svg" alt="" class="site-header__logo-img"></div>
-          <!-- Info-->
-          <div class="site-header__info">
-            <ul class="site-header__info-list">
-              <li class="site-header__info-item"><a href="tel:88002345687" class="site-header__info-link site-header__info-link_strong">8-800-234-56-87</a></li>
-              <li class="site-header__info-item"><a href="#" class="site-header__info-link">Как оплатить</a></li>
-            </ul>
-          </div>
           <!-- Search-->
           <div class="form form_right js-search-field">
             <form action="#">
@@ -57,6 +50,13 @@
               </ul>
             </div>
           </div>
+          <!-- Info-->
+          <div class="site-header__info">
+            <ul class="site-header__info-list">
+              <li class="site-header__info-item"><a href="tel:88002345687" class="site-header__info-link site-header__info-link_strong">8-800-234-56-87</a></li>
+              <li class="site-header__info-item"><a href="#" class="site-header__info-link">Как оплатить</a></li>
+            </ul>
+          </div>
         </div>
         <!-- Menu-->
         <nav class="main-menu">
@@ -66,7 +66,7 @@
             <ul class="main-menu__list">
               <li class="main-menu__item main-menu__item_dj"><a href="dj" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/dj.png'" src="img/icons/dj.svg" alt="" class="main-menu__img"><span class="main-menu__text">Dj</span></a></li>
               <li class="main-menu__item main-menu__item_gt"><a href="guitar" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/guitar.png'" src="img/icons/guitar.svg" alt="" class="main-menu__img"><span class="main-menu__text">Гитары</span></a></li>
-              <li class="main-menu__item main-menu__item_dh"><a href="wind" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/wind.png'" src="img/icons/wind.svg" alt="" class="main-menu__img"><span class="main-menu__text">Духовные</span></a></li>
+              <li class="main-menu__item main-menu__item_dh"><a href="wind" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/wind.png'" src="img/icons/wind.svg" alt="" class="main-menu__img"><span class="main-menu__text">Духовые</span></a></li>
               <li class="main-menu__item main-menu__item_pi"><a href="keyboard" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/keyboard.png'" src="img/icons/keyboard.svg" alt="" class="main-menu__img"><span class="main-menu__text">Клавишные</span></a></li>
               <li class="main-menu__item main-menu__item_sm"><a href="bow" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/bow.png'" src="img/icons/bow.svg" alt="" class="main-menu__img"><span class="main-menu__text">Смычковые</span></a></li>
               <li class="main-menu__item main-menu__item_ud"><a href="beat" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/beat.png'" src="img/icons/beat.svg" alt="" class="main-menu__img"><span class="main-menu__text">Ударные</span></a></li>
@@ -734,27 +734,31 @@
         <ul class="steps__list">
           <li class="steps__item"><img onerror="this.src='img/png-icons/icons/search_item.png'" src="img/icons/search_item.svg" alt="" class="steps__img steps__img_search">
             <p class="steps__text">Найди нужный музыкальный инструмент</p>
+            <p class="steps__tablet-text">Найдите инструмент</p>
             <div class="steps__item-arrow"></div>
           </li>
           <li class="steps__item"><img onerror="this.src='img/png-icons/icons/cart.png'" src="img/icons/cart.svg" alt="" class="steps__img steps__img_cart">
             <p class="steps__text">Нажмите «купить», введите свой номер телефона</p>
+            <p class="steps__tablet-text">Нажмите на кнопку «купить»</p>
             <div class="steps__item-arrow"></div>
           </li>
           <li class="steps__item"><img onerror="this.src='img/png-icons/icons/manager.png'" src="img/icons/manager.svg" alt="" class="steps__img steps__img_manager">
             <p class="steps__text">Наш менеджер свяжется с вами для заказа</p>
+            <p class="steps__tablet-text">Мы свяжемся с вами для заказа</p>
             <div class="steps__item-arrow"></div>
           </li>
           <li class="steps__item"><img onerror="this.src='img/png-icons/icons/rocket.png'" src="img/icons/rocket.svg" alt="" class="steps__img steps__img_rocket">
             <p class="steps__text">Мы быстро доставим товар курьером</p>
+            <p class="steps__tablet-text">Мы быстро доставим товар</p>
             <div class="steps__item-arrow"></div>
           </li>
         </ul>
       </div>
     </aside>
     <main class="content">
-      <div class="container">
-        <div class="content__row">
-          <div class="content__column-3">
+      <div class="container tb">
+        <div class="content__row tb__row">
+          <div class="content__column-3 tb__col-3">
             <div data-autorefresh="true" class="carousel js-carousel">
               <!-- Controls-->
               <div class="carousel__controls">
@@ -860,7 +864,7 @@
               </div>
             </div>
           </div>
-          <div class="content__column-1">
+          <div class="content__column-1 tb__col-1">
             <div class="product js-product"><img src="img/guitar1.png" alt="" class="product__img">
               <div class="product__flag">
                 <div class="product__flag-title">Акция</div>
@@ -922,8 +926,8 @@
             </div>
           </div>
         </div>
-        <div class="content__row">
-          <div class="content__column-1">
+        <div class="content__row tb__row">
+          <div class="content__column-1 tb__col-1 tb__right">
             <div class="product js-product"><img src="img/guitar1.png" alt="" class="product__img">
               <div class="product__flag">
                 <div class="product__flag-title">Акция</div>
@@ -984,63 +988,7 @@
               </footer>
             </div>
           </div>
-          <div class="content__column-2 js-webkitContainer">
-            <div class="tip">
-              <div data-slide='1' class="tip__wrapper js-slide active even"><img src="img/tip-bg-1.jpg" alt="" class="tip__img">
-                <div class="tip__overlay"></div>
-                <div class="tip__container">
-                  <div class="tip__title">Совет недели</div><a href="#" class="tip__update js-next-buton">
-                    <svg viewBox="0 0 20 20" class="icon icon-update">
-                      <use xlink:href="img/icons.svg#update"></use>
-                    </svg><!--[if lt IE 9]><img class="icon icon-update" src='img/png-icons/update.png' alt=""><![endif]--></a><img src="img/avatar-1.jpg" alt="" class="tip__avatar">
-                  <h2 class="tip__text">Музыкант Андрей Ясинский о том, как собрать домашнюю студию за десять штук и наебениться ацетоном.</h2>
-                  <footer class="tip__footer">
-                    <div class="tip__info-container"><span class="tip__info-text">26 августа</span><a href="/article.html" class="btn btn_red">читать</a><span class="tip__info-text">15 комментариев</span></div>
-                  </footer>
-                </div>
-              </div>
-              <div data-slide='2' class="tip__wrapper js-slide  odd"><img src="img/tip-bg-1.jpg" alt="" class="tip__img">
-                <div class="tip__overlay"></div>
-                <div class="tip__container">
-                  <div class="tip__title">Совет недели</div><a href="#" class="tip__update js-next-buton">
-                    <svg viewBox="0 0 20 20" class="icon icon-update">
-                      <use xlink:href="img/icons.svg#update"></use>
-                    </svg><!--[if lt IE 9]><img class="icon icon-update" src='img/png-icons/update.png' alt=""><![endif]--></a><img src="img/avatar-1.jpg" alt="" class="tip__avatar">
-                  <h2 class="tip__text">Музыкант Андрей Ясинский о том, как собрать домашнюю студию за десять штук и наебениться ацетоном.</h2>
-                  <footer class="tip__footer">
-                    <div class="tip__info-container"><span class="tip__info-text">26 августа</span><a href="/article.html" class="btn btn_red">читать</a><span class="tip__info-text">15 комментариев</span></div>
-                  </footer>
-                </div>
-              </div>
-              <div data-slide='3' class="tip__wrapper js-slide  odd"><img src="img/tip-bg-1.jpg" alt="" class="tip__img">
-                <div class="tip__overlay"></div>
-                <div class="tip__container">
-                  <div class="tip__title">Совет недели</div><a href="#" class="tip__update js-next-buton">
-                    <svg viewBox="0 0 20 20" class="icon icon-update">
-                      <use xlink:href="img/icons.svg#update"></use>
-                    </svg><!--[if lt IE 9]><img class="icon icon-update" src='img/png-icons/update.png' alt=""><![endif]--></a><img src="img/avatar-1.jpg" alt="" class="tip__avatar">
-                  <h2 class="tip__text">Музыкант Андрей Ясинский о том, как собрать домашнюю студию за десять штук и наебениться ацетоном.</h2>
-                  <footer class="tip__footer">
-                    <div class="tip__info-container"><span class="tip__info-text">26 августа</span><a href="/article.html" class="btn btn_red">читать</a><span class="tip__info-text">15 комментариев</span></div>
-                  </footer>
-                </div>
-              </div>
-              <div data-slide='4' class="tip__wrapper js-slide  odd"><img src="img/tip-bg-1.jpg" alt="" class="tip__img">
-                <div class="tip__overlay"></div>
-                <div class="tip__container">
-                  <div class="tip__title">Совет недели</div><a href="#" class="tip__update js-next-buton">
-                    <svg viewBox="0 0 20 20" class="icon icon-update">
-                      <use xlink:href="img/icons.svg#update"></use>
-                    </svg><!--[if lt IE 9]><img class="icon icon-update" src='img/png-icons/update.png' alt=""><![endif]--></a><img src="img/avatar-1.jpg" alt="" class="tip__avatar">
-                  <h2 class="tip__text">Музыкант Андрей Ясинский о том, как собрать домашнюю студию за десять штук и наебениться ацетоном.</h2>
-                  <footer class="tip__footer">
-                    <div class="tip__info-container"><span class="tip__info-text">26 августа</span><a href="/article.html" class="btn btn_red">читать</a><span class="tip__info-text">15 комментариев</span></div>
-                  </footer>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="content__column-1">
+          <div class="content__column-1 content__right tb__left tb__col-1">
             <div class="genres">
               <h2 class="genres__title">Поиск инструментов по жанрам</h2>
               <ul class="genres__list">
@@ -1071,6 +1019,125 @@
               </ul>
             </div>
           </div>
+          <div class="content__center tb__col-2 js-webkitContainer">
+            <div class="tip__container">
+              <div class="tip">
+                <div data-slide='1' class="tip__wrapper js-slide active even"><img src="img/tip-bg-1.jpg" alt="" class="tip__img">
+                  <div class="tip__overlay"></div>
+                  <div class="tip__container">
+                    <div class="tip__title">Совет недели</div><a href="#" class="tip__update js-next-buton">
+                      <svg viewBox="0 0 20 20" class="icon icon-update">
+                        <use xlink:href="img/icons.svg#update"></use>
+                      </svg><!--[if lt IE 9]><img class="icon icon-update" src='img/png-icons/update.png' alt=""><![endif]--></a><img src="img/avatar-1.jpg" alt="" class="tip__avatar">
+                    <h2 class="tip__text">Музыкант Андрей Ясинский о том, как собрать домашнюю студию за десять штук и наебениться ацетоном.</h2>
+                    <footer class="tip__footer">
+                      <div class="tip__info-container"><span class="tip__info-text">26 августа</span><a href="/article.html" class="btn btn_red">читать</a><span class="tip__info-text">15 комментариев</span></div>
+                    </footer>
+                  </div>
+                </div>
+                <div data-slide='2' class="tip__wrapper js-slide  odd"><img src="img/tip-bg-1.jpg" alt="" class="tip__img">
+                  <div class="tip__overlay"></div>
+                  <div class="tip__container">
+                    <div class="tip__title">Совет недели</div><a href="#" class="tip__update js-next-buton">
+                      <svg viewBox="0 0 20 20" class="icon icon-update">
+                        <use xlink:href="img/icons.svg#update"></use>
+                      </svg><!--[if lt IE 9]><img class="icon icon-update" src='img/png-icons/update.png' alt=""><![endif]--></a><img src="img/avatar-1.jpg" alt="" class="tip__avatar">
+                    <h2 class="tip__text">Музыкант Андрей Ясинский о том, как собрать домашнюю студию за десять штук и наебениться ацетоном.</h2>
+                    <footer class="tip__footer">
+                      <div class="tip__info-container"><span class="tip__info-text">26 августа</span><a href="/article.html" class="btn btn_red">читать</a><span class="tip__info-text">15 комментариев</span></div>
+                    </footer>
+                  </div>
+                </div>
+                <div data-slide='3' class="tip__wrapper js-slide  odd"><img src="img/tip-bg-1.jpg" alt="" class="tip__img">
+                  <div class="tip__overlay"></div>
+                  <div class="tip__container">
+                    <div class="tip__title">Совет недели</div><a href="#" class="tip__update js-next-buton">
+                      <svg viewBox="0 0 20 20" class="icon icon-update">
+                        <use xlink:href="img/icons.svg#update"></use>
+                      </svg><!--[if lt IE 9]><img class="icon icon-update" src='img/png-icons/update.png' alt=""><![endif]--></a><img src="img/avatar-1.jpg" alt="" class="tip__avatar">
+                    <h2 class="tip__text">Музыкант Андрей Ясинский о том, как собрать домашнюю студию за десять штук и наебениться ацетоном.</h2>
+                    <footer class="tip__footer">
+                      <div class="tip__info-container"><span class="tip__info-text">26 августа</span><a href="/article.html" class="btn btn_red">читать</a><span class="tip__info-text">15 комментариев</span></div>
+                    </footer>
+                  </div>
+                </div>
+                <div data-slide='4' class="tip__wrapper js-slide  odd"><img src="img/tip-bg-1.jpg" alt="" class="tip__img">
+                  <div class="tip__overlay"></div>
+                  <div class="tip__container">
+                    <div class="tip__title">Совет недели</div><a href="#" class="tip__update js-next-buton">
+                      <svg viewBox="0 0 20 20" class="icon icon-update">
+                        <use xlink:href="img/icons.svg#update"></use>
+                      </svg><!--[if lt IE 9]><img class="icon icon-update" src='img/png-icons/update.png' alt=""><![endif]--></a><img src="img/avatar-1.jpg" alt="" class="tip__avatar">
+                    <h2 class="tip__text">Музыкант Андрей Ясинский о том, как собрать домашнюю студию за десять штук и наебениться ацетоном.</h2>
+                    <footer class="tip__footer">
+                      <div class="tip__info-container"><span class="tip__info-text">26 августа</span><a href="/article.html" class="btn btn_red">читать</a><span class="tip__info-text">15 комментариев</span></div>
+                    </footer>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content__column-1 tb__col-1 tb__show">
+            <div class="product js-product"><img src="img/guitar1.png" alt="" class="product__img">
+              <div class="product__flag">
+                <div class="product__flag-title">Акция</div>
+                <div class="product__flag-value">-40%</div>
+              </div>
+              <!-- Wish button-->
+              <label class="wish-btn js-wishBtn">
+                <input type="checkbox" class="wish-btn__checkbox js-wishBtnCheckbox">
+                <div class="wish-btn__text">я хочу</div>
+              </label>
+              <!-- Wish block-->
+              <div class="wish js-wishBlock"><a href="#" class="wish__close js-cancelWish">
+                  <svg viewBox="0 0 20 20" class="icon icon-close">
+                    <use xlink:href="img/icons.svg#close"></use>
+                  </svg><!--[if lt IE 9]><img class="icon icon-close" src='img/png-icons/close.png' alt=""><![endif]--></a>
+                <p class="wish__text">Расскажите друзьям в соцсетях, что очень хотите этот инструмент:</p>
+                <div class="socials">
+                  <ul class="socials__list">
+                    <li class="socials__item"><a href="#" class="socials__link"><img src="img/icons/social/tw.svg" alt="" class="socials__img"></a></li>
+                    <li class="socials__item"><a href="#" class="socials__link"><img src="img/icons/social/fb.svg" alt="" class="socials__img"></a></li>
+                    <li class="socials__item"><a href="#" class="wish__btn-link"><img src="img/icons/social/vk.svg" alt="" class="socials__img"></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="product__info">
+                <div class="product__info-container">
+                  <h2 class="product__title"><a href="product.html">Электрогитара Gibson</a></h2>
+                  <!-- Rate-->
+                  <div class="rating">
+                    <select name="rating" readonly="" class="js-rating">
+                      <option value=""></option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4" selected="">4</option>
+                      <option value="5">5</option>
+                    </select><span class="rating__reviews">(230 отзывов)</span>
+                  </div>
+                </div>
+                <ul class="product__info-list">
+                  <li class="product__info-item">Основное: 22 лада</li>
+                  <li class="product__info-item">Тип корпуса: Les Paul</li>
+                  <li class="product__info-item product__info-item_no-bullet"><a href="/product.html" class="product__info-link">подробнее о товаре
+                      <svg viewBox="0 0 20 20" class="icon icon-chevron-right">
+                        <use xlink:href="img/icons.svg#chevron-right"></use>
+                      </svg><!--[if lt IE 9]><img class="icon icon-chevron-right" src='img/png-icons/chevron-right.png' alt=""><![endif]--></a></li>
+                </ul>
+              </div>
+              <footer class="product__footer">
+                <div class="product__footer-container">
+                  <div class="product__old-price">7890</div>
+                  <div class="product__price">5 800 руб.</div>
+                </div><a href="#buy-popup" data-id="guitar404" class="btn js-order">
+                  <svg viewBox="0 0 20 20" class="icon icon-cart">
+                    <use xlink:href="img/icons.svg#cart"></use>
+                  </svg><!--[if lt IE 9]><img class="icon icon-cart" src='img/png-icons/cart.png' alt=""><![endif]-->
+                  купить</a>
+              </footer>
+            </div>
+          </div>
         </div>
       </div>
       <!-- Breaking message-->
@@ -1087,10 +1154,10 @@
       </div>
       <!-- Products set-->
       <div class="products-set">
-        <div class="container">
+        <div class="container tb">
           <h2 class="products-set__title">Самое ходовое в этом месяце</h2>
-          <div class="content__row">
-            <div class="content__column-1">
+          <div class="content__row tb__row">
+            <div class="content__column-1 tb__col-1">
               <div class="product product_white js-product"><img src="img/piano1.png" alt="" class="product__img">
                 <div class="product__flag">
                   <div class="product__flag-title">Акция</div>
@@ -1151,7 +1218,7 @@
                 </footer>
               </div>
             </div>
-            <div class="content__column-1">
+            <div class="content__column-1 tb__col-1">
               <div class="product product_white js-product"><img src="img/piano1.png" alt="" class="product__img">
                 <div class="product__flag">
                   <div class="product__flag-title">Акция</div>
@@ -1212,7 +1279,7 @@
                 </footer>
               </div>
             </div>
-            <div class="content__column-1">
+            <div class="content__column-1 tb__col-1">
               <div class="product product_white js-product"><img src="img/piano1.png" alt="" class="product__img">
                 <div class="product__flag">
                   <div class="product__flag-title">Акция</div>
@@ -1273,7 +1340,7 @@
                 </footer>
               </div>
             </div>
-            <div class="content__column-1">
+            <div class="content__column-1 tb__col-1 tb__hide">
               <div class="product product_white js-product"><img src="img/piano1.png" alt="" class="product__img">
                 <div class="product__flag">
                   <div class="product__flag-title">Акция</div>
@@ -1412,9 +1479,9 @@
     <footer class="site-footer">
       <div class="content">
         <div class="site-footer__menu">
-          <div class="container">
-            <div class="content__row">
-              <div class="content__column-1">
+          <div class="container tb">
+            <div class="content__row tb__row">
+              <div class="content__column-1 tb__col-1">
                 <!-- Footer section-->
                 <div class="site-footer__section">
                   <h3 class="site-footer__section-title">Обратная связь</h3>
@@ -1429,7 +1496,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="content__column-1">
+              <div class="content__column-1 tb__col-1">
                 <!-- Footer section-->
                 <div class="site-footer__section">
                   <h3 class="site-footer__section-title">Категории инструментов</h3>
@@ -1445,7 +1512,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="content__column-1">
+              <div class="content__column-1 tb__col-1">
                 <!-- Footer section-->
                 <div class="site-footer__section">
                   <h3 class="site-footer__section-title">Возможности оплаты</h3>
@@ -1477,15 +1544,15 @@
                   </ul>
                 </div>
               </div>
-              <div class="content__column-1">
+              <div class="content__column-1 tb__col-3 tb__footer-padding-line">
                 <!-- Footer section-->
-                <div class="site-footer__section site-footer__section_contacts">
+                <div class="site-footer__section site-footer__section_contacts tb__col-1">
                   <h3 class="site-footer__section-title">Контакты</h3>
                   <p class="site-footer__text">тел.<a href="tel:8-800-345-34-21" class="site-footer__section-link">8-800-345-34-21</a></p>
                   <p class="site-footer__text">Пункт выдачи товара:<br>Таганрог, пер. Спартаковский 5</p>
                 </div>
                 <!-- Footer section-->
-                <div class="site-footer__section">
+                <div class="site-footer__section tb__col-1">
                   <h3 class="site-footer__section-title">Следите за нами</h3>
                   <!-- Social buttons-->
                   <div class="social-btn">

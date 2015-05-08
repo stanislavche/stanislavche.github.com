@@ -26,13 +26,6 @@
       <div class="container">
         <div class="site-header__container">
           <!-- Logo--><a href="index.html" class="site-header__logo"><img onerror="this.src='img/png-icons/logo.png'" src="img/logo.svg" alt="" class="site-header__logo-img"></a>
-          <!-- Info-->
-          <div class="site-header__info">
-            <ul class="site-header__info-list">
-              <li class="site-header__info-item"><a href="tel:88002345687" class="site-header__info-link site-header__info-link_strong">8-800-234-56-87</a></li>
-              <li class="site-header__info-item"><a href="#" class="site-header__info-link">Как оплатить</a></li>
-            </ul>
-          </div>
           <!-- Search-->
           <div class="form form_right js-search-field">
             <form action="#">
@@ -56,6 +49,13 @@
               </ul>
             </div>
           </div>
+          <!-- Info-->
+          <div class="site-header__info">
+            <ul class="site-header__info-list">
+              <li class="site-header__info-item"><a href="tel:88002345687" class="site-header__info-link site-header__info-link_strong">8-800-234-56-87</a></li>
+              <li class="site-header__info-item"><a href="#" class="site-header__info-link">Как оплатить</a></li>
+            </ul>
+          </div>
         </div>
         <!-- Menu-->
         <nav class="main-menu">
@@ -65,7 +65,7 @@
             <ul class="main-menu__list">
               <li class="main-menu__item main-menu__item_dj"><a href="dj" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/dj.png'" src="img/icons/dj.svg" alt="" class="main-menu__img"><span class="main-menu__text">Dj</span></a></li>
               <li class="main-menu__item main-menu__item_gt"><a href="guitar" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/guitar.png'" src="img/icons/guitar.svg" alt="" class="main-menu__img"><span class="main-menu__text">Гитары</span></a></li>
-              <li class="main-menu__item main-menu__item_dh"><a href="wind" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/wind.png'" src="img/icons/wind.svg" alt="" class="main-menu__img"><span class="main-menu__text">Духовные</span></a></li>
+              <li class="main-menu__item main-menu__item_dh"><a href="wind" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/wind.png'" src="img/icons/wind.svg" alt="" class="main-menu__img"><span class="main-menu__text">Духовые</span></a></li>
               <li class="main-menu__item main-menu__item_pi"><a href="keyboard" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/keyboard.png'" src="img/icons/keyboard.svg" alt="" class="main-menu__img"><span class="main-menu__text">Клавишные</span></a></li>
               <li class="main-menu__item main-menu__item_sm"><a href="bow" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/bow.png'" src="img/icons/bow.svg" alt="" class="main-menu__img"><span class="main-menu__text">Смычковые</span></a></li>
               <li class="main-menu__item main-menu__item_ud"><a href="beat" class="main-menu__link js-menuShow"><img onerror="this.src='img/png-icons/icons/beat.png'" src="img/icons/beat.svg" alt="" class="main-menu__img"><span class="main-menu__text">Ударные</span></a></li>
@@ -730,9 +730,9 @@
       </div>
     </header>
     <main class="content">
-      <div class="container">
-        <article class="content__row2col">
-          <div class="content__col">
+      <div class="container tb">
+        <article class="content__row2col tb__row">
+          <div class="content__col tb__col-2">
             <section class="product__page-block photoview js-gallery">
               <h1 class="photoview__title">Электрогитара Gibson LPJ 2014 Blue Satin</h1>
               <div class="photoview__gallery"><a href="/img/product_slide1.jpg" data-slideId="1" class="photoview__current js-fancybox active"><span class="photoview__expand">
@@ -945,7 +945,7 @@
               </form>
             </section>
           </div>
-          <div class="content__col">
+          <div class="content__col tb__col-1">
             <section class="product__page-block prod-description product_white">
               <div class="prod-description__top">
                 <div class="product__old-price">7800 руб.</div>
@@ -964,11 +964,15 @@
                 </label>
               </div>
               <hr class="prod-description__delimeter">
-              <div class="prod-description__featured">
-                <div class="prod-description__featured-col icon"><img onerror="this.src='img/png-icons/icons/cart.png'" src="img/icons/cart.svg" width="50" height="45"></div>
-                <div class="prod-description__featured-col text">Вы можете забрать Gibson LPJ&nbsp;2014 в магазине</div>
-                <div class="prod-description__featured-col icon"><img onerror="this.src='img/png-icons/icons/rocket.png'" src="img/icons/rocket.svg" width="50" height="50"></div>
-                <div class="prod-description__featured-col text">Либо мы доставим этот товар на дом</div>
+              <div class="prod-description__table-container">
+                <div class="prod-description__featured">
+                  <div class="prod-description__featured-col icon"><img onerror="this.src='img/png-icons/icons/cart.png'" src="img/icons/cart.svg" width="50" height="45"></div>
+                  <div class="prod-description__featured-col text">Вы можете забрать Gibson LPJ&nbsp;2014 в магазине</div>
+                </div>
+                <div class="prod-description__featured">
+                  <div class="prod-description__featured-col icon"><img onerror="this.src='img/png-icons/icons/rocket.png'" src="img/icons/rocket.svg" width="50" height="50"></div>
+                  <div class="prod-description__featured-col text">Либо мы доставим этот товар на дом</div>
+                </div>
               </div>
               <hr class="prod-description__delimeter">
               <ul class="prod-description__list">
@@ -1070,9 +1074,9 @@
     <footer class="site-footer">
       <div class="content">
         <div class="site-footer__menu">
-          <div class="container">
-            <div class="content__row">
-              <div class="content__column-1">
+          <div class="container tb">
+            <div class="content__row tb__row">
+              <div class="content__column-1 tb__col-1">
                 <!-- Footer section-->
                 <div class="site-footer__section">
                   <h3 class="site-footer__section-title">Обратная связь</h3>
@@ -1087,7 +1091,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="content__column-1">
+              <div class="content__column-1 tb__col-1">
                 <!-- Footer section-->
                 <div class="site-footer__section">
                   <h3 class="site-footer__section-title">Категории инструментов</h3>
@@ -1103,7 +1107,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="content__column-1">
+              <div class="content__column-1 tb__col-1">
                 <!-- Footer section-->
                 <div class="site-footer__section">
                   <h3 class="site-footer__section-title">Возможности оплаты</h3>
@@ -1135,15 +1139,15 @@
                   </ul>
                 </div>
               </div>
-              <div class="content__column-1">
+              <div class="content__column-1 tb__col-3 tb__footer-padding-line">
                 <!-- Footer section-->
-                <div class="site-footer__section site-footer__section_contacts">
+                <div class="site-footer__section site-footer__section_contacts tb__col-1">
                   <h3 class="site-footer__section-title">Контакты</h3>
                   <p class="site-footer__text">тел.<a href="tel:8-800-345-34-21" class="site-footer__section-link">8-800-345-34-21</a></p>
                   <p class="site-footer__text">Пункт выдачи товара:<br>Таганрог, пер. Спартаковский 5</p>
                 </div>
                 <!-- Footer section-->
-                <div class="site-footer__section">
+                <div class="site-footer__section tb__col-1">
                   <h3 class="site-footer__section-title">Следите за нами</h3>
                   <!-- Social buttons-->
                   <div class="social-btn">
