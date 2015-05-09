@@ -8,10 +8,12 @@ window.ss.views.App = Backbone.View.extend({
 	el: '.js-app',
 	nameInput: false,
 	phoneInput: false,
+	activeMenu: null,
+	newActiveMenu: null,
 	events: function() {
 		return Modernizr.touch ? {
-			'click .js-menu': 'showHideMenu',
-			'click .js-menuShow': 'showHideMenu',
+			'click .js-menu': 'showHideTouch',
+			'click .js-menuShow': 'showHideTouch',
 			'click .js-search-field': 'resizeSearch',
 			'click .js-showReview': 'reviewShow',
 			'click .js-sendReview': 'reviewHide',
@@ -45,6 +47,71 @@ window.ss.views.App = Backbone.View.extend({
 			'input .js-inputPhone': 'validatePhone',
 			'click .js-closePopup': 'closeFancybox'
 		};		
+	},
+
+	showHideTouch: function(e) {
+		var $dropdown = $('.js-dropdown'),
+			$backMask = $('.js-mask'),
+			self = this
+		;
+		$('.js-search-field').removeClass('expand');
+		console.log($(e.currentTarget));
+		if ($(e.currentTarget).hasClass('js-menuShow')){
+			e.preventDefault();
+			var currentMenuName = e.currentTarget.attributes.href.nodeValue,
+				$link = $(e.currentTarget),				
+				$currentMenu = $dropdown.find('.js-dropdown-container[data-type="' + currentMenuName + '"]');
+			self.activeMenu = currentMenuName;
+			$('.js-menuShow').removeClass('active');
+			$link.addClass('active');
+			$('.js-dropdown-container').removeClass('active');
+			$currentMenu.addClass('active');
+		} else if ($(e.currentTarget).hasClass('js-menu')){
+			// if (currentMenuName !== self.activeMenu){
+			// 	self.activeMenu = currentMenuName;
+			// }
+			console.log(self.newActiveMenu, self.activeMenu);
+			if ($dropdown.hasClass('active')){
+				if (self.newActiveMenu === self.activeMenu){
+					$dropdown.removeClass('active');
+					$backMask.removeClass('active');
+					$('.js-menuShow').removeClass('active');
+				} else {
+					self.newActiveMenu = self.activeMenu;
+				}
+			} else {
+				self.newActiveMenu = self.activeMenu;
+				$dropdown.addClass('active');
+				$backMask.addClass('active');
+			}
+			
+		}
+	},
+
+	showHideMenu: function(e) {
+		var $dropdown = $('.js-dropdown'),
+			$backMask = $('.js-mask');
+		$('.js-search-field').removeClass('expand');
+		if ($(e.currentTarget).hasClass('js-menu')){
+			if ($dropdown.hasClass('active')){
+				$dropdown.removeClass('active');
+				$backMask.removeClass('active');
+				$('.js-menuShow').removeClass('active');
+			} else {
+				$dropdown.addClass('active');
+				$backMask.addClass('active');
+			}
+		} else if ($(e.currentTarget).hasClass('js-menuShow')){
+			e.preventDefault();
+			var currentMenuName = e.currentTarget.attributes.href.nodeValue,
+				$link = $(e.currentTarget),
+				$currentMenu = $dropdown.find('.js-dropdown-container[data-type="' + currentMenuName + '"]');
+			
+			$('.js-menuShow').removeClass('active');
+			$link.addClass('active');
+			$('.js-dropdown-container').removeClass('active');
+			$currentMenu.addClass('active');
+		}
 	},
 
 	closeFancybox: function(e){
@@ -146,33 +213,6 @@ window.ss.views.App = Backbone.View.extend({
 
 	preventDef: function(e) {
 		e.preventDefault();
-	},
-
-	showHideMenu: function(e) {
-		
-		var $dropdown = $('.js-dropdown'),
-			$backMask = $('.js-mask');
-		$('.js-search-field').removeClass('expand');
-		if ($(e.currentTarget).hasClass('js-menu')){
-			if ($dropdown.hasClass('active')){
-				$dropdown.removeClass('active');
-				$backMask.removeClass('active');
-				$('.js-menuShow').removeClass('active');
-			} else {
-				$dropdown.addClass('active');
-				$backMask.addClass('active');
-			}
-		} else if ($(e.currentTarget).hasClass('js-menuShow')){
-			e.preventDefault();
-			var currentMenuName = e.currentTarget.attributes.href.nodeValue,
-				$link = $(e.currentTarget),
-				$currentMenu = $dropdown.find('.js-dropdown-container[data-type="' + currentMenuName + '"]');
-			
-			$('.js-menuShow').removeClass('active');
-			$link.addClass('active');
-			$('.js-dropdown-container').removeClass('active');
-			$currentMenu.addClass('active');
-		}
 	},
 
 	// showMenu: function(e) {
