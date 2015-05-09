@@ -10,36 +10,45 @@ window.ss.views.App = Backbone.View.extend({
 	phoneInput: false,
 	events: function() {
 		return Modernizr.touch ? {
-			'click .js-wishBtnCheckbox': 'wish',
-			'click .js-cancelWish': 'cancelWish',
-			'click .js-next-buton': 'webkitIt',
-			'click .js-menuShow': 'showHideMenu'
-		} : {
-			'click .js-wishBtnCheckbox': 'wish',
-			'click .js-cancelWish': 'cancelWish',
-			'click .js-next-buton': 'webkitIt',
-			'click .js-menuShow': 'preventDef',
+			'click .js-menu': 'showHideMenu',
+			'click .js-menuShow': 'showHideMenu',
 			'click .js-search-field': 'resizeSearch',
 			'click .js-showReview': 'reviewShow',
 			'click .js-sendReview': 'reviewHide',
 			'click .js-order': 'showPopup',
-			'mouseenter .js-menu': 'showHideMenu',
-			'mouseleave .js-menu': 'showHideMenu',
-			'mouseenter .js-menuShow': 'showHideMenu',
-			'mouseleave .js-menuShow': 'showHideMenu',
+			'click .js-wishBtnCheckbox': 'wish',
+			'click .js-cancelWish': 'cancelWish',
+			'click .js-next-buton': 'webkitIt',
 			'click .js-orderSend': 'sendOrder',
 			'click .js-orderCancel': 'orderCancel',
 			'keyup .js-inputName': 'changeName',
 			'keydown .js-inputPhone': 'changePhone',
 			'input .js-inputPhone': 'validatePhone',
 			'click .js-closePopup': 'closeFancybox'
-		}
-		
+		} : {
+			'click .js-menuShow': 'preventDef',
+			'mouseenter .js-menu': 'showHideMenu',
+			'mouseleave .js-menu': 'showHideMenu',
+			'mouseenter .js-menuShow': 'showHideMenu',
+			'mouseleave .js-menuShow': 'showHideMenu',
+			'click .js-search-field': 'resizeSearch',
+			'click .js-showReview': 'reviewShow',
+			'click .js-sendReview': 'reviewHide',
+			'click .js-order': 'showPopup',
+			'click .js-wishBtnCheckbox': 'wish',
+			'click .js-cancelWish': 'cancelWish',
+			'click .js-next-buton': 'webkitIt',
+			'click .js-orderSend': 'sendOrder',
+			'click .js-orderCancel': 'orderCancel',
+			'keyup .js-inputName': 'changeName',
+			'keydown .js-inputPhone': 'changePhone',
+			'input .js-inputPhone': 'validatePhone',
+			'click .js-closePopup': 'closeFancybox'
+		};		
 	},
 
 	closeFancybox: function(e){
 		e.preventDefault();
-		console.log('close');
 		$.fancybox.close();
 	},
 
@@ -140,6 +149,7 @@ window.ss.views.App = Backbone.View.extend({
 	},
 
 	showHideMenu: function(e) {
+		
 		var $dropdown = $('.js-dropdown'),
 			$backMask = $('.js-mask');
 		$('.js-search-field').removeClass('expand');
@@ -153,6 +163,7 @@ window.ss.views.App = Backbone.View.extend({
 				$backMask.addClass('active');
 			}
 		} else if ($(e.currentTarget).hasClass('js-menuShow')){
+			e.preventDefault();
 			var currentMenuName = e.currentTarget.attributes.href.nodeValue,
 				$link = $(e.currentTarget),
 				$currentMenu = $dropdown.find('.js-dropdown-container[data-type="' + currentMenuName + '"]');
@@ -225,8 +236,7 @@ window.ss.views.App = Backbone.View.extend({
 			$('.order-popup__category').removeClass('active');
 			$('.order-popup__offline').addClass('active');
 		}
-		$.fancybox.resize;
-
+		$.fancybox.update();
 	},
 	order: function(e){
 		var self = this;
@@ -236,12 +246,15 @@ window.ss.views.App = Backbone.View.extend({
 				wrap     : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin fancybox-skin_white"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>',
 				closeBtn : '<a title="Close" class="fancybox-item fancybox-close js-orderCancel" href="javascript:;"><svg class="icon_close_thin"><use xlink:href="/img/icons.svg#close_small" /></svg></a>'
 			},
+			beforeShow: function() {
+				$('#buy-popup').addClass('active');
+			},
 			afterShow: function() {
 				$('.js-callHours, .js-callMinutes').selectmenu( "refresh" );
 
 			},
 			afterClose: function() {
-				console.log('dauwidhiaw');
+				$('#buy-popup').removeClass('active');
 				$('body').find('.js-inputName').val('');
 				$('body').find('.js-inputPhone').val('');
 				$('body').find('.js-callHours').prop('selectedIndex',0);
