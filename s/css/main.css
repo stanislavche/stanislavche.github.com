@@ -209,6 +209,11 @@ body {
   color: #333;
   position: relative;
 }
+@media only screen and (max-width: 1179px) {
+  body {
+    overflow-x: hidden;
+  }
+}
 ::-moz-selection {
   background: #1ae0aa;
   /* WebKit/Blink Browsers */
@@ -260,7 +265,13 @@ h2 {
 }
 @media only screen and (max-width: 1179px) {
   .container {
-    max-width: 882px;
+    width: 882px;
+  }
+}
+@media only screen and (max-width: 881px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
   }
 }
 .content {
@@ -326,10 +337,14 @@ h2 {
   display: none;
 }
 @media only screen and (max-width: 1179px) {
+  .tb {
+    position: relative;
+  }
   .tb .tb__row {
     margin-bottom: 0;
     margin-right: 0;
     margin-left: -20px;
+    position: relative;
   }
   .tb .tb__row + .tb__row {
     margin-top: -371px;
@@ -337,40 +352,72 @@ h2 {
   .tb .tb__row > .tb__left {
     float: left;
   }
-  .tb .tb__row > .tb__footer-padding-line {
-    margin-top: -10px;
-    padding-top: 33px !important;
-    border-top: solid 1px #2e4454;
-  }
-  .tb .tb__row > .tb__footer-padding-line .site-footer__text {
-    margin-bottom: 20px;
-  }
   .tb .tb__row > .tb__col-3 {
     width: 100%;
-    padding: 0 !important;
+    padding: 0;
     margin-bottom: 20px;
-    margin-left: 20px;
+    padding-left: 20px;
     float: left;
   }
   .tb .tb__row > .tb__col-2 {
     width: 580px;
-    padding: 0 !important;
+    padding: 0;
     margin-bottom: 20px;
     margin-left: 20px;
     float: left;
   }
   .tb .tb__row > .tb__col-1 {
     width: 280px;
-    padding: 0 !important;
+    padding: 0;
     margin-bottom: 20px;
     margin-left: 20px;
     float: left;
+  }
+  .tb .tb__row > .tb__footer-padding-line {
+    margin-top: -10px;
+    padding-top: 33px;
+    border-top: solid 1px #2e4454;
+    *zoom: 1;
+  }
+  .tb .tb__row > .tb__footer-padding-line:before,
+  .tb .tb__row > .tb__footer-padding-line:after {
+    content: " ";
+    display: table;
+  }
+  .tb .tb__row > .tb__footer-padding-line:after {
+    clear: both;
+  }
+  .tb .tb__row > .tb__footer-padding-line .site-footer__text {
+    margin-bottom: 20px;
+  }
+  .tb .tb__row > .tb__footer-padding-line .tb__col-1 {
+    width: 280px;
+    padding: 0;
+    margin-bottom: 0;
+    margin-left: 20px;
+    float: left;
+    border-bottom: none;
   }
   .tb__show {
     display: block;
   }
   .tb__hide {
     display: none;
+  }
+}
+@media only screen and (max-width: 881px) {
+  .tb__row {
+    margin: 0;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .tb__p-col-2 {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .tb__p-col1 {
+    width: 50%;
+    padding: 0 10px;
   }
 }
 .responsive-video {
@@ -1440,11 +1487,16 @@ h2 {
   .steps__item {
     padding: 25px 0 25px;
   }
+  .steps__item-arrow {
+    right: 0;
+  }
   .steps__text {
     display: none;
   }
   .steps__tablet-text {
     display: block;
+    padding-left: 80px;
+    padding-right: 25px;
   }
 }
 .product {
