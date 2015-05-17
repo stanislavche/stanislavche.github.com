@@ -10,6 +10,7 @@ window.ss.views.App = Backbone.View.extend({
 	phoneInput: false,
 	activeMenu: null,
 	newActiveMenu: null,
+	mobileMenuStep: 0,
 	events: function() {
 		return Modernizr.touch ? {
 			'click .js-menu': 'showHideTouch',
@@ -26,7 +27,8 @@ window.ss.views.App = Backbone.View.extend({
 			'keyup .js-inputName': 'changeName',
 			'keydown .js-inputPhone': 'changePhone',
 			'input .js-inputPhone': 'validatePhone',
-			'click .js-closePopup': 'closeFancybox'
+			'click .js-closePopup': 'closeFancybox',
+			'click .js-mobileMenuToggle': 'toggleMobileMenu'
 		} : {
 			'click .js-menuShow': 'preventDef',
 			'mouseenter .js-menu': 'showHideMenu',
@@ -45,8 +47,108 @@ window.ss.views.App = Backbone.View.extend({
 			'keyup .js-inputName': 'changeName',
 			'keydown .js-inputPhone': 'changePhone',
 			'input .js-inputPhone': 'validatePhone',
-			'click .js-closePopup': 'closeFancybox'
+			'click .js-closePopup': 'closeFancybox',
+			'click .js-mobileMenuToggle': 'toggleMobileMenu',
+			//mobile menu events
+			'click .js-mobileFirstItem': 'toggleFirstLayerMenu',
+			'click .js-mobileBtn': 'stepBack'
 		};		
+	},
+
+	/*
+	.js-mobileMenu
+	.js-mobileBtn
+	.js-mobileTitle
+	.js-mobileFirstList
+	.js-mobileFirstItem
+	.js-mobileSecondList
+	.js-mobileSecondItem
+	.js-mobileThirdList
+	.js-mobileThirdItem
+	*/
+	stepBack: function(e) {
+		var $button = $(e.currentTarget);
+		if (this.mobileMenuStep === 1){
+			$('.js-mobileMenu').find('.js-mobileFirstItem.active').click();
+		}
+		if (this.mobileMenuStep === 2){
+			$('.js-mobileMenu').find('.js-mobileSecondItem.active').click();
+		}
+	},
+
+	toggleFirstLayerMenu: function(e) {
+		var $element = $(e.target),
+			$parent = $(e.target).parent(),
+			self = this
+		;
+		if ($element.hasClass('active') || $element.parent().hasClass('active')){
+			
+			if ($element.hasClass('js-mobileFirstItem') || $element.parent().hasClass('js-mobileFirstItem')){
+				self.mobileMenuStep = 0;
+				$('.js-mobileBtn').removeClass('active');
+				$('.js-mobileTitle').removeClass('disabled');
+				$('.js-mobileFirstItem').removeClass('disabled');
+				if ($element.parent().hasClass('js-mobileFirstItem')){
+					$element.parent().removeClass('active');
+				} else {
+					$element.removeClass('active');
+				}
+			}
+			if ($element.hasClass('js-mobileSecondItem') || $element.parent().hasClass('js-mobileSecondItem')){
+				self.mobileMenuStep = 1;
+				$('.js-mobileSecondItem').removeClass('disabled');
+				if ($element.parent().hasClass('js-mobileSecondItem')){
+					$element.parent().removeClass('active');
+				} else {
+					$element.removeClass('active');
+				}
+			}
+		} else {
+			if ($element.hasClass('js-mobileFirstItem') || $element.parent().hasClass('js-mobileFirstItem')){
+				self.mobileMenuStep = 1;
+				$('.js-mobileBtn').addClass('active');
+				$('.js-mobileTitle').addClass('disabled');
+				if ($element.parent().hasClass('js-mobileFirstItem')){
+					$parent = $element.closest('.js-mobileFirstList');
+					$element.parent().addClass('active');
+				} else {
+					$element.addClass('active');
+				}
+				$parent.find('.js-mobileFirstItem').each(function(index, item){
+					if (!($(item).hasClass('active'))){
+						$(item).addClass('disabled');
+					}
+				});
+			}
+			if ($element.hasClass('js-mobileSecondItem') || $element.parent().hasClass('js-mobileSecondItem')){
+				self.mobileMenuStep = 2;
+				if ($element.parent().hasClass('js-mobileSecondItem')){
+					$parent = $element.closest('.js-mobileFirstList');
+					$element.parent().addClass('active');
+				} else {
+					$element.addClass('active');
+				}
+				$parent.find('.js-mobileSecondItem').each(function(index, item){
+					if (!($(item).hasClass('active'))){
+						$(item).addClass('disabled');
+					}
+				});
+			}
+		}
+	},
+
+	toggleMobileMenu: function(e) {
+		var $menu = $('.js-mobileMenu'),
+			$button = $(e.currentTarget),
+			$body = $('body')
+		;
+		if ($button.hasClass('active')){
+			$button.removeClass('active');
+			$body.removeClass('slided');
+		} else {
+			$button.addClass('active');
+			$body.addClass('slided');
+		}
 	},
 
 	showHideTouch: function(e) {
