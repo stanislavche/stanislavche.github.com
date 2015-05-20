@@ -31,8 +31,7 @@ window.ss.views.App = Backbone.View.extend({
 			'click .js-mobileMenuToggle': 'toggleMobileMenu',
 			//mobile menu events
 			'click .js-mobileFirstItem': 'toggleFirstLayerMenu',
-			'click .js-mobileBtn': 'stepBack',
-			'click .js-menuShow': 'showMobilemenu'
+			'click .js-mobileBtn': 'stepBack'
 		} : {
 			'click .js-menuShow': 'preventDef',
 			'mouseenter .js-menu': 'showHideMenu',
@@ -74,7 +73,6 @@ window.ss.views.App = Backbone.View.extend({
 
 
 	showMobilemenu: function(e) {
-		e.preventDefault();
 		var currentMenuName = e.currentTarget.attributes.href.nodeValue;
 		if (!($('.js-mobileMenuToggle').hasClass('active')) && $(window).width() <= 570){
 			$('.js-mobileMenuToggle').click();
@@ -175,10 +173,9 @@ window.ss.views.App = Backbone.View.extend({
 			$backMask = $('.js-mask'),
 			self = this
 		;
+		
 		$('.js-search-field').removeClass('expand');
-		console.log($(e.currentTarget));
 		if ($(e.currentTarget).hasClass('js-menuShow')){
-			e.preventDefault();
 			var currentMenuName = e.currentTarget.attributes.href.nodeValue,
 				$link = $(e.currentTarget),				
 				$currentMenu = $dropdown.find('.js-dropdown-container[data-type="' + currentMenuName + '"]');
@@ -187,14 +184,14 @@ window.ss.views.App = Backbone.View.extend({
 			$link.addClass('active');
 			$('.js-dropdown-container').removeClass('active');
 			$currentMenu.addClass('active');
-			if (!($('.js-mobileMenuToggle').hasClass('active')) && $(window).width() < 570){
+			if (!($('.js-mobileMenuToggle').hasClass('active')) && $(window).width() <= 570){
 				$('.js-mobileMenuToggle').click();
+				if ($('.js-mobileFirstList').find('.js-mobileFirstItem.active').length > 0){
+					$('.js-mobileFirstItem.active').click();
+				}
 				$('.js-mobileFirstItem[name="'+ currentMenuName +'"').click();
 			}
 		} else if ($(e.currentTarget).hasClass('js-menu')){
-			// if (currentMenuName !== self.activeMenu){
-			// 	self.activeMenu = currentMenuName;
-			// }
 			if ($dropdown.hasClass('active')){
 				if (self.newActiveMenu === self.activeMenu){
 					$dropdown.removeClass('active');
@@ -208,13 +205,14 @@ window.ss.views.App = Backbone.View.extend({
 				$dropdown.addClass('active');
 				$backMask.addClass('active');
 			}
+			
 		}
+		
 	},
 
 	showHideMenu: function(e) {
 		var $dropdown = $('.js-dropdown'),
 			$backMask = $('.js-mask');
-		console.log('work');
 		$('.js-search-field').removeClass('expand');
 		if ($(e.currentTarget).hasClass('js-menu')){
 			if ($dropdown.hasClass('active')){

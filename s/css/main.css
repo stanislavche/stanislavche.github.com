@@ -1654,6 +1654,7 @@ h2 {
 }
 .steps {
   background: #fff;
+  position: relative;
 }
 .steps__list {
   list-style: none;
@@ -1754,6 +1755,7 @@ h2 {
 .steps__mobile-image {
   width: 50px;
   float: left;
+  display: block;
 }
 .steps__mobile-image > .order-popup__img_manager {
   font-size: 18px;
