@@ -975,14 +975,16 @@ h2 {
     vertical-align: top;
     float: none;
     margin-bottom: 40px;
+    position: relative;
+    width: 100%;
   }
   .site-header .form .field_search {
     width: 320px;
-    max-width: 320px;
+    max-width: 100%;
   }
   .site-header .form.expand .field {
     width: 320px;
-    max-width: 320px;
+    max-width: 100%;
   }
   .site-header__container {
     position: relative;
@@ -1344,7 +1346,7 @@ h2 {
     margin-bottom: 20px;
   }
   .home .main-menu__link {
-    padding: 10px 12px;
+    padding: 10px 0 10px 12px;
     text-align: left;
   }
   .home .main-menu__link:after {
