@@ -28,7 +28,10 @@ window.ss.views.App = Backbone.View.extend({
 			'keydown .js-inputPhone': 'changePhone',
 			'input .js-inputPhone': 'validatePhone',
 			'click .js-closePopup': 'closeFancybox',
-			'click .js-mobileMenuToggle': 'toggleMobileMenu'
+			'click .js-mobileMenuToggle': 'toggleMobileMenu',
+			//mobile menu events
+			'click .js-mobileFirstItem': 'toggleFirstLayerMenu',
+			'click .js-mobileBtn': 'stepBack'
 		} : {
 			'click .js-menuShow': 'preventDef',
 			'mouseenter .js-menu': 'showHideMenu',
@@ -51,7 +54,8 @@ window.ss.views.App = Backbone.View.extend({
 			'click .js-mobileMenuToggle': 'toggleMobileMenu',
 			//mobile menu events
 			'click .js-mobileFirstItem': 'toggleFirstLayerMenu',
-			'click .js-mobileBtn': 'stepBack'
+			'click .js-mobileBtn': 'stepBack',
+			'click .js-menuShow': 'showMobilemenu'
 		};		
 	},
 
@@ -66,6 +70,20 @@ window.ss.views.App = Backbone.View.extend({
 	.js-mobileThirdList
 	.js-mobileThirdItem
 	*/
+
+
+	showMobilemenu: function(e) {
+		e.preventDefault();
+		var currentMenuName = e.currentTarget.attributes.href.nodeValue;
+		if (!($('.js-mobileMenuToggle').hasClass('active')) && $(window).width() <= 570){
+			$('.js-mobileMenuToggle').click();
+			if ($('.js-mobileFirstList').find('.js-mobileFirstItem.active').length > 0){
+				$('.js-mobileFirstItem.active').click();
+			}
+			$('.js-mobileFirstItem[name="'+ currentMenuName +'"').click();
+		}
+	},
+
 	stepBack: function(e) {
 		var $button = $(e.currentTarget);
 		if (this.mobileMenuStep === 1){
@@ -87,7 +105,7 @@ window.ss.views.App = Backbone.View.extend({
 				self.mobileMenuStep = 0;
 				$('.js-mobileBtn').removeClass('active');
 				$('.js-mobileTitle').removeClass('disabled');
-				$('.js-mobileFirstItem').removeClass('disabled');
+				$('.js-mobileFirstItem').removeClass('disabled').removeClass('active');
 				if ($element.parent().hasClass('js-mobileFirstItem')){
 					$element.parent().removeClass('active');
 				} else {
@@ -168,11 +186,21 @@ window.ss.views.App = Backbone.View.extend({
 			$link.addClass('active');
 			$('.js-dropdown-container').removeClass('active');
 			$currentMenu.addClass('active');
+			if (!($('.js-mobileMenuToggle').hasClass('active')) && $(window).width() < 570){
+				$('.js-mobileMenuToggle').click();
+				$('.js-mobileFirstItem[name="'+ currentMenuName +'"').click();
+			}
+			if (!($('.js-mobileMenuToggle').hasClass('active')) && $(window).width() <= 570){
+				$('.js-mobileMenuToggle').click();
+				if ($('.js-mobileFirstList').find('.js-mobileFirstItem.active').length > 0){
+					$('.js-mobileFirstItem.active').click();
+				}
+				$('.js-mobileFirstItem[name="'+ currentMenuName +'"').click();
+			}
 		} else if ($(e.currentTarget).hasClass('js-menu')){
 			// if (currentMenuName !== self.activeMenu){
 			// 	self.activeMenu = currentMenuName;
 			// }
-			console.log(self.newActiveMenu, self.activeMenu);
 			if ($dropdown.hasClass('active')){
 				if (self.newActiveMenu === self.activeMenu){
 					$dropdown.removeClass('active');
@@ -186,7 +214,6 @@ window.ss.views.App = Backbone.View.extend({
 				$dropdown.addClass('active');
 				$backMask.addClass('active');
 			}
-			
 		}
 	},
 
@@ -436,6 +463,11 @@ window.ss.views.App = Backbone.View.extend({
 		this.order();
 		this.customSelect();
 		$('body').bind('click', this.bodyFunc);
+		$(window).on('resize', _.debounce(function(){
+			if ($('.js-mobileMenuToggle').hasClass('active')){
+				$('.js-mobileMenuToggle').click();
+			}
+		}, 200));
 	},
 	webkitIt: function (e) {
 		e.preventDefault();

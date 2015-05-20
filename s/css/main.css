@@ -983,8 +983,8 @@ h2 {
     margin: 0 auto;
     float: none;
     display: inline-block;
-    padding-top: 53px;
-    padding-bottom: 53px;
+    padding-top: 57px;
+    padding-bottom: 49px;
   }
   .site-header__logo-img {
     width: 183px;
@@ -1297,6 +1297,56 @@ h2 {
 @media only screen and (max-width: 570px) {
   .main-menu {
     display: none;
+  }
+  .home .main-menu {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+  }
+  .home .main-menu__title {
+    display: none;
+  }
+  .home .main-menu__list {
+    display: block;
+    margin-left: -7%;
+    margin-right: 0%;
+    width: auto;
+    *zoom: 1;
+  }
+  .home .main-menu__list:before,
+  .home .main-menu__list:after {
+    content: " ";
+    display: table;
+  }
+  .home .main-menu__list:after {
+    clear: both;
+  }
+  .home .main-menu__item {
+    float: left;
+    width: 43%;
+    margin-left: 7%;
+    vertical-align: top;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .home .main-menu__link {
+    padding: 10px 12px;
+    text-align: left;
+  }
+  .home .main-menu__link:after {
+    display: none;
+  }
+  .home .main-menu__img {
+    display: inline-block;
+  }
+  .home .main-menu__text {
+    font-size: 15px;
+    margin-left: 5px;
+  }
+  .home .menu-dropdown,
+  .home .drodown-mask {
+    display: none !important;
   }
 }
 .input {
@@ -5729,7 +5779,7 @@ body .ui-tooltip {
 .mobile-menu__cat-title {
   display: inline-block;
   vertical-align: middle;
-  line-height: 14px;
+  line-height: 20px;
 }
 .mobile-menu__link {
   position: absolute;
@@ -5738,11 +5788,14 @@ body .ui-tooltip {
   height: 100%;
   width: 100%;
   padding: 0 0 0 28px;
+  line-height: 52px;
 }
 .mobile-menu__link > span {
-  line-height: 14px;
+  line-height: 20px;
   vertical-align: middle;
   color: #343434;
+  font-size: 14px;
+  display: inline-block;
 }
 .mobile-menu__icon {
   padding: 0;
@@ -5750,8 +5803,8 @@ body .ui-tooltip {
   list-style-type: none;
   width: 30px;
   position: absolute;
-  top: 54px;
-  left: 40px;
+  top: 60px;
+  left: 0;
   cursor: pointer;
 }
 .mobile-menu__icon-line {
