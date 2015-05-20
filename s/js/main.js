@@ -31,7 +31,8 @@ window.ss.views.App = Backbone.View.extend({
 			'click .js-mobileMenuToggle': 'toggleMobileMenu',
 			//mobile menu events
 			'click .js-mobileFirstItem': 'toggleFirstLayerMenu',
-			'click .js-mobileBtn': 'stepBack'
+			'click .js-mobileBtn': 'stepBack',
+			'click .js-menuShow': 'showMobilemenu'
 		} : {
 			'click .js-menuShow': 'preventDef',
 			'mouseenter .js-menu': 'showHideMenu',
@@ -158,7 +159,7 @@ window.ss.views.App = Backbone.View.extend({
 	toggleMobileMenu: function(e) {
 		var $menu = $('.js-mobileMenu'),
 			$button = $(e.currentTarget),
-			$body = $('body')
+			$body = $('.site-container')
 		;
 		if ($button.hasClass('active')){
 			$button.removeClass('active');
@@ -190,13 +191,6 @@ window.ss.views.App = Backbone.View.extend({
 				$('.js-mobileMenuToggle').click();
 				$('.js-mobileFirstItem[name="'+ currentMenuName +'"').click();
 			}
-			if (!($('.js-mobileMenuToggle').hasClass('active')) && $(window).width() <= 570){
-				$('.js-mobileMenuToggle').click();
-				if ($('.js-mobileFirstList').find('.js-mobileFirstItem.active').length > 0){
-					$('.js-mobileFirstItem.active').click();
-				}
-				$('.js-mobileFirstItem[name="'+ currentMenuName +'"').click();
-			}
 		} else if ($(e.currentTarget).hasClass('js-menu')){
 			// if (currentMenuName !== self.activeMenu){
 			// 	self.activeMenu = currentMenuName;
@@ -220,6 +214,7 @@ window.ss.views.App = Backbone.View.extend({
 	showHideMenu: function(e) {
 		var $dropdown = $('.js-dropdown'),
 			$backMask = $('.js-mask');
+		console.log('work');
 		$('.js-search-field').removeClass('expand');
 		if ($(e.currentTarget).hasClass('js-menu')){
 			if ($dropdown.hasClass('active')){

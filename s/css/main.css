@@ -209,16 +209,27 @@ body {
   color: #333;
   left: 0;
   position: relative;
-  -webkit-transition: left 0.4s;
-  transition: left 0.4s;
 }
 @media only screen and (max-width: 1179px) {
   body {
     overflow-x: hidden;
   }
 }
-body.slided {
-  left: 240px;
+.wrapper {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+.site-container {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  z-index: 2;
+  -webkit-transition: margin 0.4s;
+  transition: margin 0.4s;
+}
+.site-container.slided {
+  margin-left: 240px;
 }
 .shadow-box {
   position: absolute;
@@ -967,9 +978,11 @@ h2 {
   }
   .site-header .form .field_search {
     width: 320px;
+    max-width: 320px;
   }
   .site-header .form.expand .field {
     width: 320px;
+    max-width: 320px;
   }
   .site-header__container {
     position: relative;
@@ -1343,6 +1356,7 @@ h2 {
   .home .main-menu__text {
     font-size: 15px;
     margin-left: 5px;
+    letter-spacing: -0.05em;
   }
   .home .menu-dropdown,
   .home .drodown-mask {
@@ -5584,7 +5598,7 @@ body .ui-tooltip {
 }
 .mobile-menu {
   position: absolute;
-  left: -240px;
+  left: 0;
   top: 0;
   width: 240px;
   background: #293d4a;
@@ -5594,6 +5608,7 @@ body .ui-tooltip {
   height: 100%;
   letter-spacing: -0.054em;
   color: #343434;
+  z-index: 1;
 }
 @media only screen and (max-width: 570px) {
   .mobile-menu {
