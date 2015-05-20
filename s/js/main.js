@@ -544,11 +544,31 @@ window.ss.views.Carousel = Backbone.View.extend({
 window.ss.views.Catalog = Backbone.View.extend({
 	el: '.js-catalog',
 	events: {
-		'click .js-sort': 'sort'
+		'click .js-sort': 'sort',
+		'click .js-showFilter': 'showFilter',
+		'click .js-hideFilters': 'hideFilters'
 	},
 	sort: function(){
-
+		
 	},
+
+	hideFilters: function(e) {
+		$('.js-showFilter').click();
+	},
+
+	showFilter: function(e){
+		var $button = $(e.target);
+		if ($button.hasClass('active')){
+			$button.removeClass('active');
+			$('.js-filterContainer').removeClass('active');
+			$('.js-filter').removeClass('active');
+		} else {
+			$button.addClass('active');
+			$('.js-filterContainer').addClass('active');
+			$('.js-filter').addClass('active');
+		}
+	},
+
 	initialize: function(){
 		$('#slider-range').slider({
 			range: true,
