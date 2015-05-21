@@ -468,6 +468,9 @@ h2 {
   }
 }
 @media only screen and (max-width: 881px) {
+  .product-page .tb__col-2 {
+    text-align: left;
+  }
   .tb__p_show {
     display: block !important;
   }
@@ -991,6 +994,9 @@ h2 {
     padding-bottom: 44px;
   }
 }
+.articles .information-title {
+  display: none;
+}
 .information-title {
   position: absolute;
   bottom: 34px;
@@ -1052,6 +1058,9 @@ h2 {
   }
   .site-header__info-list {
     display: none;
+  }
+  .articles .information-title {
+    display: block;
   }
 }
 .main-menu {
@@ -1382,6 +1391,7 @@ h2 {
     clear: both;
   }
   .home .main-menu__item {
+    cursor: pointer;
     float: left;
     width: 43%;
     margin-left: 7%;
@@ -2047,6 +2057,7 @@ h2 {
   background: #fff;
   padding: 26px 30px 30px;
   margin: 0 0 20px;
+  overflow: hidden;
 }
 .product__page-block h2,
 .product__page-block h3 {
@@ -3010,6 +3021,11 @@ h2 {
   background: #fff;
   margin-bottom: 54px;
 }
+@media only screen and (max-width: 760px) {
+  .to_read {
+    margin-bottom: 33px;
+  }
+}
 .to_read__title {
   margin: 0;
   padding: 24px 30px;
@@ -3054,8 +3070,35 @@ h2 {
 .article .container > .content__row {
   margin-bottom: 80px;
 }
+@media only screen and (max-width: 760px) {
+  .article__category {
+    display: none;
+  }
+  .article__head_img {
+    display: none;
+  }
+  .article__heading {
+    background: #fff;
+    color: #333;
+  }
+  .article__title {
+    letter-spacing: 0.01em;
+    margin-bottom: 0;
+  }
+  .article__head_main {
+    padding: 8px 18px;
+  }
+  .article__text {
+    padding: 22px 19px 26px;
+  }
+}
 .photoview {
   margin-bottom: 20px;
+}
+@media only screen and (max-width: 760px) {
+  .photoview {
+    margin-bottom: 0;
+  }
 }
 .photoview__title {
   margin: 0 0 20px;
@@ -3067,6 +3110,11 @@ h2 {
 .photoview__gallery {
   position: relative;
   padding-bottom: 101%;
+}
+@media only screen and (max-width: 760px) {
+  .photoview__gallery {
+    padding-bottom: 242%;
+  }
 }
 .photoview__current {
   position: absolute;
@@ -3082,6 +3130,13 @@ h2 {
 .photoview__current.active {
   display: block;
 }
+@media only screen and (max-width: 760px) {
+  .photoview__current {
+    width: 1000px;
+    margin-left: -500px;
+    left: 50%;
+  }
+}
 .photoview__expand {
   position: absolute;
   top: 23px;
@@ -3093,6 +3148,13 @@ h2 {
   -webkit-transition: opacity 0.2s ease-in-out;
           transition: opacity 0.2s ease-in-out;
   height: 500px;
+}
+@media only screen and (max-width: 760px) {
+  .photoview__expand {
+    left: 50%;
+    margin-left: -110px;
+    top: 11px;
+  }
 }
 .photoview__expand span {
   font-size: 14px;
@@ -3113,6 +3175,13 @@ h2 {
   display: table-cell;
   vertical-align: middle;
 }
+@media only screen and (max-width: 760px) {
+  .photoview__cur-img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+  }
+}
 .photoview__list {
   list-style: none;
   margin: 0 0 -10px;
@@ -3123,6 +3192,11 @@ h2 {
   bottom: 0;
   left: 0;
   width: 100%;
+}
+@media only screen and (max-width: 760px) {
+  .photoview__list {
+    margin: 0;
+  }
 }
 .photoview__item {
   display: inline-block;
@@ -3138,6 +3212,12 @@ h2 {
   width: 60px;
   height: 60px;
   opacity: 0.5;
+}
+@media only screen and (max-width: 760px) {
+  .photoview__item.active .photoview__link:after {
+    width: 40px;
+    height: 40px;
+  }
 }
 .photoview__item.active .photoview__svg {
   -webkit-animation: loader-show 10s;
@@ -3155,11 +3235,23 @@ h2 {
   position: relative;
   height: 80px;
 }
+@media only screen and (max-width: 760px) {
+  .photoview__link {
+    width: 55px;
+    height: 60px;
+  }
+}
 .photoview__img {
   display: block;
   width: 60px;
   height: 60px;
   position: relative;
+}
+@media only screen and (max-width: 760px) {
+  .photoview__img {
+    width: 40px;
+    height: 40px;
+  }
 }
 .photoview__svg {
   position: absolute;
@@ -3177,8 +3269,24 @@ h2 {
   stroke-dasharray: 62;
   z-index: 10;
 }
+@media only screen and (max-width: 760px) {
+  .photoview__svg {
+    margin-left: -10px;
+  }
+}
 .prod-reviews {
   font-size: 14px;
+}
+.prod-reviews__bottom {
+  display: none;
+}
+@media only screen and (max-width: 760px) {
+  .prod-reviews {
+    display: none;
+  }
+  .prod-reviews__bottom {
+    display: block;
+  }
 }
 .prod-reviews__title {
   margin: 0 0 20px;
@@ -3252,6 +3360,11 @@ h2 {
 .rev-form.active {
   max-height: 600px;
   padding: 26px 30px 30px;
+}
+@media only screen and (max-width: 760px) {
+  .rev-form {
+    display: none;
+  }
 }
 .rev-form__title {
   margin-top: 0;
@@ -3362,6 +3475,14 @@ h2 {
   line-height: 29px;
   vertical-align: top;
 }
+.catalog__filter > .shadow-box {
+  display: none;
+  left: auto;
+  right: 0;
+}
+.catalog__filter > .shadow-box:after {
+  background: #e9eae2;
+}
 .catalog__footer {
   margin-top: 18px;
   margin-bottom: 91px;
@@ -3435,20 +3556,21 @@ h2 {
     top: 0;
     left: -300px;
     margin-left: 0 !important;
+    height: 100%;
     -webkit-transition: left 0.4s;
     transition: left 0.4s;
   }
   .catalog__filter.active {
     left: 0;
   }
+  .catalog__filter > .shadow-box {
+    display: block;
+  }
   .catalog__filterContainer {
     position: relative;
     margin-bottom: 0 !important;
     -webkit-transition: margin-left 0.4s;
     transition: margin-left 0.4s;
-  }
-  .catalog__filterContainer > .shadow-box:after {
-    background: #e9eae2;
   }
   .catalog__filterContainer.active {
     margin-left: 280px !important;
@@ -3953,6 +4075,11 @@ h2 {
 #buy-popup {
   width: 580px;
 }
+@media only screen and (max-width: 640px) {
+  #buy-popup {
+    width: 100%;
+  }
+}
 #buy-popup.active {
   padding: 30px 30px 40px;
 }
@@ -4009,6 +4136,19 @@ h2 {
 }
 .order-popup__buttons .btn + .btn {
   margin-left: 20px;
+}
+@media only screen and (max-width: 570px) {
+  .order-popup__buttons {
+    width: 100px;
+  }
+  .order-popup__buttons .btn {
+    margin-bottom: 30px;
+  }
+  .order-popup__buttons .btn + .btn {
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
 }
 .order-popup__congrat {
   display: none;
@@ -4090,6 +4230,11 @@ h2 {
   padding-right: 10px;
   vertical-align: top;
   line-height: 27px;
+}
+@media only screen and (max-width: 570px) {
+  .order-popup__select-text {
+    display: block;
+  }
 }
 .order-popup .rev-form__group {
   margin: 0 0 21px;

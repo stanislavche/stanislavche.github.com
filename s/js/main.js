@@ -71,7 +71,6 @@ window.ss.views.App = Backbone.View.extend({
 	.js-mobileThirdItem
 	*/
 
-
 	showMobilemenu: function(e) {
 		var currentMenuName = e.currentTarget.attributes.href.nodeValue;
 		if (!($('.js-mobileMenuToggle').hasClass('active')) && $(window).width() <= 570){
