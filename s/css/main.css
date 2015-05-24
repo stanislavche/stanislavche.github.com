@@ -5958,8 +5958,6 @@ body .ui-tooltip {
   color: #fff;
   background: #15b287;
   overflow: hidden;
-  -webkit-transition: all 0.4;
-  transition: all 0.4;
 }
 .mobile-menu__title.disabled {
   height: 0;
@@ -5987,8 +5985,6 @@ body .ui-tooltip {
   position: relative;
   background: #fff;
   opacity: 1;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
   overflow: hidden;
   line-height: 52px;
   cursor: pointer;
@@ -6026,8 +6022,6 @@ body .ui-tooltip {
 .mobile-menu__main-item .steps__item-arrow {
   right: 16px;
   margin-top: -17px;
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
 }
 .mobile-menu__second-list {
   padding: 0;
@@ -6038,8 +6032,6 @@ body .ui-tooltip {
   top: 50px;
   left: 0;
   width: 100%;
-  -webkit-transition: max-height 0.4s;
-  transition: max-height 0.4s;
 }
 .mobile-menu__second-item {
   display: block;
@@ -6086,8 +6078,6 @@ body .ui-tooltip {
   top: 50px;
   left: 0;
   width: 100%;
-  -webkit-transition: max-height 0.4s;
-  transition: max-height 0.4s;
 }
 .mobile-menu__third-item {
   display: block;
