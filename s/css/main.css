@@ -5981,13 +5981,15 @@ body .ui-tooltip {
   display: block;
   height: 52px;
   padding: 0 50px 0 28px;
-  border-top: 2px solid #e9eae2;
   position: relative;
   background: #fff;
   opacity: 1;
   overflow: hidden;
   line-height: 52px;
   cursor: pointer;
+}
+.mobile-menu__main-item + .mobile-menu__main-item {
+  border-top: 2px solid #e9eae2;
 }
 .mobile-menu__main-item .mobile-menu__img {
   display: none;
