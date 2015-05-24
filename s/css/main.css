@@ -308,6 +308,7 @@ h2 {
 }
 .container:after {
   clear: both;
+  opacity: 0;
 }
 @media only screen and (max-width: 1179px) {
   .container {
@@ -352,6 +353,7 @@ h2 {
 }
 .content__row:after {
   clear: both;
+  opacity: 0;
 }
 .content__row > .content__right {
   float: right;
@@ -447,6 +449,7 @@ h2 {
   }
   .tb .tb__row > .tb__footer-padding-line:after {
     clear: both;
+    opacity: 0;
   }
   .tb .tb__row > .tb__footer-padding-line .site-footer__text {
     margin-bottom: 20px;
@@ -534,6 +537,7 @@ h2 {
   }
   .tb .tb__row > .tb__footer-padding-line:after {
     clear: both;
+    opacity: 0;
   }
   .tb .tb__row > .tb__footer-padding-line .tb__col-1 {
     margin-left: 0;
@@ -856,6 +860,7 @@ h2 {
 }
 .site-header__container:after {
   clear: both;
+  opacity: 0;
 }
 .site-header__logo {
   float: left;
@@ -897,6 +902,7 @@ h2 {
 }
 .site-header__info-list:after {
   clear: both;
+  opacity: 0;
 }
 .site-header__info-item {
   font-size: 14px;
@@ -1075,6 +1081,7 @@ h2 {
 }
 .main-menu__list:after {
   clear: both;
+  opacity: 0;
 }
 .main-menu__item {
   display: table-cell;
@@ -1187,6 +1194,7 @@ h2 {
   color: #fff;
   margin-right: 10px;
   letter-spacing: -0.01em;
+  position: relative;
   font-family: 'PT Sans', sans-serif;
 }
 @media only screen and (max-width: 881px) {
@@ -1369,6 +1377,7 @@ h2 {
   }
   .home .main-menu__list:after {
     clear: both;
+    opacity: 0;
   }
   .home .main-menu__item {
     cursor: pointer;
@@ -1633,6 +1642,7 @@ h2 {
 }
 .form:after {
   clear: both;
+  opacity: 0;
 }
 .form_right {
   float: right;
@@ -1686,6 +1696,9 @@ h2 {
   font-size: 14px;
   color: #585858;
 }
+.autocomplete__link > span {
+  line-height: 1;
+}
 .autocomplete__link .icon-chevron-right {
   background: url('../img/icons/big_arrow.svg') no-repeat;
   position: absolute;
@@ -1716,6 +1729,7 @@ h2 {
 }
 .steps__list:after {
   clear: both;
+  opacity: 0;
 }
 .steps__item {
   float: left;
@@ -1732,6 +1746,7 @@ h2 {
 }
 .steps__item:after {
   clear: both;
+  opacity: 0;
 }
 .steps__item:last-child:after {
   background: none;
@@ -1975,6 +1990,7 @@ h2 {
 }
 .product__footer:after {
   clear: both;
+  opacity: 0;
 }
 .product__footer .btn {
   float: right;
@@ -2140,6 +2156,7 @@ h2 {
 }
 .rating:after {
   clear: both;
+  opacity: 0;
 }
 .rating__reviews {
   font-size: 12px;
@@ -2252,6 +2269,7 @@ h2 {
 }
 .genres__list:after {
   clear: both;
+  opacity: 0;
 }
 .genres__item {
   float: left;
@@ -2586,6 +2604,7 @@ h2 {
 }
 .site-footer__icon-text-item:after {
   clear: both;
+  opacity: 0;
 }
 .site-footer__icon-text-item:last-child {
   margin-bottom: 0;
@@ -2618,6 +2637,7 @@ h2 {
 }
 .site-footer__about:after {
   clear: both;
+  opacity: 0;
 }
 .site-footer__about .container {
   padding: 0 20px;
@@ -2660,6 +2680,7 @@ h2 {
 }
 .site-footer__info:after {
   clear: both;
+  opacity: 0;
 }
 .site-footer__info .container {
   padding: 0 20px;
@@ -2721,6 +2742,7 @@ h2 {
 }
 .social-btn__list:after {
   clear: both;
+  opacity: 0;
 }
 .social-btn__item {
   float: left;
@@ -2810,6 +2832,7 @@ h2 {
 }
 .carousel:after {
   clear: both;
+  opacity: 0;
 }
 .carousel__controls {
   width: 80px;
@@ -2895,6 +2918,7 @@ h2 {
 }
 .carousel__list:after {
   clear: both;
+  opacity: 0;
 }
 .carousel__item {
   overflow: hidden;
@@ -3629,6 +3653,7 @@ h2 {
 }
 .type-selector__list_inlined:after {
   clear: both;
+  opacity: 0;
 }
 .type-selector__item + .type-selector__item {
   margin-top: 20px;
@@ -3744,6 +3769,7 @@ h2 {
 }
 .prod-description__table-container:after {
   clear: both;
+  opacity: 0;
 }
 .prod-description__featured {
   width: 50%;
@@ -3881,6 +3907,7 @@ h2 {
 }
 .menu-dropdown__container:after {
   clear: both;
+  opacity: 0;
 }
 .menu-dropdown__container.active {
   display: table;
@@ -3905,6 +3932,7 @@ h2 {
 }
 .menu-dropdown__genre:after {
   clear: both;
+  opacity: 0;
 }
 .menu-dropdown__genre:before,
 .menu-dropdown__genre:after {
@@ -3913,6 +3941,7 @@ h2 {
 }
 .menu-dropdown__genre:after {
   clear: both;
+  opacity: 0;
 }
 .menu-dropdown__genre.col-1 {
   width: 20%;
@@ -3944,6 +3973,7 @@ h2 {
 }
 .menu-dropdown__genre .col-element:after {
   clear: both;
+  opacity: 0;
 }
 .menu-dropdown__genre .col-element + .col-element {
   margin-top: 20px;
@@ -4099,6 +4129,7 @@ h2 {
 }
 .order-popup__decription:after {
   clear: both;
+  opacity: 0;
 }
 .order-popup__decription-image {
   width: 60px;
@@ -6064,6 +6095,7 @@ body .ui-tooltip {
   background: #334c5d;
   color: #fff;
   overflow: visible;
+  border-top: none;
 }
 .mobile-menu__second-item.active .mobile-menu__third-list {
   max-height: 500px;
