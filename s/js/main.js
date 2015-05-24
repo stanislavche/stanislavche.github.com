@@ -13,8 +13,8 @@ window.ss.views.App = Backbone.View.extend({
 	mobileMenuStep: 0,
 	events: function() {
 		return Modernizr.touch ? {
-			'click .js-menu': 'showHideTouch',
-			'click .js-menuShow': 'showHideTouch',
+			'touchstart .js-menu': 'showHideTouch',
+			'touchstart .js-menuShow': 'showHideTouch',
 			'click .js-search-field': 'resizeSearch',
 			'click .js-showReview': 'reviewShow',
 			'click .js-sendReview': 'reviewHide',
@@ -470,7 +470,7 @@ window.ss.views.App = Backbone.View.extend({
 		this.fancybox();
 		this.order();
 		this.customSelect();
-		$('body').bind('click', this.bodyFunc);
+		$('body').bind('click touchstart', this.bodyFunc);
 		$(window).on('resize', _.debounce(function(){
 			if ($('.js-mobileMenuToggle').hasClass('active')){
 				$('.js-mobileMenuToggle').click();
