@@ -31,7 +31,8 @@ window.ss.views.App = Backbone.View.extend({
 			'click .js-mobileMenuToggle': 'toggleMobileMenu',
 			//mobile menu events
 			'click .js-mobileFirstItem': 'toggleFirstLayerMenu',
-			'click .js-mobileBtn': 'stepBack'
+			'click .js-mobileBtn': 'stepBack',
+			'click .js-showSearch': 'goToSearch'
 		} : {
 			'click .js-menuShow': 'preventDef',
 			'mouseenter .js-menu': 'showHideMenu',
@@ -55,7 +56,8 @@ window.ss.views.App = Backbone.View.extend({
 			//mobile menu events
 			'click .js-mobileFirstItem': 'toggleFirstLayerMenu',
 			'click .js-mobileBtn': 'stepBack',
-			'click .js-menuShow': 'showMobilemenu'
+			'click .js-menuShow': 'showMobilemenu',
+			'click .js-showSearch': 'goToSearch'
 		};		
 	},
 
@@ -70,6 +72,15 @@ window.ss.views.App = Backbone.View.extend({
 	.js-mobileThirdList
 	.js-mobileThirdItem
 	*/
+
+	goToSearch: function(e) {
+		e.stopPropagation();
+		$('html, body').animate({
+			scrollTop: 0
+		}, 1000);
+		$('.js-search-field .input_search').focus();
+		$('.js-search-field').addClass('expand');
+	},
 
 	showMobilemenu: function(e) {
 		var currentMenuName = e.currentTarget.attributes.href.nodeValue;
@@ -501,7 +512,9 @@ window.ss.views.App = Backbone.View.extend({
 window.ss.views.Carousel = Backbone.View.extend({
 	el: '.js-carousel',
 	events: {
-		'click .js-carouselLink': 'changeSlideClick'
+		'click .js-carouselLink': 'changeSlideClick',
+		'mouseenter': 'pauseSlider',
+		'mouseleave': 'nextSlide'
 	},
 	initialize: function () {
 		this.currentItem = 0;
@@ -513,6 +526,11 @@ window.ss.views.Carousel = Backbone.View.extend({
 			this.restartTimer();
 		}
 	},
+	pauseSlider: function (){
+		this.restartTimer();
+		clearTimeout(this.timeout);
+	},
+
 	changeSlideClick: function(e) {
 		e.preventDefault();
 		this.currentItem = $(e.currentTarget).parent().index();

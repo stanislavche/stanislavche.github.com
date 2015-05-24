@@ -10,6 +10,7 @@
     <title>Главная – Источник звука</title>
     <meta name="description" content="default description">
     <script src="js/modernizr.js"></script>
+    <script src="js/jquery.min.js"></script>
     <!--[if (lt IE 9)]
     script(src="js/svg4everybody.ie8.min.js")
     script(src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js")
@@ -587,7 +588,7 @@
                 <li class="mobile-menu__icon-line"></li>
               </ul>
               <!-- Logo-->
-              <div class="site-header__logo"><img onerror="this.src='img/png-icons/logo.png'" src="img/logo.svg" alt="" class="site-header__logo-img tb__m-hide"><img onerror="this.src='img/png-icons/text-logo.png'" src="img/text-logo.svg" alt="" class="site-header__logo-img hide tb__m-show"></div>
+              <div class="site-header__logo"><img onerror="this.src='img/png-icons/logo.png'" src="img/logo.svg" alt="" class="site-header__logo-img"></div>
               <!-- Search-->
               <div class="form form_right js-search-field">
                 <form action="#">
@@ -1300,7 +1301,7 @@
               </div>
             </div>
             <ul class="steps__list tb__p_hidden">
-              <li class="steps__item"><img onerror="this.src='img/png-icons/icons/search_item.png'" src="img/icons/search_item.svg" alt="" class="steps__img steps__img_search">
+              <li class="steps__item js-showSearch"><img onerror="this.src='img/png-icons/icons/search_item.png'" src="img/icons/search_item.svg" alt="" class="steps__img steps__img_search">
                 <p class="steps__text">Найди нужный музыкальный инструмент</p>
                 <p class="steps__tablet-text">Найдите инструмент</p>
                 <div class="steps__item-arrow"></div>
@@ -1463,7 +1464,7 @@
                       <h2 class="product__title"><a href="product.html">Электрогитара Gibson</a></h2>
                       <!-- Rate-->
                       <div class="rating">
-                        <select name="rating" readonly="" class="js-rating">
+                        <select name="rating" readonly="" style="height: 0; width: 0; overflow: hidden; opacity: 0" class="js-rating">
                           <option value=""></option>
                           <option value="1">1</option>
                           <option value="2">2</option>
@@ -1486,7 +1487,7 @@
                     <div class="product__footer-container">
                       <div class="product__old-price">7890</div>
                       <div class="product__price">5 800 руб.</div>
-                    </div><a href="#buy-popup" data-id="guitar404" class="btn js-order">
+                    </div><a href="product.html" class="btn">
                       <svg viewBox="0 0 20 20" class="icon icon-cart">
                         <use xlink:href="img/icons.svg#cart"></use>
                       </svg><!--[if lt IE 9]><img class="icon icon-cart" src='img/png-icons/cart.png' alt=""><![endif]-->
@@ -1524,7 +1525,7 @@
                       <h2 class="product__title"><a href="product.html">Электрогитара Gibson</a></h2>
                       <!-- Rate-->
                       <div class="rating">
-                        <select name="rating" readonly="" class="js-rating">
+                        <select name="rating" readonly="" style="height: 0; width: 0; overflow: hidden; opacity: 0" class="js-rating">
                           <option value=""></option>
                           <option value="1">1</option>
                           <option value="2">2</option>
@@ -1547,7 +1548,7 @@
                     <div class="product__footer-container">
                       <div class="product__old-price">7890</div>
                       <div class="product__price">5 800 руб.</div>
-                    </div><a href="#buy-popup" data-id="guitar404" class="btn js-order">
+                    </div><a href="product.html" class="btn">
                       <svg viewBox="0 0 20 20" class="icon icon-cart">
                         <use xlink:href="img/icons.svg#cart"></use>
                       </svg><!--[if lt IE 9]><img class="icon icon-cart" src='img/png-icons/cart.png' alt=""><![endif]-->
@@ -1587,7 +1588,7 @@
                       <h2 class="product__title"><a href="product.html">Электрогитара Gibson</a></h2>
                       <!-- Rate-->
                       <div class="rating">
-                        <select name="rating" readonly="" class="js-rating">
+                        <select name="rating" readonly="" style="height: 0; width: 0; overflow: hidden; opacity: 0" class="js-rating">
                           <option value=""></option>
                           <option value="1">1</option>
                           <option value="2">2</option>
@@ -1610,7 +1611,7 @@
                     <div class="product__footer-container">
                       <div class="product__old-price">7890</div>
                       <div class="product__price">5 800 руб.</div>
-                    </div><a href="#buy-popup" data-id="guitar404" class="btn js-order">
+                    </div><a href="product.html" class="btn">
                       <svg viewBox="0 0 20 20" class="icon icon-cart">
                         <use xlink:href="img/icons.svg#cart"></use>
                       </svg><!--[if lt IE 9]><img class="icon icon-cart" src='img/png-icons/cart.png' alt=""><![endif]-->
@@ -1745,7 +1746,7 @@
                       <h2 class="product__title"><a href="product.html">Электрогитара Gibson</a></h2>
                       <!-- Rate-->
                       <div class="rating">
-                        <select name="rating" readonly="" class="js-rating">
+                        <select name="rating" readonly="" style="height: 0; width: 0; overflow: hidden; opacity: 0" class="js-rating">
                           <option value=""></option>
                           <option value="1">1</option>
                           <option value="2">2</option>
@@ -1768,7 +1769,7 @@
                     <div class="product__footer-container">
                       <div class="product__old-price">7890</div>
                       <div class="product__price">5 800 руб.</div>
-                    </div><a href="#buy-popup" data-id="guitar404" class="btn js-order">
+                    </div><a href="product.html" class="btn">
                       <svg viewBox="0 0 20 20" class="icon icon-cart">
                         <use xlink:href="img/icons.svg#cart"></use>
                       </svg><!--[if lt IE 9]><img class="icon icon-cart" src='img/png-icons/cart.png' alt=""><![endif]-->
@@ -1825,7 +1826,7 @@
                         <h2 class="product__title"><a href="product.html">Микшер Yamaha SA2200</a></h2>
                         <!-- Rate-->
                         <div class="rating">
-                          <select name="rating" readonly="" class="js-rating">
+                          <select name="rating" readonly="" style="height: 0; width: 0; overflow: hidden; opacity: 0" class="js-rating">
                             <option value=""></option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -1848,7 +1849,7 @@
                       <div class="product__footer-container">
                         <div class="product__old-price">3 2116</div>
                         <div class="product__price">2 399 руб.</div>
-                      </div><a href="#buy-popup" data-id="guitar404" class="btn js-order">
+                      </div><a href="product.html" class="btn">
                         <svg viewBox="0 0 20 20" class="icon icon-cart">
                           <use xlink:href="img/icons.svg#cart"></use>
                         </svg><!--[if lt IE 9]><img class="icon icon-cart" src='img/png-icons/cart.png' alt=""><![endif]-->
@@ -1886,7 +1887,7 @@
                         <h2 class="product__title"><a href="product.html">Микшер Yamaha SA2200</a></h2>
                         <!-- Rate-->
                         <div class="rating">
-                          <select name="rating" readonly="" class="js-rating">
+                          <select name="rating" readonly="" style="height: 0; width: 0; overflow: hidden; opacity: 0" class="js-rating">
                             <option value=""></option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -1909,7 +1910,7 @@
                       <div class="product__footer-container">
                         <div class="product__old-price">3 2116</div>
                         <div class="product__price">2 399 руб.</div>
-                      </div><a href="#buy-popup" data-id="guitar404" class="btn js-order">
+                      </div><a href="product.html" class="btn">
                         <svg viewBox="0 0 20 20" class="icon icon-cart">
                           <use xlink:href="img/icons.svg#cart"></use>
                         </svg><!--[if lt IE 9]><img class="icon icon-cart" src='img/png-icons/cart.png' alt=""><![endif]-->
@@ -1947,7 +1948,7 @@
                         <h2 class="product__title"><a href="product.html">Микшер Yamaha SA2200</a></h2>
                         <!-- Rate-->
                         <div class="rating">
-                          <select name="rating" readonly="" class="js-rating">
+                          <select name="rating" readonly="" style="height: 0; width: 0; overflow: hidden; opacity: 0" class="js-rating">
                             <option value=""></option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -1970,7 +1971,7 @@
                       <div class="product__footer-container">
                         <div class="product__old-price">3 2116</div>
                         <div class="product__price">2 399 руб.</div>
-                      </div><a href="#buy-popup" data-id="guitar404" class="btn js-order">
+                      </div><a href="product.html" class="btn">
                         <svg viewBox="0 0 20 20" class="icon icon-cart">
                           <use xlink:href="img/icons.svg#cart"></use>
                         </svg><!--[if lt IE 9]><img class="icon icon-cart" src='img/png-icons/cart.png' alt=""><![endif]-->
@@ -2008,7 +2009,7 @@
                         <h2 class="product__title"><a href="product.html">Микшер Yamaha SA2200</a></h2>
                         <!-- Rate-->
                         <div class="rating">
-                          <select name="rating" readonly="" class="js-rating">
+                          <select name="rating" readonly="" style="height: 0; width: 0; overflow: hidden; opacity: 0" class="js-rating">
                             <option value=""></option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -2031,7 +2032,7 @@
                       <div class="product__footer-container">
                         <div class="product__old-price">3 2116</div>
                         <div class="product__price">2 399 руб.</div>
-                      </div><a href="#buy-popup" data-id="guitar404" class="btn js-order">
+                      </div><a href="product.html" class="btn">
                         <svg viewBox="0 0 20 20" class="icon icon-cart">
                           <use xlink:href="img/icons.svg#cart"></use>
                         </svg><!--[if lt IE 9]><img class="icon icon-cart" src='img/png-icons/cart.png' alt=""><![endif]-->
@@ -2223,7 +2224,6 @@
         </footer>
       </div>
     </div>
-    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
   </body>
