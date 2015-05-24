@@ -6043,13 +6043,15 @@ body .ui-tooltip {
   display: block;
   height: 52px;
   padding: 0 50px 0 28px;
-  border-top: 2px solid #e9eae2;
   position: relative;
   background: #fff;
   color: #343434;
   overflow: hidden;
   line-height: 52px;
   cursor: pointer;
+}
+.mobile-menu__second-item + .mobile-menu__second-item {
+  border-top: 2px solid #e9eae2;
 }
 .mobile-menu__second-item.disabled {
   height: 0;
@@ -6089,12 +6091,14 @@ body .ui-tooltip {
   display: block;
   height: 52px;
   padding: 0 50px 0 28px;
-  border-top: 2px solid #e9eae2;
   position: relative;
   background: #fff;
   color: #343434;
   line-height: 52px;
   cursor: pointer;
+}
+.mobile-menu__third-item + .mobile-menu__third-item {
+  border-top: 2px solid #e9eae2;
 }
 .mobile-menu__third-item.hover {
   background: #334c5d;
