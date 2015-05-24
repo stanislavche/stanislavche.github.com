@@ -172,9 +172,14 @@ window.ss.views.App = Backbone.View.extend({
 		if ($button.hasClass('active')){
 			$button.removeClass('active');
 			$body.removeClass('slided');
+			_.delay(function(){
+				$menu.removeClass('active')
+			}, 1000);
 		} else {
+			$menu.addClass('active');
 			$button.addClass('active');
 			$body.addClass('slided');
+
 		}
 	},
 

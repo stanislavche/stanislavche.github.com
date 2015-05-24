@@ -5908,6 +5908,7 @@ body .ui-tooltip {
   left: 0;
   top: 0;
   width: 240px;
+  opacity: 0;
   background: #293d4a;
   -webkit-transition: left 0.4s;
   transition: left 0.4s;
@@ -5916,6 +5917,9 @@ body .ui-tooltip {
   letter-spacing: -0.054em;
   color: #343434;
   z-index: 1;
+}
+.mobile-menu.active {
+  opacity: 1;
 }
 @media only screen and (max-width: 570px) {
   .mobile-menu {
