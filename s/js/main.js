@@ -34,7 +34,6 @@ window.ss.views.App = Backbone.View.extend({
 			'click .js-mobileBtn': 'stepBack',
 			'click .js-showSearch': 'goToSearch'
 		} : {
-			'click .js-menuShow': 'preventDef',
 			'mouseenter .js-menu': 'showHideMenu',
 			'mouseleave .js-menu': 'showHideMenu',
 			'mouseenter .js-menuShow': 'showHideMenu',
@@ -84,7 +83,9 @@ window.ss.views.App = Backbone.View.extend({
 
 	showMobilemenu: function(e) {
 		var currentMenuName = e.currentTarget.attributes.href.nodeValue;
+		console.log('work');
 		if (!($('.js-mobileMenuToggle').hasClass('active')) && $(window).width() <= 570){
+			console.log('work');
 			$('.js-mobileMenuToggle').click();
 			if ($('.js-mobileFirstList').find('.js-mobileFirstItem.active').length > 0){
 				$('.js-mobileFirstItem.active').click();
@@ -307,7 +308,7 @@ window.ss.views.App = Backbone.View.extend({
 		if (this.nameInput && this.phoneInput){
 			$.ajax({
 				type: "POST",
-				url: '#',
+				// url: '#',
 				data: formData,
 				success : function( response ) {
 					$form.find('.js-step1').removeClass('active');
@@ -315,8 +316,8 @@ window.ss.views.App = Backbone.View.extend({
 					$form.find('.js-congratContainer').addClass('active');
 					$form.find('.js-phoneTime').text($form.find('.js-callHours').val() + ':' + $form.find('.js-callMinutes').val());
 					_.delay(function(){
-						$.fancybox.resize;
-					}, 2000);
+						$.fancybox.update();
+					}, 200);
 				}
 			});
 		}
@@ -346,10 +347,6 @@ window.ss.views.App = Backbone.View.extend({
 
 	resizeSearch: function(e) {
 		$(e.currentTarget).addClass('expand');
-	},
-
-	preventDef: function(e) {
-		e.preventDefault();
 	},
 
 	// showMenu: function(e) {
@@ -472,9 +469,13 @@ window.ss.views.App = Backbone.View.extend({
 		this.order();
 		this.customSelect();
 		$('body').bind('click touchstart', this.bodyFunc);
+		var width = $(window).width();
 		$(window).on('resize', _.debounce(function(){
-			if ($('.js-mobileMenuToggle').hasClass('active')){
-				$('.js-mobileMenuToggle').click();
+			if($(window).width() !== width){
+				width = $(window).width();
+				if ($('.js-mobileMenuToggle').hasClass('active')){
+					$('.js-mobileMenuToggle').click();
+				}
 			}
 		}, 200));
 	},
