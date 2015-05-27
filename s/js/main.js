@@ -593,7 +593,7 @@ window.ss.views.Catalog = Backbone.View.extend({
 	},
 
 	initialize: function(){
-		$('#slider-range').slider({
+		var slider = $('#slider-range').slider({
 			range: true,
 			min: 0,
 			max: 200000,
@@ -601,6 +601,16 @@ window.ss.views.Catalog = Backbone.View.extend({
 			slide: function( event, ui ) {
 				$("#costFrom").val(ui.values[0]);
 				$("#costTo").val(ui.values[1]);
+			}
+		});
+		$('body').on('change', '#costFrom, #costTo', function(){
+			var from = $("#costFrom").val(),
+				to = $("#costTo").val()
+			;
+			if (!isNaN(from) && !isNaN(to)){
+				slider.slider({
+					values: [ from , to ]
+				});
 			}
 		});
 	}
