@@ -306,20 +306,29 @@ window.ss.views.App = Backbone.View.extend({
 			self = this
 		;
 		if (this.nameInput && this.phoneInput){
-			$.ajax({
-				type: "POST",
-				// url: '#',
-				data: formData,
-				success : function( response ) {
-					$form.find('.js-step1').removeClass('active');
-					$form.find('.js-popupName').text($form.find('.js-inputName').val());
-					$form.find('.js-congratContainer').addClass('active');
-					$form.find('.js-phoneTime').text($form.find('.js-callHours').val() + ':' + $form.find('.js-callMinutes').val());
-					_.delay(function(){
-						$.fancybox.update();
-					}, 200);
-				}
-			});
+			// $.ajax({
+			// 	type: "POST",
+			// 	// url: '#',
+			// 	data: formData,
+			// 	success : function( response ) {
+			// 		$form.find('.js-step1').removeClass('active');
+			// 		$form.find('.js-popupName').text($form.find('.js-inputName').val());
+			// 		$form.find('.js-congratContainer').addClass('active');
+			// 		$form.find('.js-phoneTime').text($form.find('.js-callHours').val() + ':' + $form.find('.js-callMinutes').val());
+			// 		_.delay(function(){
+			// 			$.fancybox.update();
+			// 		}, 200);
+			// 	}
+			// });
+			
+			//Fake ajax
+			$form.find('.js-step1').removeClass('active');
+			$form.find('.js-popupName').text($form.find('.js-inputName').val());
+			$form.find('.js-congratContainer').addClass('active');
+			$form.find('.js-phoneTime').text($form.find('.js-callHours').val() + ':' + $form.find('.js-callMinutes').val());
+			_.delay(function(){
+				$.fancybox.update();
+			}, 200);
 		}
 	},
 
