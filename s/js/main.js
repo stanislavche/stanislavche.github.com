@@ -459,6 +459,7 @@ window.ss.views.App = Backbone.View.extend({
 		this.render();
 		if (this.$el.hasClass('home')){
 			this.views.carousel = new window.ss.views.Carousel({refreshTimeout: 2000});
+			this.views.carousel = new window.ss.views.ScrolledBackground({});
 		}
 		if (this.$el.hasClass('product-page')){
 			this.views.gallery = new window.ss.views.Gallery({});
@@ -630,13 +631,14 @@ window.ss.views.Gallery = Backbone.View.extend({
 		$(this.el).find('.js-fancybox[data-slideId="' + slideId + '"]').fadeIn();
 	}
 });
-window.ss.views.Order = Backbone.View.extend({
-	el: '.js-orderPopup',
-	events: {
-		'click .js-sort': 'sort'
-	},
+window.ss.views.ScrolledBackground = Backbone.View.extend({
+	el: '.breaking-message',
 	initialize: function(){
 		var self = this;
+		$(window).on('scroll', function() {
+			var x = $(this).scrollTop() - 470;
+			$('.breaking-message__overlay').css('background-position', '0 ' + parseInt(-x) + 'px');
+		});
 	}
 });
 $(function () {
