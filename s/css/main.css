@@ -2587,9 +2587,6 @@ h2 {
 .site-footer__section:last-child .site-footer__section-container {
   border: none;
 }
-.site-footer__section_contacts {
-  padding-bottom: 35px;
-}
 .site-footer__section > .social-btn {
   padding-top: 6px;
 }
@@ -3051,6 +3048,8 @@ h2 {
   position: absolute;
   z-index: 1;
   width: 100%;
+  top: 0;
+  left: 0;
 }
 .article__head_main {
   position: relative;
@@ -3138,6 +3137,22 @@ h2 {
 }
 .article .container > .content__row {
   margin-bottom: 80px;
+}
+@media only screen and (max-width: 881px) {
+  .article__aside-row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    font-size: 0;
+    letter-spacing: 0;
+  }
+  .article__aside-row > .tb__col-1 {
+    float: left;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .article__aside-row > .tb__col-1 + .tb__col-1 {
+    float: right;
+  }
 }
 @media only screen and (max-width: 760px) {
   .article__category {
@@ -3592,6 +3607,21 @@ h2 {
 .catalog__item:nth-child(3n-2) {
   padding-right: 10px;
 }
+@media only screen and (max-width: 1179px) {
+  .catalog__footer {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .catalog__footer > .btn {
+    margin: 0;
+  }
+  .catalog__total {
+    width: auto;
+    display: block;
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+}
 @media only screen and (max-width: 881px) {
   .catalog__header {
     text-align: left;
@@ -3623,6 +3653,12 @@ h2 {
   .catalog__row {
     overflow: hidden;
   }
+  .catalog__footer {
+    margin-bottom: 91px;
+  }
+  .catalog__total {
+    margin-bottom: 10px;
+  }
   .catalog__header {
     margin-top: 21px;
     padding-left: 30px;
@@ -3634,18 +3670,6 @@ h2 {
   .catalog__touch-filter {
     margin-left: 30px;
     display: inline-block;
-  }
-  .catalog__footer {
-    text-align: center;
-  }
-  .catalog__footer > .btn {
-    margin: 0;
-  }
-  .catalog__total {
-    width: auto;
-    display: block;
-    margin-bottom: 10px;
-    margin-right: 0;
   }
   .catalog__row {
     overflow: visible;
@@ -3979,6 +4003,13 @@ h2 {
     margin-top: 32px;
     padding-bottom: 0px;
   }
+}
+@media only screen and (max-width: 881px) {
+  .products-set__title {
+    padding-left: 10px;
+  }
+}
+@media only screen and (max-width: 760px) {
   .products-set__title {
     padding-left: 10px;
   }
@@ -3988,10 +4019,13 @@ h2 {
     margin-top: 12px;
   }
   .products-set__title {
-    width: 100%;
+    width: 280px;
     text-align: left;
+    margin: 0 auto;
+    padding-left: 0;
     font-weight: 400;
     margin-bottom: 24px;
+    display: block !important;
   }
 }
 .menu-dropdown {
@@ -6034,6 +6068,7 @@ body .ui-tooltip {
   max-width: 1180px;
   margin: 0 auto;
   background: #fff;
+  margin: 0 auto !important;
 }
 @media only screen and (max-width: 1179px) {
   .catalog-info__container {
