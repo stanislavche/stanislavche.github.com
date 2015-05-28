@@ -498,7 +498,6 @@ h2 {
     display: inline-block;
     vertical-align: top;
     text-align: left;
-    margin-left: 0;
   }
   .tb .tb__row > .tb__p-col-1 {
     width: 280px;
@@ -3979,6 +3978,9 @@ h2 {
   .products-set {
     margin-top: 32px;
     padding-bottom: 0px;
+  }
+  .products-set__title {
+    padding-left: 10px;
   }
 }
 @media only screen and (max-width: 570px) {
