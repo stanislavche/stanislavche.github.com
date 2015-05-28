@@ -4352,6 +4352,23 @@ h2 {
 .order-popup__congrat-image_opacity {
   border: none;
 }
+.order-popup__congrat-image > span {
+  position: absolute;
+  font-size: 8px;
+  color: #e3e4e1;
+  top: 58px;
+  right: 29px;
+}
+.order-popup__congrat-image > span + span {
+  font-size: 14px;
+  top: 46px;
+  right: 17px;
+}
+.order-popup__congrat-image > span + span + span {
+  font-size: 20px;
+  top: 33px;
+  right: 1px;
+}
 .order-popup__congrat-svg {
   position: absolute;
   top: -10px;
