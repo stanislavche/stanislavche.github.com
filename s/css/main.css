@@ -476,6 +476,7 @@ h2 {
   }
   .tb {
     width: 600px;
+    margin: 0 auto;
   }
   .tb__p_show {
     display: block !important;
@@ -497,6 +498,7 @@ h2 {
     display: inline-block;
     vertical-align: top;
     text-align: left;
+    margin-left: 0;
   }
   .tb .tb__row > .tb__p-col-1 {
     width: 280px;
@@ -3604,7 +3606,7 @@ h2 {
     display: block;
   }
 }
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 570px) {
   .catalog__content {
     padding-top: 0;
     overflow: hidden;
@@ -3619,43 +3621,8 @@ h2 {
     height: auto;
     margin-bottom: 23px;
   }
-  .catalog__button-back.mobile-menu__btn-back {
-    display: block;
-  }
-  .catalog__button-back.mobile-menu__btn-back .mobile-menu__btn-content {
-    padding-left: 20px;
-  }
-  .catalog__button-back.mobile-menu__btn-back .steps__item-arrow {
-    right: 118px;
-    top: 58%;
-  }
   .catalog__row {
     overflow: hidden;
-  }
-  .catalog__filter {
-    position: absolute;
-    margin: 0;
-    top: 0;
-    left: -300px;
-    margin-left: 0 !important;
-    height: 100%;
-    -webkit-transition: left 0.4s;
-    transition: left 0.4s;
-  }
-  .catalog__filter.active {
-    left: 0;
-  }
-  .catalog__filter > .shadow-box {
-    display: block;
-  }
-  .catalog__filterContainer {
-    position: relative;
-    margin-bottom: 0 !important;
-    -webkit-transition: margin-left 0.4s;
-    transition: margin-left 0.4s;
-  }
-  .catalog__filterContainer.active {
-    margin-left: 280px !important;
   }
   .catalog__header {
     margin-top: 21px;
@@ -3681,19 +3648,49 @@ h2 {
     margin-bottom: 10px;
     margin-right: 0;
   }
-}
-@media only screen and (max-width: 570px) {
   .catalog__row {
     overflow: visible;
   }
   .catalog__heading_bottom {
     padding-left: 0;
   }
+  .catalog__button-back.mobile-menu__btn-back {
+    display: block;
+  }
+  .catalog__button-back.mobile-menu__btn-back .mobile-menu__btn-content {
+    padding-left: 20px;
+  }
+  .catalog__button-back.mobile-menu__btn-back .steps__item-arrow {
+    right: 118px;
+    top: 58%;
+  }
   .catalog__header {
     padding-left: 0;
   }
   .catalog__filter {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: -300px;
     margin-left: -20px !important;
+    height: 100%;
+    -webkit-transition: left 0.4s;
+    transition: left 0.4s;
+  }
+  .catalog__filter.active {
+    left: 0;
+  }
+  .catalog__filter > .shadow-box {
+    display: block;
+  }
+  .catalog__filterContainer {
+    position: relative;
+    margin-bottom: 0 !important;
+    -webkit-transition: margin-left 0.4s;
+    transition: margin-left 0.4s;
+  }
+  .catalog__filterContainer.active {
+    margin-left: 280px !important;
   }
   .catalog__touch-filter {
     margin-left: 0;
