@@ -11,6 +11,7 @@ window.ss.views.App = Backbone.View.extend({
 	activeMenu: null,
 	newActiveMenu: null,
 	mobileMenuStep: 0,
+	mouseEntered: false,
 	events: function() {
 		return Modernizr.touch ? {
 			'touchstart .js-menu': 'showHideTouch',
@@ -22,7 +23,7 @@ window.ss.views.App = Backbone.View.extend({
 			'click .js-order': 'showPopup',
 			'click .js-wishBtnCheckbox': 'wish',
 			'click .js-cancelWish': 'cancelWish',
-			'click .js-next-buton': 'webkitIt',
+			'touchend .js-next-buton': 'webkitIt',
 			'click .js-orderSend': 'sendOrder',
 			'click .js-orderCancel': 'orderCancel',
 			'keyup .js-inputName': 'changeName',
@@ -665,9 +666,18 @@ window.ss.views.Gallery = Backbone.View.extend({
 window.ss.views.ScrolledBackground = Backbone.View.extend({
 	el: '.breaking-message',
 	initialize: function(){
-		var self = this;
+		var self = this,
+			x = 0
+		;
 		$(window).on('scroll', function() {
-			var x = $(this).scrollTop() - 470;
+			if ($(window).width() < 1180 && $(window).width() > 800){
+				x = ($(this).scrollTop() - 470) / 4;
+			} else if ($(window).width() <= 800) {
+				x = ($(this).scrollTop() - 100) / 6;
+			} else {
+				x = ($(this).scrollTop() - 470) / 2;
+			}
+			
 			$('.breaking-message__overlay').css('background-position', '0 ' + parseInt(-x) + 'px');
 		});
 	}
