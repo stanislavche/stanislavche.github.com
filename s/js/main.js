@@ -15,6 +15,7 @@ window.ss.views.App = Backbone.View.extend({
 		return Modernizr.touch ? {
 			'touchstart .js-menu': 'showHideTouch',
 			'touchstart .js-menuShow': 'showHideTouch',
+			'touchend .js-mask': 'hideTabletMenu',
 			'click .js-search-field': 'resizeSearch',
 			'click .js-showReview': 'reviewShow',
 			'click .js-sendReview': 'reviewHide',
@@ -71,6 +72,16 @@ window.ss.views.App = Backbone.View.extend({
 	.js-mobileThirdList
 	.js-mobileThirdItem
 	*/
+
+	hideTabletMenu: function(e) {
+		console.log('hide');
+		var $dropdown = $('.js-dropdown'),
+			$backMask = $('.js-mask')
+		;
+		$dropdown.removeClass('active');
+		$backMask.removeClass('active');
+		$('.js-menuShow').removeClass('active');
+	},
 
 	goToSearch: function(e) {
 		e.stopPropagation();
@@ -189,7 +200,7 @@ window.ss.views.App = Backbone.View.extend({
 			$backMask = $('.js-mask'),
 			self = this
 		;
-		
+		//console.log($(e.target));
 		$('.js-search-field').removeClass('expand');
 		if ($(e.currentTarget).hasClass('js-menuShow')){
 			var currentMenuName = e.currentTarget.attributes.href.nodeValue,
@@ -207,7 +218,7 @@ window.ss.views.App = Backbone.View.extend({
 				}
 				$('.js-mobileFirstItem[name="'+ currentMenuName +'"').click();
 			}
-		} else if ($(e.currentTarget).hasClass('js-menu')){
+		} else if ($(e.currentTarget).hasClass('js-menu') && !($(e.target).hasClass('js-dropdown-container')) && !($(e.target).hasClass('js-tablet-el'))){
 			if ($dropdown.hasClass('active')){
 				if (self.newActiveMenu === self.activeMenu){
 					$dropdown.removeClass('active');

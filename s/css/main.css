@@ -506,6 +506,9 @@ h2 {
     margin-left: 0;
     width: 100%;
   }
+  .tb .tb__row > .tb__footer-padding-line .tb__col-1 {
+    padding-top: 20px;
+  }
 }
 @media only screen and (max-width: 570px) {
   .tb__m-show {
@@ -553,7 +556,7 @@ h2 {
     margin-bottom: 0;
   }
   .site-footer .tb .tb__row > .tb__footer-padding-line .tb__col-1 {
-    padding: 25px 20px 20px 0;
+    padding: 25px 20px 0 0;
   }
 }
 .responsive-video {
@@ -1206,9 +1209,23 @@ h2 {
   position: relative;
   font-family: 'PT Sans', sans-serif;
 }
+.main-menu__text_short {
+  display: none;
+}
+.main-menu__text_full {
+  display: inline-block;
+}
 @media only screen and (max-width: 881px) {
   .main-menu__text {
     font-size: 13px;
+  }
+}
+@media only screen and (max-width: 1179px) {
+  .main-menu__text_short {
+    display: inline-block;
+  }
+  .main-menu__text_full {
+    display: none;
   }
 }
 @media only screen and (max-width: 1179px) {
@@ -1430,6 +1447,8 @@ h2 {
   border-bottom: solid 2px rgba(255, 255, 255, 0);
   -webkit-transition: border .3s;
           transition: border .3s;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 .input_search {
   padding-right: 60px;
@@ -2555,10 +2574,9 @@ h2 {
   padding: 10px 0 19px;
 }
 .site-footer__section {
-  border-bottom: solid 1px #2e4454;
-  padding: 25px 50px 20px 20px;
+  padding: 25px 50px 0 20px;
 }
-.site-footer__section:last-child {
+.site-footer__section:last-child .site-footer__section-container {
   border: none;
 }
 .site-footer__section_contacts {
@@ -2569,7 +2587,17 @@ h2 {
 }
 @media only screen and (max-width: 570px) {
   .site-footer__section {
-    padding: 25px 20px 20px 0;
+    padding: 25px 20px 0 0;
+  }
+}
+.site-footer__section-container {
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #2e4454;
+}
+@media only screen and (max-width: 570px) {
+  .site-footer__section-container {
+    padding-bottom: 25px;
     border: none;
   }
 }
@@ -4087,7 +4115,7 @@ h2 {
 }
 @media only screen and (max-width: 1179px) {
   .menu-dropdown__title {
-    padding: 0 10px;
+    padding: 0 20px;
     margin-bottom: 4px;
   }
 }
@@ -4099,6 +4127,7 @@ h2 {
 @media only screen and (max-width: 760px) {
   .menu-dropdown__title {
     font-size: 10px;
+    padding: 0 10px;
   }
 }
 .menu-dropdown__list {
@@ -4133,6 +4162,11 @@ h2 {
   background-color: #f9c866;
 }
 @media only screen and (max-width: 1179px) {
+  .menu-dropdown__goTo {
+    padding: 6px 20px;
+  }
+}
+@media only screen and (max-width: 760px) {
   .menu-dropdown__goTo {
     padding: 6px 10px;
   }
