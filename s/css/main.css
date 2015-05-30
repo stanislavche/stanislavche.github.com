@@ -1099,6 +1099,7 @@ h2 {
   margin: 0;
   display: table;
   width: 100%;
+  table-layout: fixed;
 }
 .main-menu__list:before,
 .main-menu__list:after {
@@ -1171,6 +1172,9 @@ h2 {
 .main-menu__item_et .main-menu__img {
   margin-left: 12px;
   margin-right: 10px;
+}
+.main-menu__item_sv {
+  width: 132px;
 }
 .main-menu__item_sv .main-menu__img {
   margin-left: 22px;
@@ -1326,6 +1330,9 @@ h2 {
   .main-menu__item_et .main-menu__text {
     margin-right: 0;
   }
+  .main-menu__item_sv {
+    width: 85px;
+  }
   .main-menu__item_sv .main-menu__img {
     margin-left: 8px;
     margin-right: 0px;
@@ -1353,7 +1360,7 @@ h2 {
     margin-left: -3px;
   }
   .main-menu__item_gt {
-    width: 10.8%;
+    width: 12%;
   }
   .main-menu__item_gt .main-menu__img {
     margin-left: -3px;
@@ -1365,7 +1372,7 @@ h2 {
     margin-left: -3px;
   }
   .main-menu__item_pi {
-    width: 12.5%;
+    width: 13%;
   }
   .main-menu__item_pi .main-menu__img {
     margin-left: -3px;
@@ -1383,19 +1390,19 @@ h2 {
     margin-left: -3px;
   }
   .main-menu__item_zv {
-    width: 9%;
+    width: 10%;
   }
   .main-menu__item_zv .main-menu__img {
     margin-left: -3px;
   }
   .main-menu__item_et {
-    width: 8%;
+    width: 9%;
   }
   .main-menu__item_et .main-menu__img {
     margin-left: -3px;
   }
   .main-menu__item_sv {
-    width: 9%;
+    width: 10%;
   }
   .main-menu__item_sv .main-menu__img {
     margin-left: -3px;
@@ -4234,6 +4241,7 @@ h2 {
 @media only screen and (max-width: 881px) {
   .menu-dropdown__title {
     font-size: 12px;
+    padding: 0 10px;
   }
 }
 @media only screen and (max-width: 760px) {
@@ -4276,6 +4284,11 @@ h2 {
 @media only screen and (max-width: 1179px) {
   .menu-dropdown__goTo {
     padding: 6px 20px;
+  }
+}
+@media only screen and (max-width: 881px) {
+  .menu-dropdown__goTo {
+    padding: 6px 10px;
   }
 }
 @media only screen and (max-width: 760px) {

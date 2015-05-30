@@ -75,7 +75,6 @@ window.ss.views.App = Backbone.View.extend({
 	*/
 
 	hideTabletMenu: function(e) {
-		console.log('hide');
 		var $dropdown = $('.js-dropdown'),
 			$backMask = $('.js-mask')
 		;
@@ -95,9 +94,7 @@ window.ss.views.App = Backbone.View.extend({
 
 	showMobilemenu: function(e) {
 		var currentMenuName = e.currentTarget.attributes.href.nodeValue;
-		console.log('work');
 		if (!($('.js-mobileMenuToggle').hasClass('active')) && $(window).width() <= 570){
-			console.log('work');
 			$('.js-mobileMenuToggle').click();
 			if ($('.js-mobileFirstList').find('.js-mobileFirstItem.active').length > 0){
 				$('.js-mobileFirstItem.active').click();
@@ -669,16 +666,14 @@ window.ss.views.ScrolledBackground = Backbone.View.extend({
 		var self = this,
 			x = 0
 		;
+
 		$(window).on('scroll', function() {
-			if ($(window).width() < 1180 && $(window).width() > 800){
-				x = ($(this).scrollTop() - 470) / 4;
-			} else if ($(window).width() <= 800) {
-				x = ($(this).scrollTop() - 100) / 6;
+			if ($(window).width() < 1281 ){
+				$('.breaking-message__overlay').css('background-position', '0 50%');
 			} else {
 				x = ($(this).scrollTop() - 470) / 2;
+				$('.breaking-message__overlay').css('background-position', '0 ' + parseInt(-x) + 'px');
 			}
-			
-			$('.breaking-message__overlay').css('background-position', '0 ' + parseInt(-x) + 'px');
 		});
 	}
 });
