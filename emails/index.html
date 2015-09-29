@@ -1,0 +1,737 @@
+<meta charset="utf-8">
+<style>
+	body {
+		margin: 0;
+	}
+	* {
+		font-family: 'helvetica', arial;
+	}
+
+	a {
+		text-decoration: none !important;
+	}
+
+	a img {
+		border: 0;
+	}
+
+	a span {
+		color: #0077cc;
+	}
+
+	table {
+		border-collapse: collapse;
+	}
+
+	p {
+		margin: 0;
+		font-family: 'helvetica', arial;
+		font-size: 14px;
+		line-height: 14px;
+		text-align: left;
+	}
+	.email-image{
+		display: block;
+	}
+
+	.paragraph {
+		font-family: 'helvetica', arial;
+		font-size: 14px;
+		color: #666666;
+		line-height: 1.4em;
+		text-align: left;
+	}
+
+	.button {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.button table {
+		border-collapse: separate !important;
+		border: #ffffff 5px solid;
+	}
+
+	.button div {
+		font-family: 'helvetica', arial;
+		font-size: 14px;
+	}
+
+	.button a,
+	.button span {
+		color: #ffffff !important;
+		text-decoration: none;
+	}
+	
+	.header{
+		background-color: transparent;
+		position: relative;
+		font-size: 0;
+	}
+
+	.content {
+		background-color: #ffffff;
+		position: relative;
+		font-size: 0;
+		overflow: hidden;
+	}
+
+	h1 {
+		font-family: 'helvetica', arial;
+		font-size: 20px;
+		color: #666666;
+		line-height: 20px;
+		font-weight: 700;
+		margin: 0;
+		padding: 25px 0;
+	}
+	h2 {
+		font-size: 18px;
+		color: #666666;
+		line-height: 20px;
+		font-weight: 700;
+		margin: 0;
+		padding: 25px 0 0;
+	}
+
+	.newsletter {
+		margin: 0 auto;
+		max-width: 640px;
+		background-color: #fff;
+	}
+
+	.wrapper {
+		width: 100%;
+		background-color: #eeeeee;
+		table-layout: fixed;
+		-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+	}
+	.colored-tb{
+		position: relative;
+		width: 6.25%;
+		height: 4px;
+		line-height: 0;
+    	font-size: 0;
+	}
+	.color-blue{
+		background-color: #7dc5df;
+	}
+	.color-green{
+		background-color: #c1d446;
+	}
+	.color-yellow{
+		background-color: #f7e07c;
+	}
+	.color-purple{
+		background-color: #c77b95;
+	}
+	.color-red{
+		background-color: #de5343;
+	}
+	.header-contact,
+	.header-logotype{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.header-contact{
+		margin: 20px 0;
+		text-align: right;
+	}
+	.header-contact__container{
+		position: relative;
+		display: inline-block;
+	}
+	.header-contact__image{
+		margin-right: 11px;
+	}
+	.header-contact__number{
+		font-size: 16px;
+		color: #232222;
+		font-weight: 700;
+	}
+	.header-contact__work{
+		font-size: 14px;
+	}
+	.header-contact__work-area{
+		background-color: #c1d446;
+		border-radius: 50px;
+		color: #778134;
+		font-weight: 600;
+		margin: 3px 10px;
+		text-align: center;
+	}
+	.top-content{
+		text-align: center;
+		background-color: #80c7e0;
+		table-layout: fixed;
+	}
+	.top-content p{
+		color: #fff;
+		font-size: 18px;
+		font-style: italic;
+		position: relative;
+		text-align: center;
+		margin: 43px 0 0;
+		height: 94px;
+		overflow: hidden;
+		line-height: 30px;
+		margin: 0;
+	}
+	.top-content td{
+		text-align: center;
+		font-size: 0;
+		overflow: hidden;
+	}
+	.top-content__image{
+		position: relative;
+		max-width: 640px;
+		margin: 0;
+		margin-top: -137px;
+		display: block;
+		left: 50%;
+		margin-left: -320px;
+	}
+	.description{
+		table-layout: fixed;
+		position: relative;
+		margin-top: -37px;
+		border-bottom: 1px solid #eeeeee;
+	}
+	.description__text{
+		position: relative;
+		font-size: 12px;
+		color: #404040;
+		margin-top: 19px;
+		line-height: 20px;
+	}
+	.description__author{
+		margin-top: 40px;
+		position: relative;
+		font-weight: 600;
+		font-style: italic;
+		font-size: 12px;
+		line-height: 20px;
+		color: #000000;
+	}
+	.center-contacts{
+		
+	}
+	.two-column{
+		position: relative;
+		font-size: 0px;
+		width: 100%;
+		vertical-align: middle;
+	}
+	.center-contacts__left{
+		
+	}
+	.center-contacts__left td {
+		height: 110px;
+		padding: 0 0 0 30px;
+	}
+	.center-contacts__right{
+		width: 200px;
+	}
+	.center-contacts__column{
+		text-align: right;
+		padding: 30px 0;
+	}
+	.center-contacts__socials{
+		display: inline-block;
+		padding-right: 20px;
+	}
+	.center-contacts__geo{
+
+	}
+	.center-contacts__header{
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 22px;
+	}
+	.center-contacts__text{
+		font-weight: 400;
+		font-size: 12px;
+	}
+	.center-contacts__link{
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		text-align: center;
+	}
+	.center-contacts__link span{
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 10px;
+		padding-top: 15px;
+		width: 100%;
+		text-align: center;
+		display: inline-block;
+		color: #fff;
+	}
+	.center-contacts__image{
+		display: inline-block;
+		margin-top: -16px;
+	}
+	.center-contacts__vk{
+		background-color: #82c1d8;
+	}
+	.center-contacts__f{
+		background-color: #3f7994;
+	}
+	.center-contacts__ok{
+		background-color: #2d4458;
+	}
+	.center-contacts__ins{
+		background-color: #144156;
+	}
+	.background-down__container{
+		background-color: #c77b95;
+		height: 300px;
+		display: inline-block;
+		width: 100%;
+		position: relative;
+	}
+	.background-down__image{
+		position: relative;
+		max-width: 640px;
+		margin: 0;
+		display: block;
+		left: 50%;
+		margin-left: -320px;
+	}
+	.background-down__description{
+		margin: 0;
+		margin-top: -300px;
+		position: relative;
+		max-width: 260px;
+	}
+	.background-down__title{
+		color: #fff;
+		font-size: 23px;
+		padding-top: 60px;
+		padding-left: 30px;
+		font-weight: 600;
+	}
+	.background-down__info{
+		color: #fff;
+		font-size: 14px;
+		padding-top: 14px;
+		padding-left: 30px;
+		line-height: 15px;
+	}
+	.background-down__button{
+		margin-top: 35px;
+		margin-left: 30px;
+		border-radius: 50px;
+		font-size: 12px;
+		text-transform: uppercase;
+		display: inline-block;
+		padding: 8px 31px;
+		font-weight: 600;
+		background-color: #7dc5df;
+		color: #fff !important;
+		text-align: center;
+		margin-bottom: 61px;
+	}
+	.footer-contacts{
+		position: relative;
+		height: 80px;
+	}
+	.footer-contacts__link{
+		display: inline-block;
+		color: #404040 !important;
+		font-weight: 600;
+		font-size: 12px;
+	}
+	.footer-contacts__image{
+		display: inline-block;
+		margin-left: 30px;
+		margin-right: 10px;
+	}
+	.footer-contacts__title{
+		color: #404040 !important;
+		display: inline-block;
+		font-weight: 400;
+		font-size: 12px;
+	}
+	.footer-image{
+		position: relative;
+		max-width: 640px;
+		margin: 0;
+		display: block;
+		left: 50%;
+		margin-left: -320px;
+		margin-top: -5px;
+	}
+	.footer-contacts__td-image{
+		width: 70px;
+    	height: 40px;
+	}
+
+	@media only screen and (max-width: 400px) {
+		/* причесываем верстку на малых мобильных экранах */
+		.header-logotype,
+		.header-contact{
+			width: 100%;
+			text-align: left;
+		}
+		h1{
+			padding: 25px 0 0;
+		}
+		.center-contacts__column{
+			text-align: left;
+		}
+		.two-column .column{
+			display: inline-block;
+			width: 100%;
+			vertical-align: middle;
+		}
+		.center-contacts__left td:last-child{
+			padding-right: 30px;
+		}
+		.center-contacts__socials{
+			padding-left: 30px;
+			padding-right: 0;
+		}
+		.center-contacts__column{
+			border-top: 1px solid #eeeeee;
+		}
+	}
+
+	@media screen and (min-width: 401px) and (max-width: 640px) {
+		/* причесываем верстку на средних мобильных экранах */
+		.newsletter,
+		.contact-cell{
+			width: 100%;
+		}
+		
+		.header-logotype{
+			width: 40%;
+		}
+		.header-contact{
+			width: 60%;
+		}
+		.center-contacts__column{
+			text-align: left;
+		}
+		.two-column .column{
+			display: inline-block;
+			width: 100%;
+			vertical-align: middle;
+		}
+		.center-contacts__left td:last-child{
+			padding-right: 30px;
+		}
+		.center-contacts__socials{
+			padding-left: 30px;
+			padding-right: 0;
+		}
+	}
+
+	@media screen and (min-width: 640px) {
+		.newsletter {
+			max-width: 640px;
+		}
+		.header-contact,
+		.header-logotype{
+			width: 50%;
+		}
+		.two-column .column{
+			display: inline-block;
+			width: 50%;
+			vertical-align: middle;
+		}
+	}
+
+</style>
+<!--[if (gte mso 9)|(IE)]>
+	<style>
+		/* здесь будут располагаться хаки для аутлука */
+	</style>
+<![endif]-->
+<div align="center" class="wrapper">
+	<!--[if (gte mso 9)|(IE)]>
+	<table align="center" width="640" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td>
+	<![endif]-->
+	<table class="newsletter" align="center" width="100%" cellpadding="0" cellspacing="0">
+		<tbody>
+		<!-- Header -->
+			<tr bgcolor="#eeeeee">
+				<td class="header">
+					<!--[if (gte mso 9)|(IE)]>
+	            	<table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td valign="bottom" width="50%">
+	            	<![endif]-->
+						<div class="header-logotype">
+							<table class="logotype" width="100%" cellpadding="0" cellspacing="0">
+								<tbody>
+									<tr>
+										<td dir="ltr">
+											<h1>Дизайн Окна</h1>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					<!--[if (gte mso 9)|(IE)]></td><td valign="top" width="50%"><![endif]-->
+					<div class="header-contact">
+						<!--[if (gte mso 9)|(IE)]>
+		            	<table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td valign="bottom" width="100%">
+		            	<![endif]-->
+							<div class="header-contact__container">
+								<table align="left" width="250px" cellpadding="0" cellspacing="0">
+									<tbody>
+										<tr>
+											<td class="header-contact__image">
+												<img src="http://s016.radikal.ru/i334/1508/20/8c07101c17cc.jpg" alt="operator" class="email-image" />
+											</td>
+											<td class="header-contact__number">
+												+7 (495) 542-64-84
+											</td>
+											<td class="header-contact__work">
+												<div class="header-contact__work-area">9-21ч</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+					</div>
+					<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+				</td>
+			</tr>
+			<!-- Line -->
+			<tr>
+				<td>
+					<table align="center" width="100%" cellpadding="0" cellspacing="0">
+						<tbody>
+							<tr>
+								<td class="colored-tb color-blue">,</td>
+								<td class="colored-tb color-green">,</td>
+								<td class="colored-tb color-yellow">,</td>
+								<td class="colored-tb color-purple">,</td>
+								<td class="colored-tb color-red">,</td>
+								<td class="colored-tb color-blue">,</td>
+								<td class="colored-tb color-green">,</td>
+								<td class="colored-tb color-yellow">,</td>
+								<td class="colored-tb color-purple">,</td>
+								<td class="colored-tb color-red">,</td>
+								<td class="colored-tb color-blue">,</td>
+								<td class="colored-tb color-green">,</td>
+								<td class="colored-tb color-yellow">,</td>
+								<td class="colored-tb color-purple">,</td>
+								<td class="colored-tb color-red">,</td>
+								<td class="colored-tb color-blue">,</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<!-- Main Image -->
+			<tr>
+				<td class="content">
+					<table class="top-content" align="center" width="100%" cellpadding="0" cellspacing="0">
+						<tbody>
+							<tr>
+								<td>
+									<p>Мастерская по изготовлению </br> высококачественных жалюзи в Москве</p>
+									<img class="top-content__image" src="http://s019.radikal.ru/i602/1508/1a/1a981f279d35.jpg" alt="main-image">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<!-- Description -->
+			<tr>
+				<td class="content">
+					<table class="description" align="center" width="100%" cellpadding="30" cellspacing="0">
+						<tbody>
+							<tr>
+								<td>
+									<h2>
+										Виктор, добрый день!
+									</h2>
+									<p class="description__text">
+										Это дизайн красивого HTML письма для компании “Дизайн Окна”. Такие письма повышают лояльность клиентов и узнаваемость бренда.
+									</p>
+									<p class="description__text">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+									<p class="description__author">
+										С уважением,</br>Аркадий Соловьев, менеджер Дизайн Окна
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td class="content two-column center-contacts">
+					<!--[if (gte mso 9)|(IE)]>
+		           	<table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td valign="bottom" width="50%">
+		           	<![endif]-->
+						<div class="column">
+							<table class="center-contacts__left" align="center" width="100%" cellpadding="0" cellspacing="0">
+								<tbody>
+									<tr>
+										<td>
+											<img src="http://s017.radikal.ru/i437/1508/56/36b381277298.jpg" alt="geo" class="center-contacts__geo">
+										</td>
+										<td>
+											<p class="center-contacts__header">ООО “Авалон”</p>
+											<p class="center-contacts__text">109369, Москва, Новочеркасский бульвар, д.41, корп. 3</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					<!--[if (gte mso 9)|(IE)]></td><td valign="top" width="50%"><![endif]-->
+						<div class="column center-contacts__column">
+							<!--[if (gte mso 9)|(IE)]>
+				           	<table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td valign="bottom" width="100%">
+				           	<![endif]-->
+								<div class="center-contacts__socials">
+									<table class="center-contacts__right" align="center" width="100%" cellpadding="0" cellspacing="0">
+										<tbody>
+											<tr>
+												<td>
+													<a class="center-contacts__link center-contacts__vk" href="https://vk.com/design_okna_msk" target="_blank">
+														<span>vk</span>
+														<img class="center-contacts__image" src="http://s020.radikal.ru/i701/1508/a0/03daf0a3a1b3.jpg" alt="vk">
+													</a>
+												</td>
+												<td>
+													<a class="center-contacts__link center-contacts__ok" href="https://ok.ru/group/52696953127004" target="_blank">
+														<span>ok</span>
+														<img class="center-contacts__image" src="http://s014.radikal.ru/i327/1508/b9/3965e36c9721.jpg" alt="ok">
+													</a>
+												</td>
+												<td>
+													<a class="center-contacts__link center-contacts__f" href="https://www.facebook.com/1379446162362517" target="_blank">
+														<span>f</span>
+														<img class="center-contacts__image" src="http://s020.radikal.ru/i701/1508/bf/139f746a52f7.jpg" alt="f">
+													</a>
+												</td>
+												<td>
+													<a class="center-contacts__link center-contacts__ins" href="https://instagram.com/designoknamoscow" target="_blank">
+														<span>ins</span>
+														<img class="center-contacts__image" src="http://s006.radikal.ru/i215/1508/17/6e066e2cc0a3.jpg" alt="ins">
+													</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+						</div>
+					<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+				</td>
+			</tr>
+			<tr>
+				<td class="content">
+					<!--[if (gte mso 9)|(IE)]>
+		           	<table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td valign="bottom" width="100%">
+		           	<![endif]-->
+						<div class="background-down__container">
+							<img class="background-down__image" src="http://s017.radikal.ru/i420/1508/08/0f57c40f6985.jpg" alt="background">
+						</div>
+					<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+					<table class="background-down__description" align="center" width="100%" cellpadding="0" cellspacing="0">
+						<tbody>
+							<tr>
+								<td class="background-down__title">
+									Хотите получить скидку 10%? 
+								</td>
+							</tr>
+							<tr>
+								<td class="background-down__info">
+									Посетите наш промо-сайт, находите купоны на этажах, получайте промо-коды!
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="www.design-okna.ru" class="background-down__button">
+										Найти купоны >
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td class="content two-column footer-contacts">
+					<!--[if (gte mso 9)|(IE)]>
+			        <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr><td valign="bottom" width="50%">
+			        <![endif]-->
+						<div class="column">
+							<table align="center" width="100%" cellpadding="0" cellspacing="0">
+								<tbody>
+									<tr>
+										<td class="footer-contacts__td-image">
+											<img src="http://s008.radikal.ru/i304/1508/11/6aa99c558fe0.jpg" alt="link" class="footer-contacts__image">
+										</td>
+										<td class="footer-contacts__td">
+											<p class="footer-contacts__title">
+												Официальный сайт:
+											</p>
+											<a href="#" class="footer-contacts__link">www.design-okna.ru</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					<!--[if (gte mso 9)|(IE)]></td><td valign="top" width="50%"><![endif]-->
+						<div class="column">
+							<table align="center" width="100%" cellpadding="0" cellspacing="0">
+								<tbody>
+									<tr>
+										<td class="footer-contacts__td-image">
+											<img src="http://s016.radikal.ru/i334/1508/d2/aa3e0f634f4a.jpg" alt="email" class="footer-contacts__image">
+										</td>
+										<td class="footer-contacts__td">
+											<a href="#" class="footer-contacts__link">info@design-okna.ru</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+				</td>
+			</tr>
+			<!-- Line -->
+			<tr>
+				<td style="overflow: hidden">
+					<table align="center" width="100%" cellpadding="0" cellspacing="0">
+						<tbody>
+							<tr>
+								<td class="colored-tb color-blue">,</td>
+								<td class="colored-tb color-green">,</td>
+								<td class="colored-tb color-yellow">,</td>
+								<td class="colored-tb color-purple">,</td>
+								<td class="colored-tb color-red">,</td>
+								<td class="colored-tb color-blue">,</td>
+								<td class="colored-tb color-green">,</td>
+								<td class="colored-tb color-yellow">,</td>
+								<td class="colored-tb color-purple">,</td>
+								<td class="colored-tb color-red">,</td>
+								<td class="colored-tb color-blue">,</td>
+								<td class="colored-tb color-green">,</td>
+								<td class="colored-tb color-yellow">,</td>
+								<td class="colored-tb color-purple">,</td>
+								<td class="colored-tb color-red">,</td>
+								<td class="colored-tb color-blue">,</td>
+							</tr>
+						</tbody>
+					</table>
+					<img src="http://s014.radikal.ru/i326/1508/20/39ab4133d85e.jpg" alt="footer" class="footer-image">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+</div>
