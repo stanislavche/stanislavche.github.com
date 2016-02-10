@@ -1,0 +1,139 @@
+<!-- Constructor view -->
+<main class="main-content">
+	<!-- Constructor -->
+	<div class="constructor">
+		<div class="container constructor__top">
+			<div class="constructor__title show-in-portrait">
+				Конструктор
+			</div>
+			<label
+				class="constructor__upload-btn btn btn_red btn_big">
+				<input type="file" ng-model="constructorBgImg" base-sixty-four-input>
+				<span class="icon icon-camera"></span>
+				<span class="text">Загрузить фото своего окна</span>
+			</label>
+		</div>
+		<!-- Constructor preview -->
+		<constructor-preview
+			ng-if="constructorBgImg.base64"
+			background="{{constructorBgImg.base64}}"
+			blind="{{texture.texture}}">
+		</constructor-preview>
+		<div
+			ng-if="!constructorBgImg.base64"
+			ng-style="{'background-color': '#333', 'background-image': 'url(' + texture.preview + ')'}"
+			class="constructor__preview-slide">
+		</div>
+		<div class="container container_small container_relative">
+			<!-- Info -->
+			<div class="constructor-info">
+				<div class="constructor-info__column">
+					<!-- Product name -->
+					<div class="constructor-info__name">
+						{{typesModel.category}} {{typesModel.label}} {{modelsModel.label}} <span class="grey">{{texture.model}}</span>
+					</div>
+					<!-- Link -->
+					<a
+						ng-href="{{texture.url}}"
+						class="constructor-info__link">
+						Подробнее о товаре
+					</a>
+				</div>
+				<div class="constructor-info__column">
+					<!-- Price -->
+					<div class="constructor-info__price">
+						{{texture.price}} р<span class="grey">/м<sup>2</sup></span>
+					</div>
+					<!-- Add to cart -->
+					<button class="btn btn_blue btn_wide" ng-click="addToCart()">
+						Отложить в корзину
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- Tabs -->
+		<div class="tabs">
+			<div class="container container_small container_relative">
+				<!-- Controlls -->
+				<ul
+					class="tabs__list">
+					<li
+						ng-click="currentTab='louvers'; prepareTypes(true);"
+						class="tabs__item"
+						ng-class="{'active': (currentTab=='louvers')}">
+						Жалюзи
+					</li><!--
+					--><li
+						ng-click="currentTab='shtory'; prepareTypes(true);"
+						class="tabs__item"
+						ng-class="{'active': (currentTab=='shtory')}">
+						Шторы
+					</li>
+				</ul>
+				<div class="tabs__content">
+					<div class="tabs__column">
+						<div class="form form_constructor">
+							<div class="form__column" ng-show="types.length > 0">
+								<label for="blindsType" class="label">
+									Тип
+									<span ng-if="(currentTab=='louvers')">жалюзи</span>
+									<span ng-if="(currentTab=='shtory')">штор</span>
+								</label>
+								<div class="field">
+									<div dropdown-select="types"
+										dropdown-model="typesModel"
+										dropdown-item-label="label"
+										dropdown-onchange="prepareModels(selected)">
+									</div>
+								</div>
+							</div>
+							<div class="form__column" ng-show="models.length > 0">
+								<label for="blindsType" class="label">
+									Категория
+								</label>
+								<div class="field">
+									<div dropdown-select="models"
+										dropdown-model="modelsModel"
+										dropdown-item-label="label"
+										dropdown-onchange="getConstructorTextures(selected)">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tabs__column">
+						<!-- Textures -->
+						<div class="textures textures_dark">
+							<header class="textures__header">
+								<h2 class="textures__title textures__title_small">
+									Цвета и текстуры
+								</h2>
+							</header>
+							<!-- Content -->
+							<ul class="textures__list">
+								<li
+									ng-repeat="(key,texture) in textures"
+									ng-show="(key<=11)||(showAllTextures)"
+									class="textures__item">
+									<texture
+										model="$parent.textureId"
+										name="texture"
+										checked="{{$first}}"
+										fill="{{texture.img}}"
+										value="{{texture.id}}">
+									</texture>
+								</li>
+							</ul>
+							<button class="textures__show-all" ng-show="(textures.length > 11)" ng-click="showAllTextures=!showAllTextures;">
+								<span ng-if="!showAllTextures">развернуть</span>
+								<span ng-if="showAllTextures">свернуть</span>
+								 все материалы ({{textures.length}})
+								<svg class="icon icon-shevron-down" ng-class="{'rotated': showAllTextures}"><use xlink:href="icons/icons.svg#shevron-down"></use></svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
