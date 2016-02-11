@@ -9,7 +9,6 @@
     "category_title": "Рулонные тканевые",
     "price": 1000,
     "sale": 2,
-    "colors": ["green", "red", "blue", "#fee", "#fca", "#cb3", "#232fab", "#fdb1b2","green", "red", "blue", "#fee", "#fca", "#cb3", "#232fab", "#fdb1b2","green", "red", "blue", "#fee", "#fca", "#cb3", "#232fab", "#fdb1b2","green", "red", "blue", "#fee", "#fca", "#cb3", "#232fab", "#fdb1b2"],
     "textures": [{
       "id": "1",
       "url": "kristall",
