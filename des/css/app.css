@@ -5559,6 +5559,7 @@ textarea.input {
   top: 30px;
   border-radius: 5px;
   box-shadow: 1.5px 2.6px 8px rgba(0, 0, 1, 0.33);
+  z-index: 1;
 }
 .constructor__upload-btn {
   cursor: pointer;
@@ -5613,6 +5614,10 @@ textarea.input {
   }
   .constructor__upload-btn {
     padding-top: 18px;
+    padding-left: 50px;
+  }
+  .constructor__upload-btn > .icon {
+    margin-right: 12px;
   }
   .constructor__upload-btn > .text {
     font-weight: 400;
@@ -5621,7 +5626,8 @@ textarea.input {
     margin-top: 0;
     white-space: normal;
     display: inline-block;
-    width: 70px;
+    text-align: left;
+    width: 60px;
   }
   .constructor__preview-slide {
     padding-bottom: 111%;
