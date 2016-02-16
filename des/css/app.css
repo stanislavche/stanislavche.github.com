@@ -1587,6 +1587,14 @@ body.modal-open {
   height: 53px;
   width: 462px;
 }
+@media (max-width: 1310px) {
+  .main-menu_green .main-menu__item .main-menu__list {
+    background: url('../img/tablet_submenu_green.png') no-repeat center;
+    width: 437px;
+    height: 53px;
+    left: -17px;
+  }
+}
 .main-menu_green .main-menu__link {
   color: #3f4512;
 }
@@ -1632,6 +1640,14 @@ body.modal-open {
   height: 53px;
   background-size: 100%;
   width: 442px;
+}
+@media (max-width: 1310px) {
+  .main-menu_blue .main-menu__item .main-menu__list {
+    background: url('../img/tablet_submenu_blue.png') no-repeat center;
+    width: 411px;
+    height: 53px;
+    left: -17px;
+  }
 }
 .main-menu_blue .main-menu__link {
   color: #2b3135;
@@ -1883,6 +1899,9 @@ body.modal-open {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+.cart__list-holder {
+  height: 240px;
 }
 .cart__footer {
   padding: 20px 0 0;
@@ -5363,8 +5382,8 @@ textarea.input {
   transform: translateX(-50%);
 }
 .constructor-preview__box {
-  left: 100px;
-  top: 100px;
+  left: 10px;
+  top: 60px;
   width: 218.13px;
   height: 292.38px;
   position: relative;
@@ -5398,10 +5417,6 @@ textarea.input {
   .constructor-preview {
     height: 0;
     padding-bottom: 111%;
-  }
-  .constructor-preview__box {
-    left: 10px;
-    top: 60px;
   }
 }
 .tabs {
@@ -5596,7 +5611,11 @@ textarea.input {
 }
 .constructor__mobile-top {
   display: none;
-  position: relative;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  top: 56px;
+  height: 50px;
 }
 @media (max-width: 1310px) {
   .constructor__upload-btn {
@@ -5991,6 +6010,10 @@ textarea.input {
 .cart-product__title {
   color: #363537;
   font-weight: 400;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .cart-product__dimensions {
   font-weight: 500;
@@ -6237,12 +6260,16 @@ textarea.input {
 }
 .move-left .off-canvas__menu.right {
   z-index: -1;
+  -webkit-transform: translateX(260px);
+  -ms-transform: translateX(260px);
+  transform: translateX(260px);
 }
 .off-canvas__wrapper {
   position: relative;
   width: 100%;
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
+  z-index: 10;
   zoom: 1;
 }
 .off-canvas__wrapper:before,
