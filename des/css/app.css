@@ -1593,6 +1593,7 @@ body.modal-open {
     width: 437px;
     height: 53px;
     left: -17px;
+    padding-left: 50px;
   }
 }
 .main-menu_green .main-menu__link {
@@ -1899,6 +1900,7 @@ body.modal-open {
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-right: 30px;
 }
 .cart__list-holder {
   height: 240px;
@@ -6615,6 +6617,11 @@ textarea.input {
   .menu-vertical__column {
     width: 100%;
   }
+}
+.baron__bar {
+  background: #ccc;
+  width: 8px;
+  border-radius: 8px;
 }
 
 /*# sourceMappingURL=../css/app.css.map */
