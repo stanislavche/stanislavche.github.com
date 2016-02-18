@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:boxy="http://www.boxy-svg.com/boxyNS"><defs>
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:boxy="http://www.boxy-svg.com/boxyNS"><defs>
     <style>
       .cls-1 {
         fill-rule: evenodd;
@@ -79,8 +79,59 @@
 <path fill="#FFFFFF" d="M25.6,8.9l-2.9,0c-3.2,0-5.3,2.1-5.3,5.5v2.5h-2.9c-0.3,0-0.5,0.2-0.5,0.5V21c0,0.2,0.2,0.5,0.5,0.5h2.9v9.2
 	c0,0.2,0.2,0.5,0.5,0.5h3.8c0.3,0,0.5-0.2,0.5-0.5v-9.2h3.4c0.3,0,0.5-0.2,0.5-0.5l0-3.6c0-0.1,0-0.2-0.1-0.3
 	c-0.1-0.1-0.2-0.1-0.3-0.1H22v-2.1c0-1,0.2-1.5,1.6-1.5l1.9,0c0.3,0,0.5-0.2,0.5-0.5V9.4C26,9.1,25.8,8.9,25.6,8.9z"/>
+</symbol><symbol id="filter-white" viewBox="0 0 50 50"><metadata id="metadata9"><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><dc:title/></cc:Work></rdf:RDF></metadata><sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1680" inkscape:window-height="987" id="namedview5" showgrid="false" inkscape:zoom="4.72" inkscape:cx="-6.5677966" inkscape:cy="25" inkscape:window-x="-8" inkscape:window-y="19" inkscape:window-maximized="1" inkscape:current-layer="Capa_1"/><path d="M48.797,7.284c0-2.469-2.55-4.307-7.797-5.619C36.705,0.591,31.022,0,25,0C18.978,0,13.295,0.591,9,1.665  c-5.247,1.312-7.797,3.15-7.797,5.619c0,0.914,0.35,1.741,1.056,2.487l16.196,19.645V48.22c0,0.616,0.318,1.188,0.842,1.512  C19.583,49.91,19.908,50,20.235,50c0.27,0,0.541-0.061,0.791-0.185l9.511-4.714c0.605-0.3,0.988-0.917,0.989-1.592l0.018-14.091  L47.742,9.77C48.448,9.024,48.797,8.198,48.797,7.284z M10.665,4.929C14.588,4.046,19.678,3.56,25,3.56s10.412,0.486,14.334,1.369  c4.331,0.975,5.549,2.022,5.84,2.356c-0.291,0.333-1.509,1.381-5.84,2.356c-3.922,0.883-9.013,1.369-14.334,1.369  S14.588,10.523,10.665,9.64c-4.331-0.975-5.549-2.022-5.84-2.356C5.117,6.951,6.334,5.903,10.665,4.929z M28.392,27.645  c-0.262,0.318-0.406,0.717-0.407,1.13l-0.018,13.626l-5.952,2.95V28.778c0-0.413-0.144-0.814-0.407-1.132L9.566,13.038  c4.223,0.988,9.672,1.531,15.434,1.531c5.763,0,11.211-0.543,15.434-1.531L28.392,27.645z" id="path3" style="fill:#ffffff"/></symbol><symbol id="filter" viewBox="0 0 50 50">
+<path d="M48.797,7.284c0-2.469-2.55-4.307-7.797-5.619C36.705,0.591,31.022,0,25,0C18.978,0,13.295,0.591,9,1.665
+	c-5.247,1.312-7.797,3.15-7.797,5.619c0,0.914,0.35,1.741,1.056,2.487l16.196,19.645V48.22c0,0.616,0.318,1.188,0.842,1.512
+	C19.583,49.91,19.908,50,20.235,50c0.27,0,0.541-0.061,0.791-0.185l9.511-4.714c0.605-0.3,0.988-0.917,0.989-1.592l0.018-14.091
+	L47.742,9.77C48.448,9.024,48.797,8.198,48.797,7.284z M10.665,4.929C14.588,4.046,19.678,3.56,25,3.56s10.412,0.486,14.334,1.369
+	c4.331,0.975,5.549,2.022,5.84,2.356c-0.291,0.333-1.509,1.381-5.84,2.356c-3.922,0.883-9.013,1.369-14.334,1.369
+	S14.588,10.523,10.665,9.64c-4.331-0.975-5.549-2.022-5.84-2.356C5.117,6.951,6.334,5.903,10.665,4.929z M28.392,27.645
+	c-0.262,0.318-0.406,0.717-0.407,1.13l-0.018,13.626l-5.952,2.95V28.778c0-0.413-0.144-0.814-0.407-1.132L9.566,13.038
+	c4.223,0.988,9.672,1.531,15.434,1.531c5.763,0,11.211-0.543,15.434-1.531L28.392,27.645z"/>
 </symbol><symbol id="gt" viewBox="0 0 6 8">
     <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#363537" fill="#ffffff" opacity="0.5" fill-rule="evenodd" d="M 1 1 C 1 1 5 4 5 4 C 5 4 1 7 1 7"/>
+</symbol><symbol id="info" viewBox="0 0 612 612">
+<g>
+	<g id="Info">
+		<g>
+			<path d="M306,153c-21.114,0-38.25,17.136-38.25,38.25S284.886,229.5,306,229.5s38.25-17.117,38.25-38.25S327.133,153,306,153z
+				 M306,267.75c-21.114,0-38.25,17.117-38.25,38.25v114.75c0,21.114,17.136,38.25,38.25,38.25s38.25-17.136,38.25-38.25V306
+				C344.25,284.886,327.133,267.75,306,267.75z M306,0C137.279,0,0,137.279,0,306s137.279,306,306,306s306-137.279,306-306
+				S474.721,0,306,0z M306,554.625C168.893,554.625,57.375,443.088,57.375,306S168.893,57.375,306,57.375
+				c137.088,0,248.625,111.537,248.625,248.625S443.088,554.625,306,554.625z"/>
+		</g>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
 </symbol><symbol id="insta" viewBox="0 0 1000 1000">
 <circle fill="#2B4357" cx="500" cy="500" r="500"/>
 <path fill="#FFFFFF" d="M661.2,233.8H338.2c-56.1,0-101.8,45.6-101.8,101.8v107.5v215.6c0,56.1,45.7,101.8,101.8,101.8h323.1
