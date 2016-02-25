@@ -139,7 +139,7 @@
 			<!-- Tablet video -->
 			<div class="text-block video" ng-if="!!product.video && !desktop">
 				<h2 class="video__title">
-					Видео о римских шторах
+					{{product.video_title}}
 				</h2>
 				<div class="video__frame-holder">
 					<youtube-video
@@ -148,7 +148,7 @@
 				</div>
 			</div>
 			<!-- Reviews -->
-			<reviews product-id="{{product.id}}" ng-if="!!product.id"></reviews>
+			<reviews product-id="{{product.id}}" ng-if="!!product.id && !mobile"></reviews>
 		</div>
 		<!-- Right -->
 		<div class="column-2 product-page__aside">
@@ -278,25 +278,29 @@
 						</div>
 					</div>
 				</div>
-				<div class="text-block__column">
+				<div class="text-block__column" ng-if="product.id">
 					<!-- Benefits -->
 					<benefits
+						idproduct="{{product.id}}"
 						title="Преимущества"
-						url="benefits.json">
+						url="benefits.json"
+						>
 					</benefits>
 				</div>
 			</div>
 			<!-- Video -->
 			<div class="video" ng-if="!!product.video && desktop">
 				<h2 class="video__title">
-					Видео о римских шторах
+					{{product.video_title}}
 				</h2>
-				<div class="video__frame-holder">
+				<div class="video__frame-holder" ng-if="product.video">
 					<youtube-video
 						video-id="getYoutubeId(product.video)">
 					</youtube-video>
 				</div>
 			</div>
+			<!-- Reviews -->
+			<reviews product-id="{{product.id}}" ng-if="!!product.id && !!mobile"></reviews>
 		</div>
 	</div>
 	<!-- Catalog -->
