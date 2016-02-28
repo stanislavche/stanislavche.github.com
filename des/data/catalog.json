@@ -1,0 +1,22 @@
+{
+  "title": "Горизонтальные жалюзи",
+  "filter_title": "Тип горизональных жалюзи",
+  "subcategories": [
+  {
+    "slug": "Alyuminievye",
+    "name": "Алюминиевые"
+  },
+  {
+    "slug": "Bambukovye",
+    "name": "Бамбуковые"
+  },
+  {
+    "slug": "Plastikovyye",
+    "name": "Пластиковые"
+  },
+  {
+    "slug": "Volna",
+    "name": "Волна"
+  }
+  ]
+}

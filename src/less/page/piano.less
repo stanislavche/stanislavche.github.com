@@ -1,0 +1,102 @@
+.piano{
+}
+.monitor{
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	width: 54%;
+	overflow: hidden;
+	&>img{
+		position: relative;
+		z-index: 3;
+		vertical-align: top;
+		margin-top:20px;
+		max-width: 100%;
+	}
+}
+.share-container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	.a2a_default_style{
+		display: table;
+	}
+	.a2a_default_style a{
+		display: block;
+		float: none;
+		margin-bottom: 5px;
+		&>span{
+			float: none;
+		}
+	}
+}
+.monitor-screen{
+	position: absolute;
+	width: 80%;
+	height: 54%;
+	top: 20px;
+	margin-top: 7%;
+	left: 10%;
+	background: url(../img/screen.jpg) no-repeat;
+	background-size: cover;
+	z-index: 1;
+}
+.monitor-glich{
+	position: absolute;
+	width: 80%;
+	height: 54%;
+	top: 20px;
+	margin-top: 9%;
+	left: 10%;
+	background: none;
+	z-index: 2;
+	opacity: 0;
+	&.active{
+		background: url(../img/glich.png);
+		opacity: 1;
+	}
+}
+.title-font{
+	font-family: 'C64 User';
+	font-size: 40px;
+	margin: 0;
+	color: #FFF;
+	text-shadow: 2px 2px #000;
+	text-align: center;
+	padding-top: 3px;
+	@media @tabletPortrait{
+		font-size: 30px;
+	}
+	@media @mobileLandscape{
+		font-size: 20px;
+	}
+	@media @mobilePortrait{
+		font-size: 18px;
+	}
+}
+.glith{
+	&__form{
+		position: relative;
+		font-family: 'C64 User';
+		text-align: center;
+		padding-bottom: 20px;
+	}
+	&__title{
+		margin: 0;
+		color: #fff;
+		display: inline-block;
+		padding-right: 20px;
+	}
+	&__input{
+		padding: 10px 20px;
+		margin-right: 10px;
+	}
+	&__select{
+		padding: 10px 20px;
+		margin-right: 10px;
+	}
+	&__submit{
+		padding: 10px 20px;
+	}
+}
