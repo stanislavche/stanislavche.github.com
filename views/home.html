@@ -1,0 +1,68 @@
+<!-- Home view -->
+<main class="home" ng-controller="HomeCtrl">
+	<section class="container__holder">
+		<div class="container container_margin-bottom">
+			<!-- News -->
+			<news></news>
+			<!-- Benefits -->
+			<benefits
+				title="Услуги"
+				url="services.json"
+				class="benefits_services">
+			</benefits>
+			<benefits
+				title="Преимущества"
+				url="advantages.json"
+				class="benefits_advantages"
+			></benefits>
+			<!-- Product -->
+			<div ng-repeat="product in [featuredProduct]">
+				<div ng-init="product.single = true;" ng-include="'views/directives/product.html'"></div>
+			</div>
+			<div ng-include="'includes/search-color.html'"></div>
+			<div ng-include="'includes/room-type.html'"></div>
+	</div>
+
+	<!-- Jumbotron -->
+	<section class="jumbotron container__holder">
+		<div class="jumbotron__bg"></div>
+		<div class="container">
+			<!-- Img -->
+			<svg class='icon icon-leaves jumbotron__icon'>
+				<use xlink:href="icons/icons.svg#leaves"></use>
+			</svg>
+			<h2 class="jumbotron__title">
+				Экологичность материалов 
+				<br />
+				подтверждена европейскими сертификатами
+			</h2>
+				
+			<p class="jumbotron__text">
+				За здоровье своих детей можно не волноваться, так как мы выбираем только тех производителей материалов, которые не используют в производстве вредные химикаты.
+			</p>
+			<a href="#" class="btn btn_green">о нашем контроле</a>
+			<a href="#" class="btn btn_olive">жалюзи из бамбука</a>
+		</div>
+	</section>
+	<!-- Catalog -->
+	<div class="container">
+		<div class="catalog">
+			<ul class="catalog__list">
+				<li
+					ng-repeat="product in catalogItems"
+					class="catalog__item">
+					<div ng-include="'views/directives/product.html'" scope="" onload=""></div>
+				</li>
+			</ul>
+			<!-- More btn -->
+			<div class="more-btn">
+				<a href class="more-btn__link" ng-click="getProductList()" ng-if="showLoadMoreBtn">
+					<span class="icon icon-more"></span>
+					<span class="more-btn__text">
+						Показать больше новинок
+					</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</main>
