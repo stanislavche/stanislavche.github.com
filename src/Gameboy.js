@@ -11,6 +11,7 @@ class Gameboy extends Component {
 
 	componentDidMount() {
 		let el = document.querySelector('#gameboy');
+		let aniContainer = document.querySelector('#animation');
 		let myAnimation = new LazyLinePainter(el, {
 			"strokeWidth" : 1.5,
 			"drawSequential": false,
@@ -20,7 +21,11 @@ class Gameboy extends Component {
 
 		myAnimation.paint();
 		myAnimation.on('complete', () => {
-			ReactDOM.render(<App />, document.getElementById('root'));
+			console.log('complete');
+			aniContainer.classList.remove("disactive");
+			setTimeout(() => {
+				ReactDOM.render(<App />, document.getElementById('root'));
+			}, 1500);
 		});
 	}
 
