@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Stress_TN c64 Piano - Stress_TN</title>
+	<meta name="description" content="Piano for your fun">
+	<meta name="keywords" content="Piano">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+	<script src="./js/vendor/jquery.1.9.1.min.js"></script>
+	<link rel="stylesheet" href="./css/piano.min.css">
+	<link rel="shortcut icon" type="image/gif" href="../favicon.gif">
+</head>
+
+<body itemscope itemtype="http://schema.org/Organization" class="piano">
+	<div id="loadscreen" class="loadscreen">
+		<div class="loadscreen_c64-preview">
+			<p class="loadscreen_c64-preview_title">**** COMMODORE 64 BASIC V2 ****
+				<br>64K RAM SYSTEM 38911 BASIC BYTES FREE </p>
+			<p class="loadscreen_c64-preview_ram">Loading...</p><span id="target"></span><span id="cursor"></span></div>
+	</div>
+	<div class="content-wrap">
+		<header>
+			<div class="wrapper">
+				<div class="navigation">
+					<h1 class="title-font">Stress_TN C64 Piano</h1></div>
+			</div>
+		</header>
+		<div class="content">
+			<div class="share-container">
+				<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+					<a class="a2a_button_facebook"></a>
+					<a class="a2a_button_twitter"></a>
+					<a class="a2a_button_google_plus"></a>
+					<a class="a2a_button_vk"></a>
+				</div>
+			</div>
+			<div class="wrapper">
+				<script>
+					(function(i, s, o, g, r, a, m) {
+						i['GoogleAnalyticsObject'] = r;
+						i[r] = i[r] || function() {
+							(i[r].q = i[r].q || []).push(arguments)
+						}, i[r].l = 1 * new Date();
+						a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+						a.async = 1;
+						a.src = g;
+						m.parentNode.insertBefore(a, m)
+					})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+					ga('create', 'UA-56350170-1', 'auto');
+					ga('send', 'pageview');
+				</script>
+			</div>
+			<div id="monitor" class="monitor"><img src="img/monitor.png" alt="monitor">
+				<div class="monitor-glich"></div>
+				<div class="monitor-screen"></div>
+			</div>
+		</div>
+		<div class="footer-placeholder"></div>
+	</div>
+	<footer class="sticky-footer">
+		<!--Third Octave-->
+		<div class="white-note">
+			<a class="note 3c">
+				<p style="display: none;">3c</p>
+			</a>
+		</div>
+		<div class="black-note">
+			<a class="note 3cc">
+				<p style="display: none;">3c$</p>
+			</a>
+		</div>
+		<div class="white-note">
+			<a class="note 3d">
+				<p style="display: none;">3d</p>
+			</a>
+		</div>
+		<div class="black-note">
+			<a class="note 3dd">
+				<p style="display: none;">3d$</p>
+			</a>
+		</div>
+		<div class="white-note">
+			<a class="note 3e">
+				<p style="display: none;">3e</p>
+			</a>
+		</div>
+		<div class="white-note">
+			<a class="note 3f">
+				<p style="display: none;">3f</p>
+			</a>
+		</div>
+		<div class="black-note">
+			<a class="note 3ff">
+				<p style="display: none;">3f$</p>
+			</a>
+		</div>
+		<div class="white-note">
+			<a class="note 3g">
+				<p style="display: none;">3g</p>
+			</a>
+		</div>
+		<div class="black-note">
+			<a class="note 3gg">
+				<p style="display: none;">3g$</p>
+			</a>
+		</div>
+		<div class="white-note">
+			<a class="note 3a">
+				<p style="display: none;">3a</p>
+			</a>
+		</div>
+		<div class="black-note">
+			<a class="note 3aa">
+				<p style="display: none;">3a$</p>
+			</a>
+		</div>
+		<div class="white-note">
+			<a class="note 3b">
+				<p style="display: none;">3b</p>
+			</a>
+		</div>
+		<!--Fourth Octave-->
+		<div class="white-note">
+			<a class="note 4c">
+				<p style="display: none;">4c</p>
+			</a>
+		</div>
+		<div class="black-note">
+			<a class="note 4cc">
+				<p style="display: none;">4c$</p>
+			</a>
+		</div>
+		<div class="white-note">
+			<a class="note 4d">
+				<p style="display: none;">4d</p>
+			</a>
+		</div>
+		<div class="black-note">
+			<a class="note 4dd">
+				<p style="display: none;">4d$</p>
+			</a>
+		</div>
+		<div class="white-note">
+			<a class="note 4e">
+				<p style="display: none;">4e</p>
+			</a>
+		</div>
+		<div class="white-note">
+			<a class="note 4f">
+				<p style="display: none;">4f</p>
+			</a>
+		</div>
+		<div class="black-note">
+			<a class="note 4ff">
+				<p style="display: none;">4f$</p>
+			</a>
+		</div>
+		<div class="white-note">
+			<a class="note 4g">
+				<p style="display: none;">4g</p>
+			</a>
+		</div>
+		<div class="black-note">
+			<a class="note 4gg">
+				<p style="display: none;">4g$</p>
+			</a>
+		</div>
+		<div class="white-note">
+			<a class="note 4a">
+				<p style="display: none;">4a</p>
+			</a>
+		</div>
+		<div class="black-note2e">
+			<a class="note 4aa">
+				<p style="display: none;">4a$</p>
+			</a>
+		</div>
+		<div class="white-note">
+			<a class="note 4b">
+				<p style="display: none;">4b</p>
+			</a>
+		</div>
+		<!--Fifth Octave-->
+		<div class="white-note">
+			<a class="note 5c">
+				<p style="display: none;">5c</p>
+			</a>
+		</div>
+		<div class="black-note">
+			<a class="note 5cc">
+				<p style="display: none;">5c$</p>
+			</a>
+		</div>
+		<div class="white-note">
+			<a class="note 5d">
+				<p style="display: none;">5d</p>
+			</a>
+		</div>
+		<div class="black-note">
+			<a class="note 5dd">
+				<p style="display: none;">5d$</p>
+			</a>
+		</div>
+		<div class="white-note">
+			<a class="note 5e">
+				<p style="display: none;">5e</p>
+			</a>
+		</div>
+		<div class="white-note">
+			<a class="note 5f">
+				<p style="display: none;">5f</p>
+			</a>
+		</div>
+		<div class="black-note">
+			<a class="note 5ff">
+				<p style="display: none;">5f$</p>
+			</a>
+		</div>
+		<div class="white-note">
+			<a class="note 5g">
+				<p style="display: none;">5g</p>
+			</a>
+		</div>
+		<div class="black-note">
+			<a class="note 5gg">
+				<p style="display: none;">5g$</p>
+			</a>
+		</div>
+	</footer>
+	<script src="./js/piano.js"></script>
+	<script type="text/javascript">
+		var a2a_config = a2a_config || {};
+		a2a_config.color_main = "undefined";
+		a2a_config.color_border = "undefined";
+		a2a_config.color_link_text = "undefined";
+		a2a_config.color_link_text_hover = "undefined";
+		a2a_config.color_bg = "undefined";
+		a2a_config.color_arrow = "undefined";
+		a2a_config.color_arrow_hover = "undefined";
+
+		(function(d, w, c) {
+			(w[c] = w[c] || []).push(function() {
+				try {
+					w.yaCounter26916876 = new Ya.Metrika({
+						id: 26916876,
+						webvisor: true,
+						clickmap: true,
+						trackLinks: true,
+						accurateTrackBounce: true
+					});
+				} catch (e) {}
+			});
+			var n = d.getElementsByTagName("script")[0],
+				s = d.createElement("script"),
+				f = function() {
+					n.parentNode.insertBefore(s, n);
+				};
+			s.type = "text/javascript";
+			s.async = true;
+			s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+			if (w.opera == "[object Opera]") {
+				d.addEventListener("DOMContentLoaded", f, false);
+			} else {
+				f();
+			}
+		})(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript>
+		<div><img src="//mc.yandex.ru/watch/26916876" style="position:absolute; left:-9999px;" alt=""></div>
+	</noscript>
+</body>
+
+</html>
