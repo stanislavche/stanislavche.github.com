@@ -22,27 +22,31 @@ code {
 
 #animation{
 	position: fixed;
-	top: 0;
+	top: 8vh;
 	left: 50%;
-	transform: translate(-50%, -22vw);
+	transform: translate(-50%, -50vw);
 	z-index: 1;
-	transition: all 1.5s;
+	transition-property: top;
+	transition-duration: 1.5s;
 }
 
 #gameboy{
 	position: relative;
 	display: block;
-	width: 110vw;
-	transition: all 1.5s;
+	width: 210vw;
+	max-height: 2000vh;
+	transition-property: width;
+	transition-duration: 1.5s;
 }
 
 #animation.disactive {
-	top: 50%;
+	top: 50vh;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 #animation.disactive #gameboy{
-	width: 5vw;
+	width: 50vw;
+	max-height: 80vh;
 }
 
 .App {
@@ -63,4 +67,11 @@ code {
 	position: relative;
 	height: 100px;
 	width: 100%;
+}
+#gameboy_screen{
+	fill: none;
+	stroke: none !important;
+}
+#gameboy_screen.active{
+	fill: #000;
 }
