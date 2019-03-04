@@ -27,7 +27,8 @@ class Gameboy extends Component {
 			gameboyScreen.classList.add("active");
 			setTimeout(() => {
 				ReactDOM.render(<App />, document.getElementById('root'));
-			}, 1500);
+				ReactDOM.unmountComponentAtNode(document.getElementById('animation'));
+			}, 2000);
 		});
 	}
 
