@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto+Condensed');
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Roboto Condensed', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+	background: red;
+	color: white;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+	monospace;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	&:link,
+	&:hover,
+	&:visited,
+	&:hover,
+	&:active {
+		color: red;
+	}
+	color: red;
+}
+
+#root {
+	position: relative;
+	z-index: 2;
+	background-color: #000438;
+}
+
+.wrapper{
+	position: relative;
+	&:after{
+		position: relative;
+		content: '';
+		width: 100vw;
+		height: 100%;
+		top: 0;
+		left: 0;
+		position: fixed;
+		background-image: url('./image/tv.png');
+		animation: noise 200ms infinite linear;
+		background-position: 0 0;
+		pointer-events: none;
+		opacity: 0.6;
+		z-index: 2;
+	}
+}
+
+#animation{
+	position: fixed;
+	top: -134vw;
+	left: 50%;
+	transform: translate(-50%, -50vw);
+	z-index: 1;
+	transition-property: top;
+	transition-duration: 2s;
+	&.disactive {
+		top: 50vh;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		#gameboy{
+			width: 50vw;
+			max-height: 80vh;
+		}
+	}
+}
+
+#gameboy{
+	position: relative;
+	display: block;
+	width: 800vw;
+	max-height: 4000vh;
+	transition-property: width;
+	transition-duration: 2s;
+	fill: none !important;
+}
+
+.App {
+	text-align: center;
+	filter: contrast(1.2);
+	image-rendering: initial;
+	image-rendering: -moz-crisp-edges;
+	-ms-interpolation-mode: nearest-neighbor;
+	position: relative;
+	overflow: hidden;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	&__header {
+		position: relative;
+		height: 100px;
+		width: 100%;
+		font-size: 5em;
+		text-shadow: 2px 2px 10px red;
+		color: #fff;
+		font-family: 'Permanent Marker', cursive;
+		margin-bottom: 10px;
+	}
+	&__wrapper {
+		display: flex;
+		flex-flow: row wrap;
+		align-content: flex-start;
+		align-items: flex-start;
+		justify-content: space-around;
+		font-size: calc(10px + 1vmin);
+		width: 90vw;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+	&__footer{
+
+	}
+}
+
+#gameboy_screen{
+	fill: none;
+	stroke: none !important;
+	&.active{
+		fill: #000;
+	}
+}
+.container{
+	width: calc(50% - 10px);
+	//background: #000;
+	margin: 0 0 10px;
+	padding: 10px 30px;
+	border: 2px dashed #000;
+	flex: 0 1 calc(50% - 10px);
+	&__header{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: calc(10px + 2vmin);
+	}
+	&__text {
+		text-indent: 1.5em;
+		text-align: justify;
+	}
+}
+
+@keyframes noise {
+	0% {
+		background-position: 0px 1000px;
+	}
+	50% {
+		background-position: -1000px;
+	}
+	100% {
+		background-position: 100px 0px;
+	}
+}
+
+@media screen and (max-width: 840px) {
+	.container {
+		width: 90vw;
+	}
+}

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "lazy-line-painter": "^1.9.6",
+    "node-sass": "^4.11.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-scripts": "2.1.5"

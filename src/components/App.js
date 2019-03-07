@@ -5,13 +5,14 @@ import Discography from './Discography';
 import Cotacts from './Cotacts';
 import Game from './Game';
 import Donate from './Donate';
+import Events from './Events';
 
 class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<header className="App-header">Stress_TN</header>
-				<div className="App-wrapper">
+				<header className="App__header">Stress_TN</header>
+				<div className="App__wrapper">
 					<Bio />
 					<Announce />
 					<Discography />
@@ -19,7 +20,7 @@ class App extends Component {
 					<Game />
 					<Donate />
 				</div>
-				<footer>All rights belong to Stress_TN. 2019</footer>
+				<footer className="App__footer">All rights belong to Stress_TN. 2019</footer>
 			</div>
 		);
 	}

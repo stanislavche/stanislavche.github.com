@@ -3,9 +3,13 @@ import React, { Component } from 'react';
 class Game extends Component {
 	render() {
 		return (
-			<div className="Game">
-				Game
-			</div>
+			<section className="container">
+				<h2 className="container__header">Game</h2>
+				<div className="container__wrapper">
+					<p className="container__text">
+					</p>
+				</div>
+			</section>
 		);
 	}
 }

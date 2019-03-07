@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import Gameboy from './Gameboy';
 import * as serviceWorker from './serviceWorker';
 import * as Utils from './common/Utils';

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-class Cotacts extends Component {
+class Events extends Component {
 	render() {
 		return (
 			<section className="container">
-				<h2 className="container__header">Cotacts</h2>
+				<h2 className="container__header">Events</h2>
 				<div className="container__wrapper">
-					<p className="container__information">
+					<p className="container__text">
 					</p>
 				</div>
 			</section>
@@ -14,4 +14,4 @@ class Cotacts extends Component {
 	}
 }
 
-export default Cotacts;
+export default Events;
