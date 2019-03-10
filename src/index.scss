@@ -118,8 +118,15 @@ a {
 		max-width: 1100px;
 		margin: 0 auto;
 	}
+	&__wrapper-cell{
+		display: flex;
+		width: 48%;
+		flex-flow: column wrap;
+		justify-content: space-around;
+	}
 	&__footer{
-
+		text-align: center;
+		margin: 10px 0; 
 	}
 }
 
@@ -131,7 +138,7 @@ a {
 	}
 }
 .container{
-	width: calc(50% - 10px);
+	width: 100%;
 	//background: #000;
 	margin: 0 0 10px;
 	padding: 10px 30px;
@@ -149,6 +156,81 @@ a {
 	}
 }
 
+.contact-list{
+	list-style-type: none;
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row;
+	padding: 0;
+	&__item{
+		display: block;
+	}
+	&__link{
+		font-size: 0;
+		width: 60px;
+		height: 60px;
+		display: block;
+		stroke-width: 5px;
+		transition: transform 200ms;
+		&:hover{
+			transform: scale(1.2);
+		}
+		&_fc{
+			
+		}
+		&_sc{
+
+		}
+		&_tw{
+
+		}
+		&_yt{
+
+		}
+		&_ig{
+
+		}
+		&_kg{
+
+		}
+		&_em{
+
+		}
+	}
+}
+
+.discography{
+	&__list{
+		padding: 0;
+		margin: 0;
+		display: block;
+		list-style-type: none;
+		display: flex;
+		flex-flow: row wrap;
+		width: 100%;
+	}
+	&__item{
+		display: flex;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	&__coverLink{
+		width: 30%;
+		& > img{
+			display: block;
+			width: 100%;
+		}
+	}
+	&__wrapper{
+		width: 70%;
+	}
+	&__title{
+		
+	}
+	
+}
+
 @keyframes noise {
 	0% {
 		background-position: 0px 1000px;
@@ -164,5 +246,11 @@ a {
 @media screen and (max-width: 840px) {
 	.container {
 		width: 90vw;
+	}
+	.App__wrapper-cell{
+		display: flex;
+		width: 100%;
+		flex-flow: column wrap;
+		justify-content: space-around;
 	}
 }
