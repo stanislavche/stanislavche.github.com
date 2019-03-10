@@ -219,6 +219,9 @@ a {
 			.discography__anotation{
 				display: none;
 			}
+			.discography__coverLink > img{
+				filter: grayscale(0);
+			}
 		}
 		& + & {
 			margin-top: -92%;
