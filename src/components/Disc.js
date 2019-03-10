@@ -3,12 +3,23 @@ import React, { Component } from 'react';
 class Disc extends Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			active: false
+		}
+		this.resizeMe = this.resizeMe.bind(this);
+	}
+
+	resizeMe(event) {
+		event.preventDefault();
+		this.setState({active: !this.state.active});
 	}
 
 	render() {
 		return (
-			<li className="discography__item">
-				<a href="{this.props.disc.downloadLink}" target="_blank" rel="noopener noreferrer" className="discography__coverLink"><img src={this.props.disc.coverLink} alt={this.props.disc.title} /></a>
+			<li className={"discography__item " + (this.state.active ? "discography__item_active" : "")} >
+				<a href="#" rel="noopener noreferrer" className="discography__coverLink" onClick={this.resizeMe}>
+					<img src={this.props.disc.coverLink} alt={this.props.disc.title} />
+				</a>
 				<div className="discography__wrapper">
 					<h4 className="discography__title">
 						<a href="{this.props.disc.downloadLink}" target="_blank" rel="noopener noreferrer">{this.props.disc.title}</a>
