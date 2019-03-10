@@ -175,26 +175,10 @@ a {
 		&:hover{
 			transform: scale(1.2);
 		}
-		&_fc{
-			
-		}
-		&_sc{
-
-		}
-		&_tw{
-
-		}
-		&_yt{
-
-		}
-		&_ig{
-
-		}
-		&_kg{
-
-		}
-		&_em{
-
+		&>svg{
+			fill:none;
+			stroke:red;
+			stroke-miterlimit:10;
 		}
 	}
 }
@@ -214,6 +198,8 @@ a {
 		width: 100%;
 		margin: 0;
 		padding: 0;
+		border: 2px dashed #fff;
+		padding: 10px 5px;
 	}
 	&__coverLink{
 		width: 30%;
@@ -224,11 +210,21 @@ a {
 	}
 	&__wrapper{
 		width: 70%;
+		text-align: left;
 	}
 	&__title{
+		margin: 0 0 10px 0;
+		padding-left: 40px;
+	}
+	&__info{
 		
 	}
-	
+	&__secondary-list{
+		list-style-type: decimal-leading-zero;
+	}
+	&__secondary-item{
+
+	}
 }
 
 @keyframes noise {

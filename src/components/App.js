@@ -16,13 +16,13 @@ class App extends Component {
 					<div className="App__wrapper-cell">
 						<Bio />
 						<Discography />
-						<Cotacts />
 					</div>
 					<div className="App__wrapper-cell">
 						<Announce />
 						<Events />
 						<Game />
 						<Donate />
+						<Cotacts />
 					</div>
 				</div>
 				<footer className="App__footer">All rights belong to Stress_TN. 2019</footer>
