@@ -216,6 +216,9 @@ a {
 			& + .discography__item{
 				margin-top: 0% !important;
 			}
+			.discography__anotation{
+				display: none;
+			}
 		}
 		& + & {
 			margin-top: -90%;
@@ -224,26 +227,42 @@ a {
 			& + .discography__item{
 				margin-top: 0%;
 			}
+			.discography__anotation{
+				background: rgba(0,0,0,0.5);
+				opacity: 1;
+			}
 		}
+	}
+	&__anotation{
+		position: relative;
+		width: 100%;
+		padding-top: 100%;
+		z-index: 2;
+		display: block;
+		overflow: hidden;
+		opacity: 0;
+		transition: all 500ms;
+	}
+	&__anotation-test{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: #fff;
+		font-size: 1.5em;
+		width: 100%;
 	}
 	&__coverLink{
 		width: 100%;
 		position: relative;
-		&:after{
-			content: '';
-			position: relative;
-			width: 100%;
-			padding-top: 100%;
-			z-index: 1;
-			display: block;
-		}
+		z-index: 1;
 		& > img{
 			display: block;
 			width: 100%;
 			position: absolute;
 			top: 0;
 			left: 0;
-			z-index: 2;
+			
 		}
 	}
 	&__wrapper{

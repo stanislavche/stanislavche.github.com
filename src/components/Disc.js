@@ -18,6 +18,9 @@ class Disc extends Component {
 		return (
 			<li className={"discography__item " + (this.state.active ? "discography__item_active" : "")} >
 				<a href="#" rel="noopener noreferrer" className="discography__coverLink" onClick={this.resizeMe}>
+					<div className="discography__anotation">
+						<p className="discography__anotation-test">{this.props.disc.author + ' - ' + this.props.disc.title}</p>
+					</div>
 					<img src={this.props.disc.coverLink} alt={this.props.disc.title} />
 				</a>
 				<div className="discography__wrapper">
