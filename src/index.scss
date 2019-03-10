@@ -228,9 +228,22 @@ a {
 	}
 	&__coverLink{
 		width: 100%;
+		position: relative;
+		&:after{
+			content: '';
+			position: relative;
+			width: 100%;
+			padding-top: 100%;
+			z-index: 1;
+			display: block;
+		}
 		& > img{
 			display: block;
 			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
 		}
 	}
 	&__wrapper{
