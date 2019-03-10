@@ -201,7 +201,7 @@ a {
 		padding: 10px 5px;
 		background: #000;
 		width: 100%;
-		transition: all 100ms;
+		transition: all 200ms;
 		z-index: 1;
 		cursor: pointer;
 		&_active{
@@ -221,7 +221,7 @@ a {
 			}
 		}
 		& + & {
-			margin-top: -90%;
+			margin-top: -92%;
 		}
 		&:hover{
 			& + .discography__item{
