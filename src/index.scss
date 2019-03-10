@@ -167,8 +167,8 @@ a {
 	}
 	&__link{
 		font-size: 0;
-		width: 60px;
-		height: 60px;
+		width: 58px;
+		height: 58px;
 		display: block;
 		stroke-width: 5px;
 		transition: transform 200ms;
@@ -231,6 +231,9 @@ a {
 				background: rgba(0,0,0,0.5);
 				opacity: 1;
 			}
+			.discography__coverLink > img{
+				filter: grayscale(0);
+			}
 		}
 	}
 	&__anotation{
@@ -252,6 +255,8 @@ a {
 		color: #fff;
 		font-size: 1.5em;
 		width: 100%;
+		margin: 0;
+		text-shadow: 2px 2px 2px #000;
 	}
 	&__coverLink{
 		width: 100%;
@@ -263,7 +268,8 @@ a {
 			position: absolute;
 			top: 0;
 			left: 0;
-			
+			filter: grayscale(1);
+			transition: all 200ms;
 		}
 	}
 	&__wrapper{
@@ -283,6 +289,18 @@ a {
 	}
 	&__secondary-item{
 
+	}
+}
+.game{
+	&__link{
+		display: block;
+		position: relative;
+		width: 100%;
+		img {
+			display: block;
+			width: 100%;
+			position: relative;
+		}
 	}
 }
 

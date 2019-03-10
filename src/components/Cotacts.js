@@ -57,7 +57,7 @@ class Cotacts extends Component {
 							</a>
 						</li>
 						<li className="contact-list__item">
-							<a href="http://kintogames.com/" className="contact-list__link contact-list__link_kg" target="_blank" rel="noopener noreferrer">
+							<a href="https://www.facebook.com/KintoGames/" className="contact-list__link contact-list__link_kg" target="_blank" rel="noopener noreferrer">
 								<KgSvg />
 							</a>
 						</li>
