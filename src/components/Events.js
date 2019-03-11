@@ -1,13 +1,184 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Events extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			events: [
+				{
+					"date": "5 January 2019",
+					"country": "Russia",
+					"city": "Taganrog",
+					"title": "PLUR Turbo",
+					"link": "https://vk.com/plur_vibe"
+				},
+				{
+					"date": "2 March 2018",
+					"country": "Estonia",
+					"city": "Tallin",
+					"title": "Gleeetch Tallinn Express: Punker-Vintage",
+					"link": "https://www.facebook.com/events/271899396674721/"
+				},
+				{
+					"date": "15 April 2016",
+					"country": "Russia",
+					"city": "Taganrog",
+					"title": "PLUR: Space Party",
+					"link": ""
+				},
+				{
+					"date": "22 November 2015",
+					"country": "Russia",
+					"city": "Taganrog",
+					"title": "✖ PLUR #12 ✖",
+					"link": "https://vk.com/plur_21nov"
+				},
+				{
+					"date": "20 December 2015",
+					"country": "Russia",
+					"city": "Rostov-on-Don",
+					"title": "ХАРД",
+					"link": "https://vk.com/hardcubalibre"
+				},
+				{
+					"date": "16 December 2012",
+					"country": "World Wide Chiptune Webshow",
+					"city": "",
+					"title": "WWCW 2012",
+					"link": ""
+				},
+				{
+					"date": "15 November 2012",
+					"country": "Russia",
+					"city": "Rostov-on-Don",
+					"title": "Фестиваль современного искусства СРЕЗ 5",
+					"link": "https://vk.com/event45223193"
+				},
+				{
+					"date": "6 October 2012",
+					"country": "Spain",
+					"city": "Barcelona",
+					"title": "Low Cycle Zero",
+					"link": "http://www.lowtoy.com/"
+				},
+				{
+					"date": "1 July 2012",
+					"country": "Russia",
+					"city": "Saint-Petersburg",
+					"title": "HOLY8BIT PRTY + Breakcore Massacre Night",
+					"link": "https://vk.com/holy8bit"
+				},
+				{
+					"date": "25 April 2012",
+					"country": "Russia",
+					"city": "Moscow",
+					"title": "Stress_TN на 8bit.fm",
+					"link": "http://8bit.fm/"
+				},
+				{
+					"date": "6 April 2012",
+					"country": "Russia",
+					"city": "Taganrog",
+					"title": "NO MORE SOUND Фестиваль Экспериментальной музыки",
+					"link": "https://vk.com/no_more_sound"
+				},
+				{
+					"date": "25 февраля 2012",
+					"country": "Russia",
+					"city": "Rostov-on-Don",
+					"title": "Rostov All Stars",
+					"link": ""
+				},
+				{
+					"date": "24 February 2012",
+					"country": "Russia",
+					"city": "Taganrog",
+					"title": "ТОЧКА СБОРКИ",
+					"link": "https://vk.com/ts242"
+				},{
+					"date": "19 February 2012",
+					"country": "Russia",
+					"city": "Taganrog",
+					"title": "OblackA в Закрытых пространствах",
+					"link": "https://vk.com/oblacka"
+				},{
+					"date": "11 February 2012",
+					"country": "Russia",
+					"city": "Taganrog",
+					"title": "INFERNAL REVEL",
+					"link": "https://vk.com/event34877716"
+				},{
+					"date": "28 December 2011",
+					"country": "Russia",
+					"city": "Krasnodar",
+					"title": "IN HARD WE TRUST",
+					"link": "https://vk.com/event32213941"
+				},{
+					"date": "19 November 2011",
+					"country": "Russia",
+					"city": "Taganrog",
+					"title": "FREE ZONE: in_dust_we_trust",
+					"link": "https://vk.com/event32026801"
+				},{
+					"date": "14 October 2011",
+					"country": "Russia",
+					"city": "Taganrog",
+					"title": "ТОЧКА СБОРКИ",
+					"link": "https://vk.com/event30781624"
+				},{
+					"date": "05 January 2011",
+					"country": "Russia",
+					"city": "Rostov-on-Don",
+					"title": "+ SUPER MEAT BASS +",
+					"link": "https://vk.com/event22858496"
+				},{
+					"date": "26 June 2010",
+					"country": "Russia",
+					"city": "Taganrog",
+					"title": "ZAVODPARTY.RU Festival 2010",
+					"link": "https://vk.com/event18136735"
+				},{
+					"date": "01 May 2010",
+					"country": "Russia",
+					"city": "Taganrog",
+					"title": "«КОНЦЕРТ ЭЛЕКТРОННОЙ МУЗЫКИ»",
+					"link": "https://vk.com/event17095040"
+				},{
+					"date": "09 March 2010",
+					"country": "Russia",
+					"city": "Taganrog",
+					"title": "FREE ZONE: World DJ Day @ \"STARS\"",
+					"link": "https://vk.com/event16012478"
+				},{
+					"date": "25 июля 2009",
+					"country": "Russia",
+					"city": "Anapa",
+					"title": "Open-Air(Part 2)....\"RP White KingDom\".....вечеринка",
+					"link": "https://vk.com/event10727800"
+				},
+				{
+					"date": "3 October 2009",
+					"country": "Russia",
+					"city": "Taganrog",
+					"title": "FREE ZONE: Коридорный Рейв",
+					"link": "https://vk.com/event11923043"
+				}
+			]
+		}
+	}
+
 	render() {
 		return (
 			<section className="container">
 				<h2 className="container__header">Events</h2>
-				<div className="container__wrapper">
-					<p className="container__text">
-					</p>
+				<div className="container__wrapper events">
+					<ul className="events__list">
+						{this.state.events.map((item, key) =>
+							<li className="game__item" key={key}>
+								{item.title}
+							</li>
+						)}
+					</ul>
 				</div>
 			</section>
 		);
