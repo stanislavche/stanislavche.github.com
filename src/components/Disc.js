@@ -17,12 +17,12 @@ class Disc extends Component {
 	render() {
 		return (
 			<li className={"discography__item " + (this.state.active ? "discography__item_active" : "")} >
-				<a href="#" rel="noopener noreferrer" className="discography__coverLink" onClick={this.resizeMe}>
+				<div rel="noopener noreferrer" className="discography__coverLink" onClick={this.resizeMe}>
 					<div className="discography__anotation">
 						<p className="discography__anotation-test">{this.props.disc.author + ' - ' + this.props.disc.title}</p>
 					</div>
 					<img src={this.props.disc.coverLink} alt={this.props.disc.title} />
-				</a>
+				</div>
 				<div className="discography__wrapper">
 					<h4 className="discography__title">
 						<a href="{this.props.disc.downloadLink}" target="_blank" rel="noopener noreferrer">{this.props.disc.title}</a>

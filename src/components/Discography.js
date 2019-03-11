@@ -13,7 +13,7 @@ class Discography extends Component {
 					"labelName": "",
 					"labelLink": "",
 					"releaseId": "",
-					"coverLink": "../albums/bitdungeon2.jpg",
+					"coverLink": "../images/albums/bitdungeon2.jpg",
 					"downloadLink": "https://stresstn.bandcamp.com/album/bit-dungeon-2-ost",
 					"tracklist": [
 						"Castle",
@@ -32,7 +32,7 @@ class Discography extends Component {
 					"labelName": "Noisechannel",
 					"labelLink": "http://www.noisechannel.org/",
 					"releaseId": "nc054",
-					"coverLink": "../albums/bitdungeon.png",
+					"coverLink": "../images/albums/bitdungeon.png",
 					"downloadLink": "http://www.noisechannel.org/downloads/nc054.php",
 					"tracklist": [
 						"bit Dungeon intro",
@@ -47,7 +47,7 @@ class Discography extends Component {
 					"labelName": "Bleeplove",
 					"labelLink": "https://bleeplove.bandcamp.com/",
 					"releaseId": "",
-					"coverLink": "../albums/happy.png",
+					"coverLink": "../images/albums/happy.png",
 					"downloadLink": "http://archive.org/details/Bleeplove-Happy",
 					"tracklist": [
 						"VRUMZSSSR - Showdown",
@@ -64,7 +64,7 @@ class Discography extends Component {
 					"labelName": "Lowtoy",
 					"labelLink": "http://www.lowtoy.com/",
 					"releaseId": "lwt 13",
-					"coverLink": "../albums/GangstaWithBlasta.jpg",
+					"coverLink": "../images/albums/GangstaWithBlasta.jpg",
 					"downloadLink": "http://www.lowtoy.com/portfolio/va-gangsta-with-blasta/",
 					"tracklist": [
 						"Milkdrop – Red Cat And Skinny Rat",
@@ -83,7 +83,7 @@ class Discography extends Component {
 					"labelName": "Bleeplove",
 					"labelLink": "https://bleeplove.bandcamp.com/",
 					"releaseId": "",
-					"coverLink": "../albums/greatpixelstorm.jpg",
+					"coverLink": "../images/albums/greatpixelstorm.jpg",
 					"downloadLink": "https://drive.google.com/uc?authuser=0&id=1rFhX9VU8DeqQwpAkDYMzn22Scqv-D9zI&export=download",
 					"tracklist": [
 						"Stress_TN - Computa",
@@ -101,7 +101,7 @@ class Discography extends Component {
 					"labelName": "Lowtoy",
 					"labelLink": "http://www.lowtoy.com/",
 					"releaseId": "lwt 09",
-					"coverLink": "../albums/consolisation.jpg",
+					"coverLink": "../images/albums/consolisation.jpg",
 					"downloadLink": "https://stresstn.bandcamp.com/album/consolisation-lsdj-sav-file-include",
 					"tracklist": [
 						"Pixel Bombing",
@@ -123,7 +123,7 @@ class Discography extends Component {
 					"labelName": "Chippanze",
 					"labelLink": "https://chippanze.bandcamp.com/",
 					"releaseId": "CP035",
-					"coverLink": "../albums/smokingfighters.jpg",
+					"coverLink": "../images/albums/smokingfighters.jpg",
 					"downloadLink": "https://chippanze.bandcamp.com/album/cp035-smoking-fighters",
 					"tracklist": [
 						"Square power",
@@ -143,7 +143,7 @@ class Discography extends Component {
 					"labelName": "Bitmasters",
 					"labelLink": "",
 					"releaseId": "",
-					"coverLink": "../albums/chipolino.jpg",
+					"coverLink": "../images/albums/chipolino.jpg",
 					"downloadLink": "",
 					"tracklist": [
 						"Fat Frumos - Badman",
@@ -163,7 +163,7 @@ class Discography extends Component {
 					"labelName": "Bitmasters",
 					"labelLink": "",
 					"releaseId": "",
-					"coverLink": "../albums/terriblenoise.gif",
+					"coverLink": "../images/albums/terriblenoise.gif",
 					"downloadLink": "",
 					"tracklist": [
 						"Destiny",
@@ -180,7 +180,7 @@ class Discography extends Component {
 					"labelName": "Ruszud",
 					"labelLink": "https://vk.com/ruszud",
 					"releaseId": "rz157",
-					"coverLink": "../albums/omlet.jpg",
+					"coverLink": "../images/albums/omlet.jpg",
 					"downloadLink": "https://archive.org/details/rz_157",
 					"tracklist": [
 						"Happy Twist",
@@ -197,7 +197,7 @@ class Discography extends Component {
 					"labelName": "Breakcoreyourself",
 					"labelLink": "",
 					"releaseId": "",
-					"coverLink": "../albums/FirstConsoleAid.png",
+					"coverLink": "../images/albums/FirstConsoleAid.png",
 					"downloadLink": "",
 					"tracklist": [
 						"2NRO8OT - Evacuation",
@@ -220,7 +220,7 @@ class Discography extends Component {
 					"labelName": "3pan Records",
 					"labelLink": "",
 					"releaseId": "3PND001",
-					"coverLink": "../albums/littleschranzdj.jpg",
+					"coverLink": "../images/albums/littleschranzdj.jpg",
 					"downloadLink": "",
 					"tracklist": [
 						"Shturm",
@@ -241,7 +241,7 @@ class Discography extends Component {
 					"labelName": "Forest",
 					"labelLink": "https://forestlabel.bandcamp.com/",
 					"releaseId": "",
-					"coverLink": "../albums/chiptunesfromrussia.jpg",
+					"coverLink": "../images/albums/chiptunesfromrussia.jpg",
 					"downloadLink": "https://forestlabel.bandcamp.com/album/chiptunes-from-russia",
 					"tracklist": [
 						"AlexOgre - stay wavy",
@@ -264,7 +264,7 @@ class Discography extends Component {
 					"labelName": "Bleeplove",
 					"labelLink": "https://bleeplove.bandcamp.com/",
 					"releaseId": "",
-					"coverLink": "../albums/Bleeplove4.png",
+					"coverLink": "../images/albums/Bleeplove4.png",
 					"downloadLink": "https://bleeplove.bandcamp.com/album/bleeplove-vol-4",
 					"tracklist": [
 						"BOOSH! - 16:Boner Dust",
@@ -306,7 +306,7 @@ class Discography extends Component {
 					"labelName": "Coucou",
 					"labelLink": "",
 					"releaseId": "coucou23",
-					"coverLink": "../albums/Russia_in_8bits.jpg",
+					"coverLink": "../images/albums/Russia_in_8bits.jpg",
 					"downloadLink": "https://archive.org/details/COUCOU023",
 					"tracklist": [
 						"Alex Ogre - Midnight Magic",
@@ -328,7 +328,7 @@ class Discography extends Component {
 					"labelName": "",
 					"labelLink": "",
 					"releaseId": "",
-					"coverLink": "../albums/Chip_Country.png",
+					"coverLink": "../images/albums/Chip_Country.png",
 					"downloadLink": "https://dkvine.com/features/music/chip_country/",
 					"tracklist": [
 						"HeavyW8bit ChampionChip - Theme/Cranky's Theme",
@@ -370,7 +370,7 @@ class Discography extends Component {
 					"labelName": "https://bleeplove.bandcamp.com/",
 					"labelLink": "",
 					"releaseId": "",
-					"coverLink": "../albums/bleepLove3.png",
+					"coverLink": "../images/albums/bleepLove3.png",
 					"downloadLink": "https://bleeplove.bandcamp.com/album/bleeplove-vol-3-2",
 					"tracklist": [
 						"My Neighbor Lao Tzu - Fe2O3",
@@ -394,7 +394,7 @@ class Discography extends Component {
 					"labelName": "Bleeplove",
 					"labelLink": "https://bleeplove.bandcamp.com/",
 					"releaseId": "",
-					"coverLink": "../albums/bleeplove1.png",
+					"coverLink": "../images/albums/bleeplove1.png",
 					"downloadLink": "https://archive.org/details/BleeploveVol.1",
 					"tracklist": [
 						"Dispex64 - Looking for Happiness",
@@ -413,7 +413,7 @@ class Discography extends Component {
 					"labelName": "Ruszud",
 					"labelLink": "https://vk.com/ruszud",
 					"releaseId": "rz220",
-					"coverLink": "../albums/chafer.jpg",
+					"coverLink": "../images/albums/chafer.jpg",
 					"downloadLink": "http://www.archive.org/details/rz220",
 					"tracklist": [
 						"vefiretiwina - C3POs rampage",
@@ -435,7 +435,7 @@ class Discography extends Component {
 					"labelName": "8081",
 					"labelLink": "https://8081.bandcamp.com/",
 					"releaseId": "8081-va005",
-					"coverLink": "../albums/newyearbattle.gif",
+					"coverLink": "../images/albums/newyearbattle.gif",
 					"downloadLink": "https://8081.bandcamp.com/album/new-year-battle-2011",
 					"tracklist": [
 						"xiaoxiao - happy new year",
@@ -462,7 +462,7 @@ class Discography extends Component {
 					"labelName": "8081",
 					"labelLink": "",
 					"releaseId": "8081-va002",
-					"coverLink": "../albums/pulse.jpg",
+					"coverLink": "../images/albums/pulse.jpg",
 					"downloadLink": "https://8081.bandcamp.com/album/the-pulse-of-the-blue-star",
 					"tracklist": [
 						"Мой сосед Лао Цзы - Emptiness",
@@ -482,7 +482,7 @@ class Discography extends Component {
 					"labelName": "Bitmasters",
 					"labelLink": "",
 					"releaseId": "",
-					"coverLink": "../albums/bitmasters2.gif",
+					"coverLink": "../images/albums/bitmasters2.gif",
 					"downloadLink": "http://www.mediafire.com/file/k00tdgemjm4/BITMASTERS+VOL.2.zip",
 					"tracklist": [
 						"Sycamore Drive - Happiness In Winter",
@@ -514,7 +514,7 @@ class Discography extends Component {
 					"labelName": "",
 					"labelLink": "",
 					"releaseId": "",
-					"coverLink": "../albums/aphextwin.png",
+					"coverLink": "../images/albums/aphextwin.png",
 					"downloadLink": "http://www.milkcrate.com.au/emar/AFX/",
 					"tracklist": [
 						"Brother Android - IZ-US [Come To Daddy EP]",

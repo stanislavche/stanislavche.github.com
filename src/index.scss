@@ -145,7 +145,7 @@ a {
 	border: 2px dashed #000;
 	flex: 0 1 calc(50% - 10px);
 	&__header{
-		margin: 0;
+		margin: 0 0 20px;
 		padding: 0;
 		text-align: center;
 		font-size: calc(10px + 2vmin);
@@ -153,6 +153,7 @@ a {
 	&__text {
 		text-indent: 1.5em;
 		text-align: justify;
+		margin: 0;
 	}
 }
 
@@ -265,6 +266,7 @@ a {
 		width: 100%;
 		position: relative;
 		z-index: 1;
+		cursor: pointer;
 		& > img{
 			display: block;
 			width: 100%;

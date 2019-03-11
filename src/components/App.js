@@ -21,8 +21,8 @@ class App extends Component {
 						<Announce />
 						<Events />
 						<Game />
-						<Donate />
 						<Cotacts />
+						<Donate />
 					</div>
 				</div>
 				<footer className="App__footer">All rights belong to Stress_TN. 2019</footer>
