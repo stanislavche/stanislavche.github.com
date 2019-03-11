@@ -158,6 +158,9 @@ a:hover{
 		text-align: justify;
 		margin: 0;
 	}
+	&__sub-header{
+		margin: 0 0 20px;
+	}
 }
 
 .contact-list{
@@ -196,6 +199,7 @@ a:hover{
 		list-style-type: none;
 		width: 100%;
 		position: relative;
+		margin-bottom: 20px;
 	}
 	&__item{
 		display: flex;

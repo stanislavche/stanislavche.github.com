@@ -539,7 +539,7 @@ class Discography extends Component {
 	render() {
 		return (
 			<section className="container">
-				<h2 className="container__header">Discography</h2>
+				{/*<h2 className="container__header">Discography</h2>*/}
 				<div className="container__wrapper discography">
 					<h3 className="container__sub-header">Albums & EPs</h3>
 					<ul className="discography__list">

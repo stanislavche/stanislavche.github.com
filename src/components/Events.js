@@ -172,7 +172,7 @@ class Events extends Component {
 		let checkLink = (item) => {
 			if (item.link) {
 				return (
-					<a href={(item.link ? item.link : "#")} target="_blank" className="events__link events__text">{item.country} - {item.date} - {item.title}</a>
+					<a href={(item.link ? item.link : "#")} target="_blank" className="events__link events__text" rel="noopener noreferrer">{item.country} - {item.date} - {item.title}</a>
 				);
 			} else {
 				return (
