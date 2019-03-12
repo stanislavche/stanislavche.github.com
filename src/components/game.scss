@@ -14,11 +14,16 @@
 		display: block;
 		transition: all 200ms;
 		filter: grayscale(1);
+		position: relative;
+		width: 100%;
+		img {
+			display: block;
+			width: 100%;
+			position: relative;
+			-webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.9, transparent), to(#ff0000));
+		}
 		&:hover{
 			filter: grayscale(0);
-			img{
-				filter: drop-shadow(2px 2px 5px red);
-			}
 		}
 	}
 }

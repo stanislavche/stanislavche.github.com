@@ -543,13 +543,13 @@ class Discography extends Component {
 				<div className="container__wrapper discography">
 					<h3 className="container__sub-header">Albums & EPs</h3>
 					<ul className="discography__list">
-						{this.state.albums.reverse().map((item, key) =>
+						{this.state.albums.map((item, key) =>
 							<Disc disc={item} key={key} />
 						)}
 					</ul>
 					<h3 className="container__sub-header">Singles and Remixes</h3>
 					<ul className="discography__list">
-						{this.state.singles.reverse().map((item, key) =>
+						{this.state.singles.map((item, key) =>
 							<Disc disc={item} key={key} />
 						)}
 					</ul>

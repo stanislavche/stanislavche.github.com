@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto+Condensed');
 
+$main-color: #000000;
+$info-color: #FFFFFF;
+$back-color: #000438;
+$link-color: red;
+
 body {
 	margin: 0;
 	padding: 0;
@@ -7,8 +12,24 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	position: relative;
-	background: red;
-	color: white;
+	background: $link-color;
+	color: $info-color;
+	@extend .custom-scroll;
+}
+.custom-scroll{
+	&::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px $link-color;
+		background-color: $main-color;
+	}
+
+	&::-webkit-scrollbar {
+		width: 6px;
+		background-color: $main-color;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $link-color;
+	}
 }
 
 code {
@@ -26,9 +47,9 @@ a {
 	&:visited,
 	&:hover,
 	&:active {
-		color: red;
+		color: $link-color;
 	}
-	color: red;
+	color: $link-color;
 }
 a:hover{
 	text-decoration: none;
@@ -37,7 +58,7 @@ a:hover{
 #root {
 	position: relative;
 	z-index: 2;
-	background-color: #000438;
+	background-color: $back-color;
 }
 
 .wrapper{
@@ -105,8 +126,8 @@ a:hover{
 		height: 100px;
 		width: 100%;
 		font-size: 5em;
-		text-shadow: 2px 2px 10px red;
-		color: #fff;
+		text-shadow: 2px 2px 10px $link-color;
+		color: $info-color;
 		font-family: 'Permanent Marker', cursive;
 		margin-bottom: 10px;
 	}
@@ -137,15 +158,15 @@ a:hover{
 	fill: none;
 	stroke: none !important;
 	&.active{
-		fill: #000;
+		fill: $main-color;
 	}
 }
 .container{
 	width: 100%;
-	//background: #000;
+	//background: $main-color;
 	margin: 0 0 10px;
 	padding: 10px 30px;
-	border: 2px dashed #000;
+	border: 2px dashed $main-color;
 	flex: 0 1 calc(50% - 10px);
 	&__header{
 		margin: 0 0 20px;
@@ -184,7 +205,7 @@ a:hover{
 		}
 		&>svg{
 			fill:none;
-			stroke:red;
+			stroke:$link-color;
 			stroke-miterlimit:10;
 		}
 	}
@@ -200,20 +221,32 @@ a:hover{
 		width: 100%;
 		position: relative;
 		margin-bottom: 20px;
+		perspective: 200px;
+		perspective-origin: 0 0;
 	}
 	&__item{
 		display: flex;
 		margin: 0;
 		padding: 0;
-		border: 2px dashed #fff;
+		border: 2px dashed $info-color;
 		padding: 10px 5px;
-		background: #000;
+		background: $main-color;
 		width: 100%;
 		transition: all 200ms;
 		z-index: 1;
+		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, -0.0005, 2, 0, 1, 0, 0, 0, 0, 1);
+		transform-style: flat;
 		&_active{
 			width: 100%;
+			z-index: 32;
 			cursor: inherit;
+			transform: matrix3d( 1, 0, 0, 0, 
+
+                     0, 1, 0, 0, 
+
+                     0, 0, 1, 0, 
+
+                     0, 0, 0, 1);
 			.discography__coverLink{
 				width: 30%;
 			}
@@ -221,8 +254,8 @@ a:hover{
 				display: block;
 				width: 70%;
 			}
-			& + .discography__item{
-				margin-top: 0% !important;
+			&:not(:first-child) {
+				//margin-top: 0% !important;
 			}
 			.discography__anotation{
 				display: none;
@@ -235,8 +268,8 @@ a:hover{
 			margin-top: -92%;
 		}
 		&:hover{
-			& + .discography__item{
-				margin-top: 0%;
+			&:not(:first-child) {
+				//margin-top: 0%;
 			}
 			.discography__anotation{
 				background: rgba(0,0,0,0.5);
@@ -263,11 +296,11 @@ a:hover{
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		color: #fff;
+		color: $info-color;
 		font-size: 1.5em;
 		width: 100%;
 		margin: 0;
-		text-shadow: 2px 2px 2px #000;
+		text-shadow: 2px 2px 2px $main-color;
 	}
 	&__coverLink{
 		width: 100%;
@@ -303,17 +336,14 @@ a:hover{
 
 	}
 }
-.game{
-	&__link{
-		display: block;
-		position: relative;
-		width: 100%;
-		img {
-			display: block;
-			width: 100%;
-			position: relative;
-		}
-	}
+
+@for $i from 1 through 30 {
+   .discography__item:nth-of-type(#{$i}) {
+       z-index: #{30 - $i};
+       &:hover,&.discography__item_active{
+       		z-index: 31;
+       }
+   }
 }
 
 @keyframes noise {
