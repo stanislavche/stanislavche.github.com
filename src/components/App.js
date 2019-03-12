@@ -6,6 +6,7 @@ import Cotacts from './Cotacts';
 import Game from './Game';
 import Donate from './Donate';
 import Events from './Events';
+import Player from './Player';
 
 class App extends Component {
 	render() {
@@ -15,6 +16,7 @@ class App extends Component {
 				<div className="App__wrapper">
 					<div className="App__wrapper-cell">
 						<Bio />
+						<Player />
 					</div>
 					<div className="App__wrapper-cell">
 						<Announce />
