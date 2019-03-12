@@ -1,23 +1,11 @@
 import React, { Component } from 'react';
 
 class Disc extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			active: false
-		}
-		this.resizeMe = this.resizeMe.bind(this);
-	}
-
-	resizeMe(event) {
-		event.preventDefault();
-		this.setState({active: !this.state.active});
-	}
 
 	render() {
 		return (
-			<li className={"discography__item " + (this.state.active ? "discography__item_active" : "")} >
-				<div rel="noopener noreferrer" className="discography__coverLink" onClick={this.resizeMe}>
+			<li onClick={this.props.triggerClick} className={"discography__item " + (this.props.active ? "discography__item_active" : "")}>
+				<div rel="noopener noreferrer" className="discography__coverLink">
 					<div className="discography__anotation">
 						<p className="discography__anotation-test">{this.props.disc.author + ' - ' + this.props.disc.title}</p>
 					</div>

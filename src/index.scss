@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto+Condensed');
-
-$main-color: #000000;
-$info-color: #FFFFFF;
-$back-color: #000438;
-$link-color: red;
+@import "./mixins";
 
 body {
 	margin: 0;
@@ -14,6 +10,7 @@ body {
 	position: relative;
 	background: $link-color;
 	color: $info-color;
+	font-size: $small-font;
 	@extend .custom-scroll;
 }
 .custom-scroll{
@@ -136,17 +133,22 @@ a:hover{
 		flex-flow: row wrap;
 		align-content: flex-start;
 		align-items: flex-start;
-		justify-content: space-around;
-		font-size: calc(10px + 1vmin);
+		align-content: stretch;
+		justify-content: space-between;
+		font-size: $small-font;
 		width: 90vw;
 		max-width: 1100px;
 		margin: 0 auto;
 	}
 	&__wrapper-cell{
 		display: flex;
-		width: 48%;
+		width: 49%;
 		flex-flow: column wrap;
 		justify-content: space-around;
+
+	}
+	&__wrapper-row{
+		width: 100%;
 	}
 	&__footer{
 		text-align: center;
@@ -166,7 +168,7 @@ a:hover{
 	//background: $main-color;
 	margin: 0 0 10px;
 	padding: 10px 30px;
-	border: 2px dashed $main-color;
+	border: 2px dashed $info-color;
 	flex: 0 1 calc(50% - 10px);
 	&__header{
 		margin: 0 0 20px;
@@ -217,59 +219,45 @@ a:hover{
 		margin: 0;
 		display: flex;
 		flex-flow: row wrap;
+		justify-content: space-around;
 		list-style-type: none;
 		width: 100%;
 		position: relative;
 		margin-bottom: 20px;
-		perspective: 200px;
-		perspective-origin: 0 0;
+		perspective: 100vw;
+		perspective-origin:50% 0;
 	}
 	&__item{
 		display: flex;
 		margin: 0;
 		padding: 0;
-		border: 2px dashed $info-color;
-		padding: 10px 5px;
 		background: $main-color;
-		width: 100%;
+		width: 14%;
 		transition: all 200ms;
 		z-index: 1;
-		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, -0.0005, 2, 0, 1, 0, 0, 0, 0, 1);
+		transform: matrix3d(0.4, 0, -0.5, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1);
 		transform-style: flat;
-		&_active{
-			width: 100%;
-			z-index: 32;
-			cursor: inherit;
-			transform: matrix3d( 1, 0, 0, 0, 
-
-                     0, 1, 0, 0, 
-
-                     0, 0, 1, 0, 
-
-                     0, 0, 0, 1);
-			.discography__coverLink{
-				width: 30%;
-			}
-			.discography__wrapper{
-				display: block;
-				width: 70%;
-			}
-			&:not(:first-child) {
-				//margin-top: 0% !important;
-			}
-			.discography__anotation{
-				display: none;
-			}
-			.discography__coverLink > img{
-				filter: grayscale(0);
-			}
-		}
+		border-radius: 10%;
+		overflow: hidden;
+		position: relative;
 		& + & {
-			margin-top: -92%;
+			margin-left: -15%;
+			//margin-top: -92%;
 		}
+		&_active,
 		&:hover{
+			border-radius: 0;
+			z-index: 2;
+			transform: matrix3d( 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+			&:first-child {
+				margin: 0 5% 0 0;
+			}
 			&:not(:first-child) {
 				//margin-top: 0%;
+				margin: 0 5% 0 -10%;
+			}
+			&:last-child {
+				margin: 0 0 0 -10%;
 			}
 			.discography__anotation{
 				background: rgba(0,0,0,0.5);
@@ -297,7 +285,7 @@ a:hover{
 		left: 50%;
 		transform: translate(-50%, -50%);
 		color: $info-color;
-		font-size: 1.5em;
+		font-size: 14px;
 		width: 100%;
 		margin: 0;
 		text-shadow: 2px 2px 2px $main-color;
@@ -337,14 +325,14 @@ a:hover{
 	}
 }
 
-@for $i from 1 through 30 {
-   .discography__item:nth-of-type(#{$i}) {
-       z-index: #{30 - $i};
-       &:hover,&.discography__item_active{
-       		z-index: 31;
-       }
-   }
-}
+// @for $i from 1 through 30 {
+// 	.discography__item:nth-of-type(#{$i}) {
+// 		z-index: #{30 - $i};
+// 		&:hover,&.discography__item_active{
+// 			z-index: 31;
+// 		}
+// 	}
+// }
 
 @keyframes noise {
 	0% {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Disc from './Disc';
+import Popup from './Popup';
 
 class Discography extends Component {
 	constructor(props) {
@@ -258,7 +259,7 @@ class Discography extends Component {
 					]
 				},
 				{
-					"title": "",
+					"title": "Bleep Love Vol.4",
 					"author": "Various Artist",
 					"year": "2013",
 					"labelName": "Bleeplove",
@@ -532,7 +533,33 @@ class Discography extends Component {
 						"Stress_TN - Come to Daddy [Come to Daddy EP]"
 					]
 				}
-			]
+			],
+			activeItem : null
+		};
+
+		this.resizeMe = this.resizeMe.bind(this);
+		this.onClosePopup = this.onClosePopup.bind(this);
+	}
+
+	resizeMe(event, element) {
+		event.preventDefault();
+		if (element === this.state.activeItem) {
+			this.setState({activeItem: null});
+		} else {
+			this.setState({activeItem: element});
+		}
+	}
+
+	onClosePopup(event) {
+		event.preventDefault();
+		this.setState({activeItem: null});
+	}
+
+	showPopup() {
+		if (this.state.activeItem) {
+			return <Popup disc={this.state.activeItem} onCloseClick={this.onClosePopup} />;
+		} else {
+			return '';
 		}
 	}
 
@@ -544,16 +571,18 @@ class Discography extends Component {
 					<h3 className="container__sub-header">Albums & EPs</h3>
 					<ul className="discography__list">
 						{this.state.albums.map((item, key) =>
-							<Disc disc={item} key={key} />
+							<Disc disc={item} key={key} triggerClick={(event) => this.resizeMe(event, item)} active={item === this.state.activeItem}/>
 						)}
 					</ul>
 					<h3 className="container__sub-header">Singles and Remixes</h3>
 					<ul className="discography__list">
 						{this.state.singles.map((item, key) =>
-							<Disc disc={item} key={key} />
+							<Disc disc={item} key={key} triggerClick={(event) => this.resizeMe(event, item)} active={item === this.state.activeItem}/>
 						)}
 					</ul>
+					
 				</div>
+				{this.showPopup()}
 			</section>
 		);
 	}
