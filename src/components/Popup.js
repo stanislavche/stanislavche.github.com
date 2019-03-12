@@ -15,7 +15,7 @@ class Popup extends Component {
 				</a>
 				<div className="popup__wrapper">
 					<h4 className="popup__title">
-						<a href={this.props.disc.downloadLink} target="_blank" rel="noopener noreferrer">{this.props.disc.title}</a>
+						<a href={this.props.disc.downloadLink} target="_blank" rel="noopener noreferrer">{this.props.disc.title} - ({this.props.disc.year})</a>
 					</h4>
 					<div className="popup__info">
 						<ul className="popup__secondary-list">
