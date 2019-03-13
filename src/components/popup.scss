@@ -2,9 +2,12 @@
 
 .popup {
 	display: flex;
-	position: relative;
+	position: absolute;
+	top:0;
+	left: 0;
+	min-height: 100%;
 	width: 100%;
-	background: $info-color;
+	background: rgba(0,0,0,0.9);
 	padding: 20px;
 	border-radius: 4px;
 	overflow: hidden;

@@ -4,10 +4,6 @@ import './popup.scss';
 class Popup extends Component {
 
 	render() {
-		let checkLinkStatus = () => {
-			return this.props.disc.downloadLink.length > 0;
-		};
-
 		return (
 			<div className="popup">
 				<a className="popup__coverLink" href={this.props.disc.downloadLink} target="_blank" rel="noopener noreferrer" >
