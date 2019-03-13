@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Bio from './Bio';
-import Announce from './Announce';
+import News from './News';
 import Discography from './Discography';
 import Cotacts from './Cotacts';
 import Game from './Game';
@@ -17,10 +17,10 @@ class App extends Component {
 					<div className="App__wrapper-cell">
 						<Bio />
 						<Player />
+						<Game />
 					</div>
 					<div className="App__wrapper-cell">
-						<Announce />
-						<Game />
+						<News />
 					</div>
 					<div className="App__wrapper-row">
 						<Discography />

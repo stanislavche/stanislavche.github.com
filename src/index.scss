@@ -484,4 +484,17 @@ a:hover{
 		flex-flow: column wrap;
 		justify-content: space-around;
 	}
+	.discography{
+		&__list{
+
+		}
+		&__item, &__item:hover{
+			transform: none;
+			width: 24%;
+			margin-bottom: 5px;
+			& + & {
+				margin-left: 0;
+			}
+		}
+	}
 }

@@ -547,6 +547,8 @@ class Discography extends Component {
 			this.setState({activeItem: null});
 		} else {
 			this.setState({activeItem: element});
+			let target = document.getElementById('discography');
+			target.scrollIntoView({block: "start", behavior: "smooth"});
 		}
 	}
 
@@ -567,7 +569,7 @@ class Discography extends Component {
 		return (
 			<section className="container">
 				{/*<h2 className="container__header">Discography</h2>*/}
-				<div className="container__wrapper discography">
+				<div id="discography" className="container__wrapper discography">
 					<h3 className="container__sub-header">Albums & EPs</h3>
 					<ul className="discography__list">
 						{this.state.albums.map((item, key) =>

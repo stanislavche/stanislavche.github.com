@@ -3,6 +3,7 @@
 .popup {
 	display: flex;
 	position: absolute;
+	flex-flow: row wrap;
 	top:0;
 	left: 0;
 	min-height: 100%;
@@ -75,5 +76,20 @@
 		font-size: 40px;
 		line-height: 40px;
 		z-index: 10;
+	}
+}
+
+@media screen and (max-width: 840px) {
+	.popup {
+		flex-flow: column wrap;
+		&__coverLink{
+			width: 100%;
+			padding: 20px;
+			margin-top: 20px;
+		}
+		&__wrapper{
+			width: 100%;
+			margin-top: 20px;
+		}
 	}
 }
