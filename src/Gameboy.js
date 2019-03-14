@@ -23,7 +23,6 @@ class Gameboy extends Component {
 
 		myAnimation.paint();
 		myAnimation.on('complete', () => {
-			console.log('complete');
 			aniContainer.classList.remove("disactive");
 			gameboyScreen.classList.add("active");
 			setTimeout(() => {
