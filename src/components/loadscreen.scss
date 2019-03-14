@@ -1,0 +1,84 @@
+@font-face {
+    font-family: "C64 User";
+    src: url('../font/C64_User_v1.0-STYLE.eot');
+    src: url('../font/C64_User_v1.0-STYLE.eot?#iefix') format('embedded-opentype'), url('../font/C64_User_v1.0-STYLE.woff') format('woff'), url('../font/C64_User_v1.0-STYLE.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "C64 User Mono";
+    src: url('../font/C64_User_Mono_v1.0-STYLE.eot');
+    src: url('../font/C64_User_Mono_v1.0-STYLE.eot?#iefix') format('embedded-opentype'), url('../font/C64_User_Mono_v1.0-STYLE.woff') format('woff'), url('../font/C64_User_Mono_v1.0-STYLE.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "C64 Pro";
+    src: url('../font/C64_Pro_v1.0-STYLE.eot');
+    src: url('../font/C64_Pro_v1.0-STYLE.eot?#iefix') format('embedded-opentype'), url('../font/C64_Pro_v1.0-STYLE.woff') format('woff'), url('../font/C64_Pro_v1.0-STYLE.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "C64 Pro Mono";
+    src: url('../font/C64_Pro_Mono_v1.0-STYLE.eot');
+    src: url('../font/C64_Pro_Mono_v1.0-STYLE.eot?#iefix') format('embedded-opentype'), url('../font/C64_Pro_Mono_v1.0-STYLE.woff') format('woff'), url('../font/C64_Pro_Mono_v1.0-STYLE.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.loadscreen {
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background: #8272dd;
+	&__c64-preview {
+		position: relative;
+		width: 85%;
+		height: 85%;
+		background: #3c2bab;
+		margin: 7% auto 0;
+	}
+
+	&__c64-preview_title {
+		text-align: center;
+		line-height: 50px;
+		margin: 0;
+		padding-top: 40px;
+	}
+
+	&__c64-preview_title,
+	&__c64-preview_ram {
+		letter-spacing: 1px;
+		color: #8272dd;
+		font-size: 24px;
+		font-family: 'C64 User';
+
+	}
+	&__c64-preview_ram,
+	&__c64-preview_link {
+		text-align: left;
+		padding-left: 10px;
+		color: #8272dd !important;
+		font-weight: normal;
+	}
+}
+
+.errorLink {
+	cursor: url(../image/cursor.png), auto;
+	a{
+		&:link,
+		&:hover,
+		&:visited,
+		&:hover,
+		&:active{
+			cursor: url(../image/cursor.png), auto;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+.events {
+	&__list{
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		display: block;
+		text-align: justify;
+		font-size: 14px;
+	}
+	&__item{
+		display: block;
+	}
+	&__link{
+		display: block;
+		&:hover{
+
+		}
+	}
+	&__text{
+		margin: 0 0 5px;
+	}
+}

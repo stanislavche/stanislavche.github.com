@@ -1,0 +1,32 @@
+.game {
+	&__list{
+		padding: 0;
+		margin: 0 0 10px;
+		list-style-type: none;
+		display: flex;
+		justify-content: space-around;
+		flex-flow: row wrap;
+		
+		//-webkit-box-reflect: below 4px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.8, transparent), to(#ff0000));
+	}
+	&__item{
+		
+	}
+	&__link{
+		display: block;
+		transition: all 200ms;
+		position: relative;
+		width: 100%;
+		img {
+			display: block;
+			width: 100%;
+			position: relative;
+			filter: grayscale(1) drop-shadow(2px 2px 3px #000);
+		}
+		&:hover{
+			img{
+				filter: grayscale(0)  drop-shadow(2px 2px 3px #000);
+			}
+		}
+	}
+}
