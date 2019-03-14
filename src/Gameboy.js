@@ -33,9 +33,15 @@ class Gameboy extends Component {
 	}
 
 	render() {
-		return (
-			<GameboySvg />
-		);
+		if (window.navigator.userAgent.indexOf("Edge") > -1) {
+			console.log('Edge');
+			return ReactDOM.render(<App />, document.getElementById('root'));
+		} else {
+			return (
+				<GameboySvg />
+			);
+		}
+		
 	}
 }
 

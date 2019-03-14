@@ -17,17 +17,51 @@
 		<meta property="og:description" content="Chip-musician from Russian Federation" />
 		<meta property="og:url" content="//stress-tn.party/" />
 		<meta property="og:image" content="//stress-tn.party/stress_tn.jpg" />
-		<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T826MHT');</script>
-		<!-- End Google Tag Manager -->
+		<script>
+			(function(){
+				var data = {
+					"@context": "http://schema.org",
+					"@type": "MusicGroup",
+					"@id": "https://musicbrainz.org/artist/2a19a020-f1ea-45ee-aa16-547c1a87920a",
+					"name": "Stress_TN",
+					"alternateName": "StanChe",
+					"description": "Chiptune musician from Russia",
+					"logo": {
+						"@type": "ImageObject",
+						"url": "https://stress-tn.party/stress_tn.jpg"
+					},
+					"image": {
+						"@type": "ImageObject",
+						"url": "https://stress-tn.party/stress_tn.jpg"
+					},
+					"url": "https://stress-tn.party",
+					"genre": [
+						"Chiptune",
+						"8-bit",
+						"Chipstep"
+					],
+					"sameAs": [
+						"https://www.facebook.com/StressTN",
+						"https://twitter.com/Stress_TN",
+						"https://vk.com/club14953852",
+						"https://www.discogs.com/artist/2925002",
+						"https://plus.google.com/109842483321855282635",
+						"https://soundcloud.com/stress_tn",
+						"https://www.youtube.com/user/stresstn"
+					]
+				};
+				var script = document.createElement('script');
+				script.type = 'application/ld+json';
+				script.innerHTML = JSON.stringify( data );
+				document.getElementsByTagName('head')[0].appendChild(script);
+			})(document);
+		</script>
 	</head>
 	<body>
+		<noscript>Plase install normal browser</noscript>
 		<div class="wrapper">
 			<div id="animation" class="disactive"></div>
 			<div id="root"></div>
 		</div>
-		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T826MHT"	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<!-- End Google Tag Manager (noscript) -->
 	</body>
 </html>
