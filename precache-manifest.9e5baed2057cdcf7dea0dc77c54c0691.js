@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "652c538faf1267e6b8c23970b859a0ea",
-    "url": "/static/media/C64_Pro_v1.0-STYLE.652c538f.ttf"
+    "revision": "038642c5bf2240322e77868641d21edb",
+    "url": "/static/media/C64_Pro_v1.0-STYLE.038642c5.woff"
   },
   {
-    "revision": "ee16fb738b6b28f52b18",
-    "url": "/static/css/main.85fc5097.chunk.css"
+    "revision": "f93bdde4f5c3d32c4f80",
+    "url": "/static/css/main.2a68a2ce.chunk.css"
   },
   {
     "revision": "fdfcfda2d9b1bf31db52",
@@ -24,24 +24,24 @@ self.__precacheManifest = [
     "url": "/static/media/tv.a5114486.png"
   },
   {
-    "revision": "1efe351f32cd00b8c050a30ebf8d0fb9",
-    "url": "/static/media/C64_User_v1.0-STYLE.1efe351f.woff"
-  },
-  {
     "revision": "6c16d1b1b41eb401e2045374fc8f2b18",
     "url": "/static/media/C64_User_v1.0-STYLE.6c16d1b1.eot"
+  },
+  {
+    "revision": "1efe351f32cd00b8c050a30ebf8d0fb9",
+    "url": "/static/media/C64_User_v1.0-STYLE.1efe351f.woff"
   },
   {
     "revision": "b5c0c4ab27b9b0b4cb53e347a3addbe8",
     "url": "/static/media/C64_User_Mono_v1.0-STYLE.b5c0c4ab.eot"
   },
   {
-    "revision": "927533f2407c1671b4332c31ebe69c02",
-    "url": "/static/media/C64_User_v1.0-STYLE.927533f2.ttf"
-  },
-  {
     "revision": "5cd08674a8c49c72fb5ae387a977da6f",
     "url": "/static/media/C64_User_Mono_v1.0-STYLE.5cd08674.ttf"
+  },
+  {
+    "revision": "927533f2407c1671b4332c31ebe69c02",
+    "url": "/static/media/C64_User_v1.0-STYLE.927533f2.ttf"
   },
   {
     "revision": "c98949fa9320075f4e4f8c4c45e96139",
@@ -52,12 +52,12 @@ self.__precacheManifest = [
     "url": "/static/media/C64_Pro_v1.0-STYLE.25c5706f.eot"
   },
   {
-    "revision": "038642c5bf2240322e77868641d21edb",
-    "url": "/static/media/C64_Pro_v1.0-STYLE.038642c5.woff"
+    "revision": "652c538faf1267e6b8c23970b859a0ea",
+    "url": "/static/media/C64_Pro_v1.0-STYLE.652c538f.ttf"
   },
   {
-    "revision": "ee16fb738b6b28f52b18",
-    "url": "/static/js/main.ee16fb73.chunk.js"
+    "revision": "f93bdde4f5c3d32c4f80",
+    "url": "/static/js/main.f93bdde4.chunk.js"
   },
   {
     "revision": "8ebc530c480b4361a5e7744fa87db927",
@@ -112,7 +112,7 @@ self.__precacheManifest = [
     "url": "/static/media/gameboy.97f4230a.svg"
   },
   {
-    "revision": "4ac798cfae085ca79b3b1112689ca928",
+    "revision": "e2ef5324d8631836032ba5ad2905b63e",
     "url": "/index.html"
   }
 ];
