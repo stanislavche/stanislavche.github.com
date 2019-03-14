@@ -514,12 +514,23 @@ a:hover{
 		flex-flow: column wrap;
 		justify-content: space-around;
 	}
+	.wrapper{
+		position: relative;
+		&:after{
+			//display: none;
+			background: rgba(0,0,0,0.3);
+			animation-play-state: paused;
+		}
+	}
 	.App__header {
 		font-size: 5em;
 	}
 	.discography{
 		&__list{
 
+		}
+		&__anotation-test{
+			font-size: 10px;
 		}
 		&__item, &__item:hover{
 			transform: none;
