@@ -164,7 +164,7 @@ class Discography extends Component {
 					"labelName": "Bitmasters",
 					"labelLink": "",
 					"releaseId": "",
-					"coverLink": "../images/albums/terriblenoise.gif",
+					"coverLink": "../images/albums/terriblenoise.jpg",
 					"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Stress_TN%20-%20Terrible%20Noize.rar",
 					"tracklist": [
 						"Destiny",
@@ -455,7 +455,7 @@ class Discography extends Component {
 					"labelName": "8081",
 					"labelLink": "https://8081.bandcamp.com/",
 					"releaseId": "8081-va005",
-					"coverLink": "../images/albums/newyearbattle.gif",
+					"coverLink": "../images/albums/newyearbattle.jpg",
 					"downloadLink": "https://8081.bandcamp.com/album/new-year-battle-2011",
 					"tracklist": [
 						"xiaoxiao - happy new year",
@@ -502,7 +502,7 @@ class Discography extends Component {
 					"labelName": "Bitmasters",
 					"labelLink": "",
 					"releaseId": "",
-					"coverLink": "../images/albums/bitmasters2.gif",
+					"coverLink": "../images/albums/bitmasters2.jpg",
 					"downloadLink": "http://www.mediafire.com/file/k00tdgemjm4/BITMASTERS+VOL.2.zip",
 					"tracklist": [
 						"Sycamore Drive - Happiness In Winter",

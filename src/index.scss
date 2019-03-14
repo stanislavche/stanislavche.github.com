@@ -504,6 +504,25 @@ a:hover{
 	}
 }
 
+@-moz-document url-prefix() {
+	.discography{
+		&__list{
+
+		}
+		&__anotation-test{
+			font-size: 10px;
+		}
+		&__item, &__item:hover{
+			transform: none;
+			width: 15%;
+			margin-bottom: 5px;
+			& + & {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 840px) {
 	.container {
 		width: 90vw;
