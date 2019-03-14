@@ -19,7 +19,7 @@ class App extends Component {
 					<div className="App__wrapper">
 						<div className="App__wrapper-cell">
 							<Bio />
-							<Cotacts />
+							
 							<Game />
 						</div>
 						<div className="App__wrapper-cell">
@@ -30,6 +30,7 @@ class App extends Component {
 						</div>
 						<div className="App__wrapper-cell">
 							<Player />
+							<Cotacts />
 							<Donate />
 						</div>
 						<div className="App__wrapper-cell">

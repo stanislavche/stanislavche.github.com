@@ -282,6 +282,12 @@ a:hover{
 		width: 49%;
 		flex-flow: column wrap;
 		justify-content: space-around;
+		.events,
+		.news{
+			@extend .custom-scroll;
+			max-height: 368px;
+			overflow: auto;
+		}
 	}
 	&__wrapper-row{
 		width: 100%;
@@ -307,14 +313,13 @@ a:hover{
 	border: 2px dashed $info-color;
 	flex: 0 1 calc(50% - 10px);
 	position: relative;
-	max-height: 628px;
-	overflow: auto;
-	@extend .custom-scroll;
 	&__header{
 		margin: 0 0 20px;
 		padding: 0;
 		text-align: center;
 		font-size: calc(10px + 2vmin);
+		background: $info-color;
+		color: $main-color;
 	}
 	&__text {
 		text-indent: 1.5em;
@@ -323,6 +328,9 @@ a:hover{
 	}
 	&__sub-header{
 		margin: 0 0 20px;
+		background: $info-color;
+		color: $main-color;
+		padding: 2px 0;
 	}
 }
 

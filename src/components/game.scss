@@ -1,7 +1,7 @@
 .game {
 	&__list{
 		padding: 0;
-		margin: 0 0 40px;
+		margin: 0 0 10px;
 		list-style-type: none;
 		display: flex;
 		justify-content: space-around;
@@ -21,11 +21,11 @@
 			display: block;
 			width: 100%;
 			position: relative;
-			filter: grayscale(1) drop-shadow(2px 2px 5px #000);
+			filter: grayscale(1) drop-shadow(2px 2px 3px #000);
 		}
 		&:hover{
 			img{
-				filter: grayscale(0)  drop-shadow(2px 2px 5px #000);
+				filter: grayscale(0)  drop-shadow(2px 2px 3px #000);
 			}
 		}
 	}

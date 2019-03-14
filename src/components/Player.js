@@ -8,7 +8,7 @@ class Announce extends Component {
 		return (
 			<section className="container">
 				<div className="container__wrapper player">
-					<ReactPlayer url={playlist} width="100%" height="500px" />
+					<ReactPlayer url={playlist} width="100%" height="260px" />
 				</div>
 			</section>
 		);

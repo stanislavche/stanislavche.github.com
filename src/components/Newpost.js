@@ -6,12 +6,12 @@ class Newpost extends Component {
 		let renderMediaBlock = () => {
 			switch(this.props.data.type) {
 				case "video":
-					return (<ReactPlayer url={this.props.data.media} controls width="100%"/>);
+					return (<ReactPlayer url={this.props.data.media} controls width="50%" height="70%" className="news__media" /> );
 				case "image":
 					if (this.props.data.link.length > 0) {
-						return (<a className="news__link" href={this.props.data.link} title={this.props.data.title}><img src={this.props.data.media} alt="this.props.data.title" /></a>);
+						return (<a className="news__link" href={this.props.data.link} title={this.props.data.title}><img className="news__media" src={this.props.data.media} alt="this.props.data.title" /></a>);
 					}
-					return (<img src={this.props.data.media} alt="this.props.data.title" />);
+					return (<img className="news__media" src={this.props.data.media} alt="this.props.data.title" />);
 				default:
 					return ("");
 			}

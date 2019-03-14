@@ -11,8 +11,8 @@
 		display: block;
 		width: 100%;
 		text-align: center;
-		padding: 10px 0;
 		& + & {
+			padding: 10px 0 0;
 			border-top: 2px solid #000; 
 		}
 	}
@@ -30,6 +30,12 @@
 		font-size: 11px;
 	}
 	&__description{
-
+		padding-right: 5px;
+		text-align: left;
+	}
+	&__media {
+		float: left;
+		margin: 0 10px 10px 0;
+		max-width: 50%;
 	}
 }
