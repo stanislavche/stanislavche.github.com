@@ -389,6 +389,25 @@ class Discography extends Component {
 					]
 				},
 				{
+					"title": "Rabitza - Last News Of The World",
+					"author": "Various Artist",
+					"year": "2011",
+					"labelName": "Russian-Techno",
+					"labelLink": "https://russiantechno.bandcamp.com",
+					"releaseId": "RT​-​16",
+					"coverLink": "../images/albums/lastnews.jpg",
+					"downloadLink": "https://russiantechno.bandcamp.com/album/last-news-of-the-world-rt-16",
+					"tracklist": [
+						"Last News Of The World (Original Mix)",
+						"Last News Of The World (Vadz Remix)",
+						"Last News Of The World (8bit Brothers Stress_TN Remix)",
+						"Last News Of The World (Digital Damage Remix)",
+						"Last News Of The World (SUB Remix)",
+						"Last News Of The World (Jaildigger Remix)",
+						"Last News Of The World (Weim 'Destroy Sound And Surround' Remix)"
+					]
+				},
+				{
 					"title": "Bleeplove vol.1",
 					"author": "Various Artist",
 					"year": "2011",
