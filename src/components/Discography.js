@@ -145,7 +145,7 @@ class Discography extends Component {
 					"labelLink": "",
 					"releaseId": "",
 					"coverLink": "../images/albums/chipolino.jpg",
-					"downloadLink": "",
+					"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/CHIPOLINO%20ALLIANCE.rar",
 					"tracklist": [
 						"Fat Frumos - Badman",
 						"Fat Frumos - Hil' with pixel eyes",
@@ -165,7 +165,7 @@ class Discography extends Component {
 					"labelLink": "",
 					"releaseId": "",
 					"coverLink": "../images/albums/terriblenoise.gif",
-					"downloadLink": "",
+					"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Stress_TN%20-%20Terrible%20Noize.rar",
 					"tracklist": [
 						"Destiny",
 						"Flying",
@@ -199,7 +199,7 @@ class Discography extends Component {
 					"labelLink": "",
 					"releaseId": "",
 					"coverLink": "../images/albums/FirstConsoleAid.png",
-					"downloadLink": "",
+					"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Stress_TN%2C%202NRO8OT%2C%20Nextspace%20-%20First%20Console%20Aid%20%28BREAKCOREYOURSELF.RU%29.rar",
 					"tracklist": [
 						"2NRO8OT - Evacuation",
 						"2NRO8OT - NGC 1300",
@@ -222,7 +222,7 @@ class Discography extends Component {
 					"labelLink": "",
 					"releaseId": "3PND001",
 					"coverLink": "../images/albums/littleschranzdj.jpg",
-					"downloadLink": "",
+					"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Littleschranzdj.rar",
 					"tracklist": [
 						"Shturm",
 						"Littleschranzdj",
