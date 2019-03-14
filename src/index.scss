@@ -57,7 +57,9 @@ a:hover{
 	position: relative;
 	z-index: 2;
 	background-color: $back-color;
-
+	//background-image: url('./image/background.jpg');
+	background-size: contain;
+	//animation: rain 200ms infinite linear;
 }
 
 .wrapper{
@@ -473,6 +475,18 @@ a:hover{
 	}
 	100% {
 		background-position: 100px 0px;
+	}
+}
+
+@keyframes rain {
+	0% {
+		background-position: 0px 0;
+	}
+	50% {
+		background-position: 0 313px;
+	}
+	100% {
+		background-position: 0 626px;
 	}
 }
 

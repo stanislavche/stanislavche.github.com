@@ -567,7 +567,12 @@ class Discography extends Component {
 		} else {
 			this.setState({activeItem: element});
 			let target = document.getElementById('discography');
-			target.scrollIntoView({block: "start", behavior: "smooth"});
+			if (window.innerWidth < 840) {
+				target.scrollIntoView({block: "start", behavior: "smooth"});
+			} else {
+				target.scrollIntoView({block: "center", behavior: "smooth"});
+				
+			}
 		}
 	}
 
