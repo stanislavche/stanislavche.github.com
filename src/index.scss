@@ -535,11 +535,11 @@ a:hover{
 	}
 	.wrapper{
 		position: relative;
-		&:after{
-			//display: none;
-			background: rgba(0,0,0,0.3);
-			animation-play-state: paused;
-		}
+		// &:after{
+		// 	//display: none;
+		// 	background: rgba(0,0,0,0.3);
+		// 	animation-play-state: paused;
+		// }
 	}
 	.App__header {
 		font-size: 5em;
@@ -559,5 +559,11 @@ a:hover{
 				margin-left: 0;
 			}
 		}
+	}
+}
+
+@media screen and (max-width: 641px) {
+	.App__header {
+		font-size: 3em;
 	}
 }
