@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
+
 import LazyLinePainter from 'lazy-line-painter'
 import { ReactComponent as GameboySvg } from './image/gameboy.svg';
 
@@ -33,14 +34,9 @@ class Gameboy extends Component {
 	}
 
 	render() {
-		if (window.navigator.userAgent.indexOf("Edge") > -1) {
-			console.log('Edge');
-			return ReactDOM.render(<App />, document.getElementById('root'));
-		} else {
-			return (
-				<GameboySvg />
-			);
-		}
+		return (
+			<GameboySvg />
+		);
 		
 	}
 }
