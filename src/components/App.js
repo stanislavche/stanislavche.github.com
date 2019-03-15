@@ -7,6 +7,7 @@ import Game from './Game';
 import Donate from './Donate';
 import Events from './Events';
 import Player from './Player';
+import Kits from './Kits';
 import "./loadscreen.scss";
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
 
@@ -35,6 +36,7 @@ class App extends Component {
 						</div>
 						<div className="App__wrapper-cell">
 							<Events />
+							<Kits />
 						</div>
 					</div>
 					<footer className="App__footer">All rights belong to Stress_TN. 2019</footer>
