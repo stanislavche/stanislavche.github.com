@@ -12,6 +12,7 @@ class Gameboy extends Component {
 	}
 
 	componentDidMount() {
+		console.log('mount');
 		let el = document.querySelector('#gameboy');
 		let aniContainer = document.querySelector('#animation');
 		let gameboyScreen = document.querySelector('#gameboy_screen');
@@ -28,7 +29,8 @@ class Gameboy extends Component {
 			gameboyScreen.classList.add("active");
 			setTimeout(() => {
 				ReactDOM.render(<App />, document.getElementById('root'));
-				ReactDOM.unmountComponentAtNode(document.getElementById('animation'));
+				//ReactDOM.unmountComponentAtNode(document.getElementById('animation'));
+				myAnimation.destroy();
 			}, 2000);
 		});
 	}
