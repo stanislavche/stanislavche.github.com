@@ -8,10 +8,10 @@ class News extends Component {
 		this.state = {
 			news: [{
 				"date": 1552495410,
-				"title": "New Ep Soon",
-				"description": "LSDJ based album. DJ Vadz helps with mastering. Soon!!!",
+				"title": "New Ep !!! ",
+				"description": "LSDJ based album. Kits can be found on this page",
 				"type": "image",
-				"link": "",
+				"link": "https://stresstn.bandcamp.com/album/illusion-lsdj-sav",
 				"media": "./images/albums/illusion.jpg"
 			},{
 				"date": 1552495410,
