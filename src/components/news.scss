@@ -39,3 +39,21 @@
 		max-width: 50%;
 	}
 }
+
+@media screen and (max-width: 451px) {
+	.news {
+		&__description{
+			padding-right: 0;
+			width: 90%;
+			text-align: justify;
+			display: block;
+			margin: 10px auto;
+		}
+		&__media {
+			display: block;
+			float: none;
+			max-width: 90%;
+			margin: 0 auto;
+		}
+	}
+}
