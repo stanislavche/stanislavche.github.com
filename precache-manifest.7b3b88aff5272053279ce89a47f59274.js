@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "652c538faf1267e6b8c23970b859a0ea",
-    "url": "/static/media/C64_Pro_v1.0-STYLE.652c538f.ttf"
+    "revision": "fb430063d59915d7222aaf13ae7809b3",
+    "url": "/static/media/C64_Pro_Mono_v1.0-STYLE.fb430063.woff"
   },
   {
-    "revision": "57947fe852957f992042",
-    "url": "/static/css/main.5a00b97f.chunk.css"
+    "revision": "c47d23161daad9b9a773",
+    "url": "/static/css/main.5b730570.chunk.css"
   },
   {
     "revision": "fdfcfda2d9b1bf31db52",
     "url": "/static/js/runtime~main.fdfcfda2.js"
   },
   {
-    "revision": "3a22918ec3e114715e6f",
-    "url": "/static/js/2.3a22918e.chunk.js"
+    "revision": "6f433fde7ad6e8aa3cc3",
+    "url": "/static/js/2.6f433fde.chunk.js"
   },
   {
     "revision": "bc916836bbde4ce95f6f01562dd4c4fc",
@@ -24,6 +24,10 @@ self.__precacheManifest = [
     "url": "/static/media/tv.a5114486.png"
   },
   {
+    "revision": "927533f2407c1671b4332c31ebe69c02",
+    "url": "/static/media/C64_User_v1.0-STYLE.927533f2.ttf"
+  },
+  {
     "revision": "6c16d1b1b41eb401e2045374fc8f2b18",
     "url": "/static/media/C64_User_v1.0-STYLE.6c16d1b1.eot"
   },
@@ -32,8 +36,12 @@ self.__precacheManifest = [
     "url": "/static/media/C64_User_v1.0-STYLE.1efe351f.woff"
   },
   {
-    "revision": "927533f2407c1671b4332c31ebe69c02",
-    "url": "/static/media/C64_User_v1.0-STYLE.927533f2.ttf"
+    "revision": "25c5706f165b605581d25e290f41ca8a",
+    "url": "/static/media/C64_Pro_v1.0-STYLE.25c5706f.eot"
+  },
+  {
+    "revision": "5cd08674a8c49c72fb5ae387a977da6f",
+    "url": "/static/media/C64_User_Mono_v1.0-STYLE.5cd08674.ttf"
   },
   {
     "revision": "b5c0c4ab27b9b0b4cb53e347a3addbe8",
@@ -44,32 +52,24 @@ self.__precacheManifest = [
     "url": "/static/media/C64_User_Mono_v1.0-STYLE.c98949fa.woff"
   },
   {
-    "revision": "5cd08674a8c49c72fb5ae387a977da6f",
-    "url": "/static/media/C64_User_Mono_v1.0-STYLE.5cd08674.ttf"
-  },
-  {
     "revision": "038642c5bf2240322e77868641d21edb",
     "url": "/static/media/C64_Pro_v1.0-STYLE.038642c5.woff"
   },
   {
-    "revision": "25c5706f165b605581d25e290f41ca8a",
-    "url": "/static/media/C64_Pro_v1.0-STYLE.25c5706f.eot"
-  },
-  {
-    "revision": "57947fe852957f992042",
-    "url": "/static/js/main.57947fe8.chunk.js"
+    "revision": "c47d23161daad9b9a773",
+    "url": "/static/js/main.c47d2316.chunk.js"
   },
   {
     "revision": "8ebc530c480b4361a5e7744fa87db927",
     "url": "/static/media/C64_Pro_Mono_v1.0-STYLE.8ebc530c.eot"
   },
   {
-    "revision": "fb430063d59915d7222aaf13ae7809b3",
-    "url": "/static/media/C64_Pro_Mono_v1.0-STYLE.fb430063.woff"
-  },
-  {
     "revision": "ae4fe1f14285762ebfbaf0ee03ef0c79",
     "url": "/static/media/C64_Pro_Mono_v1.0-STYLE.ae4fe1f1.ttf"
+  },
+  {
+    "revision": "652c538faf1267e6b8c23970b859a0ea",
+    "url": "/static/media/C64_Pro_v1.0-STYLE.652c538f.ttf"
   },
   {
     "revision": "5bd9a29db30b2419f93e074124f2404d",
@@ -112,7 +112,7 @@ self.__precacheManifest = [
     "url": "/static/media/gameboy.97f4230a.svg"
   },
   {
-    "revision": "1f2ec5fcfd6457ebf29299a7de73964b",
+    "revision": "7a70c4f96e5eab34d05b6f952849d220",
     "url": "/index.html"
   }
 ];
