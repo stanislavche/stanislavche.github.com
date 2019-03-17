@@ -8,6 +8,24 @@ class Discography extends Component {
 		this.state = {
 			albums : [
 				{
+					"title": "Illusion",
+					"author": "Stress_TN",
+					"year": "2019",
+					"labelName": "",
+					"labelLink": "",
+					"releaseId": "",
+					"coverLink": "../images/albums/illusion.jpg",
+					"downloadLink": "https://stresstn.bandcamp.com/album/illusion-lsdj-sav",
+					"tracklist": [
+						"Illusion",
+						"Square liana",
+						"Race crash",
+						"bit Dungeon III OST",
+						"Retetris",
+						"GameGate - Any (Stress_TN rmx)"
+					]
+				},
+				{
 					"title": "bit Dungeon 2 OST",
 					"author": "Stress_TN",
 					"year": "2014",
