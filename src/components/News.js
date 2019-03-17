@@ -7,7 +7,7 @@ class News extends Component {
 		super(props);
 		this.state = {
 			news: [{
-				"date": 1552495410,
+				"date": 1552824696,
 				"title": "New Ep !!! ",
 				"description": "LSDJ based album. Kits can be found on this page",
 				"type": "image",
