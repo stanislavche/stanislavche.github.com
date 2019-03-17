@@ -23,7 +23,7 @@ class Newpost extends Component {
 			}
 			return (<h4 className="news__title">{this.props.data.title}</h4>);
 		};
-		let postDate = (new Date(this.props.data.date)).toUTCString();
+		let postDate = (new Date(this.props.data.date * 1000)).toUTCString();
 		return (
 			<li className="news__item">
 				{checkLink()}
