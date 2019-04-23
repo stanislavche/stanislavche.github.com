@@ -7,6 +7,13 @@ class Events extends Component {
 		this.state = {
 			events: [
 				{
+					"date": "27 April 2019",
+					"country": "Russia",
+					"city": "Saint-Petersburg",
+					"title": "27.04 Chiptune event • МОТИВ",
+					"link": "https://vk.com/chiptuneevent"
+				},
+				{
 					"date": "5 January 2019",
 					"country": "Russia",
 					"city": "Taganrog",

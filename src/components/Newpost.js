@@ -10,7 +10,7 @@ class Newpost extends Component {
 					return (<ReactPlayer url={this.props.data.media} controls width={mobile ? "100%" : "50%"} height="70%" className="news__media" /> );
 				case "image":
 					if (this.props.data.link.length > 0) {
-						return (<a className="news__link" href={this.props.data.link} title={this.props.data.title}><img className="news__media" src={this.props.data.media} alt="this.props.data.title" /></a>);
+						return (<a className="news__link" href={this.props.data.link} title={this.props.data.title}><img className="news__media" src={this.props.data.media} alt={this.props.data.title} /></a>);
 					}
 					return (<img className="news__media" src={this.props.data.media} alt="this.props.data.title" />);
 				default:
@@ -29,7 +29,7 @@ class Newpost extends Component {
 				{checkLink()}
 				<p className="news__date">({postDate})</p>
 				{renderMediaBlock()}
-				<p className="news__description">{this.props.data.description}</p>
+				<p className="news__description" dangerouslySetInnerHTML={{__html: this.props.data.description}}></p>
 			</li>
 		);
 	}
