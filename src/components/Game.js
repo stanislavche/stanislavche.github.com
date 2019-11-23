@@ -7,6 +7,11 @@ class Game extends Component {
 		this.state = {
 			gameList : [
 				{
+					"title": "bit Dungeon III",
+					"image": "../images/games/bitDungeonIII.png",
+					"link": "https://store.steampowered.com/app/856210/bit_Dungeon_III/"
+				},
+				{
 					"title": "bit Dungeon II",
 					"image": "../images/games/bd2_logo.png",
 					"link": "http://store.steampowered.com/app/331440/bit_Dungeon_II/"

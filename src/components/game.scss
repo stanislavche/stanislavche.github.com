@@ -10,7 +10,8 @@
 		//-webkit-box-reflect: below 4px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.8, transparent), to(#ff0000));
 	}
 	&__item{
-		
+		position: relative;
+		max-width: 20%;
 	}
 	&__link{
 		display: block;
@@ -20,6 +21,7 @@
 		img {
 			display: block;
 			width: 100%;
+			max-width: 100%;
 			position: relative;
 			filter: grayscale(1) drop-shadow(2px 2px 3px #000);
 		}
@@ -27,6 +29,14 @@
 			img{
 				filter: grayscale(0)  drop-shadow(2px 2px 3px #000);
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 451px) {
+	.game {
+		&__item{
+			max-width: 50%;
 		}
 	}
 }

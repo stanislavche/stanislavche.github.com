@@ -6,7 +6,7 @@
   "dependencies": {
     "gh-pages": "^2.0.1",
     "lazy-line-painter": "^1.9.4",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-player": "^1.9.3",

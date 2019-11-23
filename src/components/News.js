@@ -7,17 +7,17 @@ class News extends Component {
 		super(props);
 		this.state = {
 			news: [{
-				"date": 1556036005,
+				"date": 1574974800,
 				"title": "Chiptune event",
-				"description": "27th of April 2017, Club Motiv, Sankt-Petersburg, Russia.<br /><br /><b>Line-up:</b><br />Stress_TN<br />Purely Grey<br />Astro the Fox<br />gamegate",
+				"description": "Erica Synths Garage live stream in the club: <br />Stabs<br />Stress_TN<br />Pluneptune",
 				"type": "image",
-				"link": "https://vk.com/chiptuneevent",
-				"media": "./images/extra/chiptuneevent.jpg"
+				"link": "https://www.facebook.com/events/940565892987526",
+				"media": "./images/extra/ESG.jpg"
 			},{
 				"date": 1552495410,
 				"title": "bit Dungeon III",
-				"description": "Good news, bit Dungeon will be available on STEAM store at - 04/24/2019",
-				"link": "https://www.facebook.com/KintoGames/",
+				"description": "Bit Dungeon III has been released",
+				"link": "https://store.steampowered.com/app/856210/bit_Dungeon_III/",
 				"type": "video",
 				"media": "https://www.youtube.com/watch?v=y2rdm0ej0_E"
 			},{

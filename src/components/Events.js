@@ -7,6 +7,13 @@ class Events extends Component {
 		this.state = {
 			events: [
 				{
+					"date": "28 November 2019",
+					"country": "Latvia",
+					"city": "Riga",
+					"title": "Erica Synths Garage: Stabs, Stress_TN, Pluneptune",
+					"link": "https://www.facebook.com/events/940565892987526"
+				},
+				{
 					"date": "27 April 2019",
 					"country": "Russia",
 					"city": "Saint-Petersburg",
@@ -161,7 +168,7 @@ class Events extends Component {
 					"date": "25 июля 2009",
 					"country": "Russia",
 					"city": "Anapa",
-					"title": "Open-Air(Part 2)....\"RP White KingDom\".....вечеринка",
+					"title": "Open-Air(Part 2) \"RP White KingDom\" вечеринка",
 					"link": "https://vk.com/event10727800"
 				},
 				{

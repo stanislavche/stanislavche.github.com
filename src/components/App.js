@@ -39,7 +39,7 @@ class App extends Component {
 							<Kits />
 						</div>
 					</div>
-					<footer className="App__footer">All rights belong to Stress_TN. 2019</footer>
+					<footer className="App__footer">All rights belong to Stress_TN</footer>
 				</div>
 			);
 		};
