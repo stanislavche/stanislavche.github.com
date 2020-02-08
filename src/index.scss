@@ -373,13 +373,13 @@ a:hover{
 		margin: 0;
 		display: flex;
 		flex-flow: row wrap;
-		justify-content: space-around;
+		justify-content: space-evenly;
 		list-style-type: none;
 		width: 100%;
 		position: relative;
 		margin-bottom: 40px;
 		perspective: 100vw;
-		perspective-origin:50% 0;
+		perspective-origin:80% 0;
 
 		//-webkit-box-reflect: below 7px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.8, transparent), to(#ff0000));
 	}
@@ -449,6 +449,7 @@ a:hover{
 			left: 0;
 			filter: grayscale(1);
 			transition: all 200ms;
+			height: 100%;
 		}
 	}
 	&__wrapper{

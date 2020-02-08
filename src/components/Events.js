@@ -7,6 +7,13 @@ class Events extends Component {
 		this.state = {
 			events: [
 				{
+					"date": "09 January 2020",
+					"country": "Russia",
+					"city": "Taganrog",
+					"title": "bunker.live - Stress_TN (live), Jaildigger",
+					"link": "https://youtu.be/wnlOep1sgiI"
+				},
+				{
 					"date": "28 November 2019",
 					"country": "Latvia",
 					"city": "Riga",

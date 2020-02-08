@@ -175,23 +175,23 @@ class Discography extends Component {
 						"8[bit]chyfruit - Lone Rugrat"
 					]
 				},
-				{
-					"title": "Terrible Noize",
-					"author": "Stress_TN",
-					"year": "2010",
-					"labelName": "Bitmasters",
-					"labelLink": "",
-					"releaseId": "",
-					"coverLink": "../images/albums/terriblenoise.jpg",
-					"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Stress_TN%20-%20Terrible%20Noize.rar",
-					"tracklist": [
-						"Destiny",
-						"Flying",
-						"LonelyNes",
-						"Memory",
-						"Rasta"
-					]
-				},
+				// {
+				// 	"title": "Terrible Noize",
+				// 	"author": "Stress_TN",
+				// 	"year": "2010",
+				// 	"labelName": "Bitmasters",
+				// 	"labelLink": "",
+				// 	"releaseId": "",
+				// 	"coverLink": "../images/albums/terriblenoise.jpg",
+				// 	"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Stress_TN%20-%20Terrible%20Noize.rar",
+				// 	"tracklist": [
+				// 		"Destiny",
+				// 		"Flying",
+				// 		"LonelyNes",
+				// 		"Memory",
+				// 		"Rasta"
+				// 	]
+				// },
 				{
 					"title": "Omlet",
 					"author": "Stress_TN",
@@ -231,28 +231,55 @@ class Discography extends Component {
 						"Nextspace - I'N'U",
 						"Nextspace - monobit"
 					]
-				},
-				{
-					"title": "Littreschranzdj",
-					"author": "Stress_TN",
-					"year": "2010",
-					"labelName": "3pan Records",
-					"labelLink": "",
-					"releaseId": "3PND001",
-					"coverLink": "../images/albums/littleschranzdj.jpg",
-					"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Littleschranzdj.rar",
-					"tracklist": [
-						"Shturm",
-						"Littleschranzdj",
-						"Meeting",
-						"Paranoya",
-						"Last Power",
-						"Chris Li",
-						"Chiptech"
-					]
 				}
+				// },
+				// {
+				// 	"title": "Littreschranzdj",
+				// 	"author": "Stress_TN",
+				// 	"year": "2010",
+				// 	"labelName": "3pan Records",
+				// 	"labelLink": "",
+				// 	"releaseId": "3PND001",
+				// 	"coverLink": "../images/albums/littleschranzdj.jpg",
+				// 	"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Littleschranzdj.rar",
+				// 	"tracklist": [
+				// 		"Shturm",
+				// 		"Littleschranzdj",
+				// 		"Meeting",
+				// 		"Paranoya",
+				// 		"Last Power",
+				// 		"Chris Li",
+				// 		"Chiptech"
+				// 	]
+				// }
 			],
 			singles : [
+				{
+					"title": "BleepLove - special",
+					"author": "Various Artist",
+					"year": "2019",
+					"labelName": "BleepLove",
+					"labelLink": "http://bleep-love.ru/",
+					"releaseId": "",
+					"coverLink": "../images/albums/bleeplovespecial.jpg",
+					"downloadLink": "https://drive.google.com/open?id=1dWrgVoHDzGlCVn51tcd6X6Ilhx9GtlYr",
+					"tracklist": [
+						"Ghost Memory - Herbal Tea & Video Games",
+						"Zan - High tech. Low life",
+						"Purely Grey - Another Year",
+						"Stress_TN - Overtime holidays",
+						"SPCCSM - SCUM",
+						"feonao - a way",
+						"VRUMZSSSR - Suicide Club",
+						"Balloonbear - Let Me Give You A Piece Of Advice",
+						"Daniel Voronkov - Her eyes",
+						"Nuclear Mushroom Boom - Запах мягких",
+						"GameGate - Edem na razborki",
+						"Quiet - Size Matters",
+						"Final Sketch - Runaway Clouds",
+						"Muhrochka - Token"
+					]
+				},
 				{
 					"title": "Chiptunes From Russia",
 					"author": "Various Artist",

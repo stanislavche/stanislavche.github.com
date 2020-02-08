@@ -7,6 +7,13 @@ class News extends Component {
 		super(props);
 		this.state = {
 			news: [{
+				"date": 1578598200,
+				"title": "Video translation",
+				"description": "bunker.live - Stress_TN (live), Jaildigger",
+				"link": "https://youtu.be/wnlOep1sgiI?t=1",
+				"type": "video",
+				"media": "https://youtu.be/wnlOep1sgiI?t=1"
+			},{
 				"date": 1574974800,
 				"title": "Chiptune event",
 				"description": "Erica Synths Garage live stream in the club: <br />Stabs<br />Stress_TN<br />Pluneptune",
