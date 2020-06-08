@@ -178,12 +178,13 @@ body {
   display: block;
   margin: 0 auto;
   position: fixed;
-  top: 50%;
-  left:50%;
+  top: 20%;
+  left: 50%;
   z-index: 10000;
-  background: red;
+  background: #031921;
+  border-radius: 10px;
   padding: 30px;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,0);
 }
 
 .btnPressed {
