@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Bio from './Bio';
 import News from './News';
+import Emulator from './Emulator';
 import Discography from './Discography';
 import Cotacts from './Cotacts';
 import Game from './Game';
@@ -25,6 +26,9 @@ class App extends Component {
 						</div>
 						<div className="App__wrapper-cell">
 							<News />
+						</div>
+						<div className="App__wrapper-row">
+							<Emulator />
 						</div>
 						<div className="App__wrapper-row">
 							<Discography />
