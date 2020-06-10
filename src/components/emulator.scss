@@ -1,0 +1,64 @@
+@import "../mixins";
+
+.emulator {
+	&__info {
+
+	}
+	&__game {
+
+	}
+	&__order {
+
+	}
+}
+.cart {
+	&__list {
+		margin: 0;
+		padding: 0 30px 0 0;
+		overflow: hidden;
+		flex: 0 0 230px;
+		border-right: 2px dashed $info-color;
+		list-style-type: none;
+	}
+	&__item {
+		position: relative;
+	}
+	&__data {
+		padding-left: 30px;
+		width: 100%;
+	}
+	&__image {
+		display: block;
+		cursor: pointer;
+		margin-bottom: 10px;
+		max-width: 100%;
+		position: relative;
+		width: 100%;
+		-webkit-filter: drop-shadow(5px 5px 5px #222);
+  		filter: drop-shadow(5px 5px 5px #222);
+	}
+}
+@media screen and (max-width: 641px) {
+	.cart {
+		flex-direction: column;
+		&__list {
+			padding: 0;
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			position: relative;
+			overflow: visible;
+			flex-shrink: 0;
+			border-right: none;
+			border-bottom: 2px dashed $info-color;
+			flex: 0 0 100%;
+		}
+		&__item {
+			position: relative;
+		}
+		&__data {
+			margin-top: 10px;
+			padding-left: 0;
+		}
+	}
+}
