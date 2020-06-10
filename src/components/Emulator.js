@@ -10,21 +10,24 @@ class Emulator extends Component {
 				{
 					id: 1,
 					fileName: '123',
-					image: '/images/extra/cart.png',
-					title: 'Bit dungeon I',
-					description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo iste non inventore aliquid exercitationem tempora similique numquam sint nihil eum iure repudiandae nisi cumque, quibusdam ullam blanditiis et odio fugit.'
+					image: '/images/extra/cart3.png',
+					title: 'New EP',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo iste non inventore aliquid exercitationem tempora similique numquam sint nihil eum iure repudiandae nisi cumque, quibusdam ullam blanditiis et odio fugit.',
+					status: 'not-available'
 				},{
 					id: 2,
 					fileName: 'mgb',
-					image: '/images/extra/cart.png',
+					image: '/images/extra/cart2.png',
 					title: 'Illusion',
-					description: '567'
+					description: '567',
+					status: 'available'
 				}, {
 					id: 3,
 					fileName: '123',
-					image: '/images/extra/cart.png',
-					title: 'Absurd',
-					description: '123'
+					image: '/images/extra/cart1.png',
+					title: 'Bit dungeon I',
+					description: '123',
+					status: 'available'
 				}
 			],
 			buttons: [{
@@ -127,7 +130,7 @@ class Emulator extends Component {
 			return (
 				<div className="container__button-set">
 					{this.state.buttons.map((item, key) =>
-						item.mode !== this.state.viewMode ? <button key={"button_" + item.mode} onClick={($event) => this.onSwitchModeClick($event, item.mode)}>{item.title}</button> : null
+						item.mode !== this.state.viewMode && this.state.selectedCart.status === 'available' ? <button key={"button_" + item.mode} onClick={($event) => this.onSwitchModeClick($event, item.mode)}>{item.title}</button> : null
 					)}
 				</div>
 			);
@@ -142,11 +145,12 @@ class Emulator extends Component {
 					<div className="container__row cart">
 						<ul className="container__cell cart__list">
 							{this.state.carts.map((item, key) =>
-								<li  className="cart__item" key={'cart_' + key} onClick={() => this.onCartClick(item)}>
-									<img  className="cart__image" src={item.image} title={item.title} />
+								<li className="cart__item" key={'cart_' + key} onClick={() => this.onCartClick(item)}>
+									<img className={"cart__image " + (this.state.selectedCart && this.state.selectedCart.id === item.id ? 'active' : '')} src={item.image} title={item.title} />
 								</li>
 							)}
 						</ul>
+
 						<div className="container__cell cart__data">
 							<div className="emulator__info"> { this.cartInfoBlock() } </div>
 							<div className="emulator__game"> { this.iframeBlock() } </div>

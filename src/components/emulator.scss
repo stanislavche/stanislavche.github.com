@@ -34,8 +34,11 @@
 		max-width: 100%;
 		position: relative;
 		width: 100%;
-		-webkit-filter: drop-shadow(5px 5px 5px #222);
-  		filter: drop-shadow(5px 5px 5px #222);
+  		filter: grayscale(1) drop-shadow(2px 2px 3px #000);
+  		transition: all 200ms;
+		&.active, &:hover{
+			filter: grayscale(0)  drop-shadow(2px 2px 3px #000);
+		}
 	}
 }
 @media screen and (max-width: 641px) {
