@@ -13,6 +13,11 @@ body {
   overflow: hidden;
 }
 
+html, 
+body {
+  height: 100%;
+}
+
 #game {
   width: 100%;
   touch-action: none;
@@ -24,6 +29,10 @@ body {
   image-rendering: -webkit-crisp-edges;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
+}
+
+#gameboy_shell {
+  height: 100%;
 }
 
 #controller {
@@ -321,5 +330,11 @@ body {
 
   #controller {
     display: none;
+  }
+}
+
+@media screen and (max-width: 641px) {
+  #controller_b {
+    bottom: 160px;
   }
 }

@@ -1,10 +1,12 @@
 var romName = romName = window.location.hash ? window.location.hash.substring(1) : "game";
 var romPath = "rom/" + romName +".gb";
-console.log(romPath);
 var mainCanvas = null;
 var soundReady = false;
 
-var cout = console.log.bind(console);
+// var cout = console.log.bind(console);
+var cout = function(data) {
+  // console.log(data);
+};
 function startGame(blob) {
   var binaryHandle = new FileReader();
   binaryHandle.onload = function() {

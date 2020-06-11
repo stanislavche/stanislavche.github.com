@@ -80,7 +80,7 @@ class Emulator extends Component {
 						width="100%"
 						height="600px"
 						id="emulator"
-						className="myClassname"
+						className="gameboy-emulator"
 						display="initial"
 						position="relative" />
 				</div>
@@ -146,7 +146,7 @@ class Emulator extends Component {
 						<ul className="container__cell cart__list">
 							{this.state.carts.map((item, key) =>
 								<li className="cart__item" key={'cart_' + key} onClick={() => this.onCartClick(item)}>
-									<img className={"cart__image " + (this.state.selectedCart && this.state.selectedCart.id === item.id ? 'active' : '')} src={item.image} title={item.title} />
+									<img className={"cart__image " + (this.state.selectedCart && this.state.selectedCart.id === item.id ? 'active' : '')} src={item.image} title={item.title} alt={item.title} />
 								</li>
 							)}
 						</ul>

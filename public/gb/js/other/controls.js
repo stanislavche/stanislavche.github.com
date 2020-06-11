@@ -30,23 +30,27 @@ var btnStart = document.getElementById("controller_start");
 var emptyScreen = document.getElementById("emptyScreen");
 var btnSelect = document.getElementById("controller_select");
 var dpad = document.getElementById("controller_dpad");
+var btnLeft = document.getElementById("controller_left");
+var btnRight = document.getElementById("controller_right");
+var btnUp = document.getElementById("controller_up");
+var btnDown = document.getElementById("controller_down");
+var mainCanvas = document.getElementById("gameboy_shell");
+mainCanvas.addEventListener('click', checkUserEvent);
 
 function bindButton(el, code) {
-  "onclick touchstart".split(" ").forEach(function(eventName){
+  "mousedown touchstart".split(" ").forEach(function(eventName){
     el.addEventListener(eventName, function(e) {
       e.preventDefault();
       e.stopPropagation();
       e.currentTarget.className = e.currentTarget.className + " btnPressed";
       GameBoyKeyDown(code);
     });
-    console.log(el);
   });
   
-  "onclick touchend".split(" ").forEach(function(eventName){
-    el.addEventListener("eventName", function(e) {
+  "mouseup touchend".split(" ").forEach(function(eventName){
+    el.addEventListener(eventName, function(e) {
       e.preventDefault();
       e.stopPropagation();
-      checkUserEvent();
       initSound();
       e.currentTarget.className = e.currentTarget.className.replace(
         / btnPressed/,
@@ -58,22 +62,46 @@ function bindButton(el, code) {
 }
 
 function bindDpad(el) {
-  el.addEventListener("touchstart", function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    var rect = e.currentTarget.getBoundingClientRect();
-    var x = (2 * (e.targetTouches[0].clientX - rect.left)) / rect.width - 1;
-    var y = (2 * (e.targetTouches[0].clientY - rect.top)) / rect.height - 1;
-    move(x, y);
+  "mousedown touchstart".split(" ").forEach(function(eventName){
+    el.addEventListener(eventName, function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var rect = e.currentTarget.getBoundingClientRect();
+      var x = 0;
+      var y = 0;
+      e.target.className = e.target.className + " btnPressed";
+      if (eventName === 'mousedown') {
+        x = (2 * (e.clientX - rect.left)) / rect.width - 1;
+        y = (2 * (e.clientY - rect.top)) / rect.height - 1;
+      } else {
+        x = (2 * (e.targetTouches[0].clientX - rect.left)) / rect.width - 1;
+        y = (2 * (e.targetTouches[0].clientY - rect.top)) / rect.height - 1;
+      }
+      move(x, y);
+    });
   });
 
-  el.addEventListener("touchmove", function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    var rect = e.currentTarget.getBoundingClientRect();
-    var x = (2 * (e.targetTouches[0].clientX - rect.left)) / rect.width - 1;
-    var y = (2 * (e.targetTouches[0].clientY - rect.top)) / rect.height - 1;
-    move(x, y);
+  "mouseup touchend".split(" ").forEach(function(eventName){
+    el.addEventListener(eventName, function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var rect = e.currentTarget.getBoundingClientRect();
+      var x = 0;
+      var y = 0;
+      e.target.className = e.target.className.replace(
+        / btnPressed/,
+        ""
+      );
+      if (eventName === 'mouseup') {
+        x = (2 * (e.clientX - rect.left)) / rect.width - 1;
+        y = (2 * (e.clientY - rect.top)) / rect.height - 1;
+      } else {
+        x = (2 * (e.targetTouches[0].clientX - rect.left)) / rect.width - 1;
+        y = (2 * (e.targetTouches[0].clientY - rect.top)) / rect.height - 1;
+      }
+      
+      move(x, y);
+    });
   });
 
   function move(x, y) {
@@ -108,21 +136,21 @@ function bindDpad(el) {
     }
   }
 
-  el.addEventListener("touchend", function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    checkUserEvent();
-    initSound();
-    GameBoyKeyUp("left");
-    GameBoyKeyUp("right");
-    GameBoyKeyUp("up");
-    GameBoyKeyUp("down");
+  "mouseup touchend".split(" ").forEach(function(eventName){
+    el.addEventListener(eventName, function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      initSound();
+      GameBoyKeyUp("left");
+      GameBoyKeyUp("right");
+      GameBoyKeyUp("up");
+      GameBoyKeyUp("down");
+    });
   });
 }
 
 function bindKeyboard() {
   window.onkeydown = function(e) {
-    checkUserEvent();
     initSound();
     if (isTouchEnabled) {
       //controller.style.display = "none";
@@ -131,34 +159,42 @@ function bindKeyboard() {
     if (
       e.keyCode !== JS_KEY_CTRL &&
       e.keyCode !== JS_KEY_ALT &&
-      (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey)
+      (e.altKey || e.ctrlKey || e.metaKey)
     ) {
       return;
     }
     if (e.keyCode === JS_KEY_LEFT || e.keyCode === JS_KEY_A) {
       GameBoyKeyDown("left");
+      pressedButton("left");
     } else if (e.keyCode === JS_KEY_RIGHT || e.keyCode === JS_KEY_D) {
       GameBoyKeyDown("right");
+      pressedButton("right");
     } else if (e.keyCode === JS_KEY_UP || e.keyCode === JS_KEY_W) {
       GameBoyKeyDown("up");
+      pressedButton("up");
     } else if (e.keyCode === JS_KEY_DOWN || e.keyCode === JS_KEY_S) {
       GameBoyKeyDown("down");
+      pressedButton("down");
     } else if (e.keyCode === JS_KEY_ENTER) {
       GameBoyKeyDown("start");
+      pressedButton("start");
     } else if (
       e.keyCode === JS_KEY_ALT ||
       e.keyCode === JS_KEY_Z ||
       e.keyCode === JS_KEY_J
     ) {
       GameBoyKeyDown("a");
+      pressedButton("a");
     } else if (
       e.keyCode === JS_KEY_CTRL ||
       e.keyCode === JS_KEY_K ||
       e.keyCode === JS_KEY_X
     ) {
       GameBoyKeyDown("b");
+      pressedButton("b");
     } else if (e.keyCode === JS_KEY_SHIFT) {
       GameBoyKeyDown("select");
+      pressedButton("select");
     }
     e.preventDefault();
   };
@@ -170,48 +206,120 @@ function bindKeyboard() {
       ["right", "left", "up", "down", "a", "b", "select", "start"].forEach(
         key => {
           GameBoyKeyUp(key);
+          unPressedButton(key)
         }
       );
     }
     if (e.keyCode === JS_KEY_LEFT || e.keyCode === JS_KEY_A) {
       GameBoyKeyUp("left");
+      unPressedButton("left")
     } else if (e.keyCode === JS_KEY_RIGHT || e.keyCode === JS_KEY_D) {
       GameBoyKeyUp("right");
+      unPressedButton("right")
     } else if (e.keyCode === JS_KEY_UP || e.keyCode === JS_KEY_W) {
       GameBoyKeyUp("up");
+      unPressedButton("up")
     } else if (e.keyCode === JS_KEY_DOWN || e.keyCode === JS_KEY_S) {
       GameBoyKeyUp("down");
+      unPressedButton("down")
     } else if (e.keyCode === JS_KEY_ENTER) {
       GameBoyKeyUp("start");
+      unPressedButton("start")
     } else if (
       e.keyCode === JS_KEY_ALT ||
       e.keyCode === JS_KEY_Z ||
       e.keyCode === JS_KEY_J
     ) {
       GameBoyKeyUp("a");
+      unPressedButton("a")
     } else if (
       e.keyCode === JS_KEY_CTRL ||
       e.keyCode === JS_KEY_K ||
       e.keyCode === JS_KEY_X
     ) {
       GameBoyKeyUp("b");
+      unPressedButton("b")
     } else if (e.keyCode === JS_KEY_SHIFT) {
       GameBoyKeyUp("select");
+      unPressedButton("select")
     }
     e.preventDefault();
   };
 }
 
+function pressedButton(name) {
+  let element = null;
+  switch (name) {
+    case "a":
+      element = btnA;
+      break;
+    case "b":
+      element = btnB;
+      break;
+    case "select":
+      element = btnSelect;
+      break;
+    case "start":
+      element = btnStart;
+      break;
+    case "down":
+      element = btnDown;
+      break;
+    case "up":
+      element = btnUp;
+      break;
+    case "left":
+      element = btnLeft;
+      break;
+    case "right":
+      element = btnRight;
+      break;
+  }
+  element.className = element.className + " btnPressed";
+}
+
+function unPressedButton(name) {
+  let element = null;
+  switch (name) {
+    case "a":
+      element = btnA;
+      break;
+    case "b":
+      element = btnB;
+      break;
+    case "select":
+      element = btnSelect;
+      break;
+    case "start":
+      element = btnStart;
+      break;
+    case "down":
+      element = btnDown;
+      break;
+    case "up":
+      element = btnUp;
+      break;
+    case "left":
+      element = btnLeft;
+      break;
+    case "right":
+      element = btnRight;
+      break;
+  }
+  element.className = element.className.replace(/ btnPressed/, "");
+}
+
 function checkUserEvent() {
   if (!isReady) {
-    run();
     isReady = true;
     emptyScreen.style.display = "none";
+    mainCanvas.removeEventListener('click', checkUserEvent);
+    run();
+    initSound();
   }
 }
 
 if (isTouchEnabled) {
-  console.log('bind once');
   bindButton(btnA, "a");
   bindButton(btnB, "b");
   bindButton(btnStart, "start");

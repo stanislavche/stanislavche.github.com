@@ -1,6 +1,7 @@
 @import "../mixins";
 
 .emulator {
+
 	&__info {
 
 	}
@@ -10,6 +11,13 @@
 	&__order {
 
 	}
+}
+.gameboy-emulator {
+	position: relative;
+    display: initial;
+    border: 2px dashed;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .cart {
 	&__list {
@@ -42,6 +50,12 @@
 	}
 }
 @media screen and (max-width: 641px) {
+	.emulator {
+		padding: 10px 0;
+	}
+	.gameboy-emulator {
+		border: none;
+	}
 	.cart {
 		flex-direction: column;
 		&__list {

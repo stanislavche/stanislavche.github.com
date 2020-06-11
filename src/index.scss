@@ -544,6 +544,7 @@ a:hover{
 @media screen and (max-width: 840px) {
 	.container {
 		width: 90vw;
+		padding: 10px; 
 	}
 	.App__wrapper-cell{
 		display: flex;
@@ -581,6 +582,16 @@ a:hover{
 }
 
 @media screen and (max-width: 641px) {
+	// ani,ation swither
+	// .App__header {
+	// 	animation: none;
+	// }
+	// .wrapper {
+	// 	&:after, &:before{
+	// 		display: none;
+	// 	}
+	// }
+
 	.App__header {
 		font-size: 3em;
 	}

@@ -20,19 +20,21 @@ export function setAnimatedFavicon() {
 		head = document.head||document.getElementsByTagName("head")[0];
 
 	setInterval(function() {
-		document.getElementById('dynamic-favicon').remove();
+		if (window.innerWidth > 960) {
+			document.getElementById('dynamic-favicon').remove();
 
-		let favikonEl = document.createElement('link');
-		favikonEl.setAttribute("id", "dynamic-favicon");
-		favikonEl.setAttribute("rel", "icon");
-		favikonEl.setAttribute("type", "image/gif");
-		favikonEl.setAttribute("href", favicon_images[image_counter]);
-		head.appendChild(favikonEl);
-		
-		if (image_counter === favicon_images.length -1) {
-			image_counter = 0;
-		} else {
-			image_counter++;
+			let favikonEl = document.createElement('link');
+			favikonEl.setAttribute("id", "dynamic-favicon");
+			favikonEl.setAttribute("rel", "icon");
+			favikonEl.setAttribute("type", "image/gif");
+			favikonEl.setAttribute("href", favicon_images[image_counter]);
+			head.appendChild(favikonEl);
+			
+			if (image_counter === favicon_images.length -1) {
+				image_counter = 0;
+			} else {
+				image_counter++;
+			}
 		}
 	}, 300);
 }
