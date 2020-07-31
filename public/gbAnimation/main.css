@@ -1,0 +1,193 @@
+html, 
+body {
+    height: 100%;
+	background: #000;
+}
+.gameboy {
+	background: #000;
+	height: 100%;
+}
+
+.screen {
+	width: 160px;
+	height: 144px;
+	background: #d7e894;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%) scale(4);
+}
+
+.color1 {
+	color: #d7e894;
+}
+.color2 {
+	color: #527f39;
+}
+.color3 {
+	color: #aec440;
+}
+.color4 {
+	color: #204631;
+}
+
+.wrapper {
+	width: 160px;
+	height: 144px;
+	position: relative;
+	overflow: hidden;
+}
+
+.logo {
+	width: auto;
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+	transition: all 4s;
+}
+
+.logo img{
+	max-width: 100%;
+}
+
+.earth {
+	position: absolute;
+	top: 0;
+	left: -216px;
+	width: 320px;
+	height: 288px;
+	background: url('./img/earth.png');
+	background-size: cover;
+	z-index: 2;
+}
+
+.space {
+	position: absolute;
+	top: 0;
+	left: 0px;
+	width: 320px;
+	height: 288px;
+	background: url('./img/space.gif');
+	background-size: cover;
+	background-repeat: all;
+	z-index: 1;
+	animation: animatedSpace 20s linear infinite;
+    -moz-animation: animatedSpace 20s linear infinite;
+    -webkit-animation: animatedSpace 20s linear infinite;
+    -ms-animation: animatedSpace 20s linear infinite;
+    -o-animation: animatedSpace 20s linear infinite;
+}
+
+.stars {
+	position: absolute;
+	top: 0;
+	left: 160px;
+}
+
+.planet1 {
+	position: absolute;
+	top: 0;
+	left: 160px;
+}
+
+.planet2 {
+	position: absolute;
+	top: 0;
+	left: 160px;
+}
+
+.mainStar {
+	position: absolute;
+	top: 0;
+	left: 160px;
+}
+
+.album {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.artist {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.playlist {
+	position: absolute;
+	top: 145px;
+	left: 0;
+}
+
+.ship {
+	position: absolute;
+	top: 144px;
+	left: 0;
+}
+
+.equilizer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.step-6 .logo {
+	top: -14%;
+	left: 50%;
+
+}
+.step-0 .logo {
+	top: 50%;
+	left: 50%;
+}
+.step-1 .logo { 
+	top: 50%;
+	left: -100%;
+}
+
+.step-6 .earth {
+	top: -288px;
+	left: -320px;
+}
+
+.step-0 .earth {
+	top: 0;
+	left: 0;
+}
+.step-1 .earth {
+	position: absolute;
+	top: 0;
+	left: -216px;
+	transition: left 4s;
+}
+
+
+
+
+
+
+@keyframes animatedSpace {
+    0% { background-position: 0 0; }
+    100% { background-position: -640px 1152px; }
+}
+@-moz-keyframes animatedSpace {
+    0% { background-position: 0 0; }
+    100% { background-position: -640px 1152px; }
+}
+@-webkit-keyframes animatedSpace {
+    0% { background-position: 0 0; }
+    100% { background-position: -640px 1152px; }
+}
+@-ms-keyframes animatedSpace {
+    0% { background-position: 0 0; }
+    100% { background-position: -640px 1152px; }
+}
+@-o-keyframes animatedSpace {
+    0% { background-position: 0 0; }
+    100% { background-position: -640px 1152px; }
+}
