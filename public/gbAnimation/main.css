@@ -128,6 +128,23 @@ body {
 	position: absolute;
 	top: 144px;
 	left: 0;
+	z-index: 4;
+	animation: animatedShip 4s linear infinite;
+    -moz-animation: animatedShip 4s linear infinite;
+    -webkit-animation: animatedShip 4s linear infinite;
+    -ms-animation: animatedShip 4s linear infinite;
+    -o-animation: animatedShip 4s linear infinite;
+}
+
+.fire {
+	position: absolute;
+	top: 32px;
+	left: 0;
+}
+.astro {
+	position: absolute;
+	top: 0;
+	left: 8px;
 }
 
 .equilizer {
@@ -166,6 +183,17 @@ body {
 	transition: left 4s;
 }
 
+.step-2 .ship {
+	top: 24%;
+    left: 21%;
+	transition: all 4s;
+}
+
+.step-3 .ship {
+	top: 20%;
+    left: 150%;
+	transition: all 2s;
+}
 
 
 
@@ -190,4 +218,40 @@ body {
 @-o-keyframes animatedSpace {
     0% { background-position: 0 0; }
     100% { background-position: -640px 1152px; }
+}
+
+@keyframes animatedShip {
+    0% { margin: 0 0; }
+    25% { margin: -4px 0 0px 4px; }
+    50% { margin: 4px 0 0px 6px; }
+    75% { margin: -4px 0 0px -6px; }
+    100% { margin: 0 0; }
+}
+@-moz-keyframes animatedShip {
+	0% { margin: 0 0; }
+    25% { margin: -4px 0 0px 4px; }
+    50% { margin: 4px 0 0px 6px; }
+    75% { margin: -4px 0 0px -6px; }
+    100% { margin: 0 0; }
+}
+@-webkit-keyframes animatedShip {
+   	0% { margin: 0 0; }
+    25% { margin: -4px 0 0px 4px; }
+    50% { margin: 4px 0 0px 6px; }
+    75% { margin: -4px 0 0px -6px; }
+    100% { margin: 0 0; }
+}
+@-ms-keyframes animatedShip {
+    0% { margin: 0 0; }
+    25% { margin: -4px 0 0px 4px; }
+    50% { margin: 4px 0 0px 6px; }
+    75% { margin: -4px 0 0px -6px; }
+    100% { margin: 0 0; }
+}
+@-o-keyframes animatedShip {
+    0% { margin: 0 0; }
+    25% { margin: -4px 0 0px 4px; }
+    50% { margin: 4px 0 0px 6px; }
+    75% { margin: -4px 0 0px -6px; }
+    100% { margin: 0 0; }
 }
