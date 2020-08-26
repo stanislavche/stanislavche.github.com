@@ -7,47 +7,53 @@ document.addEventListener('DOMContentLoaded', function(){
 	const layPl2 = document.getElementsByClassName('planet2');
 	const layMSt = document.getElementsByClassName('mainStar');
 	const layArt = document.getElementsByClassName('artist');
-	const layAlb = document.getElementsByClassName('album');
 	const layPla = document.getElementsByClassName('playlist');
 	const layShi = document.getElementsByClassName('ship');
 	const layEqu = document.getElementsByClassName('equilizer');
+	const layMain = document.getElementsByClassName('mainScreen');
+	const start = document.getElementsByClassName('start');
+	
 	const scenes = [
 		{
-			step: 0,
+			step: 2,
 			delay: 0
 		},
 		{
-			step: 1,
-			delay: 2000
-		},
-		{
-			step: 2,
+			step: 3,
 			delay: 6000
 		},
 		{
-			step: 3,
-			delay: 12000
-		},
-		{
 			step: 4,
-			delay: 20000
+			delay: 10000
 		},
 		{
 			step: 5,
-			delay: 30000
+			delay: 20000
 		}
 	];
-
 	function changeSeen(step, time) {
-		setTimeout(() => {
-			console.log(step, time);
-			const regex = /\d/;
-			scene[0].className = scene[0].className.replace(regex, step);
-		}, time);
+			setTimeout(() => {
+				console.log(step, time);
+				const regex = /\d/;
+				scene[0].className = scene[0].className.replace(regex, step);
+			}, time);
+		}
+
+	
+
+	setInterval(function(){
+		start[0].classList.toggle("active");
+	}, 500);
+
+	changeSeen(0, 0);
+	changeSeen(1, 2000);
+
+	function startAnimation() {
+		scenes.forEach(action => {
+			changeSeen(action.step, action.delay);
+		});
 	}
 
-	scenes.forEach(action => {
-		changeSeen(action.step, action.delay);
-	});
+	start[0].addEventListener('click', startAnimation);
 });
 

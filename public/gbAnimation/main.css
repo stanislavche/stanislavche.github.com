@@ -2,6 +2,7 @@ html,
 body {
     height: 100%;
 	background: #000;
+	font-family: 'Orbitron', sans-serif;
 }
 .gameboy {
 	background: #000;
@@ -37,6 +38,9 @@ body {
 	position: relative;
 	overflow: hidden;
 }
+.step-6 .logo, .step-0 .logo {
+	transition: all 4s;
+}
 
 .logo {
 	width: auto;
@@ -45,7 +49,6 @@ body {
 	left: -50%;
 	transform: translate(-50%, -50%);
 	z-index: 3;
-	transition: all 4s;
 }
 
 .logo img{
@@ -55,7 +58,7 @@ body {
 .earth {
 	position: absolute;
 	top: 0;
-	left: -216px;
+	left: -235px;
 	width: 320px;
 	height: 288px;
 	background: url('./img/earth.png');
@@ -104,13 +107,6 @@ body {
 	left: 160px;
 }
 
-.album {
-	position: absolute;
-	top: 0;
-	left: 0;
-	opacity: 0;
-}
-
 .artist {
 	position: absolute;
 	top: 0;
@@ -121,20 +117,52 @@ body {
 .playlist {
 	position: absolute;
 	top: 200%;
-	left: 30%;
+	left: 40%;
 	font-size: 6px;
 	z-index: 5;
 	color: #d7e894;
 	font-weight: bold;
 	transition: top 0.5s;
 	transform: translate(-50%, -50%);
+	width: 66%;
 }
 
 .playlist ul{
 	padding: 0;
 	margin: 0;
-	list-style-type: none;
+	list-style-type: "   ";
 }
+.playlist li {
+	margin-bottom: 1px;
+	border: 1px solid transparent;
+	border-radius: 2px;
+}
+
+.playlist li:hover {
+	list-style-type: "▷  ";
+}
+
+.playlist li.active {
+	list-style-type: "▶  ";
+	color: #aec440;
+	border-color: #aec440;
+}
+.playlist p {
+	margin: 1px;
+}
+
+/*.color1 {
+	color: #d7e894;
+}
+.color2 {
+	color: #527f39;
+}
+.color3 {
+	color: #aec440;
+}
+.color4 {
+	color: #204631;
+}*/
 
 .ship {
 	position: absolute;
@@ -165,6 +193,8 @@ body {
 	left: 0;
 }
 
+ 
+
 .step-6 .logo {
 	top: -14%;
 	left: 50%;
@@ -173,10 +203,10 @@ body {
 .step-0 .logo {
 	top: 50%;
 	left: 50%;
+	opacity: 1;
 }
-.step-1 .logo { 
-	top: 50%;
-	left: -100%;
+.step-1 .logo {
+	opacity: 0;
 }
 
 .step-6 .earth {
@@ -191,8 +221,12 @@ body {
 .step-1 .earth {
 	position: absolute;
 	top: 0;
-	left: -216px;
+	left: -235px;
 	transition: left 4s;
+}
+
+.step-1 .mainScreen {
+	opacity: 1;
 }
 
 .step-2 .ship {
@@ -216,7 +250,42 @@ body {
 	top: 50%;
 }
 
+.mainScreen {
+	z-index: 10;
+    position: absolute;
+    color: #aec440;
+	text-align: center;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	width: 160px;
+	opacity: 0;
+}    
 
+.album {
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.musician {
+	font-size: 6px;
+	
+}
+.code {
+	font-size: 6px;
+}
+.art {
+	font-size: 6px;
+}
+
+.start {
+	font-size: 9px;
+    margin-top: 10px;
+    color: #d7e894;
+}
+.start.active {
+	color: #aec440;
+}
 
 @keyframes animatedSpace {
     0% { background-position: 0 0; }
