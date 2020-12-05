@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 class Disc extends Component {
-
+	
+	
 	render() {
 		return (
 			<li onClick={this.props.triggerClick} className={"discography__item " + (this.props.active ? "discography__item_active" : "")}>

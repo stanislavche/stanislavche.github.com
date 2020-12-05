@@ -2,6 +2,24 @@ import React, { Component } from 'react';
 import './popup.scss';
 
 class Popup extends Component {
+	renderPlayer() {
+		if (this.props.disc.bandcampAlbum) {
+			let link = "https://bandcamp.com/EmbeddedPlayer/album=" + this.props.disc.bandcampAlbum + "/size=large/bgcol=333333/linkcol=4ec5ec/tracklist=false/artwork=small/transparent=true/";
+			return(
+				<div className="bandcamp-layer">
+					<iframe
+						src={link}
+						seamless
+						title={this.props.disc.title}
+						>
+							<a href="{this.props.disc.downloadLink}">{this.props.disc.title}</a>
+					</iframe>
+				</div>
+			);
+		}
+		return false;
+		
+	}
 
 	render() {
 		return (
@@ -20,6 +38,7 @@ class Popup extends Component {
 							)}
 						</ul>
 					</div>
+					{this.renderPlayer()}
 				</div>
 				<div className="popup__close" onClick={this.props.onCloseClick}>&#128473;</div>
 			</div>
