@@ -8,6 +8,7 @@ import { ReactComponent as KgSvg } from '../image/kg.svg';
 import { ReactComponent as EmSvg } from '../image/em.svg';
 import { ReactComponent as BcSvg } from '../image/bc.svg';
 import { ReactComponent as VkSvg } from '../image/vk.svg';
+import { ReactComponent as SpotiSvg } from '../image/spoti.svg';
 
 class Cotacts extends Component {
 	render() {
@@ -16,6 +17,11 @@ class Cotacts extends Component {
 				<h2 className="container__header">Subscribe</h2>
 				<div className="container__wrapper">
 					<ul className="contact-list">
+						<li className="contact-list__item">
+							<a href="https://open.spotify.com/artist/4yUXvZtanRfs1DcnPPjr8Y?si=YmQDjpOESyq4j2AyqGFapg" className="contact-list__link contact-list__link_spoti" target="_blank" rel="noopener noreferrer">
+								<SpotiSvg />
+							</a>
+						</li>
 						<li className="contact-list__item">
 							<a href="https://www.facebook.com/StressTN/" className="contact-list__link contact-list__link_fc" target="_blank" rel="noopener noreferrer">
 								<FcSvg />
