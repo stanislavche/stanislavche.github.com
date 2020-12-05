@@ -7,6 +7,28 @@ class News extends Component {
 		super(props);
 		this.state = {
 			news: [{
+				"date": 1607161580,
+				"title": "COLD FLAME EP",
+				"description": "Release based on M8 tracker",
+				"link": "https://stresstn.bandcamp.com/album/cold-flame",
+				"type": "image",
+				"media": "./images/albums/cold_flame.png"
+			},{
+				"date": 1602201600,
+				"title": "Theremin FEST 2020",
+				"description": "live for Theremin FEST 2020",
+				"link": "https://youtu.be/vI0BUcc2mAs?t=26",
+				"type": "video",
+				"media": "https://youtu.be/vI0BUcc2mAs?t=26"
+			},{
+				"date": 1593194400,
+				"title": "Birthday Stream",
+				"description": "BleepLove live // Stress_TN - HappyBirthday stream",
+				"link": "https://www.youtube.com/watch?v=eG2uJnnNmEQ",
+				"type": "video",
+				"media": "https://www.youtube.com/watch?v=eG2uJnnNmEQ"
+			},
+			{
 				"date": 1578598200,
 				"title": "Video translation",
 				"description": "bunker.live - Stress_TN (live), Jaildigger",
@@ -14,22 +36,15 @@ class News extends Component {
 				"type": "video",
 				"media": "https://youtu.be/wnlOep1sgiI?t=1"
 			},{
-				"date": 1574974800,
-				"title": "Chiptune event",
-				"description": "Erica Synths Garage live stream in the club: <br />Stabs<br />Stress_TN<br />Pluneptune",
-				"type": "image",
-				"link": "https://www.facebook.com/events/940565892987526",
-				"media": "./images/extra/ESG.jpg"
-			},{
 				"date": 1552495410,
-				"title": "bit Dungeon III",
+				"title": "bit Dungeon III GAME",
 				"description": "Bit Dungeon III has been released",
 				"link": "https://store.steampowered.com/app/856210/bit_Dungeon_III/",
 				"type": "video",
 				"media": "https://www.youtube.com/watch?v=y2rdm0ej0_E"
 			},{
 				"date": 1552824696,
-				"title": "New Ep !!! ",
+				"title": "Illusion EP",
 				"description": "LSDJ based album. Kits can be found on this page",
 				"type": "image",
 				"link": "https://stresstn.bandcamp.com/album/illusion-lsdj-sav",

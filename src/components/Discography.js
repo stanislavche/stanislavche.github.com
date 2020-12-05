@@ -8,6 +8,23 @@ class Discography extends Component {
 		this.state = {
 			albums : [
 				{
+					"title": "COLD FLAME",
+					"author": "Stress_TN",
+					"year": "2020",
+					"labelName": "",
+					"labelLink": "",
+					"releaseId": "",
+					"coverLink": "../images/albums/cold_flame.png",
+					"downloadLink": "https://stresstn.bandcamp.com/album/cold-flame",
+					"tracklist": [
+						"Cold flame",
+						"Deny reality",
+						"Fatal error",
+						"Humility",
+						"Indetermination"
+					]
+				},
+				{
 					"title": "Illusion",
 					"author": "Stress_TN",
 					"year": "2019",
@@ -154,27 +171,28 @@ class Discography extends Component {
 						"Siberia",
 						"TMNT rmx (Bonus track)"
 					]
-				},
-				{
-					"title": "Chipolino Alliance",
-					"author": "Stress_TN, BOB The Builder!, Fat Frumos, 8bitchyfruit",
-					"year": "2010",
-					"labelName": "Bitmasters",
-					"labelLink": "",
-					"releaseId": "",
-					"coverLink": "../images/albums/chipolino.jpg",
-					"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/CHIPOLINO%20ALLIANCE.rar",
-					"tracklist": [
-						"Fat Frumos - Badman",
-						"Fat Frumos - Hil' with pixel eyes",
-						"BOB The Builder! - Gazmanov's somersault",
-						"BOB The Builder! - Jeso cristo",
-						"Stress_TN - Schranz Reserved",
-						"Stress_TN - Tick Tack Boom",
-						"8[bit]chyfruit - b.l.n.t.o.e.t",
-						"8[bit]chyfruit - Lone Rugrat"
-					]
-				},
+				}
+				// },
+				// {
+				// 	"title": "Chipolino Alliance",
+				// 	"author": "Stress_TN, BOB The Builder!, Fat Frumos, 8bitchyfruit",
+				// 	"year": "2010",
+				// 	"labelName": "Bitmasters",
+				// 	"labelLink": "",
+				// 	"releaseId": "",
+				// 	"coverLink": "../images/albums/chipolino.jpg",
+				// 	"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/CHIPOLINO%20ALLIANCE.rar",
+				// 	"tracklist": [
+				// 		"Fat Frumos - Badman",
+				// 		"Fat Frumos - Hil' with pixel eyes",
+				// 		"BOB The Builder! - Gazmanov's somersault",
+				// 		"BOB The Builder! - Jeso cristo",
+				// 		"Stress_TN - Schranz Reserved",
+				// 		"Stress_TN - Tick Tack Boom",
+				// 		"8[bit]chyfruit - b.l.n.t.o.e.t",
+				// 		"8[bit]chyfruit - Lone Rugrat"
+				// 	]
+				// },
 				// {
 				// 	"title": "Terrible Noize",
 				// 	"author": "Stress_TN",
@@ -192,46 +210,46 @@ class Discography extends Component {
 				// 		"Rasta"
 				// 	]
 				// },
-				{
-					"title": "Omlet",
-					"author": "Stress_TN",
-					"year": "2010",
-					"labelName": "Ruszud",
-					"labelLink": "https://vk.com/ruszud",
-					"releaseId": "rz157",
-					"coverLink": "../images/albums/omlet.jpg",
-					"downloadLink": "https://archive.org/details/rz_157",
-					"tracklist": [
-						"Happy Twist",
-						"Xyp",
-						"Omlet",
-						"Dnb",
-						"Right"
-					]
-				},
-				{
-					"title": "First Console Aid",
-					"author": "Stress_TN, 2NRO8OT, Nextspace",
-					"year": "2010",
-					"labelName": "Breakcoreyourself",
-					"labelLink": "",
-					"releaseId": "",
-					"coverLink": "../images/albums/FirstConsoleAid.png",
-					"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Stress_TN%2C%202NRO8OT%2C%20Nextspace%20-%20First%20Console%20Aid%20%28BREAKCOREYOURSELF.RU%29.rar",
-					"tracklist": [
-						"2NRO8OT - Evacuation",
-						"2NRO8OT - NGC 1300",
-						"2NRO8OT - Ravenosnie Sosudi (Raveносные Сосуды)",
-						"2NRO8OT - Visit To Other Galaxy (Посещение Другой Галактики)",
-						"Stress_TN - Empire",
-						"Stress_TN - lepricon",
-						"Stress_TN - lyric",
-						"Stress_TN - melok",
-						"Nextspace - Electric Robots",
-						"Nextspace - I'N'U",
-						"Nextspace - monobit"
-					]
-				}
+				// {
+				// 	"title": "Omlet",
+				// 	"author": "Stress_TN",
+				// 	"year": "2010",
+				// 	"labelName": "Ruszud",
+				// 	"labelLink": "https://vk.com/ruszud",
+				// 	"releaseId": "rz157",
+				// 	"coverLink": "../images/albums/omlet.jpg",
+				// 	"downloadLink": "https://archive.org/details/rz_157",
+				// 	"tracklist": [
+				// 		"Happy Twist",
+				// 		"Xyp",
+				// 		"Omlet",
+				// 		"Dnb",
+				// 		"Right"
+				// 	]
+				// },
+				// {
+				// 	"title": "First Console Aid",
+				// 	"author": "Stress_TN, 2NRO8OT, Nextspace",
+				// 	"year": "2010",
+				// 	"labelName": "Breakcoreyourself",
+				// 	"labelLink": "",
+				// 	"releaseId": "",
+				// 	"coverLink": "../images/albums/FirstConsoleAid.png",
+				// 	"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Stress_TN%2C%202NRO8OT%2C%20Nextspace%20-%20First%20Console%20Aid%20%28BREAKCOREYOURSELF.RU%29.rar",
+				// 	"tracklist": [
+				// 		"2NRO8OT - Evacuation",
+				// 		"2NRO8OT - NGC 1300",
+				// 		"2NRO8OT - Ravenosnie Sosudi (Raveносные Сосуды)",
+				// 		"2NRO8OT - Visit To Other Galaxy (Посещение Другой Галактики)",
+				// 		"Stress_TN - Empire",
+				// 		"Stress_TN - lepricon",
+				// 		"Stress_TN - lyric",
+				// 		"Stress_TN - melok",
+				// 		"Nextspace - Electric Robots",
+				// 		"Nextspace - I'N'U",
+				// 		"Nextspace - monobit"
+				// 	]
+				// }
 				// },
 				// {
 				// 	"title": "Littreschranzdj",

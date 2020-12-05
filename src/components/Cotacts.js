@@ -13,7 +13,7 @@ class Cotacts extends Component {
 	render() {
 		return (
 			<section className="container">
-				<h2 className="container__header">Cotacts</h2>
+				<h2 className="container__header">Subscribe</h2>
 				<div className="container__wrapper">
 					<ul className="contact-list">
 						<li className="contact-list__item">

@@ -7,6 +7,27 @@ class Events extends Component {
 		this.state = {
 			events: [
 				{
+					"date": "08 October 2020",
+					"country": "Russia",
+					"city": "Saint-Petersburg",
+					"title": "Theremin FEST 2020",
+					"link": "https://youtu.be/vI0BUcc2mAs"
+				},
+				{
+					"date": "06 September 2020",
+					"country": "Latvia",
+					"city": "Riga",
+					"title": "LSDJ masterclass",
+					"link": "https://youtu.be/E_0T4kzRJ_g"
+				},
+				{
+					"date": "26 June 2020",
+					"country": "Latvia",
+					"city": "Riga",
+					"title": "Birthday Stream",
+					"link": "https://www.youtube.com/watch?v=eG2uJnnNmEQ"
+				},
+				{
 					"date": "09 January 2020",
 					"country": "Russia",
 					"city": "Taganrog",
