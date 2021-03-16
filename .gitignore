@@ -2,3 +2,4 @@ piano/node_modules
 node_modules
 build/
 public/gbAnimation/
+.idea/workspace.xml
