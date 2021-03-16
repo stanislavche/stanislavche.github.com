@@ -9,7 +9,7 @@ class Discography extends Component {
 			albums : [
 				{
 					"title": "COLD FLAME",
-					"author": "Stress_TN",
+					"author": "S_TN",
 					"year": "2020",
 					"bandcampAlbum": 3935878986,
 					"labelName": "",

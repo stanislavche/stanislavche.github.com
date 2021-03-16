@@ -16,7 +16,7 @@ class App extends Component {
 		let showIndexPage = () => {
 			return (
 				<div className="App">
-					<header className="App__header glitch">Stress_TN</header>
+					<header className="App__header glitch">S_TN</header>
 					<div className="App__wrapper">
 						<div className="App__wrapper-cell">
 							<Bio />
@@ -39,7 +39,7 @@ class App extends Component {
 							<Kits />
 						</div>
 					</div>
-					<footer className="App__footer">All rights belong to Stress_TN</footer>
+					<footer className="App__footer">All rights belong to S_TN</footer>
 				</div>
 			);
 		};

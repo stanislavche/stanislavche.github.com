@@ -1,7 +1,7 @@
 {
-  "name": "stress_tn",
+  "name": "s_tn",
   "version": "0.1.0",
-  "homepage": "http://stress-tn.party/",
+  "homepage": "http://s-tn.space/",
   "private": true,
   "dependencies": {
     "gh-pages": "^2.0.1",
