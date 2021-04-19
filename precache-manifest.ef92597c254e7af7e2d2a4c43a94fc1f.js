@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "4e4deca4403a8d654729",
-    "url": "/static/css/main.1b36319a.chunk.css"
+    "revision": "12bc6d92416d3d88c9ae",
+    "url": "/static/css/main.9c6bf693.chunk.css"
   },
   {
-    "revision": "4e4deca4403a8d654729",
-    "url": "/static/js/main.4e4deca4.chunk.js"
+    "revision": "12bc6d92416d3d88c9ae",
+    "url": "/static/js/main.12bc6d92.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -28,24 +28,24 @@ self.__precacheManifest = [
     "url": "/static/media/C64_User_v1.0-STYLE.6c16d1b1.eot"
   },
   {
-    "revision": "1efe351f32cd00b8c050a30ebf8d0fb9",
-    "url": "/static/media/C64_User_v1.0-STYLE.1efe351f.woff"
-  },
-  {
     "revision": "927533f2407c1671b4332c31ebe69c02",
     "url": "/static/media/C64_User_v1.0-STYLE.927533f2.ttf"
   },
   {
-    "revision": "b5c0c4ab27b9b0b4cb53e347a3addbe8",
-    "url": "/static/media/C64_User_Mono_v1.0-STYLE.b5c0c4ab.eot"
+    "revision": "1efe351f32cd00b8c050a30ebf8d0fb9",
+    "url": "/static/media/C64_User_v1.0-STYLE.1efe351f.woff"
+  },
+  {
+    "revision": "c98949fa9320075f4e4f8c4c45e96139",
+    "url": "/static/media/C64_User_Mono_v1.0-STYLE.c98949fa.woff"
   },
   {
     "revision": "5cd08674a8c49c72fb5ae387a977da6f",
     "url": "/static/media/C64_User_Mono_v1.0-STYLE.5cd08674.ttf"
   },
   {
-    "revision": "c98949fa9320075f4e4f8c4c45e96139",
-    "url": "/static/media/C64_User_Mono_v1.0-STYLE.c98949fa.woff"
+    "revision": "b5c0c4ab27b9b0b4cb53e347a3addbe8",
+    "url": "/static/media/C64_User_Mono_v1.0-STYLE.b5c0c4ab.eot"
   },
   {
     "revision": "25c5706f165b605581d25e290f41ca8a",
@@ -116,7 +116,7 @@ self.__precacheManifest = [
     "url": "/static/media/gameboy.97f4230a.svg"
   },
   {
-    "revision": "195b9d2166c0249c889f31e2c4db7fa3",
+    "revision": "5718cdebeacf6fe71e7da8d65e3561a1",
     "url": "/index.html"
   }
 ];
