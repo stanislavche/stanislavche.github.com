@@ -7,12 +7,12 @@ class News extends Component {
 		super(props);
 		this.state = {
 			news: [{
-				"date": 1607161580,
-				"title": "COLD FLAME EP",
-				"description": "Release based on M8 tracker",
-				"link": "https://stresstn.bandcamp.com/album/cold-flame",
+				"date": 1618207620,
+				"title": "МИР",
+				"description": "NEW ALBUM",
+				"link": "https://stresstn.bandcamp.com/album/-",
 				"type": "image",
-				"media": "./images/albums/cold_flame.png"
+				"media": "./images/albums/mup.jpg"
 			},{
 				"date": 1602201600,
 				"title": "Theremin FEST 2020",
@@ -27,28 +27,13 @@ class News extends Component {
 				"link": "https://www.youtube.com/watch?v=eG2uJnnNmEQ",
 				"type": "video",
 				"media": "https://www.youtube.com/watch?v=eG2uJnnNmEQ"
-			},
-			{
-				"date": 1578598200,
-				"title": "Video translation",
-				"description": "bunker.live - Stress_TN (live), Jaildigger",
-				"link": "https://youtu.be/wnlOep1sgiI?t=1",
-				"type": "video",
-				"media": "https://youtu.be/wnlOep1sgiI?t=1"
 			},{
-				"date": 1552495410,
-				"title": "bit Dungeon III GAME",
-				"description": "Bit Dungeon III has been released",
-				"link": "https://store.steampowered.com/app/856210/bit_Dungeon_III/",
-				"type": "video",
-				"media": "https://www.youtube.com/watch?v=y2rdm0ej0_E"
-			},{
-				"date": 1552824696,
-				"title": "Illusion EP",
-				"description": "LSDJ based album. Kits can be found on this page",
-				"type": "image",
-				"link": "https://stresstn.bandcamp.com/album/illusion-lsdj-sav",
-				"media": "./images/albums/illusion.jpg"
+					"date": 1578598200,
+					"title": "Video translation",
+					"description": "bunker.live - Stress_TN (live), Jaildigger",
+					"link": "https://youtu.be/wnlOep1sgiI?t=1",
+					"type": "video",
+					"media": "https://youtu.be/wnlOep1sgiI?t=1"
 			}]
 		}
 	}

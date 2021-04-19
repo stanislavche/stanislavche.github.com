@@ -8,6 +8,29 @@ class Discography extends Component {
 		this.state = {
 			albums : [
 				{
+				"title": "Мир",
+				"author": "S_TN",
+				"year": "2021",
+				"bandcampAlbum": 1299205273,
+				"labelName": "",
+				"labelLink": "",
+				"releaseId": "",
+				"coverLink": "../images/albums/mup.jpg",
+				"downloadLink": "https://stresstn.bandcamp.com/album/-",
+				"tracklist": [
+					"SERENITY",
+					"HOLY ROCKET",
+					"PROMISE",
+					"SPACE TIME",
+					"POPCORN",
+					"GOAL ACHIEVEMENT",
+					"CRYOGENIC DREAM",
+					"STARWAY",
+					"IMPETUS (feat. Balloonbear)",
+					"RAILROAD SWITCH"
+				]
+			},
+				{
 					"title": "COLD FLAME",
 					"author": "S_TN",
 					"year": "2020",
@@ -104,6 +127,7 @@ class Discography extends Component {
 					"labelName": "Lowtoy",
 					"labelLink": "http://www.lowtoy.com/",
 					"releaseId": "lwt 13",
+					"soundcloudPlayer": 45280171,
 					"coverLink": "../images/albums/GangstaWithBlasta.jpg",
 					"downloadLink": "http://www.lowtoy.com/portfolio/va-gangsta-with-blasta/",
 					"tracklist": [
@@ -123,6 +147,7 @@ class Discography extends Component {
 					"labelName": "Bleeplove",
 					"labelLink": "https://bleeplove.bandcamp.com/",
 					"releaseId": "",
+					"soundcloudPlayer": 40134942,
 					"coverLink": "../images/albums/greatpixelstorm.jpg",
 					"downloadLink": "https://drive.google.com/uc?authuser=0&id=1rFhX9VU8DeqQwpAkDYMzn22Scqv-D9zI&export=download",
 					"tracklist": [
@@ -141,6 +166,7 @@ class Discography extends Component {
 					"labelName": "Lowtoy",
 					"labelLink": "http://www.lowtoy.com/",
 					"releaseId": "lwt 09",
+					"bandcampAlbum": 3534733380,
 					"coverLink": "../images/albums/consolisation.jpg",
 					"downloadLink": "https://stresstn.bandcamp.com/album/consolisation-lsdj-sav-file-include",
 					"tracklist": [
@@ -163,6 +189,7 @@ class Discography extends Component {
 					"labelName": "Chippanze",
 					"labelLink": "https://chippanze.bandcamp.com/",
 					"releaseId": "CP035",
+					"bandcampAlbum": 2380577811,
 					"coverLink": "../images/albums/smokingfighters.jpg",
 					"downloadLink": "https://chippanze.bandcamp.com/album/cp035-smoking-fighters",
 					"tracklist": [
@@ -282,9 +309,10 @@ class Discography extends Component {
 					"year": "2019",
 					"labelName": "BleepLove",
 					"labelLink": "http://bleep-love.ru/",
+					"bandcampAlbum": 3485096965,
 					"releaseId": "",
 					"coverLink": "../images/albums/bleeplovespecial.jpg",
-					"downloadLink": "https://drive.google.com/open?id=1dWrgVoHDzGlCVn51tcd6X6Ilhx9GtlYr",
+					"downloadLink": "https://bleeplove.bandcamp.com/album/bleeplove-special",
 					"tracklist": [
 						"Ghost Memory - Herbal Tea & Video Games",
 						"Zan - High tech. Low life",
@@ -307,6 +335,7 @@ class Discography extends Component {
 					"author": "Various Artist",
 					"year": "2016",
 					"labelName": "Forest",
+					"bandcampAlbum": 3927299074,
 					"labelLink": "https://forestlabel.bandcamp.com/",
 					"releaseId": "",
 					"coverLink": "../images/albums/chiptunesfromrussia.jpg",
@@ -332,6 +361,7 @@ class Discography extends Component {
 					"labelName": "Bleeplove",
 					"labelLink": "https://bleeplove.bandcamp.com/",
 					"releaseId": "",
+					"bandcampAlbum": 1778776117,
 					"coverLink": "../images/albums/Bleeplove4.png",
 					"downloadLink": "https://bleeplove.bandcamp.com/album/bleeplove-vol-4",
 					"tracklist": [
@@ -396,6 +426,7 @@ class Discography extends Component {
 					"labelName": "",
 					"labelLink": "",
 					"releaseId": "",
+					"soundcloudPlayer": '63996760',
 					"coverLink": "../images/albums/Chip_Country.png",
 					"downloadLink": "https://dkvine.com/features/music/chip_country/",
 					"tracklist": [
@@ -435,6 +466,7 @@ class Discography extends Component {
 					"title": "BleepLove vol.3 part 2",
 					"author": "Various Artist",
 					"year": "2012",
+					"bandcampAlbum": 1609782809,
 					"labelName": "https://bleeplove.bandcamp.com/",
 					"labelLink": "",
 					"releaseId": "",
@@ -460,6 +492,7 @@ class Discography extends Component {
 					"author": "Various Artist",
 					"year": "2011",
 					"labelName": "Russian-Techno",
+					"bandcampAlbum": 3798878920,
 					"labelLink": "https://russiantechno.bandcamp.com",
 					"releaseId": "RT​-​16",
 					"coverLink": "../images/albums/lastnews.jpg",
@@ -494,34 +527,13 @@ class Discography extends Component {
 					]
 				},
 				{
-					"title": "Chafer",
-					"author": "Various Artist",
-					"year": "2011",
-					"labelName": "Ruszud",
-					"labelLink": "https://vk.com/ruszud",
-					"releaseId": "rz220",
-					"coverLink": "../images/albums/chafer.jpg",
-					"downloadLink": "http://www.archive.org/details/rz220",
-					"tracklist": [
-						"vefiretiwina - C3POs rampage",
-						"NEMO - Mary-go-Round",
-						"MICROCOBRA - Scorpion vs Cobra",
-						"Stress TN - Power wave",
-						"<3an - skipjack",
-						"Moaner - SOS",
-						"Nextspace - dodo XD",
-						"fakediscoclub - wOOt",
-						"Synthetic Boy - Box with basses",
-						"Max Tailord - Fucking boy"
-					]
-				},
-				{
 					"title": "New Year Battle 2011",
 					"author": "Various Artist",
 					"year": "2011",
 					"labelName": "8081",
 					"labelLink": "https://8081.bandcamp.com/",
 					"releaseId": "8081-va005",
+					"bandcampAlbum": 3562585710,
 					"coverLink": "../images/albums/newyearbattle.jpg",
 					"downloadLink": "https://8081.bandcamp.com/album/new-year-battle-2011",
 					"tracklist": [
@@ -549,6 +561,7 @@ class Discography extends Component {
 					"labelName": "8081",
 					"labelLink": "",
 					"releaseId": "8081-va002",
+					"bandcampAlbum": 129114256,
 					"coverLink": "../images/albums/pulse.jpg",
 					"downloadLink": "https://8081.bandcamp.com/album/the-pulse-of-the-blue-star",
 					"tracklist": [
@@ -563,38 +576,6 @@ class Discography extends Component {
 					]
 				},
 				{
-					"title": "BITMASTERS VOL.2: Vital Sines",
-					"author": "Various Artist",
-					"year": "2010",
-					"labelName": "Bitmasters",
-					"labelLink": "",
-					"releaseId": "",
-					"coverLink": "../images/albums/bitmasters2.jpg",
-					"downloadLink": "http://www.mediafire.com/file/k00tdgemjm4/BITMASTERS+VOL.2.zip",
-					"tracklist": [
-						"Sycamore Drive - Happiness In Winter",
-						"Alucard - Nightfall",
-						"Cartoon Bomb - Speed Of Dark",
-						"DEADBEATBLAST - Cross Vector",
-						"Hellz - Riviera ~ Encounter! (Remix)",
-						"TWELVE INSOMNIA - Shibuya on Fire",
-						"MicroD - Palisade",
-						"We The Sick - And Yet We Keep on Trying",
-						"Standby emulator - 061109",
-						"Phazeshift - Sally",
-						"Je M'appelle - The Dust Dance",
-						"ZAZI - Azure Dreams",
-						"Bleepshit - We Can't Die Coz We Are Living!",
-						"Zomvor - Peach Pupils",
-						"robochip漀 - 24 and friend",
-						"Robinerd - Town Music",
-						"Broken Board Broken Life - RRR",
-						"Jophish - Error Pending",
-						"BEASTMODE - DEADLY WEAPON",
-						"Stress_TN - Lazy Cat"
-					]
-				},
-				{
 					"title": "The Chip Tribute To Aphex Twin",
 					"author": "Various Artist",
 					"year": "2010",
@@ -603,6 +584,7 @@ class Discography extends Component {
 					"releaseId": "",
 					"coverLink": "../images/albums/aphextwin.png",
 					"downloadLink": "http://www.milkcrate.com.au/emar/AFX/",
+					"soundcloudPlayer": '6096420',
 					"tracklist": [
 						"Brother Android - IZ-US [Come To Daddy EP]",
 						"Emar - On [On EP]",
@@ -619,6 +601,60 @@ class Discography extends Component {
 						"Stress_TN - Come to Daddy [Come to Daddy EP]"
 					]
 				}
+				// {
+				// 	"title": "Chafer",
+				// 	"author": "Various Artist",
+				// 	"year": "2011",
+				// 	"labelName": "Ruszud",
+				// 	"labelLink": "https://vk.com/ruszud",
+				// 	"releaseId": "rz220",
+				// 	"coverLink": "../images/albums/chafer.jpg",
+				// 	"downloadLink": "http://www.archive.org/details/rz220",
+				// 	"tracklist": [
+				// 		"vefiretiwina - C3POs rampage",
+				// 		"NEMO - Mary-go-Round",
+				// 		"MICROCOBRA - Scorpion vs Cobra",
+				// 		"Stress TN - Power wave",
+				// 		"<3an - skipjack",
+				// 		"Moaner - SOS",
+				// 		"Nextspace - dodo XD",
+				// 		"fakediscoclub - wOOt",
+				// 		"Synthetic Boy - Box with basses",
+				// 		"Max Tailord - Fucking boy"
+				// 	]
+				// },
+				// {
+				// 	"title": "BITMASTERS VOL.2: Vital Sines",
+				// 	"author": "Various Artist",
+				// 	"year": "2010",
+				// 	"labelName": "Bitmasters",
+				// 	"labelLink": "",
+				// 	"releaseId": "",
+				// 	"coverLink": "../images/albums/bitmasters2.jpg",
+				// 	"downloadLink": "http://www.mediafire.com/file/k00tdgemjm4/BITMASTERS+VOL.2.zip",
+				// 	"tracklist": [
+				// 		"Sycamore Drive - Happiness In Winter",
+				// 		"Alucard - Nightfall",
+				// 		"Cartoon Bomb - Speed Of Dark",
+				// 		"DEADBEATBLAST - Cross Vector",
+				// 		"Hellz - Riviera ~ Encounter! (Remix)",
+				// 		"TWELVE INSOMNIA - Shibuya on Fire",
+				// 		"MicroD - Palisade",
+				// 		"We The Sick - And Yet We Keep on Trying",
+				// 		"Standby emulator - 061109",
+				// 		"Phazeshift - Sally",
+				// 		"Je M'appelle - The Dust Dance",
+				// 		"ZAZI - Azure Dreams",
+				// 		"Bleepshit - We Can't Die Coz We Are Living!",
+				// 		"Zomvor - Peach Pupils",
+				// 		"robochip漀 - 24 and friend",
+				// 		"Robinerd - Town Music",
+				// 		"Broken Board Broken Life - RRR",
+				// 		"Jophish - Error Pending",
+				// 		"BEASTMODE - DEADLY WEAPON",
+				// 		"Stress_TN - Lazy Cat"
+				// 	]
+				// },
 			],
 			activeItem : null
 		};

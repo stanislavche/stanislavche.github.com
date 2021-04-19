@@ -18,7 +18,7 @@ class Cotacts extends Component {
 				<div className="container__wrapper">
 					<ul className="contact-list">
 						<li className="contact-list__item">
-							<a href="https://open.spotify.com/artist/4yUXvZtanRfs1DcnPPjr8Y?si=YmQDjpOESyq4j2AyqGFapg" className="contact-list__link contact-list__link_spoti" target="_blank" rel="noopener noreferrer">
+							<a href="https://open.spotify.com/artist/4pqWR0lco3CjTBzIWuour7" className="contact-list__link contact-list__link_spoti" target="_blank" rel="noopener noreferrer">
 								<SpotiSvg />
 							</a>
 						</li>

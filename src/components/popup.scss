@@ -34,10 +34,15 @@
 		margin: 0;
 		text-shadow: 2px 2px 2px $info-color;
 	}
-	&__coverLink{
+	&__left{
 		width: 30%;
 		position: relative;
 		z-index: 1;
+	}
+	&__coverLink{
+		display: block;
+		width: 100%;
+		max-width: 100%;
 		cursor: pointer;
 		& > img{
 			display: block;
@@ -82,7 +87,7 @@
 @media screen and (max-width: 840px) {
 	.popup {
 		flex-flow: column wrap;
-		&__coverLink{
+		&__left {
 			width: 100%;
 			padding: 20px;
 			margin-top: 20px;
