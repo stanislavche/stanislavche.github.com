@@ -35,7 +35,7 @@ class Game extends Component {
 	render() {
 		return (
 			<section className="container">
-				<h2 className="container__header">Games with S_TN music</h2>
+				<h2 className="container__header">Games, OST</h2>
 				<div className="container__wrapper game">
 					<ul className="game__list">
 						{this.state.gameList.map((item, key) =>

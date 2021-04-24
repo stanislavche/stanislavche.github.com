@@ -10,6 +10,7 @@ import Player from './Player';
 import Kits from './Kits';
 import "./loadscreen.scss";
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
+import Mup from "./Mup";
 
 class App extends Component {
 	render() {
@@ -31,12 +32,13 @@ class App extends Component {
 						</div>
 						<div className="App__wrapper-cell">
 							<Player />
-							<Cotacts />
-							<Donate />
+							<Events />
+							{/*<Donate />*/}
 						</div>
 						<div className="App__wrapper-cell">
-							<Events />
+							<Mup />
 							<Kits />
+							<Cotacts />
 						</div>
 					</div>
 					<footer className="App__footer">All rights belong to S_TN</footer>

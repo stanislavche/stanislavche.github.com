@@ -286,10 +286,14 @@ a:hover{
 		flex-flow: column wrap;
 		justify-content: space-around;
 		z-index: 1;
-		.events,
-		.news{
+		.news {
 			@extend .custom-scroll;
-			max-height: 368px;
+			max-height: 346px;
+			overflow: auto;
+		}
+		.events {
+			@extend .custom-scroll;
+			max-height: 486px;
 			overflow: auto;
 		}
 	}

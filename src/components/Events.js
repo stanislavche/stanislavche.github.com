@@ -7,6 +7,20 @@ class Events extends Component {
 		this.state = {
 			events: [
 				{
+					"date": "25 April 2021",
+					"country": "Denmark",
+					"city": "Vårtgården",
+					"title": "Chipwrecked 3.1",
+					"link": "https://fb.me/e/1MvlfKZvF"
+				},
+				{
+					"date": "25 April 2021",
+					"country": "Italy",
+					"city": "online",
+					"title": "MICROMUSIC ITALY SUNDAY JAM",
+					"link": "https://www.twitch.tv/micromusicitaly"
+				},
+				{
 					"date": "08 October 2020",
 					"country": "Russia",
 					"city": "Saint-Petersburg",

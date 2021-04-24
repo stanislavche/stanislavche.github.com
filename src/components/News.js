@@ -9,10 +9,17 @@ class News extends Component {
 			news: [{
 				"date": 1618207620,
 				"title": "МИР",
-				"description": "NEW ALBUM",
+				"description": "FIRST CHIPTUNE ALBUM INTO THE SPACE",
 				"link": "https://stresstn.bandcamp.com/album/-",
 				"type": "image",
 				"media": "./images/albums/mup.jpg"
+			},{
+				"date": 1619359200,
+				"title": "MICROMUSIC ITALY SUNDAY JAM",
+				"description": "ONLINE STREAM",
+				"link": "https://www.twitch.tv/micromusicitaly",
+				"type": "image",
+				"media": "./images/extra/micromusic.jpg"
 			},{
 				"date": 1602201600,
 				"title": "Theremin FEST 2020",

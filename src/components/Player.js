@@ -7,6 +7,7 @@ class Announce extends Component {
 		let playlist = 'https://soundcloud.com/stress_tn/sets/playlist-for-website';
 		return (
 			<section className="container">
+				<h2 className="container__header">MUSIC</h2>
 				<div className="container__wrapper player">
 					<ReactPlayer url={playlist} width="100%" height="300px" />
 				</div>
