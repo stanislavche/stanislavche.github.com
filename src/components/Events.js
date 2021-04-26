@@ -7,7 +7,7 @@ class Events extends Component {
 		this.state = {
 			events: [
 				{
-					"date": "25 April 2021",
+					"date": "26 August 2021",
 					"country": "Denmark",
 					"city": "Vårtgården",
 					"title": "Chipwrecked 3.1",
