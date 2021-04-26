@@ -4,7 +4,7 @@ import News from './News';
 import Discography from './Discography';
 import Cotacts from './Cotacts';
 import Game from './Game';
-import Donate from './Donate';
+//import Donate from './Donate';
 import Events from './Events';
 import Player from './Player';
 import Kits from './Kits';
