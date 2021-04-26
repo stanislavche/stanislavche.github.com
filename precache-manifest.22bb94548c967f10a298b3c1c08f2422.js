@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "2e0a8f9c0c42b46c4ae7",
-    "url": "/static/css/main.2574119a.chunk.css"
+    "revision": "32c99e5b864ddd82185e",
+    "url": "/static/css/main.6d498c7e.chunk.css"
   },
   {
-    "revision": "2e0a8f9c0c42b46c4ae7",
-    "url": "/static/js/main.2e0a8f9c.chunk.js"
+    "revision": "32c99e5b864ddd82185e",
+    "url": "/static/js/main.32c99e5b.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -56,10 +56,6 @@ self.__precacheManifest = [
     "url": "/static/media/C64_Pro_v1.0-STYLE.038642c5.woff"
   },
   {
-    "revision": "652c538faf1267e6b8c23970b859a0ea",
-    "url": "/static/media/C64_Pro_v1.0-STYLE.652c538f.ttf"
-  },
-  {
     "revision": "fb430063d59915d7222aaf13ae7809b3",
     "url": "/static/media/C64_Pro_Mono_v1.0-STYLE.fb430063.woff"
   },
@@ -70,6 +66,10 @@ self.__precacheManifest = [
   {
     "revision": "ae4fe1f14285762ebfbaf0ee03ef0c79",
     "url": "/static/media/C64_Pro_Mono_v1.0-STYLE.ae4fe1f1.ttf"
+  },
+  {
+    "revision": "652c538faf1267e6b8c23970b859a0ea",
+    "url": "/static/media/C64_Pro_v1.0-STYLE.652c538f.ttf"
   },
   {
     "revision": "5bd9a29db30b2419f93e074124f2404d",
@@ -116,7 +116,7 @@ self.__precacheManifest = [
     "url": "/static/media/gameboy.97f4230a.svg"
   },
   {
-    "revision": "e621944f049b4796b758d46813f05b23",
+    "revision": "8983f0866ce8c78af9b7dce7496ac617",
     "url": "/index.html"
   }
 ];
