@@ -7,6 +7,20 @@ class News extends Component {
 		super(props);
 		this.state = {
 			news: [{
+				"date": 1624046400,
+				"title": "20.06 - BleepLove 8-bit - Red Cups",
+				"description": "🔥Press start: Nuclear Mushroom Boom / S_TN / ZAN / VRUMZSSSR / Poiu Poiu",
+				"link": "https://vk.com/bleeplove_redcups",
+				"type": "image",
+				"media": "./images/extra/210620.jpg"
+			},{
+				"date": 1624035600,
+				"title": "LUXURY GodOfShina в Дюнах на Лиговке",
+				"description": "Shoom and B1per weeding party",
+				"link": "https://vk.com/luxuryofgod",
+				"type": "image",
+				"media": "./images/extra/210618.jpg"
+			},{
 				"date": 1618207620,
 				"title": "МИР",
 				"description": "FIRST CHIPTUNE ALBUM INTO THE SPACE",
@@ -20,27 +34,6 @@ class News extends Component {
 				"link": "https://www.twitch.tv/micromusicitaly",
 				"type": "image",
 				"media": "./images/extra/micromusic.jpg"
-			},{
-				"date": 1602201600,
-				"title": "Theremin FEST 2020",
-				"description": "live for Theremin FEST 2020",
-				"link": "https://youtu.be/vI0BUcc2mAs?t=26",
-				"type": "video",
-				"media": "https://youtu.be/vI0BUcc2mAs?t=26"
-			},{
-				"date": 1593194400,
-				"title": "Birthday Stream",
-				"description": "BleepLove live // Stress_TN - HappyBirthday stream",
-				"link": "https://www.youtube.com/watch?v=eG2uJnnNmEQ",
-				"type": "video",
-				"media": "https://www.youtube.com/watch?v=eG2uJnnNmEQ"
-			},{
-					"date": 1578598200,
-					"title": "Video translation",
-					"description": "bunker.live - Stress_TN (live), Jaildigger",
-					"link": "https://youtu.be/wnlOep1sgiI?t=1",
-					"type": "video",
-					"media": "https://youtu.be/wnlOep1sgiI?t=1"
 			}]
 		}
 	}

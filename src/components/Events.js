@@ -14,11 +14,25 @@ class Events extends Component {
 					"link": "https://fb.me/e/1MvlfKZvF"
 				},
 				{
+					"date": "20 June 2021",
+					"country": "Russia",
+					"city": "Saint-Petersburg",
+					"title": "20.06 - BleepLove 8-bit - Red Cups",
+					"link": "https://vk.com/bleeplove_redcups"
+				},
+				{
+					"date": "18 June 2021",
+					"country": "Russia",
+					"city": "Saint-Petersburg",
+					"title": "LUXURY GodOfShina в Дюнах на Лиговке",
+					"link": "https://vk.com/event204992684"
+				},
+				{
 					"date": "25 April 2021",
 					"country": "Italy",
 					"city": "online",
 					"title": "MICROMUSIC ITALY SUNDAY JAM",
-					"link": "https://www.twitch.tv/micromusicitaly"
+					"link": "https://youtu.be/GlTnhwDq1Ss"
 				},
 				{
 					"date": "08 October 2020",
