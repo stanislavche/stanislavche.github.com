@@ -12,7 +12,9 @@ body {
   user-select: none;
   overflow: hidden;
 }
-
+#mainCanvas {
+  background: #031921;
+}
 html, 
 body {
   height: 100%;
@@ -172,14 +174,14 @@ body {
 #controller_start {
   position: absolute;
   bottom: 20px;
-  right: 15px;
+  right: calc(50% - 90px);
   cursor: pointer;
 }
 
 #controller_select {
   position: absolute;
   bottom: 20px;
-  right: 100px;
+  left: calc(50% - 90px);
   cursor: pointer;
 }
 
