@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "1bf22387f989dcada7b7",
-    "url": "/static/css/main.ba827fa7.chunk.css"
+    "revision": "07629af13d69eadf3699",
+    "url": "/static/css/main.8cd70034.chunk.css"
   },
   {
-    "revision": "1bf22387f989dcada7b7",
-    "url": "/static/js/main.1bf22387.chunk.js"
+    "revision": "07629af13d69eadf3699",
+    "url": "/static/js/main.07629af1.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -36,10 +36,6 @@ self.__precacheManifest = [
     "url": "/static/media/C64_User_v1.0-STYLE.927533f2.ttf"
   },
   {
-    "revision": "5cd08674a8c49c72fb5ae387a977da6f",
-    "url": "/static/media/C64_User_Mono_v1.0-STYLE.5cd08674.ttf"
-  },
-  {
     "revision": "b5c0c4ab27b9b0b4cb53e347a3addbe8",
     "url": "/static/media/C64_User_Mono_v1.0-STYLE.b5c0c4ab.eot"
   },
@@ -48,12 +44,16 @@ self.__precacheManifest = [
     "url": "/static/media/C64_User_Mono_v1.0-STYLE.c98949fa.woff"
   },
   {
-    "revision": "25c5706f165b605581d25e290f41ca8a",
-    "url": "/static/media/C64_Pro_v1.0-STYLE.25c5706f.eot"
+    "revision": "5cd08674a8c49c72fb5ae387a977da6f",
+    "url": "/static/media/C64_User_Mono_v1.0-STYLE.5cd08674.ttf"
   },
   {
     "revision": "038642c5bf2240322e77868641d21edb",
     "url": "/static/media/C64_Pro_v1.0-STYLE.038642c5.woff"
+  },
+  {
+    "revision": "25c5706f165b605581d25e290f41ca8a",
+    "url": "/static/media/C64_Pro_v1.0-STYLE.25c5706f.eot"
   },
   {
     "revision": "652c538faf1267e6b8c23970b859a0ea",
@@ -64,12 +64,12 @@ self.__precacheManifest = [
     "url": "/static/media/C64_Pro_Mono_v1.0-STYLE.8ebc530c.eot"
   },
   {
-    "revision": "ae4fe1f14285762ebfbaf0ee03ef0c79",
-    "url": "/static/media/C64_Pro_Mono_v1.0-STYLE.ae4fe1f1.ttf"
-  },
-  {
     "revision": "fb430063d59915d7222aaf13ae7809b3",
     "url": "/static/media/C64_Pro_Mono_v1.0-STYLE.fb430063.woff"
+  },
+  {
+    "revision": "ae4fe1f14285762ebfbaf0ee03ef0c79",
+    "url": "/static/media/C64_Pro_Mono_v1.0-STYLE.ae4fe1f1.ttf"
   },
   {
     "revision": "5bd9a29db30b2419f93e074124f2404d",
@@ -116,7 +116,7 @@ self.__precacheManifest = [
     "url": "/static/media/gameboy.97f4230a.svg"
   },
   {
-    "revision": "1a8d84815815b23ab74aec77aeb11206",
+    "revision": "26136383336efe3352da9344a16f0cd2",
     "url": "/index.html"
   }
 ];
