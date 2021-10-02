@@ -4,13 +4,14 @@ import News from './News';
 import Discography from './Discography';
 import Cotacts from './Cotacts';
 import Game from './Game';
+import Emulator from './Emulator';
 //import Donate from './Donate';
 import Events from './Events';
 import Player from './Player';
 import Kits from './Kits';
 import "./loadscreen.scss";
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
-import Mup from "./Mup";
+// import Mup from "./Mup";
 
 class App extends Component {
 	render() {
@@ -36,7 +37,8 @@ class App extends Component {
 							{/*<Donate />*/}
 						</div>
 						<div className="App__wrapper-cell">
-							<Mup />
+							{/*<Mup />*/}
+							<Emulator />
 							<Kits />
 							<Cotacts />
 						</div>

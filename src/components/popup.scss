@@ -87,14 +87,23 @@
 @media screen and (max-width: 840px) {
 	.popup {
 		flex-flow: column wrap;
+		padding: 0px;
 		&__left {
-			width: 100%;
-			padding: 20px;
+			padding: 20px 30px;
+			width: 90vw;
 			margin-top: 20px;
 		}
 		&__wrapper{
+			width: 90vw;
 			width: 100%;
-			margin-top: 20px;
+			padding: 0 30px;
+			margin-top: 0px;
+		}
+		&__title{
+			padding: 0px;
+		}
+		&__secondary-list{
+			padding-left: 20px;
 		}
 	}
 }

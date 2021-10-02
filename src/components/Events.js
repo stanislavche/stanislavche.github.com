@@ -5,19 +5,25 @@ class Events extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			events: [
-				{
-					"date": "26 August 2021",
+			events: [{
+					"date": "??? 2022 ???",
 					"country": "Denmark",
 					"city": "Vårtgården",
 					"title": "Chipwrecked 3.1",
 					"link": "https://fb.me/e/1MvlfKZvF"
 				},
 				{
+					"date": "16 July 2021",
+					"country": "Russia",
+					"city": "Taganrog",
+					"title": "OTPUSK 2021",
+					"link": "https://vk.com/otpusk__2021"
+				},
+				{
 					"date": "20 June 2021",
 					"country": "Russia",
 					"city": "Saint-Petersburg",
-					"title": "20.06 - BleepLove 8-bit - Red Cups",
+					"title": "20.06 - BleepLove 8-bit -  MOD CLUB ROOF",
 					"link": "https://vk.com/bleeplove_redcups"
 				},
 				{

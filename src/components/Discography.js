@@ -8,6 +8,7 @@ class Discography extends Component {
 		this.state = {
 			albums : [
 				{
+				"show": true,
 				"title": "Мир",
 				"author": "S_TN",
 				"year": "2021",
@@ -31,6 +32,7 @@ class Discography extends Component {
 				]
 			},
 				{
+					"show": true,
 					"title": "COLD FLAME",
 					"author": "S_TN",
 					"year": "2020",
@@ -49,6 +51,7 @@ class Discography extends Component {
 					]
 				},
 				{
+					"show": true,
 					"title": "Illusion",
 					"author": "Stress_TN",
 					"year": "2019",
@@ -68,6 +71,7 @@ class Discography extends Component {
 					]
 				},
 				{
+					"show": true,
 					"title": "bit Dungeon 2 OST",
 					"author": "Stress_TN",
 					"year": "2014",
@@ -88,6 +92,7 @@ class Discography extends Component {
 					]
 				},
 				{
+					"show": true,
 					"title": "bit Dungeon OST",
 					"author": "Stress_TN",
 					"year": "2013",
@@ -104,6 +109,7 @@ class Discography extends Component {
 					]
 				},
 				{
+					"show": true,
 					"title": "Happy",
 					"author": "Stress TN, VRUMZSSSR, 3an",
 					"year": "2013",
@@ -121,6 +127,7 @@ class Discography extends Component {
 					]
 				},
 				{
+					"show": true,
 					"title": "Gangsta With Blasta",
 					"author": "Stress TN, GameGate, Milkdrop",
 					"year": "2012",
@@ -141,6 +148,7 @@ class Discography extends Component {
 					]
 				},
 				{
+					"show": true,
 					"title": "Great Pixel Storm",
 					"author": "Stress_TN, Мой сосед Лао Цзы",
 					"year": "2012",
@@ -160,6 +168,7 @@ class Discography extends Component {
 					]
 				},
 				{
+					"show": true,
 					"title": "Consolisation",
 					"author": "Stress_TN",
 					"year": "2011",
@@ -183,6 +192,7 @@ class Discography extends Component {
 					]
 				},
 				{
+					"show": false,
 					"title": "Smoking Fighters",
 					"author": "Stress_TN",
 					"year": "2011",
@@ -202,108 +212,192 @@ class Discography extends Component {
 						"Siberia",
 						"TMNT rmx (Bonus track)"
 					]
-				}
-				// },
-				// {
-				// 	"title": "Chipolino Alliance",
-				// 	"author": "Stress_TN, BOB The Builder!, Fat Frumos, 8bitchyfruit",
-				// 	"year": "2010",
-				// 	"labelName": "Bitmasters",
-				// 	"labelLink": "",
-				// 	"releaseId": "",
-				// 	"coverLink": "../images/albums/chipolino.jpg",
-				// 	"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/CHIPOLINO%20ALLIANCE.rar",
-				// 	"tracklist": [
-				// 		"Fat Frumos - Badman",
-				// 		"Fat Frumos - Hil' with pixel eyes",
-				// 		"BOB The Builder! - Gazmanov's somersault",
-				// 		"BOB The Builder! - Jeso cristo",
-				// 		"Stress_TN - Schranz Reserved",
-				// 		"Stress_TN - Tick Tack Boom",
-				// 		"8[bit]chyfruit - b.l.n.t.o.e.t",
-				// 		"8[bit]chyfruit - Lone Rugrat"
-				// 	]
-				// },
-				// {
-				// 	"title": "Terrible Noize",
-				// 	"author": "Stress_TN",
-				// 	"year": "2010",
-				// 	"labelName": "Bitmasters",
-				// 	"labelLink": "",
-				// 	"releaseId": "",
-				// 	"coverLink": "../images/albums/terriblenoise.jpg",
-				// 	"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Stress_TN%20-%20Terrible%20Noize.rar",
-				// 	"tracklist": [
-				// 		"Destiny",
-				// 		"Flying",
-				// 		"LonelyNes",
-				// 		"Memory",
-				// 		"Rasta"
-				// 	]
-				// },
-				// {
-				// 	"title": "Omlet",
-				// 	"author": "Stress_TN",
-				// 	"year": "2010",
-				// 	"labelName": "Ruszud",
-				// 	"labelLink": "https://vk.com/ruszud",
-				// 	"releaseId": "rz157",
-				// 	"coverLink": "../images/albums/omlet.jpg",
-				// 	"downloadLink": "https://archive.org/details/rz_157",
-				// 	"tracklist": [
-				// 		"Happy Twist",
-				// 		"Xyp",
-				// 		"Omlet",
-				// 		"Dnb",
-				// 		"Right"
-				// 	]
-				// },
-				// {
-				// 	"title": "First Console Aid",
-				// 	"author": "Stress_TN, 2NRO8OT, Nextspace",
-				// 	"year": "2010",
-				// 	"labelName": "Breakcoreyourself",
-				// 	"labelLink": "",
-				// 	"releaseId": "",
-				// 	"coverLink": "../images/albums/FirstConsoleAid.png",
-				// 	"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Stress_TN%2C%202NRO8OT%2C%20Nextspace%20-%20First%20Console%20Aid%20%28BREAKCOREYOURSELF.RU%29.rar",
-				// 	"tracklist": [
-				// 		"2NRO8OT - Evacuation",
-				// 		"2NRO8OT - NGC 1300",
-				// 		"2NRO8OT - Ravenosnie Sosudi (Raveносные Сосуды)",
-				// 		"2NRO8OT - Visit To Other Galaxy (Посещение Другой Галактики)",
-				// 		"Stress_TN - Empire",
-				// 		"Stress_TN - lepricon",
-				// 		"Stress_TN - lyric",
-				// 		"Stress_TN - melok",
-				// 		"Nextspace - Electric Robots",
-				// 		"Nextspace - I'N'U",
-				// 		"Nextspace - monobit"
-				// 	]
-				// }
-				// },
-				// {
-				// 	"title": "Littreschranzdj",
-				// 	"author": "Stress_TN",
-				// 	"year": "2010",
-				// 	"labelName": "3pan Records",
-				// 	"labelLink": "",
-				// 	"releaseId": "3PND001",
-				// 	"coverLink": "../images/albums/littleschranzdj.jpg",
-				// 	"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Littleschranzdj.rar",
-				// 	"tracklist": [
-				// 		"Shturm",
-				// 		"Littleschranzdj",
-				// 		"Meeting",
-				// 		"Paranoya",
-				// 		"Last Power",
-				// 		"Chris Li",
-				// 		"Chiptech"
-				// 	]
-				// }
-			],
-			singles : [
+				},
 				{
+				 "show": false,
+					"title": "Chipolino Alliance",
+					"author": "Stress_TN, BOB The Builder!, Fat Frumos, 8bitchyfruit",
+					"year": "2010",
+					"labelName": "Bitmasters",
+					"labelLink": "",
+					"releaseId": "",
+					"coverLink": "../images/albums/chipolino.jpg",
+					"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/CHIPOLINO%20ALLIANCE.rar",
+					"tracklist": [
+						"Fat Frumos - Badman",
+						"Fat Frumos - Hil' with pixel eyes",
+						"BOB The Builder! - Gazmanov's somersault",
+						"BOB The Builder! - Jeso cristo",
+						"Stress_TN - Schranz Reserved",
+						"Stress_TN - Tick Tack Boom",
+						"8[bit]chyfruit - b.l.n.t.o.e.t",
+						"8[bit]chyfruit - Lone Rugrat"
+					]
+				},
+				{
+				 "show": false,
+					"title": "Terrible Noize",
+					"author": "Stress_TN",
+					"year": "2010",
+					"labelName": "Bitmasters",
+					"labelLink": "",
+					"releaseId": "",
+					"coverLink": "../images/albums/terriblenoise.jpg",
+					"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Stress_TN%20-%20Terrible%20Noize.rar",
+					"tracklist": [
+						"Destiny",
+						"Flying",
+						"LonelyNes",
+						"Memory",
+						"Rasta"
+					]
+				},
+				{
+				 "show": false,
+					"title": "Omlet",
+					"author": "Stress_TN",
+					"year": "2010",
+					"labelName": "Ruszud",
+					"labelLink": "https://vk.com/ruszud",
+					"releaseId": "rz157",
+					"coverLink": "../images/albums/omlet.jpg",
+					"downloadLink": "https://archive.org/details/rz_157",
+					"tracklist": [
+						"Happy Twist",
+						"Xyp",
+						"Omlet",
+						"Dnb",
+						"Right"
+					]
+				},
+				{
+				 "show": false,
+					"title": "First Console Aid",
+					"author": "Stress_TN, 2NRO8OT, Nextspace",
+					"year": "2010",
+					"labelName": "Breakcoreyourself",
+					"labelLink": "",
+					"releaseId": "",
+					"coverLink": "../images/albums/FirstConsoleAid.png",
+					"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Stress_TN%2C%202NRO8OT%2C%20Nextspace%20-%20First%20Console%20Aid%20%28BREAKCOREYOURSELF.RU%29.rar",
+					"tracklist": [
+						"2NRO8OT - Evacuation",
+						"2NRO8OT - NGC 1300",
+						"2NRO8OT - Ravenosnie Sosudi (Raveносные Сосуды)",
+						"2NRO8OT - Visit To Other Galaxy (Посещение Другой Галактики)",
+						"Stress_TN - Empire",
+						"Stress_TN - lepricon",
+						"Stress_TN - lyric",
+						"Stress_TN - melok",
+						"Nextspace - Electric Robots",
+						"Nextspace - I'N'U",
+						"Nextspace - monobit"
+					]
+				},
+				{
+				 "show": false,
+					"title": "Littreschranzdj",
+					"author": "Stress_TN",
+					"year": "2010",
+					"labelName": "3pan Records",
+					"labelLink": "",
+					"releaseId": "3PND001",
+					"coverLink": "../images/albums/littleschranzdj.jpg",
+					"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Littleschranzdj.rar",
+					"tracklist": [
+						"Shturm",
+						"Littleschranzdj",
+						"Meeting",
+						"Paranoya",
+						"Last Power",
+						"Chris Li",
+						"Chiptech"
+					]
+				}
+			],
+		singles : [
+
+				{
+					"show": true,
+					"title": "FUK THE BORDERS VOL.6",
+					"author": "Various Artist",
+					"year": "2021",
+					"labelName": "Suck Puck Recordz",
+					"labelLink": "https://suckpuck.com/",
+					"bandcampAlbum": 1336541243,
+					"releaseId": "6",
+					"coverLink": "../images/albums/fuk_the_borders.jpg",
+					"downloadLink": "https://suckpuck.com/album/fuk-the-borders-v-a-vol-6",
+					"tracklist": [
+						"AleX Tune - I Control Your Body (We Rob Rave Remix)",
+						"Ac1d Vicious - Plucky",
+						"Šulak - Solipsis",
+						"E-Coli - Sakkijarven Polka",
+						"AleX Tune - The Summer is Shining",
+						"DJ GURL POWER - boom boom boom",
+						"Deidream - Anomely live",
+						"Toecutter - Freak",
+						"Passenger Of Shit - EATMYFUCKINGASSMEATRIGHTNOW (remix)",
+						"Captain Raveman - Skittish",
+						"XÄCKSECKS - SPIKPISTOL MOT PANNAN feat. OZIGIRI",
+						"The Junglechrist - Zero Minus Two",
+						"Hitori Tori - Hailien",
+						"VANDVL - Long Way To The Inside",
+						"Laxenanchaos - Give Love For Haters",
+						"Daed - viscose",
+						"Miki Taiki - Heterochromia",
+						"Wayfarer - Orate",
+						"C3B - Whoa",
+						"FED. - going on",
+						"Jamin Nimjah - Rough Blues",
+						"Tinkers - La pasta è tutto",
+						"GLITCHGIRL + Scousenbluten - THE CHRONIC",
+						"Meow Meow vs Jefflocks - Paarse Zeeëgel",
+						"Headkick - EuroCore",
+						"Fat Frumos - 8bit dura4ek (grob cover) NMDB SUPER SAIYAN REMIX",
+						"DOC + PZG - KROVOSTOK",
+						"S-miley - Feeling high",
+						"irodv55 - lri_15cv21",
+						"goreshit - 210224untambrez",
+						"Prid Prod - POWER",
+						"Despir Blue - Mars",
+						"Bajm - Jezioro szczęścia _LAKE TITIKAKA RMX",
+						"Glitchtrip - Dont Drop the Space Gun",
+						"S_TN - Higgledy-piggledy V.2",
+						"Otherr - HRR"
+					]
+				},
+				{
+					"show": true,
+					"title": "Soft Power",
+					"author": "Balloonbear",
+					"year": "2021",
+					"labelName": "Self release",
+					"labelLink": "https://balloonbear.bandcamp.com/album/soft-power",
+					"bandcampAlbum": 3759654060,
+					"releaseId": "",
+					"coverLink": "../images/albums/soft_power.jpg",
+					"downloadLink": "https://balloonbear.bandcamp.com/album/soft-power",
+					"tracklist": [
+						"At First Sight",
+						"Unrequited Love",
+						"Luscious",
+						"Ultimate Gold",
+						"Nostalgic Vibes",
+						"Ultimate Gold (Final Sketch remix)",
+						"Hive (L_qcy remix)",
+						"Ultimate Gold (Psybolord remix)",
+						"Unrequited Love (Ghost Memory remix)",
+						"Ultimate Gold (L_qcy remix)",
+						"Unrequited Love (Creon remix)",
+						"Ultimate Gold (S_TN remix)",
+						"Luscious (Kola Kid remix)",
+						"Ultimate Gold (SPCCSM remix)",
+						"Ultimate Gold (Skip Sandwich DX remix)"
+					]
+				},
+				{
+					"show": true,
 					"title": "BleepLove - special",
 					"author": "Various Artist",
 					"year": "2019",
@@ -331,6 +425,7 @@ class Discography extends Component {
 					]
 				},
 				{
+					"show": true,
 					"title": "Chiptunes From Russia",
 					"author": "Various Artist",
 					"year": "2016",
@@ -355,6 +450,7 @@ class Discography extends Component {
 					]
 				},
 				{
+					"show": true,
 					"title": "Bleep Love Vol.4",
 					"author": "Various Artist",
 					"year": "2013",
@@ -398,6 +494,7 @@ class Discography extends Component {
 					]
 				},
 				{
+					"show": true,
 					"title": "Russia in 8bits",
 					"author": "Various Artist",
 					"year": "2013",
@@ -420,6 +517,7 @@ class Discography extends Component {
 					]
 				},
 				{
+					"show": true,
 					"title": "Chip Country",
 					"author": "Various Artist",
 					"year": "2012",
@@ -463,6 +561,7 @@ class Discography extends Component {
 					]
 				},
 				{
+					"show": true,
 					"title": "BleepLove vol.3 part 2",
 					"author": "Various Artist",
 					"year": "2012",
@@ -488,6 +587,7 @@ class Discography extends Component {
 					]
 				},
 				{
+					"show": true,
 					"title": "Rabitza - Last News Of The World",
 					"author": "Various Artist",
 					"year": "2011",
@@ -508,6 +608,7 @@ class Discography extends Component {
 					]
 				},
 				{
+					"show": true,
 					"title": "Bleeplove vol.1",
 					"author": "Various Artist",
 					"year": "2011",
@@ -527,6 +628,7 @@ class Discography extends Component {
 					]
 				},
 				{
+					"show": true,
 					"title": "New Year Battle 2011",
 					"author": "Various Artist",
 					"year": "2011",
@@ -555,6 +657,7 @@ class Discography extends Component {
 					]
 				},
 				{
+					"show": true,
 					"title": "The Pulse Of The Blue Star",
 					"author": "Various Artist",
 					"year": "2010",
@@ -576,6 +679,7 @@ class Discography extends Component {
 					]
 				},
 				{
+					"show": true,
 					"title": "The Chip Tribute To Aphex Twin",
 					"author": "Various Artist",
 					"year": "2010",
@@ -600,63 +704,65 @@ class Discography extends Component {
 						"Shame_boy - Logon Witch Rock [Melodies from Mars]",
 						"Stress_TN - Come to Daddy [Come to Daddy EP]"
 					]
-				}
-				// {
-				// 	"title": "Chafer",
-				// 	"author": "Various Artist",
-				// 	"year": "2011",
-				// 	"labelName": "Ruszud",
-				// 	"labelLink": "https://vk.com/ruszud",
-				// 	"releaseId": "rz220",
-				// 	"coverLink": "../images/albums/chafer.jpg",
-				// 	"downloadLink": "http://www.archive.org/details/rz220",
-				// 	"tracklist": [
-				// 		"vefiretiwina - C3POs rampage",
-				// 		"NEMO - Mary-go-Round",
-				// 		"MICROCOBRA - Scorpion vs Cobra",
-				// 		"Stress TN - Power wave",
-				// 		"<3an - skipjack",
-				// 		"Moaner - SOS",
-				// 		"Nextspace - dodo XD",
-				// 		"fakediscoclub - wOOt",
-				// 		"Synthetic Boy - Box with basses",
-				// 		"Max Tailord - Fucking boy"
-				// 	]
-				// },
-				// {
-				// 	"title": "BITMASTERS VOL.2: Vital Sines",
-				// 	"author": "Various Artist",
-				// 	"year": "2010",
-				// 	"labelName": "Bitmasters",
-				// 	"labelLink": "",
-				// 	"releaseId": "",
-				// 	"coverLink": "../images/albums/bitmasters2.jpg",
-				// 	"downloadLink": "http://www.mediafire.com/file/k00tdgemjm4/BITMASTERS+VOL.2.zip",
-				// 	"tracklist": [
-				// 		"Sycamore Drive - Happiness In Winter",
-				// 		"Alucard - Nightfall",
-				// 		"Cartoon Bomb - Speed Of Dark",
-				// 		"DEADBEATBLAST - Cross Vector",
-				// 		"Hellz - Riviera ~ Encounter! (Remix)",
-				// 		"TWELVE INSOMNIA - Shibuya on Fire",
-				// 		"MicroD - Palisade",
-				// 		"We The Sick - And Yet We Keep on Trying",
-				// 		"Standby emulator - 061109",
-				// 		"Phazeshift - Sally",
-				// 		"Je M'appelle - The Dust Dance",
-				// 		"ZAZI - Azure Dreams",
-				// 		"Bleepshit - We Can't Die Coz We Are Living!",
-				// 		"Zomvor - Peach Pupils",
-				// 		"robochip漀 - 24 and friend",
-				// 		"Robinerd - Town Music",
-				// 		"Broken Board Broken Life - RRR",
-				// 		"Jophish - Error Pending",
-				// 		"BEASTMODE - DEADLY WEAPON",
-				// 		"Stress_TN - Lazy Cat"
-				// 	]
-				// },
+				},
+				{
+				 "show": false,
+					"title": "Chafer",
+					"author": "Various Artist",
+					"year": "2011",
+					"labelName": "Ruszud",
+					"labelLink": "https://vk.com/ruszud",
+					"releaseId": "rz220",
+					"coverLink": "../images/albums/chafer.jpg",
+					"downloadLink": "http://www.archive.org/details/rz220",
+					"tracklist": [
+						"vefiretiwina - C3POs rampage",
+						"NEMO - Mary-go-Round",
+						"MICROCOBRA - Scorpion vs Cobra",
+						"Stress TN - Power wave",
+						"<3an - skipjack",
+						"Moaner - SOS",
+						"Nextspace - dodo XD",
+						"fakediscoclub - wOOt",
+						"Synthetic Boy - Box with basses",
+						"Max Tailord - Fucking boy"
+					]
+				},
+				{
+				 "show": false,
+					"title": "BITMASTERS VOL.2: Vital Sines",
+					"author": "Various Artist",
+					"year": "2010",
+					"labelName": "Bitmasters",
+					"labelLink": "",
+					"releaseId": "",
+					"coverLink": "../images/albums/bitmasters2.jpg",
+					"downloadLink": "http://www.mediafire.com/file/k00tdgemjm4/BITMASTERS+VOL.2.zip",
+					"tracklist": [
+						"Sycamore Drive - Happiness In Winter",
+						"Alucard - Nightfall",
+						"Cartoon Bomb - Speed Of Dark",
+						"DEADBEATBLAST - Cross Vector",
+						"Hellz - Riviera ~ Encounter! (Remix)",
+						"TWELVE INSOMNIA - Shibuya on Fire",
+						"MicroD - Palisade",
+						"We The Sick - And Yet We Keep on Trying",
+						"Standby emulator - 061109",
+						"Phazeshift - Sally",
+						"Je M'appelle - The Dust Dance",
+						"ZAZI - Azure Dreams",
+						"Bleepshit - We Can't Die Coz We Are Living!",
+						"Zomvor - Peach Pupils",
+						"robochip漀 - 24 and friend",
+						"Robinerd - Town Music",
+						"Broken Board Broken Life - RRR",
+						"Jophish - Error Pending",
+						"BEASTMODE - DEADLY WEAPON",
+						"Stress_TN - Lazy Cat"
+					]
+				},
 			],
-			activeItem : null
+			activeItem: null
 		};
 
 		this.resizeMe = this.resizeMe.bind(this);
@@ -699,15 +805,32 @@ class Discography extends Component {
 				<div id="discography" className="container__wrapper discography">
 					<h3 className="container__sub-header">Albums & EPs</h3>
 					<ul className="discography__list">
-						{this.state.albums.map((item, key) =>
-							<Disc disc={item} key={key} triggerClick={(event) => this.resizeMe(event, item)} active={item === this.state.activeItem}/>
-						)}
+						{this.state.albums.map((item, key) => {
+							if (item.show) {
+								return <Disc disc={item}
+									key={key}
+									triggerClick={(event) => this.resizeMe(event, item)}
+									active={item === this.state.activeItem}
+								/>
+							}
+							return true
+						})}
 					</ul>
 					<h3 className="container__sub-header">Singles and Remixes</h3>
 					<ul className="discography__list">
-						{this.state.singles.map((item, key) =>
-							<Disc disc={item} key={key} triggerClick={(event) => this.resizeMe(event, item)} active={item === this.state.activeItem}/>
-						)}
+						{this.state.singles.map((item, key) => {
+							if (item.show) {
+								return <Disc
+											disc={item}
+											key={key}
+											triggerClick={(event) => this.resizeMe(event, item)}
+											active={
+												item === this.state.activeItem
+											}
+										/>
+							}
+							return true;
+						})}
 					</ul>
 					
 				</div>

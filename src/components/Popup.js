@@ -48,6 +48,7 @@ class Popup extends Component {
 					</ul>
 				</div>
 				<div className="popup__wrapper">
+					{this.renderPlayer()}
 					<h4 className="popup__title">
 						<a href={this.props.disc.downloadLink} target="_blank" rel="noopener noreferrer">{this.props.disc.title} - ({this.props.disc.year})</a>
 					</h4>
@@ -58,7 +59,6 @@ class Popup extends Component {
 							)}
 						</ul>
 					</div>
-					{this.renderPlayer()}
 				</div>
 				<div className="popup__close" onClick={this.props.onCloseClick}>&#128473;</div>
 			</div>
