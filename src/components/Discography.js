@@ -316,7 +316,52 @@ class Discography extends Component {
 				}
 			],
 		singles : [
-
+				{
+					"show": true,
+					"title": "anxiety episode",
+					"author": "SPCCSM",
+					"year": "2022",
+					"labelName": "Self release",
+					"labelLink": "https://spccsm.bandcamp.com/album/anxiety-episode",
+					"bandcampAlbum": 2832257567,
+					"releaseId": "",
+					"coverLink": "../images/albums/anxietyepisode.jpg",
+					"downloadLink": "https://spccsm.bandcamp.com/album/anxiety-episode",
+					"tracklist": [
+						"SPCCSM - wtf u mean",
+						"SPCCSM - dont touch me",
+						"SPCCSM - anxiety episode",
+						"SPCCSM - scum",
+						"SPCCSM - welcome to remission",
+						"SPCCSM - not bad news",
+						"SPCCSM - wtf u mean (S_TN rmx)",
+						"SPCCSM - anxiety episode (L_QCY remix 4xLSDJ)"
+					]
+				},
+				{
+					"show": true,
+					"title": "Welcome to Terror City",
+					"author": "Pixelbob",
+					"year": "2021",
+					"labelName": "Self release",
+					"labelLink": "https://pixelbob.bandcamp.com/album/welcome-to-terror-city",
+					"soundcloudPlayer": 1247716948,
+					"releaseId": "",
+					"coverLink": "../images/albums/pixelbob.png",
+					"downloadLink": "https://pixelbob.bandcamp.com/album/welcome-to-terror-city",
+					"tracklist": [
+						"Pixelbob - Circle Pit",
+						"Pixelbob - Terror City",
+						"Pixelbob - Black Spring",
+						"Pixelbob - South Core",
+						"Pixelbob - Chuck",
+						"Pixelbob - Russian Chipping",
+						"Pixelbob - Z. I. P",
+						"Pixelbob - Kity 93",
+						"Pixelbob - Not Gonna Get Us (t.A.T.u. Cover)",
+						"Pixelbob - Black Spring (S_TN rmx)"
+					]
+				},
 				{
 					"show": true,
 					"title": "FUK THE BORDERS VOL.6",

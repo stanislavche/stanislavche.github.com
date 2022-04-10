@@ -34,5 +34,5 @@ export function setAnimatedFavicon() {
 		} else {
 			image_counter++;
 		}
-	}, 300);
+	}, 600);
 }
