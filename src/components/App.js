@@ -18,7 +18,9 @@ class App extends Component {
 		let showIndexPage = () => {
 			return (
 				<div className="App">
-					<header className="App__header glitch">&#9996; S_TN &#9996;</header>
+					<header className="App__header glitch">
+						<span role="img" aria-labelledby="peace-1">✌</span>S_TN<span role="img" aria-labelledby="peace-2">✌</span>
+					</header>
 					<div className="App__wrapper">
 						<div className="App__wrapper-cell">
 							<Bio />
