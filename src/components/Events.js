@@ -6,6 +6,12 @@ class Events extends Component {
 		super(props);
 		this.state = {
 			events: [{
+					"date": "23 April 2022",
+					"country": "Latvia",
+					"city": "Riga",
+					"title": "Lokal House Hardcore Punk Party!",
+					"link": "https://www.facebook.com/events/322568109862913"
+				},{
 					"date": "16 July 2021",
 					"country": "Russia",
 					"city": "Taganrog",
