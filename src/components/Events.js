@@ -6,6 +6,18 @@ class Events extends Component {
 		super(props);
 		this.state = {
 			events: [{
+					"date": "11 - 14 August 2022",
+					"country": "Latvia",
+					"city": "Jaunciems, Tārgale Parish",
+					"title": "Festivāls Parakosm",
+					"link": "https://www.facebook.com/events/512174570376446"
+				},{
+					"date": "08 - 11 Julu 2022",
+					"country": "Estonia",
+					"city": "Vana-Veski Puhkekeskus",
+					"title": "Art of Nature Festival 2022",
+					"link": "https://www.facebook.com/events/1017419369001223"
+				},{
 					"date": "23 April 2022",
 					"country": "Latvia",
 					"city": "Riga",
@@ -253,7 +265,7 @@ class Events extends Component {
 				return (
 					<p className="events__text">{item.country} - {item.date} - {item.title}</p>
 				);
-			}	
+			}
 		}
 
 		return (

@@ -316,7 +316,27 @@ class Discography extends Component {
 			}
 		],
 		singles : [
-
+				{
+					"show": true,
+					"title": "Сразу же сужение ума",
+					"author": "Primary substance, Electrosky",
+					"year": "2022",
+					"labelName": "Self release",
+					"labelLink": "https://spccsm.bandcamp.com/album/anxiety-episode",
+					"bandcampAlbum": 3440141307,
+					"releaseId": "",
+					"coverLink": "../images/albums/vekvak.jpeg",
+					"downloadLink": "https://blagayavest.bandcamp.com/album/-",
+					"tracklist": [
+						"Сразу же сужение ума (Original mix)",
+						"Сразу же сужение ума (Office Passenger rmx))",
+						"Сразу же сужение ума (Высота)",
+						"Сразу же сужение ума (S_TN rmx)",
+						"Сразу же сужение ума (Пустота)",
+						"Сразу же сужение ума (AY rmx)",
+						"Сразу же сужение ума (Vladislav Nogin rmx)"
+					]
+				},
 				{
 					"show": true,
 					"title": "FROZEN ASS COLLECTION vol​.​2",
@@ -880,7 +900,7 @@ class Discography extends Component {
 				target.scrollIntoView({block: "start", behavior: "smooth"});
 			} else {
 				target.scrollIntoView({block: "center", behavior: "smooth"});
-				
+
 			}
 		}
 	}
@@ -932,7 +952,7 @@ class Discography extends Component {
 							return true;
 						})}
 					</ul>
-					
+
 				</div>
 				{this.showPopup()}
 			</section>
