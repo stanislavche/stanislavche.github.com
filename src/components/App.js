@@ -19,12 +19,12 @@ class App extends Component {
 			return (
 				<div className="App">
 					<header className="App__header glitch">
-						<span role="img" aria-labelledby="peace-1">✌</span>S_TN<span role="img" aria-labelledby="peace-2">✌</span>
+						<span role="img" aria-labelledby="peace-1">✌</span>S_TN<span className="App__hand-rotate" role="img" aria-labelledby="peace-2">✌</span>
 					</header>
 					<div className="App__wrapper">
 						<div className="App__wrapper-cell">
 							<Bio />
-							
+
 							<Game />
 						</div>
 						<div className="App__wrapper-cell">

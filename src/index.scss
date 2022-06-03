@@ -146,7 +146,7 @@ a:hover{
 	fill: none !important;
 }
 
-@keyframes glitch { 
+@keyframes glitch {
   0% { text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5;}
   1% { text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5;}
   2% { text-shadow: 3px 0 0 red, -3px 0 0 #0c33f5;}
@@ -391,7 +391,7 @@ a:hover{
 		width: 90vw;
 		max-width: 1100px;
 		margin: 0 auto;
-		
+
 	}
 	&__wrapper-cell{
 		position: relative;
@@ -418,7 +418,12 @@ a:hover{
 	}
 	&__footer{
 		text-align: center;
-		margin: 10px 0; 
+		margin: 10px 0;
+	}
+	&__hand-rotate {
+		transform: scaleX(-1);
+		-webkit-transform: scaleX(-1);
+		display: inline-block;
 	}
 }
 
@@ -582,7 +587,7 @@ a:hover{
 		padding-left: 40px;
 	}
 	&__info{
-		
+
 	}
 	&__secondary-list{
 		list-style-type: decimal-leading-zero;
