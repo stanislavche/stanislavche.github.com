@@ -9,7 +9,7 @@ class Announce extends Component {
 			<section className="container">
 				<h2 className="container__header">MUSIC</h2>
 				<div className="container__wrapper player">
-					<ReactPlayer url={playlist} width="100%" height="300px" />
+					<ReactPlayer url={playlist} width="100%" height="401px" />
 				</div>
 			</section>
 		);
