@@ -12,21 +12,23 @@ class Gameboy extends Component {
 	}
 
 	componentDidMount() {
-		console.log('mount');
 		let el = document.querySelector('#gameboy');
+		let wrapper = document.querySelector('.wrapper');
 		let aniContainer = document.querySelector('#animation');
 		let gameboyScreen = document.querySelector('#gameboy_screen');
 		let myAnimation = new LazyLinePainter(el, {
-			"strokeWidth" : 1.5,
+			"strokeWidth" : 2.2,
 			"drawSequential": false,
-			"strokeColor": "#000",
+			"strokeColor": "#f7e6e4",
+			speedMultiplier: 3,
 			"ease": 'easeInOutSine'
 		});
-
+		aniContainer.classList.add("active");
 		myAnimation.paint();
 		myAnimation.on('complete', () => {
 			aniContainer.classList.remove("disactive");
 			gameboyScreen.classList.add("active");
+			wrapper.classList.add("active");
 			setTimeout(() => {
 				ReactDOM.render(<App />, document.getElementById('root'));
 				//ReactDOM.unmountComponentAtNode(document.getElementById('animation'));
