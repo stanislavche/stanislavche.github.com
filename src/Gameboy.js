@@ -12,6 +12,7 @@ class Gameboy extends Component {
 	}
 
 	componentDidMount() {
+		console.log('mount');
 		let el = document.querySelector('#gameboy');
 		let wrapper = document.querySelector('.wrapper');
 		let aniContainer = document.querySelector('#animation');

@@ -66,7 +66,8 @@ a:hover{
 #root {
 	position: relative;
 	z-index: 2;
-	background-color: $back-color;
+	background-color: $dark-red;
+	//background-color: $back-color;
 	//background-image: url('./image/background.jpg');
 	background-size: contain;
 	//animation: rain 200ms infinite linear;
@@ -399,11 +400,11 @@ a:hover{
 		position: relative;
 		display: flex;
 		flex-flow: row wrap;
-		align-content: flex-start;
 		align-items: flex-start;
 		align-content: stretch;
 		justify-content: space-between;
-		font-size: $small-font;
+		font-size: $medium-font;
+		font-weight: 600;
 		width: 90vw;
 		max-width: 1100px;
 		margin: 0 auto;

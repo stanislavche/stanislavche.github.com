@@ -11,7 +11,7 @@ import Player from './Player';
 import Kits from './Kits';
 import "./loadscreen.scss";
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
-// import Mup from "./Mup";
+import Mup from "./Mup";
 
 class App extends Component {
 	render() {
@@ -24,8 +24,6 @@ class App extends Component {
 					<div className="App__wrapper">
 						<div className="App__wrapper-cell">
 							<Bio />
-
-							<Game />
 						</div>
 						<div className="App__wrapper-cell">
 							<News />
@@ -34,14 +32,15 @@ class App extends Component {
 							<Discography />
 						</div>
 						<div className="App__wrapper-cell">
+							<Game />
 							<Player />
 							<Events />
 							{/*<Donate />*/}
 						</div>
 						<div className="App__wrapper-cell">
-							{/*<Mup />*/}
-							<Emulator />
-							<Kits />
+							<Mup />
+							{/*<Emulator />*/}
+							{/*<Kits />*/}
 							<Cotacts />
 						</div>
 					</div>
