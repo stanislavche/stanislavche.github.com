@@ -43,7 +43,7 @@ class Cotacts extends Component {
 							</a>
 						</li>
 						<li className="contact-list__item">
-							<a href="https://instagram.com/stress_tn" className="contact-list__link contact-list__link_ig" target="_blank" rel="noopener noreferrer">
+							<a href="https://www.instagram.com/s_tn_space/" className="contact-list__link contact-list__link_ig" target="_blank" rel="noopener noreferrer">
 								<IgSvg />
 							</a>
 						</li>
