@@ -147,7 +147,7 @@ class Events extends Component {
 					"country": "Spain",
 					"city": "Barcelona",
 					"title": "Low Cycle Zero",
-					"link": "http://www.lowtoy.com/"
+					"link": "https://www.facebook.com/events/280066995442299"
 				},
 				{
 					"date": "1 July 2012",

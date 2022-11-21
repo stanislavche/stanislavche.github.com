@@ -38,8 +38,8 @@ class App extends Component {
 							{/*<Donate />*/}
 						</div>
 						<div className="App__wrapper-cell">
-							<Mup />
-							{/*<Emulator />*/}
+							{/*<Mup />*/}
+							<Emulator />
 							{/*<Kits />*/}
 							<Cotacts />
 						</div>
