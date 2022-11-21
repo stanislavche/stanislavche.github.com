@@ -47,7 +47,7 @@ class Kits extends Component {
 	render() {
 		return (
 			<section className="container">
-				<h2 className="container__header">LSDJ KITS</h2>
+				<h2 className="container__header">FREE LSDJ KITS</h2>
 				<div className="container__wrapper kits">
 					<ul className="kits__list">
 						{this.state.kits.map((item, key) =>

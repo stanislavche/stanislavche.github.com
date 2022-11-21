@@ -40,7 +40,7 @@ class App extends Component {
 						<div className="App__wrapper-cell">
 							{/*<Mup />*/}
 							<Emulator />
-							{/*<Kits />*/}
+							<Kits />
 							<Cotacts />
 						</div>
 					</div>
