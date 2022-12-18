@@ -9,7 +9,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	position: relative;
 	background: #0a0000;
-	color: $info-color;
+	color: $main-color;
 	font-size: $small-font;
 	@extend .custom-scroll;
 }
@@ -54,9 +54,9 @@ a {
 	&:visited,
 	&:hover,
 	&:active {
-		color: $link-color;
+		color: $main-color;
 	}
-	color: $link-color;
+	color: $main-color;
 	font-weight: bold;
 }
 a:hover{

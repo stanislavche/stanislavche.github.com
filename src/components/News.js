@@ -13,7 +13,14 @@ class News extends Component {
 				"link": "https://stresstn.bandcamp.com/album/-",
 				"type": "image",
 				"media": "./images/albums/mup.jpg"
-			}]
+			},{
+				"date": 1618007620,
+				"title": "Интервью с 2021",
+				"description": "Путешествие в мир 8Bit с элементами окружающей действительности",
+				"link": "https://rockweek.ru/stn-201021/",
+				"type": "link"
+			}
+			]
 		}
 	}
 
