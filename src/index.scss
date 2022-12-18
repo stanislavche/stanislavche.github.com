@@ -459,6 +459,9 @@ a:hover{
 	border: 2px dashed $info-color;
 	flex: 0 1 calc(50% - 10px);
 	position: relative;
+	&_news {
+		min-height: 382px;
+	}
 	&__header{
 		margin: 0 0 20px;
 		padding: 0;

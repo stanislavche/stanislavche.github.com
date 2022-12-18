@@ -33,7 +33,7 @@ class Popup extends Component {
 			)
 		}
 		return false;
-		
+
 	}
 
 	render() {
@@ -60,7 +60,7 @@ class Popup extends Component {
 						</ul>
 					</div>
 				</div>
-				<div className="popup__close" onClick={this.props.onCloseClick}>&#128473;</div>
+				<div className="popup__close" onClick={this.props.onCloseClick}>&#10005;</div>
 			</div>
 
 		);

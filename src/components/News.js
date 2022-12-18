@@ -26,7 +26,7 @@ class News extends Component {
 
 	render() {
 		return (
-			<section className="container">
+			<section className="container container_news">
 				<h2 className="container__header">News</h2>
 				<div className="container__wrapper news">
 					<ul className="news__list">

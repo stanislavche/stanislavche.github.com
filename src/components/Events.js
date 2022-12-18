@@ -6,6 +6,24 @@ class Events extends Component {
 		super(props);
 		this.state = {
 			events: [{
+					"date": "11 November 2022",
+					"country": "Latvia",
+					"city": "Riga",
+					"title": "THE ONLY GOOD SYSTEM IS A SOUND SYSTEM vol.1",
+					"link": "https://www.facebook.com/events/426278366322562"
+				},{
+					"date": "27 August 2022",
+					"country": "Russia",
+					"city": "Moscow",
+					"title": "Russian Chiptune Mafia vol.2",
+					"link": "https://t.me/s_tn_space/20"
+				},{
+					"date": "16 August 2022",
+					"country": "Russia",
+					"city": "Saint-Petersburg",
+					"title": "Chiptune в Масло club",
+					"link": "https://vk.com/spbchiptune"
+				},{
 					"date": "11 - 14 August 2022",
 					"country": "Latvia",
 					"city": "Jaunciems, Tārgale Parish",
@@ -147,7 +165,7 @@ class Events extends Component {
 					"country": "Spain",
 					"city": "Barcelona",
 					"title": "Low Cycle Zero",
-					"link": "http://www.lowtoy.com/"
+					"link": "https://www.facebook.com/events/280066995442299"
 				},
 				{
 					"date": "1 July 2012",
