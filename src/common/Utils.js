@@ -1,6 +1,6 @@
 export function setAnimatedFavicon() {
 	Element.prototype.remove = function() {
-		this.parentElement.removeChild(this);
+		this.parentElement?.removeChild(this);
 	}
 	NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
 		for(var i = this.length - 1; i >= 0; i--) {
@@ -34,5 +34,5 @@ export function setAnimatedFavicon() {
 		} else {
 			image_counter++;
 		}
-	}, 600);
+	}, 400);
 }
