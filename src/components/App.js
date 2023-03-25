@@ -10,16 +10,18 @@ import Events from './Events';
 import Player from './Player';
 import Kits from './Kits';
 import "./loadscreen.scss";
-import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Routes, Navigate } from "react-router-dom";
 import Mup from "./Mup";
 
 class App extends Component {
 	render() {
-		let showIndexPage = () => {
+		const ShowIndexPage = () => {
 			return (
 				<div className="App">
 					<header className="App__header glitch">
-						<span role="img" aria-labelledby="peace-1">✌</span>S_TN<span className="App__hand-rotate" role="img" aria-labelledby="peace-2">✌</span>
+						{/*<span role="img" aria-labelledby="peace-1">✌</span>*/}
+						S_TN
+						{/*<span className="App__hand-rotate" role="img" aria-labelledby="peace-2">✌</span>*/}
 					</header>
 					<div className="App__wrapper">
 						<div className="App__wrapper-cell">
@@ -49,7 +51,7 @@ class App extends Component {
 			);
 		};
 
-		let showErrorPage = () => {
+		const ShowErrorPage = () => {
 			return (
 				<div id="error" className="loadscreen errorLink">
 					<div className="loadscreen__c64-preview">
@@ -69,11 +71,11 @@ class App extends Component {
 
 		return (
 			<Router>
-				<Switch>
-					<Route path="/" exact component={showIndexPage} />
-					<Route path="/error" component={showErrorPage} />
-					<Redirect from='*' to='/error' />
-				</Switch>
+				<Routes>
+					<Route path="/" exact element={ <ShowIndexPage /> } />
+					<Route path="/error" element={ <ShowErrorPage />} />
+					<Route path='*' element={<Navigate to='/error' />} />
+				</Routes>
 			</Router>
 		);
 	}

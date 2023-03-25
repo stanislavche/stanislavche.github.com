@@ -468,7 +468,7 @@ a:hover{
 		text-align: center;
 		font-size: calc(10px + 2vmin);
 		background: $info-color;
-		color: $main-color;
+		color: $white-color;
 	}
 	&__text {
 		text-indent: 1.5em;
@@ -478,7 +478,7 @@ a:hover{
 	&__sub-header{
 		margin: 0 0 20px;
 		background: $info-color;
-		color: $main-color;
+		color: $white-color;
 		padding: 2px 0;
 	}
 }
@@ -575,7 +575,7 @@ a:hover{
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		color: $main-color;
+		color: $white-color;
 		font-size: 14px;
 		width: 100%;
 		margin: 0;

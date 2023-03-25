@@ -4,6 +4,7 @@ import App from './components/App';
 
 import LazyLinePainter from 'lazy-line-painter'
 import { ReactComponent as GameboySvg } from './image/gameboy.svg';
+import * as ReactDOMClient from 'react-dom/client';
 
 class Gameboy extends Component {
 	constructor(props) {
@@ -31,8 +32,11 @@ class Gameboy extends Component {
 			gameboyScreen.classList.add("active");
 			wrapper.classList.add("active");
 			setTimeout(() => {
-				ReactDOM.render(<App />, document.getElementById('root'));
-				//ReactDOM.unmountComponentAtNode(document.getElementById('animation'));
+				this.props.root.render(
+					<React.StrictMode>
+						<App />
+					</React.StrictMode>
+				);
 				myAnimation.destroy();
 			}, 2000);
 		});

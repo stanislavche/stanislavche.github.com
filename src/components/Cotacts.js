@@ -38,7 +38,7 @@ class Cotacts extends Component {
 							</a>
 						</li>
 						<li className="contact-list__item">
-							<a href="https://www.youtube.com/@STN_live" className="contact-list__link contact-list__link_yt" target="_blank" rel="noopener noreferrer">
+							<a href="https://www.youtube.com/@S_TN" className="contact-list__link contact-list__link_yt" target="_blank" rel="noopener noreferrer">
 								<YtSvg />
 							</a>
 						</li>

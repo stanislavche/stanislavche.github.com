@@ -5,7 +5,14 @@ class Events extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			events: [{
+			events: [
+				{
+					"date": "05 January 2023",
+					"country": "Latvia",
+					"city": "Riga",
+					"title": "+ TATHUUNS +",
+					"link": "https://www.facebook.com/events/1185800398991080"
+				},{
 					"date": "11 November 2022",
 					"country": "Latvia",
 					"city": "Riga",
