@@ -31,291 +31,343 @@ class Discography extends Component {
 					"RAILROAD SWITCH"
 				]
 			},
-			{
-				"show": true,
-				"title": "COLD FLAME",
-				"author": "S_TN",
-				"year": "2020",
-				"bandcampAlbum": 3935878986,
-				"labelName": "",
-				"labelLink": "",
-				"releaseId": "",
-				"coverLink": "../images/albums/cold_flame.png",
-				"downloadLink": "https://stresstn.bandcamp.com/album/cold-flame",
-				"tracklist": [
-					"Cold flame",
-					"Deny reality",
-					"Fatal error",
-					"Humility",
-					"Indetermination"
-				]
-			},
-			{
-				"show": true,
-				"title": "Illusion",
-				"author": "Stress_TN",
-				"year": "2019",
-				"bandcampAlbum": 1377210106,
-				"labelName": "",
-				"labelLink": "",
-				"releaseId": "",
-				"coverLink": "../images/albums/illusion.jpg",
-				"downloadLink": "https://stresstn.bandcamp.com/album/illusion-lsdj-sav",
-				"tracklist": [
-					"Illusion",
-					"Square liana",
-					"Race crash",
-					"bit Dungeon III OST",
-					"Retetris",
-					"GameGate - Any (Stress_TN rmx)"
-				]
-			},
-			{
-				"show": true,
-				"title": "bit Dungeon 2 OST",
-				"author": "Stress_TN",
-				"year": "2014",
-				"bandcampAlbum": 3872594737,
-				"labelName": "",
-				"labelLink": "",
-				"releaseId": "",
-				"coverLink": "../images/albums/bitdungeon2.jpg",
-				"downloadLink": "https://stresstn.bandcamp.com/album/bit-dungeon-2-ost",
-				"tracklist": [
-					"Castle",
-					"Commodore bass preview",
-					"Firstflower",
-					"Game boy sketch",
-					"Herovo gore",
-					"Senseless war",
-					"Victory madnes"
-				]
-			},
-			{
-				"show": true,
-				"title": "bit Dungeon OST",
-				"author": "Stress_TN",
-				"year": "2013",
-				"bandcampAlbum": 2488591096,
-				"labelName": "Noisechannel",
-				"labelLink": "http://www.noisechannel.org/",
-				"releaseId": "nc054",
-				"coverLink": "../images/albums/bitdungeon.png",
-				"downloadLink": "http://www.noisechannel.org/downloads/nc054.php",
-				"tracklist": [
-					"bit Dungeon intro",
-					"bit Dungeon part 1",
-					"bit Dungeon part 2"
-				]
-			},
-			{
-				"show": true,
-				"title": "Happy",
-				"author": "Stress TN, VRUMZSSSR, 3an",
-				"year": "2013",
-				"labelName": "Bleeplove",
-				"labelLink": "https://bleeplove.bandcamp.com/",
-				"releaseId": "",
-				"coverLink": "../images/albums/happy.png",
-				"downloadLink": "http://archive.org/details/Bleeplove-Happy",
-				"tracklist": [
-					"VRUMZSSSR - Showdown",
-					"VRUMZSSSR - Marry Xmans",
-					"Stress_TN - Skachki krotov",
-					"Stress_TN - Cosmo warrior",
-					"<3an - Looooov3"
-				]
-			},
-			{
-				"show": true,
-				"title": "Gangsta With Blasta",
-				"author": "Stress TN, GameGate, Milkdrop",
-				"year": "2012",
-				"labelName": "Lowtoy",
-				"labelLink": "http://www.lowtoy.com/",
-				"releaseId": "lwt 13",
-				"soundcloudPlayer": 45280171,
-				"coverLink": "../images/albums/GangstaWithBlasta.jpg",
-				"downloadLink": "http://www.lowtoy.com/portfolio/va-gangsta-with-blasta/",
-				"tracklist": [
-					"Milkdrop – Red Cat And Skinny Rat",
-					"Milkdrop – Alice",
-					"Stress_TN & Milkdrop – Get Me Magic",
-					"Stress_TN – Huracan",
-					"Stress_TN & Game Gate – Space",
-					"Game Gate – Apolo",
-					"Game Gate – Lonely Soldier"
-				]
-			},
-			{
-				"show": true,
-				"title": "Great Pixel Storm",
-				"author": "Stress_TN, Мой сосед Лао Цзы",
-				"year": "2012",
-				"labelName": "Bleeplove",
-				"labelLink": "https://bleeplove.bandcamp.com/",
-				"releaseId": "",
-				"soundcloudPlayer": 40134942,
-				"coverLink": "../images/albums/greatpixelstorm.jpg",
-				"downloadLink": "https://drive.google.com/uc?authuser=0&id=1rFhX9VU8DeqQwpAkDYMzn22Scqv-D9zI&export=download",
-				"tracklist": [
-					"Stress_TN - Computa",
-					"Мой сосед Лао Цзы - Nothing Has Changed",
-					"Мой сосед Лао Цзы – A Sparrow",
-					"Stress_TN – Pixel punks",
-					"Stress_TN – Race for a dream",
-					"Мой сосед Лао Цзы – Heroes Of Time"
-				]
-			},
-			{
-				"show": true,
-				"title": "Consolisation",
-				"author": "Stress_TN",
-				"year": "2011",
-				"labelName": "Lowtoy",
-				"labelLink": "http://www.lowtoy.com/",
-				"releaseId": "lwt 09",
-				"bandcampAlbum": 3534733380,
-				"coverLink": "../images/albums/consolisation.jpg",
-				"downloadLink": "https://stresstn.bandcamp.com/album/consolisation-lsdj-sav-file-include",
-				"tracklist": [
-					"Pixel Bombing",
-					"Tank Resistance",
-					"Rescue Expedition",
-					"Last Chance",
-					"Decisive Battle",
-					"Enslaving Of People Melody",
-					"Consolisation Win Melody",
-					"Enslaving Of People Melody (CMOS Killers Remix)",
-					"Consolisation win melody (Gidropony Remix)",
-					"NES Games Bonus"
-				]
-			},
-			{
-				"show": false,
-				"title": "Smoking Fighters",
-				"author": "Stress_TN",
-				"year": "2011",
-				"labelName": "Chippanze",
-				"labelLink": "https://chippanze.bandcamp.com/",
-				"releaseId": "CP035",
-				"bandcampAlbum": 2380577811,
-				"coverLink": "../images/albums/smokingfighters.jpg",
-				"downloadLink": "https://chippanze.bandcamp.com/album/cp035-smoking-fighters",
-				"tracklist": [
-					"Square power",
-					"Prima Shooter",
-					"Wob Bob",
-					"Decibel",
-					"Piz.DOS",
-					"Invanders lunch",
-					"Siberia",
-					"TMNT rmx (Bonus track)"
-				]
-			},
-			{
-			 "show": false,
-				"title": "Chipolino Alliance",
-				"author": "Stress_TN, BOB The Builder!, Fat Frumos, 8bitchyfruit",
-				"year": "2010",
-				"labelName": "Bitmasters",
-				"labelLink": "",
-				"releaseId": "",
-				"coverLink": "../images/albums/chipolino.jpg",
-				"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/CHIPOLINO%20ALLIANCE.rar",
-				"tracklist": [
-					"Fat Frumos - Badman",
-					"Fat Frumos - Hil' with pixel eyes",
-					"BOB The Builder! - Gazmanov's somersault",
-					"BOB The Builder! - Jeso cristo",
-					"Stress_TN - Schranz Reserved",
-					"Stress_TN - Tick Tack Boom",
-					"8[bit]chyfruit - b.l.n.t.o.e.t",
-					"8[bit]chyfruit - Lone Rugrat"
-				]
-			},
-			{
-			 "show": false,
-				"title": "Terrible Noize",
-				"author": "Stress_TN",
-				"year": "2010",
-				"labelName": "Bitmasters",
-				"labelLink": "",
-				"releaseId": "",
-				"coverLink": "../images/albums/terriblenoise.jpg",
-				"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Stress_TN%20-%20Terrible%20Noize.rar",
-				"tracklist": [
-					"Destiny",
-					"Flying",
-					"LonelyNes",
-					"Memory",
-					"Rasta"
-				]
-			},
-			{
-			 "show": false,
-				"title": "Omlet",
-				"author": "Stress_TN",
-				"year": "2010",
-				"labelName": "Ruszud",
-				"labelLink": "https://vk.com/ruszud",
-				"releaseId": "rz157",
-				"coverLink": "../images/albums/omlet.jpg",
-				"downloadLink": "https://archive.org/details/rz_157",
-				"tracklist": [
-					"Happy Twist",
-					"Xyp",
-					"Omlet",
-					"Dnb",
-					"Right"
-				]
-			},
-			{
-			 "show": false,
-				"title": "First Console Aid",
-				"author": "Stress_TN, 2NRO8OT, Nextspace",
-				"year": "2010",
-				"labelName": "Breakcoreyourself",
-				"labelLink": "",
-				"releaseId": "",
-				"coverLink": "../images/albums/FirstConsoleAid.png",
-				"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Stress_TN%2C%202NRO8OT%2C%20Nextspace%20-%20First%20Console%20Aid%20%28BREAKCOREYOURSELF.RU%29.rar",
-				"tracklist": [
-					"2NRO8OT - Evacuation",
-					"2NRO8OT - NGC 1300",
-					"2NRO8OT - Ravenosnie Sosudi (Raveносные Сосуды)",
-					"2NRO8OT - Visit To Other Galaxy (Посещение Другой Галактики)",
-					"Stress_TN - Empire",
-					"Stress_TN - lepricon",
-					"Stress_TN - lyric",
-					"Stress_TN - melok",
-					"Nextspace - Electric Robots",
-					"Nextspace - I'N'U",
-					"Nextspace - monobit"
-				]
-			},
-			{
-			 "show": false,
-				"title": "Littreschranzdj",
-				"author": "Stress_TN",
-				"year": "2010",
-				"labelName": "3pan Records",
-				"labelLink": "",
-				"releaseId": "3PND001",
-				"coverLink": "../images/albums/littleschranzdj.jpg",
-				"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Littleschranzdj.rar",
-				"tracklist": [
-					"Shturm",
-					"Littleschranzdj",
-					"Meeting",
-					"Paranoya",
-					"Last Power",
-					"Chris Li",
-					"Chiptech"
-				]
-			}
-		],
+				{
+					"show": true,
+					"title": "COLD FLAME",
+					"author": "S_TN",
+					"year": "2020",
+					"bandcampAlbum": 3935878986,
+					"labelName": "",
+					"labelLink": "",
+					"releaseId": "",
+					"coverLink": "../images/albums/cold_flame.png",
+					"downloadLink": "https://stresstn.bandcamp.com/album/cold-flame",
+					"tracklist": [
+						"Cold flame",
+						"Deny reality",
+						"Fatal error",
+						"Humility",
+						"Indetermination"
+					]
+				},
+				{
+					"show": true,
+					"title": "Illusion",
+					"author": "Stress_TN",
+					"year": "2019",
+					"bandcampAlbum": 1377210106,
+					"labelName": "",
+					"labelLink": "",
+					"releaseId": "",
+					"coverLink": "../images/albums/illusion.jpg",
+					"downloadLink": "https://stresstn.bandcamp.com/album/illusion-lsdj-sav",
+					"tracklist": [
+						"Illusion",
+						"Square liana",
+						"Race crash",
+						"bit Dungeon III OST",
+						"Retetris",
+						"GameGate - Any (Stress_TN rmx)"
+					]
+				},
+				{
+					"show": true,
+					"title": "bit Dungeon 2 OST",
+					"author": "Stress_TN",
+					"year": "2014",
+					"bandcampAlbum": 3872594737,
+					"labelName": "",
+					"labelLink": "",
+					"releaseId": "",
+					"coverLink": "../images/albums/bitdungeon2.jpg",
+					"downloadLink": "https://stresstn.bandcamp.com/album/bit-dungeon-2-ost",
+					"tracklist": [
+						"Castle",
+						"Commodore bass preview",
+						"Firstflower",
+						"Game boy sketch",
+						"Herovo gore",
+						"Senseless war",
+						"Victory madnes"
+					]
+				},
+				{
+					"show": true,
+					"title": "bit Dungeon OST",
+					"author": "Stress_TN",
+					"year": "2013",
+					"bandcampAlbum": 2488591096,
+					"labelName": "Noisechannel",
+					"labelLink": "http://www.noisechannel.org/",
+					"releaseId": "nc054",
+					"coverLink": "../images/albums/bitdungeon.png",
+					"downloadLink": "http://www.noisechannel.org/downloads/nc054.php",
+					"tracklist": [
+						"bit Dungeon intro",
+						"bit Dungeon part 1",
+						"bit Dungeon part 2"
+					]
+				},
+				{
+					"show": true,
+					"title": "Happy",
+					"author": "Stress TN, VRUMZSSSR, 3an",
+					"year": "2013",
+					"labelName": "Bleeplove",
+					"labelLink": "https://bleeplove.bandcamp.com/",
+					"releaseId": "",
+					"coverLink": "../images/albums/happy.png",
+					"downloadLink": "http://archive.org/details/Bleeplove-Happy",
+					"tracklist": [
+						"VRUMZSSSR - Showdown",
+						"VRUMZSSSR - Marry Xmans",
+						"Stress_TN - Skachki krotov",
+						"Stress_TN - Cosmo warrior",
+						"<3an - Looooov3"
+					]
+				},
+				{
+					"show": true,
+					"title": "Gangsta With Blasta",
+					"author": "Stress TN, GameGate, Milkdrop",
+					"year": "2012",
+					"labelName": "Lowtoy",
+					"labelLink": "http://www.lowtoy.com/",
+					"releaseId": "lwt 13",
+					"soundcloudPlayer": 45280171,
+					"coverLink": "../images/albums/GangstaWithBlasta.jpg",
+					"downloadLink": "http://www.lowtoy.com/portfolio/va-gangsta-with-blasta/",
+					"tracklist": [
+						"Milkdrop – Red Cat And Skinny Rat",
+						"Milkdrop – Alice",
+						"Stress_TN & Milkdrop – Get Me Magic",
+						"Stress_TN – Huracan",
+						"Stress_TN & Game Gate – Space",
+						"Game Gate – Apolo",
+						"Game Gate – Lonely Soldier"
+					]
+				},
+				{
+					"show": true,
+					"title": "Great Pixel Storm",
+					"author": "Stress_TN, Мой сосед Лао Цзы",
+					"year": "2012",
+					"labelName": "Bleeplove",
+					"labelLink": "https://bleeplove.bandcamp.com/",
+					"releaseId": "",
+					"soundcloudPlayer": 40134942,
+					"coverLink": "../images/albums/greatpixelstorm.jpg",
+					"downloadLink": "https://drive.google.com/uc?authuser=0&id=1rFhX9VU8DeqQwpAkDYMzn22Scqv-D9zI&export=download",
+					"tracklist": [
+						"Stress_TN - Computa",
+						"Мой сосед Лао Цзы - Nothing Has Changed",
+						"Мой сосед Лао Цзы – A Sparrow",
+						"Stress_TN – Pixel punks",
+						"Stress_TN – Race for a dream",
+						"Мой сосед Лао Цзы – Heroes Of Time"
+					]
+				},
+				{
+					"show": true,
+					"title": "Consolisation",
+					"author": "Stress_TN",
+					"year": "2011",
+					"labelName": "Lowtoy",
+					"labelLink": "http://www.lowtoy.com/",
+					"releaseId": "lwt 09",
+					"bandcampAlbum": 3534733380,
+					"coverLink": "../images/albums/consolisation.jpg",
+					"downloadLink": "https://stresstn.bandcamp.com/album/consolisation-lsdj-sav-file-include",
+					"tracklist": [
+						"Pixel Bombing",
+						"Tank Resistance",
+						"Rescue Expedition",
+						"Last Chance",
+						"Decisive Battle",
+						"Enslaving Of People Melody",
+						"Consolisation Win Melody",
+						"Enslaving Of People Melody (CMOS Killers Remix)",
+						"Consolisation win melody (Gidropony Remix)",
+						"NES Games Bonus"
+					]
+				},
+				{
+					"show": false,
+					"title": "Smoking Fighters",
+					"author": "Stress_TN",
+					"year": "2011",
+					"labelName": "Chippanze",
+					"labelLink": "https://chippanze.bandcamp.com/",
+					"releaseId": "CP035",
+					"bandcampAlbum": 2380577811,
+					"coverLink": "../images/albums/smokingfighters.jpg",
+					"downloadLink": "https://chippanze.bandcamp.com/album/cp035-smoking-fighters",
+					"tracklist": [
+						"Square power",
+						"Prima Shooter",
+						"Wob Bob",
+						"Decibel",
+						"Piz.DOS",
+						"Invanders lunch",
+						"Siberia",
+						"TMNT rmx (Bonus track)"
+					]
+				},
+				{
+				 "show": false,
+					"title": "Chipolino Alliance",
+					"author": "Stress_TN, BOB The Builder!, Fat Frumos, 8bitchyfruit",
+					"year": "2010",
+					"labelName": "Bitmasters",
+					"labelLink": "",
+					"releaseId": "",
+					"coverLink": "../images/albums/chipolino.jpg",
+					"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/CHIPOLINO%20ALLIANCE.rar",
+					"tracklist": [
+						"Fat Frumos - Badman",
+						"Fat Frumos - Hil' with pixel eyes",
+						"BOB The Builder! - Gazmanov's somersault",
+						"BOB The Builder! - Jeso cristo",
+						"Stress_TN - Schranz Reserved",
+						"Stress_TN - Tick Tack Boom",
+						"8[bit]chyfruit - b.l.n.t.o.e.t",
+						"8[bit]chyfruit - Lone Rugrat"
+					]
+				},
+				{
+				 "show": false,
+					"title": "Terrible Noize",
+					"author": "Stress_TN",
+					"year": "2010",
+					"labelName": "Bitmasters",
+					"labelLink": "",
+					"releaseId": "",
+					"coverLink": "../images/albums/terriblenoise.jpg",
+					"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Stress_TN%20-%20Terrible%20Noize.rar",
+					"tracklist": [
+						"Destiny",
+						"Flying",
+						"LonelyNes",
+						"Memory",
+						"Rasta"
+					]
+				},
+				{
+				 "show": false,
+					"title": "Omlet",
+					"author": "Stress_TN",
+					"year": "2010",
+					"labelName": "Ruszud",
+					"labelLink": "https://vk.com/ruszud",
+					"releaseId": "rz157",
+					"coverLink": "../images/albums/omlet.jpg",
+					"downloadLink": "https://archive.org/details/rz_157",
+					"tracklist": [
+						"Happy Twist",
+						"Xyp",
+						"Omlet",
+						"Dnb",
+						"Right"
+					]
+				},
+				{
+				 "show": false,
+					"title": "First Console Aid",
+					"author": "Stress_TN, 2NRO8OT, Nextspace",
+					"year": "2010",
+					"labelName": "Breakcoreyourself",
+					"labelLink": "",
+					"releaseId": "",
+					"coverLink": "../images/albums/FirstConsoleAid.png",
+					"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Stress_TN%2C%202NRO8OT%2C%20Nextspace%20-%20First%20Console%20Aid%20%28BREAKCOREYOURSELF.RU%29.rar",
+					"tracklist": [
+						"2NRO8OT - Evacuation",
+						"2NRO8OT - NGC 1300",
+						"2NRO8OT - Ravenosnie Sosudi (Raveносные Сосуды)",
+						"2NRO8OT - Visit To Other Galaxy (Посещение Другой Галактики)",
+						"Stress_TN - Empire",
+						"Stress_TN - lepricon",
+						"Stress_TN - lyric",
+						"Stress_TN - melok",
+						"Nextspace - Electric Robots",
+						"Nextspace - I'N'U",
+						"Nextspace - monobit"
+					]
+				},
+				{
+				 "show": false,
+					"title": "Littreschranzdj",
+					"author": "Stress_TN",
+					"year": "2010",
+					"labelName": "3pan Records",
+					"labelLink": "",
+					"releaseId": "3PND001",
+					"coverLink": "../images/albums/littleschranzdj.jpg",
+					"downloadLink": "https://archive.org/download/StressTN2NRO8OTNextspaceFirstConsoleAidBREAKCOREYOURSELF.RU/Littleschranzdj.rar",
+					"tracklist": [
+						"Shturm",
+						"Littleschranzdj",
+						"Meeting",
+						"Paranoya",
+						"Last Power",
+						"Chris Li",
+						"Chiptech"
+					]
+				}
+			],
 		singles : [
+			{
+				"show": true,
+				"title": "BleepLove Vol.7",
+				"author": "Various Artist",
+				"year": "2022",
+				"labelName": "BleepLove",
+				"labelLink": "https://bleeplove.bandcamp.com/album/bleeplove-vol-7",
+				"bandcampAlbum": 783955225,
+				"releaseId": "7",
+				"coverLink": "../images/albums/bleeplove7.jpg",
+				"downloadLink": "https://bleeplove.bandcamp.com/album/bleeplove-vol-7",
+				"tracklist": [
+					"Sound Forces - What A Lovely Day",
+					"VRUMZSSSR - Youth",
+					"S_TN feat. son - El Candelabro",
+					"illusory essence - Happiness",
+					"Final Sketch - Diablo",
+					"Nuclear Mushroom Boom - Distort Weave",
+					"feonao - City Lights",
+					"Balloonbear - illicit ventures",
+					"L_qcy - Shoom",
+					"Dazmarus -It's my cry",
+					"R.K.B. Studio 13 - The Secret Cat",
+					"ONE HIT KILL - BEEZwax (BleepLove mix)",
+					"Pixelbob - Back to SPB",
+					"GameGate - veas",
+					"Nagareboshi - Gyutaro",
+					"b00leant - CMOS, C'MON!",
+					"Blonde Mohawk - A Good Ol' Case of the Grass is Always Greener"
+				]
+			},
+			{
+				"show": true,
+				"title": "Сразу же сужение ума",
+				"author": "Primary substance, Electrosky",
+				"year": "2022",
+				"labelName": "Self release",
+				"labelLink": "https://spccsm.bandcamp.com/album/anxiety-episode",
+				"bandcampAlbum": 3440141307,
+				"releaseId": "",
+				"coverLink": "../images/albums/vekvak.jpeg",
+				"downloadLink": "https://blagayavest.bandcamp.com/album/-",
+				"tracklist": [
+					"Сразу же сужение ума (Original mix)",
+					"Сразу же сужение ума (Office Passenger rmx))",
+					"Сразу же сужение ума (Высота)",
+					"Сразу же сужение ума (S_TN rmx)",
+					"Сразу же сужение ума (Пустота)",
+					"Сразу же сужение ума (AY rmx)",
+					"Сразу же сужение ума (Vladislav Nogin rmx)"
+				]
+			},
 				{
 					"show": true,
 					"title": "Сразу же сужение ума",
