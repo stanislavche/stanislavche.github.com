@@ -7,6 +7,27 @@ class Events extends Component {
 		this.state = {
 			events: [
 				{
+					"date": "18 January 2024",
+					"country": "Germany",
+					"city": "Berlin",
+					"title": "Stranger Bits",
+					"link": "https://fb.me/e/1lMcwSyLD"
+				},
+				{
+					"date": "01 January 2024",
+					"country": "Russia",
+					"city": "Saint-Petersburg",
+					"title": "Inline Fest",
+					"link": "https://www.youtube.com/watch?v=QQrpxz7CCa0&t=206s"
+				},
+				{
+					"date": "16 December 2023",
+					"country": "Latvia",
+					"city": "Riga",
+					"title": "DziļumSpektrs - Audio Reaktīvais Elektroniskais Džems",
+					"link": "https://fb.me/e/77sEjxj7A"
+				},
+				{
 					"date": "28 July 2023",
 					"country": "Georgia",
 					"city": "Tbilisi",

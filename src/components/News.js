@@ -18,7 +18,8 @@ class News extends Component {
 				"title": "Интервью",
 				"description": "Путешествие в мир 8Bit с элементами окружающей действительности",
 				"link": "https://rockweek.ru/stn-201021/",
-				"type": "link"
+				"type": "image",
+				"media": "./images/extra/boy.gif"
 			}
 			]
 		}

@@ -436,6 +436,7 @@ a:hover{
 	&__footer{
 		text-align: center;
 		margin: 10px 0;
+		font-weight: bold;
 	}
 	&__hand-rotate {
 		transform: scaleX(-1);
@@ -524,7 +525,7 @@ a:hover{
 		position: relative;
 		margin-bottom: 40px;
 		perspective: 100vw;
-		perspective-origin:80% 0;
+		perspective-origin:125% 0;
 
 		//-webkit-box-reflect: below 7px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.8, transparent), to(#ff0000));
 	}
