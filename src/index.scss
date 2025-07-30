@@ -69,8 +69,8 @@ a:hover{
 	z-index: 2;
 	background-color: vars.$dark-red;
 	//background-color: $back-color;
-	//background-image: url('./image/background.jpg');
-	background-size: contain;
+	background-image: url('./image/consoles.png');
+	background-size: initial;
 	//animation: rain 200ms infinite linear;
 }
 
@@ -397,13 +397,15 @@ $steps: 100;
 	justify-content: space-between;
 	&__header {
 		position: relative;
-		width: 100%;
+		width: 1100px;
+		max-width: 1100px;
+		margin: 0 auto 10px;
+		background: rgba(vars.$white-color, 0.5);
 		font-size: 8em;
 		line-height: 1.2;
 		text-shadow: 2px 2px 10px vars.$link-color;
 		color: vars.$info-color;
 		font-family: 'Permanent Marker', cursive;
-		margin-bottom: 10px;
 		animation: glitch 2s steps(20) infinite;
 	}
 	&__wrapper {
@@ -445,8 +447,13 @@ $steps: 100;
 	}
 	&__footer{
 		text-align: center;
-		margin: 10px 0;
 		font-weight: bold;
+		max-width: 1100px;
+		margin: 10px auto;
+		padding: 10px 20px;
+		background: vars.$white-color;
+		border-radius: 10px;
+		border: 2px dashed vars.$info-color;
 	}
 	&__hand-rotate {
 		transform: scaleX(-1);
@@ -464,7 +471,7 @@ $steps: 100;
 }
 .container{
 	width: 100%;
-	background: rgba(vars.$main-color, 0.1);
+	background: rgba(vars.$white-color, 1);
 	margin: 0 0 10px;
 	padding: 10px 30px;
 	border-radius: 4px;

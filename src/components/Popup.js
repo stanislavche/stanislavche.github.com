@@ -32,6 +32,20 @@ class Popup extends Component {
 				</div>
 			)
 		}
+		if (this.props.disc.bandcampTrack && this.props.disc.bandcampTrack.toString().length > 0) {
+			let link = "https://bandcamp.com/EmbeddedPlayer/track=" + this.props.disc.bandcampTrack + "/size=large/bgcol=333333/linkcol=4ec5ec/tracklist=false/artwork=small/transparent=true/";
+			return(
+				<div className="bandcamp-layer">
+					<iframe
+						src={link}
+						seamless
+						title={this.props.disc.title}
+					>
+						<a href="{this.props.disc.downloadLink}">{this.props.disc.title}</a>
+					</iframe>
+				</div>
+			);
+		}
 		return false;
 
 	}

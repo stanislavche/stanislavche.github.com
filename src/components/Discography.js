@@ -8,6 +8,27 @@ class Discography extends Component {
 		this.state = {
 			albums : [
 				{
+					"show": true,
+					"title": "Chiptune is not dead",
+					"author": "S_TN",
+					"year": "2025",
+					"bandcampAlbum": 569378756,
+					"labelName": "",
+					"labelLink": "",
+					"releaseId": "",
+					"coverLink": "../images/albums/chiptune_is_not_dead.jpg",
+					"downloadLink": "https://band.link/chiptune_is_not_dead",
+					"tracklist": [
+						"Chiptune is not dead",
+						"S_TN feat. Primary substance x Electr0sky - Shamanwave",
+						"Dilapidated stirrup",
+						"Katikataoka",
+						"S_TN feat DEFENSE MECHANISM - Механизм",
+						"Anomalistic drops",
+						"O! kops",
+					]
+				},
+				{
 				"show": true,
 				"title": "Мир",
 				"author": "S_TN",
@@ -316,6 +337,21 @@ class Discography extends Component {
 				}
 			],
 		singles : [
+			{
+				"show": true,
+				"title": "Last swift",
+				"author": "S_TN",
+				"year": "2023",
+				"labelName": "self",
+				"labelLink": "https://stresstn.bandcamp.com/track/last-swift",
+				"bandcampTrack": 4226290089,
+				"releaseId": "",
+				"coverLink": "../images/albums/last_swift.jpg",
+				"downloadLink": "https://stresstn.bandcamp.com/track/last-swift",
+				"tracklist": [
+					"Last Swift"
+				]
+			},
 			{
 				"show": true,
 				"title": "Valentune",
