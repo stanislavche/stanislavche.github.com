@@ -397,7 +397,7 @@ $steps: 100;
 	justify-content: space-between;
 	&__header {
 		position: relative;
-		width: 1100px;
+		width: 100%;
 		max-width: 1100px;
 		margin: 0 auto 10px;
 		background: rgba(vars.$white-color, 0.5);
@@ -767,11 +767,17 @@ $steps: 100;
 }
 
 @media screen and (max-width: 840px) {
+	#root {
+		background-size: 510px;
+	}
 	.bandcamp-layer {
 		padding-left: 0;
 	}
 }
 @media screen and (max-width: 641px) {
+	#root {
+		background-size: 330px;
+	}
 	.App__header {
 		font-size: 3em;
 	}
