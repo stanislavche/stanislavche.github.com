@@ -342,7 +342,7 @@ class Discography extends Component {
 					"remori - #000000",
 					"ONE HIT KILL - Luuuurve",
 					"XzxxzY - Sinful Love",
-					"Arsitech - Sun Ray ",
+					"Arsitech - Sun Ray",
 					"Shakaboyd - Aaa",
 					"Anti-Lag - Apa Kabar",
 				]

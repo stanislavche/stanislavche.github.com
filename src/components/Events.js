@@ -7,6 +7,69 @@ class Events extends Component {
 		this.state = {
 			events: [
 				{
+					"date": "17-21 July 2025",
+					"country": "Russia",
+					"city": "Lahdenpohya",
+					"title": "КАСТРЫ 2025",
+					"link": "https://kastry.art/"
+				},
+				{
+					"date": "12 April 2025",
+					"country": "Russia",
+					"city": "Krasnodar",
+					"title": "INSOMNIA BleepLove",
+					"link": "https://t.me/insomnianightkrd/1550"
+				},
+				{
+					"date": "11 April 2025",
+					"country": "Russia",
+					"city": "Taganrog",
+					"title": "OTPUSK c BleepLove",
+					"link": "https://t.me/otpusk_ug"
+				},
+				{
+					"date": "01 January 2025",
+					"country": "Russia",
+					"city": "Saint-Petersburg",
+					"title": "INLINE FEST 2025",
+					"link": "https://www.youtube.com/live/mduxSt5TiLw?si=rnrfSZaxYja2pZXO&t=7490"
+				},
+				{
+					"date": "06 December 2024",
+					"country": "Russia",
+					"city": "Taganrog",
+					"title": "Fucking HARDCORE vol. V",
+					"link": "https://t.me/s_tn_space/189"
+				},
+				{
+					"date": "21 September 2024",
+					"country": "Russia",
+					"city": "Taganrog",
+					"title": "#877 TEKKNOHEADZ",
+					"link": "https://t.me/s_tn_space/181"
+				},
+				{
+					"date": "27 July 2024",
+					"country": "Russia",
+					"city": "Saint-Petersburg",
+					"title": "27.07 BleepLove ЧИПТЮН",
+					"link": "https://t.me/c/1867708820/1527"
+				},
+				{
+					"date": "10 July 2024",
+					"country": "Russia",
+					"city": "Moscow",
+					"title": "GameGate Birthday party",
+					"link": "https://t.me/c/1867708820/1527"
+				},
+				{
+					"date": "26 June 2024",
+					"country": "Spain",
+					"city": "Monelia",
+					"title": "Birthday Stream",
+					"link": "https://www.youtube.com/live/fsKbHGzIMM4"
+				},
+				{
 					"date": "18 January 2024",
 					"country": "Germany",
 					"city": "Berlin",
