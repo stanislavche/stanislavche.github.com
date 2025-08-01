@@ -71,7 +71,7 @@ a:hover{
 	//background-color: $back-color;
 	background-image: url('./image/consoles.png');
 	background-size: initial;
-	//animation: rain 200ms infinite linear;
+	animation: rain 60s infinite linear;
 }
 
 .wrapper{
@@ -674,10 +674,10 @@ $steps: 100;
 		background-position: 0 0;
 	}
 	50% {
-		background-position: 0 313px;
+		background-position: 512px 512px;
 	}
 	100% {
-		background-position: 0 626px;
+		background-position: 1024px 1024px;
 	}
 }
 
@@ -686,10 +686,10 @@ $steps: 100;
 		background-position: 0 0;
 	}
 	50% {
-		background-position: 0 313px;
+		background-position: 512px 512px;
 	}
 	100% {
-		background-position: 0 626px;
+		background-position: 1024px 1024px;
 	}
 }
 
