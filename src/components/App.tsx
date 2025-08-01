@@ -31,7 +31,7 @@ class App extends Component {
 							<News />
 						</div>
 						<div className="App__wrapper-row">
-							<Discography />
+							<Discography  />
 						</div>
 						<div className="App__wrapper-cell">
 							<Game />

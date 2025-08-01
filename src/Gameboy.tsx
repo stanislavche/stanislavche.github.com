@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import App from './components/App';
 
 import LazyLinePainter from 'lazy-line-painter'
 import { ReactComponent as GameboySvg } from './image/gameboy.svg';
-import * as ReactDOMClient from 'react-dom/client';
+
+import { AppContext } from './context/AppContext';
+import data from '../src/api/data.json'; // если используешь import
 
 class Gameboy extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {date: new Date()};
+		this.state = { date: new Date() };
 	}
 
 	componentDidMount() {
-		console.log('mount');
 		let el = document.querySelector('#gameboy');
 		let wrapper = document.querySelector('.wrapper');
 		let aniContainer = document.querySelector('#animation');
@@ -33,9 +33,9 @@ class Gameboy extends Component {
 			wrapper.classList.add("active");
 			setTimeout(() => {
 				this.props.root.render(
-					<React.StrictMode>
+					<AppContext.Provider value={data}>
 						<App />
-					</React.StrictMode>
+					</AppContext.Provider>
 				);
 				myAnimation.destroy();
 			}, 2000);

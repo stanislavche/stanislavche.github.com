@@ -31,6 +31,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "sass": "^1.89.2"
+    "sass": "^1.89.2",
+    "typescript": "^4.9.5",
+    "vite-plugin-svgr": "^4.3.0"
   }
 }
