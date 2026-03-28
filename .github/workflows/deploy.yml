@@ -1,0 +1,49 @@
+name: 🚀 Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch: # Ручной запуск через GitHub UI
+
+jobs:
+  build-and-deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # Нужно для gh-pages деплоя
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🔑 Inject Netlify Identity URL
+        # Заменяет плейсхолдер реальным URL из GitHub Secret
+        # Secret называется NETLIFY_IDENTITY_URL
+        # Значение: https://ВАШ-САЙТ.netlify.app/.netlify/identity
+        run: |
+          sed -i 's|__NETLIFY_IDENTITY_URL__|${{ secrets.NETLIFY_IDENTITY_URL }}|g' public/admin/index.html
+
+      - name: 🟢 Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: 📦 Install dependencies
+        run: npm install
+
+      - name: 🔨 Build
+        run: npm run build
+        env:
+          # Нужно для react-scripts с более новыми версиями Node.js
+          NODE_OPTIONS: --openssl-legacy-provider
+          CI: false   # Отключаем treatment warnings as errors
+
+      - name: 🚀 Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          # CNAME уже есть в public/CNAME — домен s-tn.space сохранится автоматически
