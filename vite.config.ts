@@ -30,6 +30,9 @@ export default defineConfig({
             '@': '/src',
         },
     },
+    server: {
+        port: 3000,
+    },
     build: {
         outDir: 'build',
     },

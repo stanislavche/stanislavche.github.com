@@ -5,3 +5,6 @@ public/gbAnimation/
 .idea/workspace.xml
 yarn.lock
 .idea/
+build_log.txt
+install_log.txt
+start_log.txt
