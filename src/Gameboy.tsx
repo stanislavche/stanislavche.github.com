@@ -5,7 +5,6 @@ import LazyLinePainter from 'lazy-line-painter';
 import { ReactComponent as GameboySvg } from './image/gameboy.svg';
 
 import { AppContext } from './context/AppContext';
-import siteData from '../public/data.json'; // <= короткий путь (если Vite)
 
 class Gameboy extends Component {
 	constructor(props) {

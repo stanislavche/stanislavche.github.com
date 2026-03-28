@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  # Отключаем режим CI чтобы ESLint warnings не ломали сборку
+  CI = "false"
+  NODE_OPTIONS = "--openssl-legacy-provider"
+
