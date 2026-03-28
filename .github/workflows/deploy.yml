@@ -6,24 +6,35 @@ on:
       - master
   workflow_dispatch: # Ручной запуск через GitHub UI
 
+# Разрешения для официального деплоя GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Запрещаем параллельные деплои
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  build-and-deploy:
-    name: Build & Deploy
+  build:
+    name: Build
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write  # Нужно для gh-pages деплоя
-
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
 
       - name: 🔑 Inject Netlify Identity URL
-        # Заменяет плейсхолдер реальным URL из GitHub Secret
-        # Secret называется NETLIFY_IDENTITY_URL
-        # Значение: https://ВАШ-САЙТ.netlify.app/.netlify/identity
+        # Подставляет URL из GitHub Secret (Settings → Secrets → NETLIFY_IDENTITY_URL)
+        # Если секрет ещё не добавлен — шаг просто ничего не заменит
         run: |
-          sed -i 's|__NETLIFY_IDENTITY_URL__|${{ secrets.NETLIFY_IDENTITY_URL }}|g' public/admin/index.html
+          if [ -n "${{ secrets.NETLIFY_IDENTITY_URL }}" ]; then
+            sed -i 's|__NETLIFY_IDENTITY_URL__|${{ secrets.NETLIFY_IDENTITY_URL }}|g' public/admin/index.html
+            echo "✅ Netlify Identity URL injected"
+          else
+            echo "⚠️  Secret NETLIFY_IDENTITY_URL not set, skipping injection"
+          fi
 
       - name: 🟢 Setup Node.js 20
         uses: actions/setup-node@v4
@@ -32,18 +43,30 @@ jobs:
           cache: "npm"
 
       - name: 📦 Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: 🔨 Build
         run: npm run build
         env:
-          # Нужно для react-scripts с более новыми версиями Node.js
           NODE_OPTIONS: --openssl-legacy-provider
-          CI: false   # Отключаем treatment warnings as errors
+          CI: false
 
-      - name: 🚀 Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: ⚙️ Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: 📤 Upload build artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          # CNAME уже есть в public/CNAME — домен s-tn.space сохранится автоматически
+          path: ./build
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
