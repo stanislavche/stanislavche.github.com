@@ -26,14 +26,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 🔑 Inject Netlify Identity URL
-        # Подставляет URL из GitHub Secret (Settings → Secrets → NETLIFY_IDENTITY_URL)
-        # Если секрет ещё не добавлен — шаг просто ничего не заменит
         run: |
           if [ -n "${{ secrets.NETLIFY_IDENTITY_URL }}" ]; then
             sed -i 's|__NETLIFY_IDENTITY_URL__|${{ secrets.NETLIFY_IDENTITY_URL }}|g' public/admin/index.html
+            sed -i 's|__NETLIFY_IDENTITY_URL__|${{ secrets.NETLIFY_IDENTITY_URL }}|g' public/index.html
             echo "✅ Netlify Identity URL injected"
           else
-            echo "⚠️  Secret NETLIFY_IDENTITY_URL not set, skipping injection"
+            echo "⚠️  Secret NETLIFY_IDENTITY_URL not set, skipping"
           fi
 
       - name: 🟢 Setup Node.js 20
