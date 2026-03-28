@@ -384,6 +384,19 @@
     {
       "show": true,
       "type": "single",
+      "title": "Der Schubfladen: A Micromusic Compilation From Germany",
+      "author": "Various Artist",
+      "year": "2021",
+      "labelName": "Micromusic.net",
+      "labelLink": "https://www.discogs.com/ru/release/19333690-Various-Der-Schubfladen-A-Micromusic-Compilation-From-Germany",
+      "releaseId": "19333690",
+      "coverLink": "../images/albums/commodore album.jpg",
+      "downloadLink": "https://www.discogs.com/ru/release/19333690-Various-Der-Schubfladen-A-Micromusic-Compilation-From-Germany",
+      "tracklist": []
+    },
+    {
+      "show": true,
+      "type": "single",
       "title": "Last swift",
       "author": "S_TN",
       "year": "2023",
@@ -1047,6 +1060,20 @@
     }
   ],
   "events": [
+    {
+      "date": "21 February 2026",
+      "country": "Russia",
+      "city": "Ростов-на-Дону",
+      "title": "Night Shift Showcase",
+      "link": "https://t.me/nightshiftpromo/279"
+    },
+    {
+      "date": "11 November 2025",
+      "country": "Russia",
+      "city": "Москва",
+      "title": "EVA 30",
+      "link": "https://t.me/lachesis_groves/1271"
+    },
     {
       "date": "17-21 July 2025",
       "country": "Russia",
