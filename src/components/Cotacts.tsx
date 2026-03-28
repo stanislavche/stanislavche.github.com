@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { ReactComponent as FcSvg } from '../image/fc.svg';
-import { ReactComponent as ScSvg } from '../image/sc.svg';
-import { ReactComponent as TwSvg } from '../image/tw.svg';
-import { ReactComponent as YtSvg } from '../image/yt.svg';
-import { ReactComponent as IgSvg } from '../image/ig.svg';
-import { ReactComponent as KgSvg } from '../image/kg.svg';
-import { ReactComponent as EmSvg } from '../image/em.svg';
-import { ReactComponent as BcSvg } from '../image/bc.svg';
-import { ReactComponent as VkSvg } from '../image/vk.svg';
-import { ReactComponent as SpotiSvg } from '../image/spoti.svg';
+import FcSvg from '../image/fc.svg?react';
+import ScSvg from '../image/sc.svg?react';
+import TwSvg from '../image/tw.svg?react';
+import YtSvg from '../image/yt.svg?react';
+import IgSvg from '../image/ig.svg?react';
+import KgSvg from '../image/kg.svg?react';
+import EmSvg from '../image/em.svg?react';
+import BcSvg from '../image/bc.svg?react';
+import VkSvg from '../image/vk.svg?react';
+import SpotiSvg from '../image/spoti.svg?react';
 
 class Cotacts extends Component {
 	render() {

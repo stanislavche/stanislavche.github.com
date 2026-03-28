@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import App from './components/App';
 
 import LazyLinePainter from 'lazy-line-painter';
-import { ReactComponent as GameboySvg } from './image/gameboy.svg';
+import GameboySvg from './image/gameboy.svg?react';
 
 import { AppContext } from './context/AppContext';
 

@@ -47,7 +47,6 @@ jobs:
       - name: 🔨 Build
         run: npm run build
         env:
-          NODE_OPTIONS: --openssl-legacy-provider
           CI: false
 
       - name: ⚙️ Configure GitHub Pages
