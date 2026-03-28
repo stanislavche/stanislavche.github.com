@@ -13,6 +13,7 @@ import "./loadscreen.scss";
 import { BrowserRouter as Router, Route, Link, Routes, Navigate } from "react-router-dom";
 import Mup from "./Mup";
 import { AppContext } from '../context/AppContext';
+import AdminPanel from './admin/AdminPanel';
 
 class App extends Component {
 	static contextType = AppContext;
@@ -94,6 +95,7 @@ class App extends Component {
 			<Router>
 				<Routes>
 					<Route path="/" exact element={ <ShowIndexPage /> } />
+					<Route path="/admin" element={ <AdminPanel /> } />
 					<Route path="/error" element={ <ShowErrorPage />} />
 					<Route path='*' element={<Navigate to='/error' />} />
 				</Routes>

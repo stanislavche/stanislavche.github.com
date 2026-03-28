@@ -6,3 +6,10 @@
   # Отключаем режим CI чтобы ESLint warnings не ломали сборку
   CI = "false"
 
+[functions]
+  directory = "netlify/functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
