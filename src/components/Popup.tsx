@@ -7,6 +7,7 @@ interface DiscData {
 	year?: string;
 	coverLink?: string;
 	downloadLink?: string;
+	description?: string;
 	tracklist?: string[];
 	bandcampAlbum?: number | string;
 	bandcampTrack?: number | string;
@@ -21,15 +22,45 @@ interface PopupProps {
 
 interface PopupState {
 	playerLoaded: boolean;
+	bandcampDescription: string | null;
+	descLoading: boolean;
 }
 
 class Popup extends Component<PopupProps, PopupState> {
-	state: PopupState = { playerLoaded: false };
+	state: PopupState = { playerLoaded: false, bandcampDescription: null, descLoading: false };
+
+	componentDidMount() {
+		this.fetchDescription(this.props.disc);
+	}
 
 	componentDidUpdate(prevProps: PopupProps) {
 		if (prevProps.disc !== this.props.disc) {
-			this.setState({ playerLoaded: false });
+			this.setState({ playerLoaded: false, bandcampDescription: null, descLoading: false });
+			this.fetchDescription(this.props.disc);
 		}
+	}
+
+	fetchDescription(disc: DiscData) {
+		// Если описание уже задано вручную — не загружаем с Bandcamp
+		if (disc.description) return;
+		// Загружаем только если есть ссылка на Bandcamp
+		if (!disc.downloadLink) return;
+
+		this.setState({ descLoading: true });
+		fetch('/.netlify/functions/bandcamp-desc', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({ url: disc.downloadLink }),
+		})
+			.then(r => r.json())
+			.then(data => {
+				if (data.description) {
+					this.setState({ bandcampDescription: data.description, descLoading: false });
+				} else {
+					this.setState({ descLoading: false });
+				}
+			})
+			.catch(() => this.setState({ descLoading: false }));
 	}
 
 	handleLoad = () => this.setState({ playerLoaded: true });
@@ -109,7 +140,10 @@ class Popup extends Component<PopupProps, PopupState> {
 
 	render() {
 		const { disc, onCloseClick } = this.props;
+		const { bandcampDescription, descLoading } = this.state;
 		const isVideo = !!(disc.youtubeId && disc.youtubeId.length > 0);
+		// Приоритет: собственное описание > загруженное с Bandcamp
+		const displayDescription = disc.description || bandcampDescription;
 		return (
 			<div className="popup">
 				<div className="popup__left">
@@ -130,6 +164,18 @@ class Popup extends Component<PopupProps, PopupState> {
 								<li className="popup__secondary-item" key={index}>{track}</li>
 							)}
 						</ul>
+						{displayDescription && (
+							<div className="popup__description">
+								{displayDescription.split('\n').map((line, i) =>
+									line.trim() ? <p key={i}>{line}</p> : null
+								)}
+							</div>
+						)}
+						{!displayDescription && descLoading && (
+							<div className="popup__desc-loading">
+								<span className="popup__desc-loading-cursor">█</span>
+							</div>
+						)}
 					</div>
 				</div>
 				<div className="popup__close" onClick={onCloseClick}>&#10005;</div>

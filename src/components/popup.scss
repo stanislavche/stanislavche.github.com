@@ -108,6 +108,28 @@
 		font-size: 14px;
 		font-weight: 400;
 	}
+	&__description {
+		margin-top: 14px;
+		padding-top: 12px;
+		border-top: 1px dashed rgba(vars.$white-color, 0.25);
+		p {
+			color: rgba(vars.$white-color, 0.75);
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 1.6;
+			margin: 0 0 6px;
+			font-family: 'C64 User Mono', 'Courier New', monospace;
+			letter-spacing: 0.3px;
+		}
+	}
+	&__desc-loading {
+		margin-top: 10px;
+		.popup__desc-loading-cursor {
+			color: rgba(vars.$white-color, 0.4);
+			font-size: 12px;
+			animation: c64blink 0.8s step-end infinite;
+		}
+	}
 	&__close{
 		display: block;
 		width: 40px;
@@ -142,6 +164,9 @@
 		}
 		&__secondary-list{
 			padding-left: 20px;
+		}
+		&__description {
+			padding: 0 0 10px;
 		}
 	}
 }

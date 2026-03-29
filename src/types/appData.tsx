@@ -14,6 +14,7 @@ export interface DiscographyItem {
     author: string;
     year: string;
     cover: string;
+    description?: string;
     bandcampAlbum?: number;
     bandcampTrack?: number;
     soundcloudPlayer?: string;
