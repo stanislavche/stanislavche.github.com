@@ -36,6 +36,26 @@ interface AppData {
 
 // ─── Defaults ─────────────────────────────────────────────────────────────────
 
+const COUNTRIES = [
+    { name: 'Russia',         flag: '🇷🇺' },
+    { name: 'Latvia',         flag: '🇱🇻' },
+    { name: 'Estonia',        flag: '🇪🇪' },
+    { name: 'Germany',        flag: '🇩🇪' },
+    { name: 'Georgia',        flag: '🇬🇪' },
+    { name: 'Spain',          flag: '🇪🇸' },
+    { name: 'Italy',          flag: '🇮🇹' },
+    { name: 'Ukraine',        flag: '🇺🇦' },
+    { name: 'Finland',        flag: '🇫🇮' },
+    { name: 'Poland',         flag: '🇵🇱' },
+    { name: 'Belarus',        flag: '🇧🇾' },
+    { name: 'Czech Republic', flag: '🇨🇿' },
+    { name: 'Netherlands',    flag: '🇳🇱' },
+    { name: 'France',         flag: '🇫🇷' },
+    { name: 'UK',             flag: '🇬🇧' },
+    { name: 'USA',            flag: '🇺🇸' },
+    { name: 'World Wide Chiptune Webshow', flag: '🌐' },
+];
+
 const emptyEvent = (): EventItem => ({ date: '', country: 'Russia', city: '', title: '', link: '' });
 const emptyDisc = (): DiscItem => ({
     show: true, type: 'single', title: '', author: 'S_TN', year: String(new Date().getFullYear()),
@@ -244,7 +264,11 @@ function EventsTab({ data, onChange }: { data: AppData; onChange: (d: EventItem[
                         </div>
                         <div className="admin__form-group">
                             <label>Country</label>
-                            <input type="text" value={editing.country} onChange={e => upd('country', e.target.value)} />
+                            <select value={editing.country} onChange={e => upd('country', e.target.value)}>
+                                {COUNTRIES.map(c => (
+                                    <option key={c.name} value={c.name}>{c.flag} {c.name}</option>
+                                ))}
+                            </select>
                         </div>
                         <div className="admin__form-group">
                             <label>City</label>
@@ -271,7 +295,7 @@ function EventsTab({ data, onChange }: { data: AppData; onChange: (d: EventItem[
                     <li key={i} className="admin__list-item">
                         <div className="admin__list-item-info">
                             <div className="admin__list-item-title">{ev.title}</div>
-                            <div className="admin__list-item-meta">{ev.date} · {ev.country}, {ev.city}</div>
+                            <div className="admin__list-item-meta">{ev.date} · {COUNTRIES.find(c => c.name === ev.country)?.flag || ''} {ev.country}, {ev.city}</div>
                         </div>
                         <div className="admin__list-item-actions">
                             <button className="admin__btn admin__btn--icon" onClick={() => move(i, -1)} title="Up">▲</button>

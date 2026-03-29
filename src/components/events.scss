@@ -73,6 +73,16 @@
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+	}
+
+	&__flag {
+		font-style: normal;
+		font-size: 14px;
+		line-height: 1;
+		flex-shrink: 0;
 	}
 
 	&__name {

@@ -2,6 +2,25 @@ import React, { Component } from "react";
 import './events.scss';
 import {AppContext} from "../context/AppContext";
 
+const COUNTRY_FLAGS = {
+	'Russia': '🇷🇺',
+	'Latvia': '🇱🇻',
+	'Estonia': '🇪🇪',
+	'Germany': '🇩🇪',
+	'Georgia': '🇬🇪',
+	'Spain': '🇪🇸',
+	'Italy': '🇮🇹',
+	'Ukraine': '🇺🇦',
+	'Finland': '🇫🇮',
+	'Poland': '🇵🇱',
+	'Belarus': '🇧🇾',
+	'Czech Republic': '🇨🇿',
+	'Netherlands': '🇳🇱',
+	'France': '🇫🇷',
+	'UK': '🇬🇧',
+	'USA': '🇺🇸',
+};
+
 class Events extends Component {
 	static contextType = AppContext;
 
@@ -36,12 +55,15 @@ class Events extends Component {
 							<div className="events__year-label">{year}</div>
 							<ul className="events__list">
 								{byYear[year].map((item, key) => {
-									// Дата без года — уже показан в заголовке группы
 									const dateShort = (item.date || '').replace(/[\s,]*\d{4}[\s,]*/, '').trim();
+									const flag = COUNTRY_FLAGS[item.country] || '';
 									const row = (
 										<>
 											<span className="events__date">{dateShort}</span>
-											<span className="events__city">{item.city}</span>
+											<span className="events__city">
+												{flag && <span className="events__flag">{flag}</span>}
+												{item.city || item.country}
+											</span>
 											<span className="events__name">{item.title}</span>
 										</>
 									);
