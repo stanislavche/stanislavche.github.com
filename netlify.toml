@@ -1,9 +1,23 @@
 [build]
   command = "npm run build"
   publish = "build"
+  # Пропускаем билд если ни src/, ни public/, ни конфиги не изменились
+  ignore = "! git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- src/ public/ package.json package-lock.json vite.config.ts tsconfig.json netlify.toml netlify/"
 
 [build.environment]
   CI = "false"
+
+# Продакшн-деплой — только ветка master
+[context.production]
+  command = "npm run build"
+
+# Для deploy-preview (PR из develop → master) — полноценный билд
+[context.deploy-preview]
+  command = "npm run build"
+
+# Все остальные ветки (develop, feature/* и т.д.) — НЕ билдим
+[context.branch-deploy]
+  ignore = "exit 1"
 
 [functions]
   directory = "netlify/functions"

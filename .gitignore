@@ -12,3 +12,9 @@ start_log.txt
 .env
 .env.local
 .env.*.local
+
+# Тяжёлые файлы — >100 МБ не влезают в GitHub. Хранить на внешнем CDN.
+public/albums/*.zip
+public/albums/*.rar
+public/albums/*.7z
+

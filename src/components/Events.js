@@ -1,24 +1,25 @@
 import React, { Component } from "react";
 import './events.scss';
+import 'flag-icons/css/flag-icons.min.css';
 import {AppContext} from "../context/AppContext";
 
 const COUNTRY_FLAGS = {
-	'Russia': '🇷🇺',
-	'Latvia': '🇱🇻',
-	'Estonia': '🇪🇪',
-	'Germany': '🇩🇪',
-	'Georgia': '🇬🇪',
-	'Spain': '🇪🇸',
-	'Italy': '🇮🇹',
-	'Ukraine': '🇺🇦',
-	'Finland': '🇫🇮',
-	'Poland': '🇵🇱',
-	'Belarus': '🇧🇾',
-	'Czech Republic': '🇨🇿',
-	'Netherlands': '🇳🇱',
-	'France': '🇫🇷',
-	'UK': '🇬🇧',
-	'USA': '🇺🇸',
+	'Russia': 'ru',
+	'Latvia': 'lv',
+	'Estonia': 'ee',
+	'Germany': 'de',
+	'Georgia': 'ge',
+	'Spain': 'es',
+	'Italy': 'it',
+	'Ukraine': 'ua',
+	'Finland': 'fi',
+	'Poland': 'pl',
+	'Belarus': 'by',
+	'Czech Republic': 'cz',
+	'Netherlands': 'nl',
+	'France': 'fr',
+	'UK': 'gb',
+	'USA': 'us',
 };
 
 class Events extends Component {
@@ -56,13 +57,13 @@ class Events extends Component {
 							<ul className="events__list">
 								{byYear[year].map((item, key) => {
 									const dateShort = (item.date || '').replace(/[\s,]*\d{4}[\s,]*/, '').trim();
-									const flag = COUNTRY_FLAGS[item.country] || '';
+									const flagCode = COUNTRY_FLAGS[item.country] || '';
 									const row = (
 										<>
 											<span className="events__date">{dateShort}</span>
 											<span className="events__city">
+												{flagCode && <span className={`events__flag fi fi-${flagCode}`}></span>}
 												{item.city || item.country}
-												{flag && <span className="events__flag">{flag}</span>}
 											</span>
 											<span className="events__name">{item.title}</span>
 										</>

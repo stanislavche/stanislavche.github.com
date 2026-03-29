@@ -9,18 +9,22 @@ export interface NewsItem {
 }
 
 export interface DiscographyItem {
-    id: string;
+    show: boolean;
+    type: 'album' | 'single';
     title: string;
     author: string;
     year: string;
-    cover: string;
-    description?: string;
+    labelName?: string;
+    labelLink?: string;
+    releaseId?: string;
+    coverLink: string;
+    downloadLink?: string;
+    soundcloudPlayer?: string;
     bandcampAlbum?: number;
     bandcampTrack?: number;
-    soundcloudPlayer?: string;
     youtubeId?: string;
-    type: 'album' | 'single';
-    hidden: boolean;
+    tracklist?: string[];
+    description?: string;
 }
 
 export interface EventItem {
