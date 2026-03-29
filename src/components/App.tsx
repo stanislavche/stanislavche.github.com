@@ -95,7 +95,7 @@ class App extends Component {
 			<Router>
 				<Routes>
 					<Route path="/" exact element={ <ShowIndexPage /> } />
-					<Route path="/admin" element={ <AdminPanel /> } />
+					<Route path="/cms" element={ <AdminPanel /> } />
 					<Route path="/error" element={ <ShowErrorPage />} />
 					<Route path='*' element={<Navigate to='/error' />} />
 				</Routes>
