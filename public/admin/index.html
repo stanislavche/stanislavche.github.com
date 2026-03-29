@@ -2,31 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <title>Admin — S_TN</title>
-    <script>
-      // URL подставляется автоматически при деплое через GitHub Actions
-      window.__NETLIFY_IDENTITY_API_URL__ = "__NETLIFY_IDENTITY_URL__";
-    </script>
+    <meta http-equiv="refresh" content="0; url=/admin" />
+    <title>Redirecting...</title>
   </head>
   <body>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.init({
-          APIUrl: window.__NETLIFY_IDENTITY_API_URL__
-        });
-        window.netlifyIdentity.on("init", function(user) {
-          if (!user) {
-            window.netlifyIdentity.on("login", function() {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    </script>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>window.location.replace('/admin');</script>
   </body>
 </html>
 

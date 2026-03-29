@@ -63,21 +63,5 @@
 			<div id="root"></div>
 			<noscript>Please install normal browser</noscript>
 		</div>
-		<!-- Netlify Identity: нужно для обработки invite-ссылок и редиректа в /admin/ -->
-		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-		<script>
-			if (window.netlifyIdentity) {
-				window.netlifyIdentity.init({
-					APIUrl: "__NETLIFY_IDENTITY_URL__"
-				});
-				window.netlifyIdentity.on("init", function(user) {
-					if (!user) {
-						window.netlifyIdentity.on("login", function() {
-							document.location.href = "/admin/";
-						});
-					}
-				});
-			}
-		</script>
 	</body>
 </html>
