@@ -387,12 +387,30 @@
       "title": "Der Schubfladen: A Micromusic Compilation From Germany",
       "author": "Various Artist",
       "year": "2021",
-      "labelName": "Micromusic.net",
+      "labelName": "Musikfladen",
       "labelLink": "https://www.discogs.com/ru/release/19333690-Various-Der-Schubfladen-A-Micromusic-Compilation-From-Germany",
-      "releaseId": "19333690",
+      "releaseId": "MF10",
       "coverLink": "../images/albums/commodore album.jpg",
+      "youtubeId": "PlxVXw-YrBM",
       "downloadLink": "https://www.discogs.com/ru/release/19333690-Various-Der-Schubfladen-A-Micromusic-Compilation-From-Germany",
-      "tracklist": []
+      "tracklist": [
+        "A1 Betty Bluescreen – Betty 8Bit",
+        "A2 Poly In Frames – Fallen Ghost",
+        "A3 Vault Kid – Dance Dance Demolition",
+        "A4 Callisto Ghost – The Pasttracker (Chip Mix)",
+        "A5 BACK TO NEWC45TLE – Psy Kicks",
+        "A6 Klirre – NOALE",
+        "A7 Melted Moon – Site-23",
+        "A8 FLAVA WAVS – Barracuda",
+        "B1 Legoluft – Numbers",
+        "B2 Aschenteppich* – Side Trip",
+        "B3 The Mad Bitter – Song Covid-8",
+        "B4 diGlitch – J-Bots Conflict",
+        "B5 DantesDMG – NEVERCHILL",
+        "B6 S_TN – Higgledy Piggledy",
+        "B7 Mike Witschi – Verstecken (C64 Bonusgame)",
+        "B8 Maik Holstein – Eatin´ Fish (C64 Bonusdemo)"
+      ]
     },
     {
       "show": true,
