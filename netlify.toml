@@ -8,14 +8,20 @@
 [functions]
   directory = "netlify/functions"
 
-# /admin/ → /admin (без косой черты = React SPA)
+# /admin и /admin/ — оба отдают React SPA (rewrite, force override файла)
 [[redirects]]
-  from = "/admin/"
-  to = "/admin"
-  status = 301
+  from = "/admin"
+  to = "/index.html"
+  status = 200
   force = true
 
-# SPA fallback — все остальные пути на index.html
+[[redirects]]
+  from = "/admin/"
+  to = "/index.html"
+  status = 200
+  force = true
+
+# SPA fallback для всех остальных маршрутов
 [[redirects]]
   from = "/*"
   to = "/index.html"
