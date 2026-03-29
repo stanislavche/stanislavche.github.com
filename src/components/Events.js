@@ -5,9 +5,7 @@ import {AppContext} from "../context/AppContext";
 class Events extends Component {
 	static contextType = AppContext;
 
-	state = {
-		events: [],
-	};
+	state = { events: [] };
 
 	componentDidMount() {
 		const ctx = this.context;
@@ -17,29 +15,51 @@ class Events extends Component {
 	}
 
 	render() {
-		let checkLink = (item) => {
-			if (item.link) {
-				return (
-					<a href={(item.link ? item.link : "#")} target="_blank" className="events__link events__text" rel="noopener noreferrer">{item.country} - {item.date} - {item.title}</a>
-				);
-			} else {
-				return (
-					<p className="events__text">{item.country} - {item.date} - {item.title}</p>
-				);
-			}
-		}
+		const { events } = this.state;
+
+		// Группируем по году
+		const byYear = {};
+		events.forEach(item => {
+			const yearMatch = (item.date || '').match(/\d{4}/);
+			const year = yearMatch ? yearMatch[0] : '?';
+			if (!byYear[year]) byYear[year] = [];
+			byYear[year].push(item);
+		});
+		const years = Object.keys(byYear).sort((a, b) => b - a);
 
 		return (
 			<section className="container">
 				<h2 className="container__header">Events</h2>
 				<div className="container__wrapper events">
-					<ul className="events__list">
-						{this.state.events.map((item, key) =>
-							<li className="events__item" key={key}>
-								{ checkLink(item) }
-							</li>
-						)}
-					</ul>
+					{years.map(year => (
+						<div className="events__year-group" key={year}>
+							<div className="events__year-label">{year}</div>
+							<ul className="events__list">
+								{byYear[year].map((item, key) => {
+									// Дата без года — уже показан в заголовке группы
+									const dateShort = (item.date || '').replace(/[\s,]*\d{4}[\s,]*/, '').trim();
+									const row = (
+										<>
+											<span className="events__date">{dateShort}</span>
+											<span className="events__city">{item.city}</span>
+											<span className="events__name">{item.title}</span>
+										</>
+									);
+									return (
+										<li className="events__item" key={key}>
+											{item.link ? (
+												<a href={item.link} target="_blank" rel="noopener noreferrer" className="events__row events__row--link">
+													{row}
+												</a>
+											) : (
+												<div className="events__row">{row}</div>
+											)}
+										</li>
+									);
+								})}
+							</ul>
+						</div>
+					))}
 				</div>
 			</section>
 		);

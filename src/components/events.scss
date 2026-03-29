@@ -1,22 +1,108 @@
-.events {
-	&__list{
-		padding: 0;
-		margin: 0;
-		list-style-type: none;
-		display: block;
-		text-align: justify;
-		font-size: 14px;
-	}
-	&__item{
-		display: block;
-	}
-	&__link{
-		display: block;
-		&:hover{
+@use "../mixins" as vars;
 
+.events {
+	// ── Группа по году ─────────────────────────────────────────────────────
+	&__year-group {
+		margin-bottom: 18px;
+
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
-	&__text{
-		margin: 0 0 5px;
+
+	&__year-label {
+		font-size: 11px;
+		font-weight: 700;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		color: vars.$dark-red;
+		border-bottom: 2px solid vars.$dark-red;
+		padding-bottom: 3px;
+		margin-bottom: 6px;
+		font-family: 'Roboto Condensed', sans-serif;
+	}
+
+	// ── Список и строки ─────────────────────────────────────────────────────
+	&__list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	&__item {
+		display: block;
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: 100px 130px 1fr;
+		align-items: baseline;
+		gap: 0 8px;
+		padding: 4px 6px;
+		border-bottom: 1px solid rgba(vars.$main-color, 0.08);
+		text-decoration: none;
+		color: vars.$main-color;
+
+		&--link {
+			cursor: pointer;
+			transition: background 0.15s;
+
+			&:hover {
+				background: rgba(vars.$dark-red, 0.08);
+
+				.events__name {
+					text-decoration: underline;
+					color: vars.$dark-red;
+				}
+			}
+		}
+	}
+
+	// ── Колонки ─────────────────────────────────────────────────────────────
+	&__date {
+		font-size: 11px;
+		color: rgba(vars.$main-color, 0.45);
+		white-space: nowrap;
+		font-family: 'Roboto Condensed', sans-serif;
+	}
+
+	&__city {
+		font-size: 13px;
+		font-weight: 700;
+		color: vars.$dark-red;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&__name {
+		font-size: 13px;
+		font-weight: 400;
+		color: vars.$main-color;
+	}
+}
+
+// ── Мобильная версия ────────────────────────────────────────────────────────
+@media screen and (max-width: 600px) {
+	.events {
+		&__row {
+			grid-template-columns: 1fr;
+			gap: 1px 0;
+			padding: 6px 4px;
+		}
+
+		&__date {
+			font-size: 10px;
+			color: rgba(vars.$main-color, 0.4);
+		}
+
+		&__city {
+			font-size: 14px;
+		}
+
+		&__name {
+			font-size: 12px;
+			color: rgba(vars.$main-color, 0.75);
+		}
 	}
 }
