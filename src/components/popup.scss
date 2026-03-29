@@ -1,5 +1,35 @@
 @use "../mixins" as vars;
 
+// ── Player preloader — C64 style ──────────────────────────────────────────────
+.player-loader {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	background: #3c2bab;
+	border: 2px solid #8272dd;
+	font-family: 'C64 User Mono', 'Courier New', monospace;
+	font-size: 12px;
+	letter-spacing: 2px;
+	z-index: 2;
+	pointer-events: none;
+
+	&__text {
+		color: #8272dd;
+		text-transform: uppercase;
+	}
+
+	&__cursor {
+		color: #8272dd;
+		animation: c64blink 0.8s step-end infinite;
+		font-size: 14px;
+	}
+}
+
+// ── Popup ─────────────────────────────────────────────────────────────────────
 .popup {
 	display: flex;
 	position: absolute;
@@ -38,6 +68,13 @@
 		width: 30%;
 		position: relative;
 		z-index: 1;
+
+		// YouTube плеер под обложкой — та же ширина, без отступа
+		.bandcamp-layer--youtube {
+			padding-left: 0;
+			margin-top: 8px;
+			margin-bottom: 0;
+		}
 	}
 	&__coverLink{
 		display: block;
@@ -56,11 +93,11 @@
 	&__wrapper{
 		display: block;
 		width: 60%;
+		padding-left: 20px;
 		text-align: left;
 	}
 	&__title{
 		margin: 0 0 10px 0;
-		padding-left: 20px;
 		a {
 			color: vars.$white-color;
 		}

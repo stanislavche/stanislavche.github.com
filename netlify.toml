@@ -8,6 +8,31 @@
 [functions]
   directory = "netlify/functions"
 
+# Проксируем /mup/* и /helloworld/* на GitHub Pages (отдельные репозитории)
+[[redirects]]
+  from = "/mup"
+  to = "https://stanislavche.github.io/mup/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/mup/*"
+  to = "https://stanislavche.github.io/mup/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/helloworld"
+  to = "https://stanislavche.github.io/helloworld/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/helloworld/*"
+  to = "https://stanislavche.github.io/helloworld/:splat"
+  status = 200
+  force = true
+
 # SPA fallback — все пути отдают React index.html
 [[redirects]]
   from = "/*"

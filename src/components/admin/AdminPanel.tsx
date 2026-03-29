@@ -17,7 +17,8 @@ interface NewsItem {
 interface DiscItem {
     show: boolean; type: 'album' | 'single'; title: string; author: string;
     year: string; bandcampAlbum?: number; bandcampTrack?: number;
-    soundcloudPlayer?: string | number; labelName: string; labelLink: string;
+    soundcloudPlayer?: string | number; youtubeId?: string;
+    labelName: string; labelLink: string;
     releaseId: string; coverLink: string; downloadLink: string; tracklist: string[];
 }
 
@@ -400,6 +401,10 @@ function DiscTab({ data, pw = '', onChange }: { data: AppData; pw?: string; onCh
                             <label>SoundCloud Player ID</label>
                             <input type="text" value={editing.soundcloudPlayer ?? ''} onChange={e => upd('soundcloudPlayer', e.target.value)} />
                         </div>
+                        <div className="admin__form-group">
+                            <label>YouTube Video ID</label>
+                            <input type="text" placeholder="dQw4w9WgXcQ" value={editing.youtubeId ?? ''} onChange={e => upd('youtubeId', e.target.value || undefined)} />
+                        </div>
                         <div className="admin__form-group admin__form-group--full">
                             <label>Cover Link (e.g. ../images/albums/myalbum.jpg)</label>
                             <input type="text" value={editing.coverLink} onChange={e => upd('coverLink', e.target.value)} />
@@ -579,6 +584,166 @@ function BioTab({ bio, onChange }: { bio: string; onChange: (b: string) => void 
                 </p>
             </div>
         </>
+    );
+}
+
+// ─── URL Resolver (Bandcamp / SoundCloud / YouTube) ──────────────────────────
+
+interface ResolvedPlayer {
+    platform: 'bandcamp' | 'soundcloud' | 'youtube';
+    embedUrl?: string;
+    title?: string;
+    artist?: string;
+    thumbnail?: string;
+    // bandcamp
+    itemType?: 'album' | 'track';
+    bandcampAlbum?: number;
+    bandcampTrack?: number;
+    // soundcloud
+    trackId?: string;
+    // youtube
+    videoId?: string;
+}
+
+function UrlResolver({ onApply }: {
+    onApply: (data: Partial<DiscItem>) => void;
+}) {
+    const [url, setUrl] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [result, setResult] = useState<ResolvedPlayer | null>(null);
+    const [error, setError] = useState<string | null>(null);
+
+    const platformIcon = { bandcamp: '🎵', soundcloud: '🔊', youtube: '▶️' };
+    const platformColor = { bandcamp: '#1da0c3', soundcloud: '#ff5500', youtube: '#ff0000' };
+
+    const detect = (u: string) => {
+        if (u.includes('bandcamp.com')) return 'bandcamp';
+        if (u.includes('soundcloud.com')) return 'soundcloud';
+        if (u.includes('youtube.com') || u.includes('youtu.be')) return 'youtube';
+        return null;
+    };
+
+    const resolve = async () => {
+        if (!url.trim()) return;
+        setLoading(true); setError(null); setResult(null);
+        try {
+            const res = await fetch('/.netlify/functions/resolve-player', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ url: url.trim() }),
+            });
+            const json = await res.json();
+            if (!res.ok) { setError(json.error || 'Error'); }
+            else { setResult(json); }
+        } catch (e: any) { setError(e.message); }
+        setLoading(false);
+    };
+
+    const apply = () => {
+        if (!result) return;
+        const patch: Partial<DiscItem> = {};
+        if (result.title) patch.title = result.title;
+        if (result.artist) patch.author = result.artist;
+        if (result.bandcampAlbum) patch.bandcampAlbum = result.bandcampAlbum;
+        if (result.bandcampTrack) patch.bandcampTrack = result.bandcampTrack;
+        if (result.trackId) patch.soundcloudPlayer = result.trackId;
+        if (result.videoId) patch.youtubeId = result.videoId;
+        patch.downloadLink = url.trim();
+        if (result.platform === 'bandcamp') patch.labelLink = url.trim();
+        onApply(patch);
+    };
+
+    const detected = detect(url);
+
+    return (
+        <div style={{
+            background: '#0d0010', border: '1px solid #7f00ff',
+            borderRadius: 6, padding: 14, marginBottom: 16
+        }}>
+            <p style={{ margin: '0 0 10px', fontSize: 12, color: '#f32e92', textTransform: 'uppercase', letterSpacing: 2 }}>
+                🔗 URL → Player ID resolver
+            </p>
+            <div style={{ display: 'flex', gap: 8, marginBottom: 8 }}>
+                <input
+                    type="text"
+                    placeholder="Вставь ссылку: Bandcamp / SoundCloud / YouTube"
+                    value={url}
+                    onChange={e => { setUrl(e.target.value); setResult(null); setError(null); }}
+                    onKeyDown={e => e.key === 'Enter' && resolve()}
+                    style={{ flex: 1 }}
+                />
+                <button className="admin__btn admin__btn--primary" onClick={resolve} disabled={loading || !url.trim()} style={{ whiteSpace: 'nowrap' }}>
+                    {loading ? '⏳' : '🔍 Resolve'}
+                </button>
+            </div>
+
+            {/* Подсказка платформы */}
+            {detected && !result && !loading && (
+                <p style={{ fontSize: 11, color: platformColor[detected], margin: '4px 0' }}>
+                    {platformIcon[detected]} Определено: {detected}
+                </p>
+            )}
+
+            {error && <p style={{ color: '#ff2244', fontSize: 12, margin: '4px 0' }}>✗ {error}</p>}
+
+            {result && (
+                <div style={{ marginTop: 12 }}>
+                    {/* Метаданные */}
+                    <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start', marginBottom: 10 }}>
+                        {result.thumbnail && (
+                            <img src={result.thumbnail} alt="" style={{ width: 56, height: 56, objectFit: 'cover', borderRadius: 4, flexShrink: 0 }} />
+                        )}
+                        <div style={{ fontSize: 12 }}>
+                            <p style={{ margin: 0, color: platformColor[result.platform] }}>
+                                {platformIcon[result.platform]} {result.platform.toUpperCase()}
+                                {result.itemType ? ` · ${result.itemType}` : ''}
+                            </p>
+                            {result.title && <p style={{ margin: '2px 0', color: '#e7d1b1', fontWeight: 'bold' }}>{result.title}</p>}
+                            {result.artist && <p style={{ margin: 0, color: '#aaa' }}>{result.artist}</p>}
+                            {result.bandcampAlbum && <p style={{ margin: '2px 0', color: '#888', fontSize: 11 }}>Album ID: <b style={{ color: '#00ff88' }}>{result.bandcampAlbum}</b></p>}
+                            {result.bandcampTrack && <p style={{ margin: '2px 0', color: '#888', fontSize: 11 }}>Track ID: <b style={{ color: '#00ff88' }}>{result.bandcampTrack}</b></p>}
+                            {result.trackId && <p style={{ margin: '2px 0', color: '#888', fontSize: 11 }}>SoundCloud ID: <b style={{ color: '#00ff88' }}>{result.trackId}</b></p>}
+                            {result.videoId && <p style={{ margin: '2px 0', color: '#888', fontSize: 11 }}>YouTube ID: <b style={{ color: '#00ff88' }}>{result.videoId}</b></p>}
+                        </div>
+                    </div>
+
+                    {/* Превью плеера */}
+                    {result.embedUrl && (
+                        <div style={{ marginBottom: 10 }}>
+                            <p style={{ fontSize: 11, color: '#888', margin: '0 0 6px' }}>Preview:</p>
+                            {result.platform === 'youtube' ? (
+                                <iframe
+                                    src={result.embedUrl}
+                                    width="100%" height="200"
+                                    frameBorder="0" allow="autoplay; encrypted-media"
+                                    allowFullScreen title="YouTube preview"
+                                    style={{ borderRadius: 4 }}
+                                />
+                            ) : result.platform === 'soundcloud' ? (
+                                <iframe
+                                    src={result.embedUrl}
+                                    width="100%" height="166"
+                                    frameBorder="no" scrolling="no"
+                                    allow="autoplay" title="SoundCloud preview"
+                                    style={{ borderRadius: 4 }}
+                                />
+                            ) : (
+                                <iframe
+                                    src={result.embedUrl}
+                                    seamless width="100%" height="200"
+                                    title="Bandcamp preview"
+                                    style={{ borderRadius: 4 }}
+                                />
+                            )}
+                        </div>
+                    )}
+
+                    <button className="admin__btn admin__btn--success" onClick={apply}>
+                        ✓ Применить в форму
+                    </button>
+                </div>
+            )}
+        </div>
     );
 }
 

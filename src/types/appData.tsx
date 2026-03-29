@@ -17,6 +17,7 @@ export interface DiscographyItem {
     bandcampAlbum?: number;
     bandcampTrack?: number;
     soundcloudPlayer?: string;
+    youtubeId?: string;
     type: 'album' | 'single';
     hidden: boolean;
 }

@@ -752,11 +752,54 @@ $steps: 100;
 }
 
 .bandcamp-layer{
+	position: relative;
 	padding-left: 20px;
 	margin-bottom: 20px;
 	iframe {
 		border: 0; width: 100%; height: 120px;
 	}
+	&--youtube {
+		padding-left: 20px;
+		margin-bottom: 20px;
+		min-height: 120px;
+		iframe {
+			border: 0;
+			width: 100%;
+			height: auto;
+			aspect-ratio: 16 / 9;
+		}
+	}
+}
+
+// Прелоадер для секционных iframe (MUP, HELLO WORLD) — C64 стиль
+.iframe-loader {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	background: #3c2bab;
+	border: 2px solid #8272dd;
+	height: 450px;
+	font-family: 'C64 User Mono', 'Courier New', monospace;
+	font-size: 14px;
+	letter-spacing: 3px;
+
+	&__text {
+		color: #8272dd;
+		text-transform: uppercase;
+	}
+
+	&__cursor {
+		color: #8272dd;
+		animation: c64blink 0.8s step-end infinite;
+		font-size: 16px;
+	}
+}
+
+@keyframes c64blink {
+	0%, 100% { opacity: 1; }
+	50%       { opacity: 0; }
 }
 
 @media screen and (max-width: 1400px) {
@@ -772,6 +815,9 @@ $steps: 100;
 	}
 	.bandcamp-layer {
 		padding-left: 0;
+		&--youtube {
+			padding-left: 0;
+		}
 	}
 }
 @media screen and (max-width: 641px) {
