@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import './admin.scss';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -173,10 +173,10 @@ export default function AdminPanel() {
                     <EventsTab data={data} onChange={d => setData({ ...data, events: d })} />
                 )}
                 {activeTab === 'disc' && (
-                    <DiscTab data={data} onChange={d => setData({ ...data, discography: d })} />
+                    <DiscTab data={data} pw={pw} onChange={d => setData({ ...data, discography: d })} />
                 )}
                 {activeTab === 'news' && (
-                    <NewsTab data={data} onChange={d => setData({ ...data, news: d })} />
+                    <NewsTab data={data} pw={pw} onChange={d => setData({ ...data, news: d })} />
                 )}
                 {activeTab === 'bio' && (
                     <BioTab bio={data.bio} onChange={b => setData({ ...data, bio: b })} />
@@ -287,7 +287,7 @@ function EventsTab({ data, onChange }: { data: AppData; onChange: (d: EventItem[
 
 // ─── Discography Tab ──────────────────────────────────────────────────────────
 
-function DiscTab({ data, onChange }: { data: AppData; onChange: (d: DiscItem[]) => void }) {
+function DiscTab({ data, pw = '', onChange }: { data: AppData; pw?: string; onChange: (d: DiscItem[]) => void }) {
     const [filter, setFilter] = useState<'all' | 'album' | 'single'>('all');
     const [editing, setEditing] = useState<DiscItem | null>(null);
     const [editIdx, setEditIdx] = useState<number | null>(null);
@@ -403,6 +403,8 @@ function DiscTab({ data, onChange }: { data: AppData; onChange: (d: DiscItem[]) 
                         <div className="admin__form-group admin__form-group--full">
                             <label>Cover Link (e.g. ../images/albums/myalbum.jpg)</label>
                             <input type="text" value={editing.coverLink} onChange={e => upd('coverLink', e.target.value)} />
+                            <ImageUpload folder="albums" label="Загрузить обложку"
+                                password={pw} onUploaded={path => upd('coverLink', path)} />
                         </div>
                         <div className="admin__form-group admin__form-group--full">
                             <label>Download Link</label>
@@ -458,7 +460,7 @@ function DiscTab({ data, onChange }: { data: AppData; onChange: (d: DiscItem[]) 
 
 // ─── News Tab ─────────────────────────────────────────────────────────────────
 
-function NewsTab({ data, onChange }: { data: AppData; onChange: (d: NewsItem[]) => void }) {
+function NewsTab({ data, pw = '', onChange }: { data: AppData; pw?: string; onChange: (d: NewsItem[]) => void }) {
     const [editing, setEditing] = useState<NewsItem | null>(null);
     const [editIdx, setEditIdx] = useState<number | null>(null);
     const [isNew, setIsNew] = useState(false);
@@ -532,6 +534,8 @@ function NewsTab({ data, onChange }: { data: AppData; onChange: (d: NewsItem[]) 
                         <div className="admin__form-group admin__form-group--full">
                             <label>Media (image path or video URL)</label>
                             <input type="text" value={editing.media} onChange={e => upd('media', e.target.value)} />
+                            <ImageUpload folder="extra" label="Загрузить картинку"
+                                password={pw} onUploaded={path => upd('media', path)} />
                         </div>
                     </div>
                     <div className="admin__form-actions">
@@ -575,6 +579,100 @@ function BioTab({ bio, onChange }: { bio: string; onChange: (b: string) => void 
                 </p>
             </div>
         </>
+    );
+}
+
+// ─── Image Upload Component ───────────────────────────────────────────────────
+
+function ImageUpload({ onUploaded, folder = 'albums', label = 'Загрузить обложку', password = '' }: {
+    onUploaded: (path: string) => void;
+    folder?: 'albums' | 'extra' | 'games';
+    label?: string;
+    password?: string;
+}) {
+    const [uploading, setUploading] = useState(false);
+    const [status, setStatus] = useState<{ ok: boolean; msg: string } | null>(null);
+    const [preview, setPreview] = useState<string | null>(null);
+    const inputRef = useRef<HTMLInputElement>(null);
+
+    const handleFile = async (file: File) => {
+        if (!file) return;
+        if (file.size > 5 * 1024 * 1024) {
+            setStatus({ ok: false, msg: 'Файл больше 5MB' }); return;
+        }
+
+        setPreview(URL.createObjectURL(file));
+        setUploading(true);
+        setStatus(null);
+
+        try {
+            // Конвертируем в base64
+            const base64 = await new Promise<string>((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => {
+                    const result = reader.result as string;
+                    resolve(result.split(',')[1]); // убираем data:image/...;base64,
+                };
+                reader.onerror = reject;
+                reader.readAsDataURL(file);
+            });
+
+            const pw = password || DEFAULT_PASS || '';
+
+            const res = await fetch('/.netlify/functions/upload-image', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    password: pw,
+                    filename: file.name,
+                    content: base64,
+                    folder,
+                }),
+            });
+
+            const json = await res.json();
+            if (res.ok && json.ok) {
+                setStatus({ ok: true, msg: `✓ ${json.filename}` });
+                onUploaded(json.path);
+            } else {
+                setStatus({ ok: false, msg: `✗ ${json.error}` });
+            }
+        } catch (e: any) {
+            setStatus({ ok: false, msg: `✗ ${e.message}` });
+        }
+        setUploading(false);
+    };
+
+    return (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+            <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+                <button
+                    type="button"
+                    className="admin__btn admin__btn--secondary"
+                    onClick={() => inputRef.current?.click()}
+                    disabled={uploading}
+                    style={{ fontSize: 12 }}
+                >
+                    {uploading ? '⏳ Загрузка...' : `🖼 ${label}`}
+                </button>
+                {status && (
+                    <span style={{ fontSize: 11, color: status.ok ? '#00ff88' : '#ff2244' }}>
+                        {status.msg}
+                    </span>
+                )}
+                <input
+                    ref={inputRef}
+                    type="file"
+                    accept="image/*"
+                    style={{ display: 'none' }}
+                    onChange={e => e.target.files?.[0] && handleFile(e.target.files[0])}
+                />
+            </div>
+            {preview && (
+                <img src={preview} alt="preview"
+                    style={{ maxWidth: 120, maxHeight: 120, borderRadius: 4, border: '1px solid #3d0050', objectFit: 'cover' }} />
+            )}
+        </div>
     );
 }
 
