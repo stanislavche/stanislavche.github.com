@@ -66,16 +66,8 @@
 		font-family: 'Roboto Condensed', sans-serif;
 	}
 
-	&__location {
-		display: flex;
-		flex-direction: column;
-		gap: 1px;
-		overflow: hidden;
-		min-width: 0;
-	}
-
-	&__country {
-		font-size: 12px;
+	&__city {
+		font-size: 13px;
 		font-weight: 700;
 		color: vars.$dark-red;
 		white-space: nowrap;
@@ -83,21 +75,11 @@
 		text-overflow: ellipsis;
 		display: flex;
 		align-items: center;
-		gap: 4px;
-	}
-
-	&__city {
-		font-size: 11px;
-		font-weight: 400;
-		color: rgba(vars.$main-color, 0.55);
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
+		gap: 5px;
 	}
 
 	&__flag {
-		font-style: normal;
-		font-size: 13px;
+		font-size: 14px;
 		line-height: 1;
 		flex-shrink: 0;
 	}

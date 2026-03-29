@@ -60,14 +60,9 @@ class Events extends Component {
 									const row = (
 										<>
 											<span className="events__date">{dateShort}</span>
-											<span className="events__location">
-												<span className="events__country">
-													{flag && <span className="events__flag">{flag}</span>}
-													{item.country}
-												</span>
-												{item.city && item.city !== item.country && (
-													<span className="events__city">{item.city}</span>
-												)}
+											<span className="events__city">
+												{item.city || item.country}
+												{flag && <span className="events__flag">{flag}</span>}
 											</span>
 											<span className="events__name">{item.title}</span>
 										</>
