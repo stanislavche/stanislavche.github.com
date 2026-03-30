@@ -12,8 +12,8 @@
     "emulator": true,
     "kits": true
   },
-  "bio": "<p class=\"container__text\">I'm Stas — aka <b>S_TN</b> / <b>Stress_TN</b>, one half of the <b>8bit brothers</b> duo. Chip musician. Video game composer. Devoted to everything that beeps and glitches.</p><p class=\"container__text\">Since 2008 I've been turning vintage game consoles and old computers into musical instruments — pulling strange sounds out of chips that were never meant to make music.</p><p class=\"container__text\">It's raw. It's noisy. Sometimes it's just weird. I call it <b>TERRIBLE NOISE (TN)</b> \uD83D\uDE0E</p><p class=\"container__text\">Thanks for listening — every bit of support, curiosity and feedback makes this worth doing.</p>",
-  "bio_ru": "<p class=\"container__text\">Я Стас — он же <b>S_TN</b> / <b>Stress_TN</b>, половина дуэта <b>8bit brothers</b>. Чип-музыкант. Композитор видеоигровой музыки. Помешанный на всём, что пищит и глючит.</p><p class=\"container__text\">С 2008 года я превращаю старые игровые консоли и ретро-компьютеры в музыкальные инструменты — вытаскиваю странные звуки из чипов, которые для этого совсем не предназначались.</p><p class=\"container__text\">Это грубо. Шумно. Иногда просто странно. Я называю это <b>TERRIBLE NOISE (TN)</b> \uD83D\uDE0E</p><p class=\"container__text\">Спасибо, что слушаешь — каждая поддержка, вопрос и отклик делают это всё осмысленным.</p>",
+  "bio": "<p class=\"container__text\">Hi! I'm Stas — aka <b>S_TN</b> / <b>Stress_TN</b>, one half of the <b>8bit brothers</b> duo. Chip musician. Video game composer. Devoted to everything that beeps and glitches.</p><p class=\"container__text\">Since 2008 I've been turning vintage game consoles and old computers into musical instruments — pulling strange sounds out of chips that were never meant to make music.</p><p class=\"container__text\">It's raw. It's noisy. Sometimes it's just weird. I call it <b>TERRIBLE NOISE (TN)</b> 😎</p><p class=\"container__text\">Thanks for listening — every bit of support, curiosity and feedback makes this worth doing.</p>",
+  "bio_ru": "<p class=\"container__text\">Привет! Я Стас — он же <b>S_TN</b> / <b>Stress_TN</b>, половина дуэта <b>8bit brothers</b>. Чип-музыкант. Композитор видеоигровой музыки. Помешанный на всём, что пищит и глючит.</p><p class=\"container__text\">С 2008 года я превращаю старые игровые консоли и ретро-компьютеры в музыкальные инструменты — вытаскиваю странные звуки из чипов, которые для этого совсем не предназначались.</p><p class=\"container__text\">Это грубо. Шумно. Иногда просто странно. Я называю это <b>TERRIBLE NOISE (TN)</b> 😎</p><p class=\"container__text\">Спасибо, что слушаешь — каждая поддержка, вопрос и отклик делают это всё осмысленным.</p>",
   "news": [
     {
       "show": true,
@@ -23,7 +23,8 @@
       "link": "https://stresstn.bandcamp.com/album/-",
       "type": "image",
       "media": "./images/albums/mup.jpg"
-    },{
+    },
+    {
       "show": true,
       "date": 1618007620,
       "title": "Интервью",
@@ -378,10 +379,6 @@
         "Chiptech"
       ]
     },
-
-
-
-
     {
       "show": true,
       "type": "single",
@@ -1189,43 +1186,50 @@
       "city": "Riga",
       "title": "+ TATHUUNS +",
       "link": "https://www.facebook.com/events/1185800398991080"
-    },{
+    },
+    {
       "date": "11 November 2022",
       "country": "Latvia",
       "city": "Riga",
       "title": "THE ONLY GOOD SYSTEM IS A SOUND SYSTEM vol.1",
       "link": "https://www.facebook.com/events/426278366322562"
-    },{
+    },
+    {
       "date": "27 August 2022",
       "country": "Russia",
       "city": "Moscow",
       "title": "Russian Chiptune Mafia vol.2",
       "link": "https://t.me/s_tn_space/20"
-    },{
+    },
+    {
       "date": "16 August 2022",
       "country": "Russia",
       "city": "Saint-Petersburg",
       "title": "Chiptune в Масло club",
       "link": "https://vk.com/spbchiptune"
-    },{
+    },
+    {
       "date": "11 - 14 August 2022",
       "country": "Latvia",
       "city": "Jaunciems, Tārgale Parish",
       "title": "Festivāls Parakosm",
       "link": "https://www.facebook.com/events/512174570376446"
-    },{
+    },
+    {
       "date": "08 - 11 Julu 2022",
       "country": "Estonia",
       "city": "Vana-Veski Puhkekeskus",
       "title": "Art of Nature Festival 2022",
       "link": "https://www.facebook.com/events/1017419369001223"
-    },{
+    },
+    {
       "date": "23 April 2022",
       "country": "Latvia",
       "city": "Riga",
       "title": "Lokal House Hardcore Punk Party!",
       "link": "https://www.facebook.com/events/322568109862913"
-    },{
+    },
+    {
       "date": "16 July 2021",
       "country": "Russia",
       "city": "Taganrog",
@@ -1385,61 +1389,71 @@
       "city": "Taganrog",
       "title": "ТОЧКА СБОРКИ",
       "link": "https://vk.com/ts242"
-    },{
+    },
+    {
       "date": "19 February 2012",
       "country": "Russia",
       "city": "Taganrog",
       "title": "OblackA в Закрытых пространствах",
       "link": "https://vk.com/oblacka"
-    },{
+    },
+    {
       "date": "11 February 2012",
       "country": "Russia",
       "city": "Taganrog",
       "title": "INFERNAL REVEL",
       "link": "https://vk.com/event34877716"
-    },{
+    },
+    {
       "date": "28 December 2011",
       "country": "Russia",
       "city": "Krasnodar",
       "title": "IN HARD WE TRUST",
       "link": "https://vk.com/event32213941"
-    },{
+    },
+    {
       "date": "19 November 2011",
       "country": "Russia",
       "city": "Taganrog",
       "title": "FREE ZONE: in_dust_we_trust",
       "link": "https://vk.com/event32026801"
-    },{
+    },
+    {
       "date": "14 October 2011",
       "country": "Russia",
       "city": "Taganrog",
       "title": "ТОЧКА СБОРКИ",
       "link": "https://vk.com/event30781624"
-    },{
+    },
+    {
       "date": "05 January 2011",
       "country": "Russia",
       "city": "Rostov-on-Don",
       "title": "+ SUPER MEAT BASS +",
       "link": "https://vk.com/event22858496"
-    },{
+    },
+    {
       "date": "26 June 2010",
       "country": "Russia",
       "city": "Taganrog",
       "title": "ZAVODPARTY.RU Festival 2010",
       "link": "https://vk.com/event18136735"
-    },{
+    },
+    {
       "date": "01 May 2010",
       "country": "Russia",
       "city": "Taganrog",
       "title": "«КОНЦЕРТ ЭЛЕКТРОННОЙ МУЗЫКИ»",
       "link": "https://vk.com/event17095040"
-    },{
+    },
+    {
       "date": "09 March 2010",
       "country": "Russia",
       "city": "Taganrog",
       "title": "FREE ZONE: World DJ Day @ \"STARS\"",
       "link": "https://vk.com/event16012478"
-    },{
+    },
+    {
       "date": "25 July 2009",
       "country": "Russia",
       "city": "Anapa",
