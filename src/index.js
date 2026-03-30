@@ -15,27 +15,6 @@ if (isCmsRoute) {
 	const favicon = document.getElementById('dynamic-favicon');
 	if (favicon) { favicon.href = '/cms/icon.png'; favicon.type = 'image/png'; }
 
-	// PWA-теги для "Добавить на экран Домой" (iOS / Android)
-	const head = document.head;
-	const addMeta = (name, content) => {
-		const m = document.createElement('meta');
-		m.name = name; m.content = content;
-		head.appendChild(m);
-	};
-	const addLink = (rel, href, extra = {}) => {
-		const l = document.createElement('link');
-		l.rel = rel; l.href = href;
-		Object.assign(l, extra);
-		head.appendChild(l);
-	};
-	addMeta('apple-mobile-web-app-capable', 'yes');
-	addMeta('apple-mobile-web-app-status-bar-style', 'black-translucent');
-	addMeta('apple-mobile-web-app-title', 'S_TN Admin');
-	addMeta('mobile-web-app-capable', 'yes');
-	addMeta('theme-color', '#0d0d0d');
-	addLink('apple-touch-icon', '/cms/icon.png');
-	addLink('manifest', '/cms/manifest.json');
-
 	document.title = 'S_TN Admin';
 } else {
 	Utils.setAnimatedFavicon();

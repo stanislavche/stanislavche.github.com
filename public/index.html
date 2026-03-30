@@ -6,10 +6,37 @@
 		<link rel="canonical" href="https://s-tn.space" />
 		<meta
 			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
 		/>
 		<meta name="theme-color" content="#000000" />
-		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+		<link id="pwa-manifest" rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+		<!-- PWA override для /cms — должен быть синхронным, до того как Safari прочитает head -->
+		<script>
+			(function() {
+				if (window.location.pathname.indexOf('/cms') === 0 || window.location.pathname.indexOf('/admin') === 0) {
+					// Манифест
+					var m = document.getElementById('pwa-manifest');
+					if (m) m.href = '/cms/manifest.json';
+					// Иконка
+					var icon = document.createElement('link');
+					icon.rel = 'apple-touch-icon'; icon.href = '/cms/icon.png';
+					document.head.appendChild(icon);
+					// Apple PWA мета-теги
+					[
+						['apple-mobile-web-app-capable',          'yes'],
+						['apple-mobile-web-app-status-bar-style', 'black-translucent'],
+						['apple-mobile-web-app-title',            'S_TN Admin'],
+						['mobile-web-app-capable',                'yes'],
+						['theme-color',                           '#0d0d0d'],
+					].forEach(function(pair) {
+						var t = document.createElement('meta');
+						t.name = pair[0]; t.content = pair[1];
+						document.head.appendChild(t);
+					});
+					document.title = 'S_TN Admin';
+				}
+			})();
+		</script>
 		<title>S_TN Official web site</title>
 		<!--OG-->
 		<meta property="og:title" content="S_TN" />
