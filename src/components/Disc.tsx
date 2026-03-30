@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
+import { DiscographyItem } from '../types/appData';
 
-class Disc extends Component {
+interface DiscProps {
+	disc: DiscographyItem;
+	active: boolean;
+	triggerClick: (event: React.MouseEvent) => void;
+}
+
+class Disc extends Component<DiscProps> {
 	
 	
 	render() {
@@ -14,7 +21,7 @@ class Disc extends Component {
 				</div>
 				<div className="discography__wrapper">
 					<h4 className="discography__title">
-						<a href="{this.props.disc.downloadLink}" target="_blank" rel="noopener noreferrer">{this.props.disc.title}</a>
+						<a href={this.props.disc.downloadLink} target="_blank" rel="noopener noreferrer">{this.props.disc.title}</a>
 					</h4>
 					<div className="discography__info">
 						<ul className="discography__secondary-list">

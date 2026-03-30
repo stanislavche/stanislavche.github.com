@@ -79,9 +79,14 @@
 	}
 
 	&__flag {
-		font-size: 14px;
-		line-height: 1;
+		display: inline-block;
+		width: 1.2em;
+		height: 0.9em;
+		background-size: contain;
+		background-position: 50%;
+		background-repeat: no-repeat;
 		flex-shrink: 0;
+		vertical-align: middle;
 	}
 
 	&__name {

@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "caniuse-lite": "^1.0.30001202",
+    "flag-icons": "^7.5.0",
     "gh-pages": "^5.0.0",
     "lazy-line-painter": "^1.9.4",
     "react": "^18.2.0",
