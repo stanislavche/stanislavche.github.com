@@ -158,8 +158,11 @@ export default function AdminPanel() {
     );
 
     if (loading || !data) return (
-        <div className="admin" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
-            <p style={{ color: '#f32e92' }}>Loading data.json...</p>
+        <div className="admin">
+            <div className="admin__loader">
+                <div className="admin__loader-spinner" />
+                <span className="admin__loader-text">Loading…</span>
+            </div>
         </div>
     );
 

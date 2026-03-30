@@ -9,7 +9,39 @@
 			content="width=device-width, initial-scale=1, shrink-to-fit=no"
 		/>
 		<meta name="theme-color" content="#000000" />
-		<link rel="manifest" href="/manifest.json" />
+		<link id="pwa-manifest" rel="manifest" href="/manifest.json" />
+		<!-- PWA override for /cms — runs sync before Safari reads head -->
+		<script>
+			(function() {
+				var p = window.location.pathname;
+				if (p.indexOf('/cms') === 0 || p.indexOf('/admin') === 0) {
+					var m = document.getElementById('pwa-manifest');
+					if (m) m.setAttribute('href', '/cms/manifest.json');
+					var icon = document.createElement('link');
+					icon.rel = 'apple-touch-icon';
+					icon.href = '/cms/icon.png';
+					document.head.appendChild(icon);
+					[
+						['apple-mobile-web-app-capable',          'yes'],
+						['apple-mobile-web-app-status-bar-style', 'black-translucent'],
+						['apple-mobile-web-app-title',            'S_TN Admin'],
+						['mobile-web-app-capable',                'yes'],
+						['theme-color',                           '#0d0d0d'],
+					].forEach(function(pair) {
+						var t = document.createElement('meta');
+						t.name = pair[0]; t.content = pair[1];
+						document.head.appendChild(t);
+					});
+					document.title = 'S_TN Admin';
+					// Inline preloader — показывается до того как React смонтируется
+					var style = document.createElement('style');
+					style.textContent = '@keyframes _cmspin{to{transform:rotate(360deg)}}@keyframes _cmpulse{0%,100%{opacity:1}50%{opacity:.35}}#cms-pl{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;background:#0d0010;gap:20px}#cms-pl-ring{width:52px;height:52px;border:3px solid rgba(243,46,146,.18);border-top-color:#f32e92;border-radius:50%;animation:_cmspin .85s linear infinite}#cms-pl-text{color:#f32e92;font-size:12px;letter-spacing:3px;text-transform:uppercase;animation:_cmpulse 1.6s ease-in-out infinite}';
+					document.head.appendChild(style);
+					var root = document.getElementById('root');
+					if (root) root.innerHTML = '<div id="cms-pl"><div id="cms-pl-ring"></div><span id="cms-pl-text">LOADING...</span></div>';
+				}
+			})();
+		</script>
 		<title>S_TN Official web site</title>
 		<!--OG-->
 		<meta property="og:title" content="S_TN" />

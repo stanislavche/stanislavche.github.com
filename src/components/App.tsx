@@ -15,6 +15,7 @@ import Mup from "./Mup";
 import { AppContext } from '../context/AppContext';
 import AdminPanel from './admin/AdminPanel';
 import { LanguageContext, useLanguage } from '../context/LanguageContext';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 // ── Переключатель языка ──────────────────────────────────────────────────────
 function LangSwitcher() {
@@ -121,6 +122,7 @@ class App extends Component {
 
 		return (
 			<Router>
+				<SpeedInsights />
 				<Routes>
 					<Route path="/" exact element={ <ShowIndexPage /> } />
 					<Route path="/cms" element={ <AdminPanel /> } />

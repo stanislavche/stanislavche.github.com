@@ -41,13 +41,13 @@ const translations = {
         // Footer
         footer:          'Все права принадлежат S_TN',
         // 404 page
-        error404title:   '**** СТРАНИЦА НЕ НАЙДЕНА ****',
-        error404code:    'ОШИБКА 404',
-        errorReady:      'ГОТОВО.',
-        errorFileNotFound: 'ФАЙЛ НЕ НАЙДЕН',
-        errorGotoMain:   'НА ГЛАВНУЮ',
+        error404title:   '**** PAGE NOT FOUND ****',
+        error404code:    'ERROR 404',
+        errorReady:      'READY.',
+        errorFileNotFound: 'FILE NOT FOUND',
+        errorGotoMain:   'GOTO MAIN PAGE',
         // Loader
-        loading:         'ЗАГРУЗКА',
+        loading:         'LOADING',
     },
 } as const;
 

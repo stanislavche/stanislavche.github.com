@@ -4,6 +4,7 @@
   "homepage": "http://stanislavche.github.io/",
   "private": true,
   "dependencies": {
+    "@vercel/speed-insights": "^2.0.0",
     "caniuse-lite": "^1.0.30001202",
     "flag-icons": "^7.5.0",
     "gh-pages": "^5.0.0",

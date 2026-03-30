@@ -344,3 +344,32 @@ $admin-input-bg: #1e0028;
   }
 }
 
+// ─── Loader ───────────────────────────────────────────────────────────────────
+@keyframes admin-spin  { to { transform: rotate(360deg); } }
+@keyframes admin-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+.admin__loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 20px;
+
+  &-spinner {
+    width: 52px;
+    height: 52px;
+    border: 3px solid rgba($admin-accent, 0.18);
+    border-top-color: $admin-accent;
+    border-radius: 50%;
+    animation: admin-spin 0.85s linear infinite;
+  }
+
+  &-text {
+    color: $admin-accent;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: admin-pulse 1.6s ease-in-out infinite;
+  }
+}

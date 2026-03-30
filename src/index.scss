@@ -72,10 +72,24 @@ a:hover{
 #root {
 	position: relative;
 	z-index: 2;
+	background-color: transparent;
+	// background и анимация вынесены в body::before для GPU-compositing
+}
+
+// Анимированный фон через transform (не background-position) — работает на GPU без repaint
+body::before {
+	content: '';
+	position: fixed;
+	top: -1100px;
+	left: -1100px;
+	width: calc(100vw + 2200px);
+	height: calc(100vh + 2200px);
+	z-index: 0;
 	background-color: vars.$dark-red;
-	//background-color: $back-color;
 	background-image: url('./image/consoles.png');
 	background-size: initial;
+	pointer-events: none;
+	will-change: transform;
 	animation: rain 60s infinite linear;
 }
 
@@ -100,18 +114,20 @@ a:hover{
 	//	background-position: 50% 0;
 	&:after{
 		content: '';
-		width: 100vw;
-		height: 100%;
-		top: 0;
-		left: 0;
+		// Oversized чтобы transform-translate не обнажал края
+		width: calc(100vw + 2200px);
+		height: calc(100vh + 2200px);
+		top: -1100px;
+		left: -1100px;
 		position: fixed;
 		background-image: url('./image/tv.png');
 		animation: noise 2000ms infinite linear;
-		background-position: 0 0;
 		pointer-events: none;
 		opacity: 0;
 		z-index: 2;
 		transition: opacity 1s;
+		// will-change: transform даёт браузеру вынести в отдельный compositing layer
+		will-change: transform;
 	}
 	&.active:after{
 		opacity: 0.6;
@@ -415,6 +431,9 @@ $steps: 100;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		// Изолируем glitch анимацию в отдельный compositing layer
+		will-change: filter;
+		transform: translateZ(0);
 	}
 	&__wrapper {
 		position: relative;
@@ -485,11 +504,11 @@ $steps: 100;
 	font-family: 'C64 User Mono', 'Courier New', monospace;
 	font-size: 13px;
 	line-height: 1;
-	background: rgba(0, 0, 0, 0.72);
+	// backdrop-filter: blur убран — GPU-тяжёлый на мобиле, особенно с noise animation
+	background: rgba(0, 0, 0, 0.82);
 	border: 1px solid vars.$dark-red;
 	border-radius: 4px;
 	padding: 5px 8px;
-	backdrop-filter: blur(4px);
 
 	&__btn {
 		background: none;
@@ -709,50 +728,38 @@ $steps: 100;
 // }
 
 @keyframes noise {
-	0% {
-		background-position: 0 1000px;
-	}
-	50% {
-		background-position: -1000px;
-	}
-	100% {
-		background-position: 100px 0px;
-	}
+	0%   { transform: translate3d(0, 0, 0); }
+	50%  { transform: translate3d(1000px, -1000px, 0); }
+	100% { transform: translate3d(-100px, -1000px, 0); }
 }
 
 @-webkit-keyframes noise {
-	0% {
-		background-position: 0 1000px;
-	}
-	50% {
-		background-position: -1000px;
-	}
-	100% {
-		background-position: 100px 0;
-	}
+	0%   { transform: translate3d(0, 0, 0); }
+	50%  { transform: translate3d(1000px, -1000px, 0); }
+	100% { transform: translate3d(-100px, -1000px, 0); }
 }
 
 @keyframes rain {
 	0% {
-		background-position: 0 0;
+		transform: translate3d(0, 0, 0);
 	}
 	50% {
-		background-position: 512px 512px;
+		transform: translate3d(-512px, -512px, 0);
 	}
 	100% {
-		background-position: 1024px 1024px;
+		transform: translate3d(-1024px, -1024px, 0);
 	}
 }
 
 @-webkit-keyframes rain {
 	0% {
-		background-position: 0 0;
+		transform: translate3d(0, 0, 0);
 	}
 	50% {
-		background-position: 512px 512px;
+		transform: translate3d(-512px, -512px, 0);
 	}
 	100% {
-		background-position: 1024px 1024px;
+		transform: translate3d(-1024px, -1024px, 0);
 	}
 }
 
@@ -799,6 +806,12 @@ $steps: 100;
 	}
 	.App__header {
 		font-size: 5em;
+	}
+	.lang-switcher {
+		font-size: 11px;
+		padding: 4px 7px;
+		top: 10px;
+		right: 12px;
 	}
 	.discography{
 		&__list{
@@ -876,7 +889,7 @@ $steps: 100;
 }
 
 @media screen and (max-width: 840px) {
-	#root {
+	body::before {
 		background-size: 510px;
 	}
 	.bandcamp-layer {
@@ -887,10 +900,20 @@ $steps: 100;
 	}
 }
 @media screen and (max-width: 641px) {
-	#root {
+	body::before {
 		background-size: 330px;
 	}
 	.App__header {
 		font-size: 3em;
+	}
+	.lang-switcher {
+		font-size: 10px;
+		padding: 3px 6px;
+		top: 8px;
+		right: 8px;
+		gap: 2px;
+		&__btn {
+			padding: 1px 4px;
+		}
 	}
 }
