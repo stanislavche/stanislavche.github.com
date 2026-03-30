@@ -1,10 +1,17 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "build",
+  "ignoreCommand": "[ \"$VERCEL_GIT_COMMIT_REF\" != \"master\" ] || [ -z \"$(git diff HEAD^ HEAD --name-only | grep -v 'public/data.json')\" ]",
+  "redirects": [
+    { "source": "/admin",   "destination": "/cms", "permanent": true },
+    { "source": "/admin/",  "destination": "/cms", "permanent": true }
+  ],
   "rewrites": [
-    { "source": "/mup",        "destination": "https://stanislavche.github.io/mup/" },
-    { "source": "/mup/:path*", "destination": "https://stanislavche.github.io/mup/:path*" },
+    { "source": "/mup",         "destination": "https://stanislavche.github.io/mup/" },
+    { "source": "/mup/",        "destination": "https://stanislavche.github.io/mup/" },
+    { "source": "/mup/:path*",  "destination": "https://stanislavche.github.io/mup/:path*" },
     { "source": "/helloworld",        "destination": "https://stanislavche.github.io/helloworld/" },
+    { "source": "/helloworld/",       "destination": "https://stanislavche.github.io/helloworld/" },
     { "source": "/helloworld/:path*", "destination": "https://stanislavche.github.io/helloworld/:path*" },
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]

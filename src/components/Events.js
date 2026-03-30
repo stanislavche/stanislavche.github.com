@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import './events.scss';
 import 'flag-icons/css/flag-icons.min.css';
 import {AppContext} from "../context/AppContext";
+import { LanguageContext } from '../context/LanguageContext';
 
 const COUNTRY_FLAGS = {
 	'Russia': 'ru',
@@ -48,43 +49,47 @@ class Events extends Component {
 		const years = Object.keys(byYear).sort((a, b) => b - a);
 
 		return (
-			<section className="container">
-				<h2 className="container__header">Events</h2>
-				<div className="container__wrapper events">
-					{years.map(year => (
-						<div className="events__year-group" key={year}>
-							<div className="events__year-label">{year}</div>
-							<ul className="events__list">
-								{byYear[year].map((item, key) => {
-									const dateShort = (item.date || '').replace(/[\s,]*\d{4}[\s,]*/, '').trim();
-									const flagCode = COUNTRY_FLAGS[item.country] || '';
-									const row = (
-										<>
-											<span className="events__date">{dateShort}</span>
-											<span className="events__city">
-												{flagCode && <span className={`events__flag fi fi-${flagCode}`}></span>}
-												{item.city || item.country}
-											</span>
-											<span className="events__name">{item.title}</span>
-										</>
-									);
-									return (
-										<li className="events__item" key={key}>
-											{item.link ? (
-												<a href={item.link} target="_blank" rel="noopener noreferrer" className="events__row events__row--link">
-													{row}
-												</a>
-											) : (
-												<div className="events__row">{row}</div>
-											)}
-										</li>
-									);
-								})}
-							</ul>
+			<LanguageContext.Consumer>
+				{({ t }) => (
+					<section className="container">
+						<h2 className="container__header">{t('events')}</h2>
+						<div className="container__wrapper events">
+							{years.map(year => (
+								<div className="events__year-group" key={year}>
+									<div className="events__year-label">{year}</div>
+									<ul className="events__list">
+										{byYear[year].map((item, key) => {
+											const dateShort = (item.date || '').replace(/[\s,]*\d{4}[\s,]*/, '').trim();
+											const flagCode = COUNTRY_FLAGS[item.country] || '';
+											const row = (
+												<>
+													<span className="events__date">{dateShort}</span>
+													<span className="events__city">
+														{flagCode && <span className={`events__flag fi fi-${flagCode}`}></span>}
+														{item.city || item.country}
+													</span>
+													<span className="events__name">{item.title}</span>
+												</>
+											);
+											return (
+												<li className="events__item" key={key}>
+													{item.link ? (
+														<a href={item.link} target="_blank" rel="noopener noreferrer" className="events__row events__row--link">
+															{row}
+														</a>
+													) : (
+														<div className="events__row">{row}</div>
+													)}
+												</li>
+											);
+										})}
+									</ul>
+								</div>
+							))}
 						</div>
-					))}
-				</div>
-			</section>
+					</section>
+				)}
+			</LanguageContext.Consumer>
 		);
 	}
 }

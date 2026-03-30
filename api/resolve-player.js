@@ -1,6 +1,5 @@
 // Vercel Serverless Function: resolve-player
 // Принимает { url } → возвращает ID/embed для Bandcamp / SoundCloud / YouTube
-// Переконвертировано из netlify/functions/resolve-player.js
 
 module.exports = async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');

@@ -12,7 +12,8 @@
     "emulator": true,
     "kits": true
   },
-  "bio": "<p class=\"container__text\">Stas or <b>S_TN, Stress_TN,</b> 1/2 of <b>8bit brothers</b> - chip-musician and video game music composer.</p><p class=\"container__text\">Since&nbsp;2008 I has started music project based on retro sound. Game consoles and vintage computers are turning into musical instruments.</p><p>The main goal of the project is to unlock the potential of these sound chips in the underground culture. Some times it sound weird \uD83D\uDE0E - I call it <b>TERRIBLE NOISE (TN)</b></p><p>P.S. This project is being developed for entertainment purposes only. Your support, criticism and feedback is very encouraging for me as an author. Thank you for being interested in chiptune and my work!</p>",
+  "bio": "<p class=\"container__text\">I'm Stas — aka <b>S_TN</b> / <b>Stress_TN</b>, one half of the <b>8bit brothers</b> duo. Chip musician. Video game composer. Devoted to everything that beeps and glitches.</p><p class=\"container__text\">Since 2008 I've been turning vintage game consoles and old computers into musical instruments — pulling strange sounds out of chips that were never meant to make music.</p><p class=\"container__text\">It's raw. It's noisy. Sometimes it's just weird. I call it <b>TERRIBLE NOISE (TN)</b> \uD83D\uDE0E</p><p class=\"container__text\">Thanks for listening — every bit of support, curiosity and feedback makes this worth doing.</p>",
+  "bio_ru": "<p class=\"container__text\">Я Стас — он же <b>S_TN</b> / <b>Stress_TN</b>, половина дуэта <b>8bit brothers</b>. Чип-музыкант. Композитор видеоигровой музыки. Помешанный на всём, что пищит и глючит.</p><p class=\"container__text\">С 2008 года я превращаю старые игровые консоли и ретро-компьютеры в музыкальные инструменты — вытаскиваю странные звуки из чипов, которые для этого совсем не предназначались.</p><p class=\"container__text\">Это грубо. Шумно. Иногда просто странно. Я называю это <b>TERRIBLE NOISE (TN)</b> \uD83D\uDE0E</p><p class=\"container__text\">Спасибо, что слушаешь — каждая поддержка, вопрос и отклик делают это всё осмысленным.</p>",
   "news": [
     {
       "show": true,
@@ -1000,7 +1001,7 @@
       "labelLink": "",
       "releaseId": "",
       "coverLink": "../images/albums/aphextwin.png",
-      "downloadLink": "https://musify.club/release/the-chip-tribute-to-aphex-twin-2010-531958",
+      "downloadLink": "https://archive.org/download/2010-expert-bit-twiddlers/%282010%29-Expert-Bit-Twiddlers.zip",
       "tracklist": [
         "Brother Android - IZ-US [Come To Daddy EP]",
         "Emar - On [On EP]",

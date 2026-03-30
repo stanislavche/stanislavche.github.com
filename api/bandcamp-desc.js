@@ -1,6 +1,5 @@
 // Vercel Serverless Function: bandcamp-desc
 // Принимает { url } → возвращает описание Bandcamp альбома/трека
-// Переконвертировано из netlify/functions/bandcamp-desc.js
 
 module.exports = async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');

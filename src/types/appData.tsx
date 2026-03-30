@@ -40,6 +40,7 @@ export interface EventItem {
 
 export interface AppData {
     bio: string;
+    bio_ru?: string;
     news: NewsItem[];
     discography: DiscographyItem[];
     events: EventItem[];

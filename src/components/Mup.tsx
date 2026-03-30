@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './mup.scss';
+import { LanguageContext } from '../context/LanguageContext';
 
 interface MupState {
 	loaded: boolean;
@@ -7,6 +8,9 @@ interface MupState {
 }
 
 class Mup extends Component<{}, MupState> {
+	static contextType = LanguageContext;
+	declare context: React.ContextType<typeof LanguageContext>;
+
 	state: MupState = { loaded: false, error: false };
 
 	handleLoad = () => this.setState({ loaded: true });
@@ -14,13 +18,14 @@ class Mup extends Component<{}, MupState> {
 
 	render() {
 		const { loaded } = this.state;
+		const { t } = this.context;
 		return (
 			<section className="container">
-				<h2 className="container__header">MUP</h2>
+				<h2 className="container__header">{t('mup')}</h2>
 				<div className="container__wrapper mup">
 					{!loaded && (
 						<div className="iframe-loader">
-							<span className="iframe-loader__text">LOADING</span>
+							<span className="iframe-loader__text">{t('loading')}</span>
 							<span className="iframe-loader__cursor">█</span>
 						</div>
 					)}

@@ -29,6 +29,7 @@ interface EventItem {
 interface AppData {
     visibleSections: VisibleSections;
     bio: string;
+    bio_ru: string;
     news: NewsItem[];
     discography: DiscItem[];
     events: EventItem[];
@@ -69,7 +70,7 @@ const emptyNews = (): NewsItem => ({
 const ADMIN_KEY = 'stn_admin_auth';
 // Пароль хранится в .env.local (не коммитится в git)
 // Локально: VITE_ADMIN_PASSWORD в .env.local
-// На Netlify: Site settings → Environment variables → VITE_ADMIN_PASSWORD
+// На Vercel: Project Settings → Environment Variables → VITE_ADMIN_PASSWORD
 const DEFAULT_PASS = import.meta.env.VITE_ADMIN_PASSWORD as string | undefined;
 
 // URL для загрузки данных (GitHub Raw — без ребилда при изменениях)
@@ -208,7 +209,11 @@ export default function AdminPanel() {
                     <NewsTab data={data} pw={pw} onChange={d => setData({ ...data, news: d })} />
                 )}
                 {activeTab === 'bio' && (
-                    <BioTab bio={data.bio} onChange={b => setData({ ...data, bio: b })} />
+                    <BioTab
+                        bio={data.bio}
+                        bioRu={data.bio_ru || ''}
+                        onChange={(b, bRu) => setData({ ...data, bio: b, bio_ru: bRu })}
+                    />
                 )}
                 {activeTab === 'settings' && (
                     <SettingsTab vs={data.visibleSections} onChange={vs => setData({ ...data, visibleSections: vs })} />
@@ -602,17 +607,32 @@ function NewsTab({ data, pw = '', onChange }: { data: AppData; pw?: string; onCh
 
 // ─── Bio Tab ──────────────────────────────────────────────────────────────────
 
-function BioTab({ bio, onChange }: { bio: string; onChange: (b: string) => void }) {
+function BioTab({ bio, bioRu, onChange }: { bio: string; bioRu: string; onChange: (b: string, bRu: string) => void }) {
     return (
         <>
-            <div className="admin__section-header"><h2>Bio (HTML)</h2></div>
+            <div className="admin__section-header"><h2>Bio</h2></div>
             <div className="admin__form">
+
+                <p style={{ fontSize: 11, color: '#f32e92', textTransform: 'uppercase', letterSpacing: 2, margin: '0 0 12px' }}>
+                    🇬🇧 English version
+                </p>
                 <div className="admin__form-group">
-                    <label>Bio text (HTML tags supported)</label>
-                    <textarea style={{ minHeight: 180 }} value={bio} onChange={e => onChange(e.target.value)} />
+                    <label>Bio EN (HTML tags supported)</label>
+                    <textarea style={{ minHeight: 160 }} value={bio} onChange={e => onChange(e.target.value, bioRu)} />
                 </div>
-                <p style={{ fontSize: 11, color: '#888', marginTop: 8 }}>
+                <p style={{ fontSize: 11, color: '#888', marginTop: 6, marginBottom: 20 }}>
                     Preview: <span dangerouslySetInnerHTML={{ __html: bio }} style={{ color: '#e7d1b1' }} />
+                </p>
+
+                <p style={{ fontSize: 11, color: '#f32e92', textTransform: 'uppercase', letterSpacing: 2, margin: '0 0 12px' }}>
+                    🇷🇺 Russian version
+                </p>
+                <div className="admin__form-group">
+                    <label>Bio RU (HTML tags supported)</label>
+                    <textarea style={{ minHeight: 160 }} value={bioRu} onChange={e => onChange(bio, e.target.value)} />
+                </div>
+                <p style={{ fontSize: 11, color: '#888', marginTop: 6 }}>
+                    Preview: <span dangerouslySetInnerHTML={{ __html: bioRu }} style={{ color: '#e7d1b1' }} />
                 </p>
             </div>
         </>

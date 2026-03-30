@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import './kits.scss';
+import { LanguageContext } from '../context/LanguageContext';
 
 class Kits extends Component {
+	static contextType = LanguageContext;
+	declare context: React.ContextType<typeof LanguageContext>;
+
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -45,9 +49,10 @@ class Kits extends Component {
 	}
 
 	render() {
+		const { t } = this.context;
 		return (
 			<section className="container">
-				<h2 className="container__header">FREE LSDJ KITS</h2>
+				<h2 className="container__header">{t('freeLsdjKits')}</h2>
 				<div className="container__wrapper kits">
 					<ul className="kits__list">
 						{this.state.kits.map((item, key) =>

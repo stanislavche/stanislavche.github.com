@@ -9,12 +9,17 @@ import EmSvg from '../image/em.svg?react';
 import BcSvg from '../image/bc.svg?react';
 import VkSvg from '../image/vk.svg?react';
 import SpotiSvg from '../image/spoti.svg?react';
+import { LanguageContext } from '../context/LanguageContext';
 
 class Cotacts extends Component {
+	static contextType = LanguageContext;
+	declare context: React.ContextType<typeof LanguageContext>;
+
 	render() {
+		const { t } = this.context;
 		return (
 			<section className="container">
-				<h2 className="container__header">Subscribe</h2>
+				<h2 className="container__header">{t('subscribe')}</h2>
 				<div className="container__wrapper">
 					<ul className="contact-list">
 						<li className="contact-list__item">

@@ -1,24 +1,29 @@
 import React, { Component } from 'react';
 import './emulator.scss';
+import { LanguageContext } from '../context/LanguageContext';
 
 interface EmulatorState {
 	loaded: boolean;
 }
 
 class Emulator extends Component<{}, EmulatorState> {
+	static contextType = LanguageContext;
+	declare context: React.ContextType<typeof LanguageContext>;
+
 	state: EmulatorState = { loaded: false };
 
 	handleLoad = () => this.setState({ loaded: true });
 
 	render() {
 		const { loaded } = this.state;
+		const { t } = this.context;
 		return (
 			<section className="container">
-				<h2 className="container__header">HELLO WORLD</h2>
+				<h2 className="container__header">{t('helloWorld')}</h2>
 				<div className="container__wrapper emulator">
 					{!loaded && (
 						<div className="iframe-loader">
-							<span className="iframe-loader__text">LOADING</span>
+							<span className="iframe-loader__text">{t('loading')}</span>
 							<span className="iframe-loader__cursor">█</span>
 						</div>
 					)}

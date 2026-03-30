@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import './game.scss';
+import { LanguageContext } from '../context/LanguageContext';
 
 class Game extends Component {
+	static contextType = LanguageContext;
+	declare context: React.ContextType<typeof LanguageContext>;
+
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -33,9 +37,10 @@ class Game extends Component {
 	}
 
 	render() {
+		const { t } = this.context;
 		return (
 			<section className="container">
-				<h2 className="container__header">Games, OST</h2>
+				<h2 className="container__header">{t('gamesOst')}</h2>
 				<div className="container__wrapper game">
 					<ul className="game__list">
 						{this.state.gameList.map((item, key) =>

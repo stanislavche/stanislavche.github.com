@@ -5,6 +5,7 @@ import LazyLinePainter from 'lazy-line-painter';
 import GameboySvg from './image/gameboy.svg?react';
 
 import { AppContext } from './context/AppContext';
+import { LanguageProvider } from './context/LanguageContext';
 
 class Gameboy extends Component {
 	constructor(props) {
@@ -56,9 +57,11 @@ class Gameboy extends Component {
 			const json = await res.json();
 
 			this.props.root.render(
-				<AppContext.Provider value={json}>
-					<App />
-				</AppContext.Provider>
+				<LanguageProvider>
+					<AppContext.Provider value={json}>
+						<App />
+					</AppContext.Provider>
+				</LanguageProvider>
 			);
 
 			animation.destroy();

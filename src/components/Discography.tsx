@@ -3,6 +3,7 @@ import Disc from './Disc';
 import Popup from './Popup';
 import { AppContext } from '../context/AppContext';
 import { DiscographyItem } from '../types/appData'
+import { LanguageContext } from '../context/LanguageContext';
 
 class Discography extends Component {
 	static contextType = AppContext;
@@ -64,42 +65,43 @@ class Discography extends Component {
 
 	render() {
 		return (
-			<section className="container">
-				{/*<h2 className="container__header">Discography</h2>*/}
-				<div id="discography" className="container__wrapper discography">
-					<h3 className="container__sub-header">Albums & EPs</h3>
-					<ul className="discography__list">
-						{this.state.albums.map((item, key) => {
-							if (item.show) {
-								return <Disc disc={item}
-									key={key}
-									triggerClick={(event) => this.resizeMe(event, item)}
-									active={item === this.state.activeItem}
-								/>
-							}
-							return true
-						})}
-					</ul>
-					<h3 className="container__sub-header">Singles and Remixes</h3>
-					<ul className="discography__list">
-						{this.state.singles.map((item, key) => {
-							if (item.show) {
-								return <Disc
-											disc={item}
+			<LanguageContext.Consumer>
+				{({ t }) => (
+					<section className="container">
+						{/*<h2 className="container__header">{t('discography')}</h2>*/}
+						<div id="discography" className="container__wrapper discography">
+							<h3 className="container__sub-header">{t('albumsEps')}</h3>
+							<ul className="discography__list">
+								{this.state.albums.map((item, key) => {
+									if (item.show) {
+										return <Disc disc={item}
 											key={key}
 											triggerClick={(event) => this.resizeMe(event, item)}
-											active={
-												item === this.state.activeItem
-											}
+											active={item === this.state.activeItem}
 										/>
-							}
-							return true;
-						})}
-					</ul>
-
-				</div>
-				{this.showPopup()}
-			</section>
+									}
+									return true
+								})}
+							</ul>
+							<h3 className="container__sub-header">{t('singlesRemixes')}</h3>
+							<ul className="discography__list">
+								{this.state.singles.map((item, key) => {
+									if (item.show) {
+										return <Disc
+													disc={item}
+													key={key}
+													triggerClick={(event) => this.resizeMe(event, item)}
+													active={item === this.state.activeItem}
+												/>
+									}
+									return true;
+								})}
+							</ul>
+						</div>
+						{this.showPopup()}
+					</section>
+				)}
+			</LanguageContext.Consumer>
 		);
 	}
 }

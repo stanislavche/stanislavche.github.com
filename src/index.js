@@ -6,8 +6,20 @@ import * as Utils from './common/Utils';
 import App from './components/App';
 import * as ReactDOMClient from 'react-dom/client';
 import { AppContext } from './context/AppContext';
+import { LanguageProvider } from './context/LanguageContext';
 
-Utils.setAnimatedFavicon();
+const isCmsRoute = window.location.pathname.startsWith('/cms') || window.location.pathname.startsWith('/admin');
+
+if (isCmsRoute) {
+	// На страницах CMS/Admin — своя иконка, без анимированного фавикона
+	const favicon = document.getElementById('dynamic-favicon');
+	if (favicon) {
+		favicon.href = '/cms/icon.png';
+		favicon.type = 'image/png';
+	}
+} else {
+	Utils.setAnimatedFavicon();
+}
 
 const root = ReactDOMClient.createRoot(document.getElementById("root"));
 const gameboy = ReactDOMClient.createRoot(document.getElementById("animation"));
@@ -26,15 +38,18 @@ fetch(`${DATA_URL}?t=${Date.now()}`)
 	.then((res) => res.json())
 	.then((data) => {
 		if (
+			isCmsRoute ||
 			window.navigator.userAgent.indexOf("Edge") > -1 ||
 			/iPad|iPhone|iPod/.test(navigator.userAgent)
 		) {
-			// iPhone: сразу рендерим App
+			// CMS/Admin и iPhone: сразу рендерим App без анимации
 			root.render(
 				<React.StrictMode>
-					<AppContext.Provider value={data}>
-						<App />
-					</AppContext.Provider>
+					<LanguageProvider>
+						<AppContext.Provider value={data}>
+							<App />
+						</AppContext.Provider>
+					</LanguageProvider>
 				</React.StrictMode>
 			);
 		} else {

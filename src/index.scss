@@ -26,18 +26,23 @@ body {
 }
 .custom-scroll{
 	&::-webkit-scrollbar-track {
-		border: 1px solid vars.$link-color;
-		background-color: vars.$main-color;
+		background: transparent;
+		border: none;
 	}
 
 	&::-webkit-scrollbar {
 		width: 6px;
-		background-color: vars.$main-color;
+		background: transparent;
 	}
 
 	&::-webkit-scrollbar-thumb {
-		background-color: vars.$link-color;
+		background-color: vars.$main-color;
+		border-radius: 3px;
 	}
+
+	// Firefox
+	scrollbar-width: thin;
+	scrollbar-color: vars.$main-color transparent;
 }
 
 code {
@@ -407,12 +412,15 @@ $steps: 100;
 		color: vars.$info-color;
 		font-family: 'Permanent Marker', cursive;
 		animation: glitch 2s steps(20) infinite;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 	&__wrapper {
 		position: relative;
 		display: flex;
 		flex-flow: row wrap;
-		align-items: flex-start;
+		align-items: stretch;
 		align-content: stretch;
 		justify-content: space-between;
 		font-size: vars.$medium-font;
@@ -420,18 +428,21 @@ $steps: 100;
 		width: 90vw;
 		max-width: 1100px;
 		margin: 0 auto;
-
 	}
 	&__wrapper-cell{
 		position: relative;
 		display: flex;
 		width: 49%;
-		flex-flow: column wrap;
-		justify-content: space-around;
+		flex-direction: column;
+		justify-content: flex-start;
 		z-index: 1;
+		// Единственный блок в ячейке — растягивается на всю высоту ряда
+		> .container:only-child {
+			flex: 1;
+		}
 		.news {
 			@extend .custom-scroll;
-			max-height: 346px;
+			max-height: 292px;
 			overflow: auto;
 		}
 		.events {
@@ -462,6 +473,58 @@ $steps: 100;
 	}
 }
 
+// ── Language switcher ────────────────────────────────────────────────────────
+.lang-switcher {
+	position: absolute;
+	top: 14px;
+	right: 18px;
+	z-index: 1000;
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	font-family: 'C64 User Mono', 'Courier New', monospace;
+	font-size: 13px;
+	line-height: 1;
+	background: rgba(0, 0, 0, 0.72);
+	border: 1px solid vars.$dark-red;
+	border-radius: 4px;
+	padding: 5px 8px;
+	backdrop-filter: blur(4px);
+
+	&__btn {
+		background: none;
+		border: none;
+		color: vars.$white-color;
+		cursor: pointer;
+		font-family: inherit;
+		font-size: 1em;
+		font-weight: bold;
+		letter-spacing: 1px;
+		padding: 2px 6px;
+		border-radius: 2px;
+		transition: background 0.15s, color 0.15s;
+		text-transform: uppercase;
+		outline: none;
+
+		&:hover {
+			background: rgba(vars.$dark-red, 0.35);
+			color: vars.$dark-red;
+		}
+
+		&--active {
+			background: vars.$dark-red;
+			color: #000;
+		}
+	}
+
+	&__sep {
+		color: vars.$white-color;
+		opacity: 0.4;
+		font-size: 0.85em;
+		user-select: none;
+	}
+}
+
 #gameboy_screen{
 	fill: none;
 	stroke: none !important;
@@ -476,7 +539,7 @@ $steps: 100;
 	padding: 10px 30px;
 	border-radius: 4px;
 	border: 2px dashed vars.$info-color;
-	flex: 0 1 calc(50% - 10px);
+	flex: 0 0 auto;
 	position: relative;
 	&_news {
 		min-height: 382px;
@@ -719,8 +782,12 @@ $steps: 100;
 	.App__wrapper-cell{
 		display: flex;
 		width: 100%;
-		flex-flow: column wrap;
-		justify-content: space-around;
+		flex-direction: column;
+		justify-content: flex-start;
+		// На мобиле блоки в один столбец — растяжение по высоте не нужно
+		> .container:only-child {
+			flex: 0 0 auto;
+		}
 	}
 	.wrapper{
 		position: relative;

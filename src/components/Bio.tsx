@@ -1,29 +1,27 @@
 import React, { Component } from 'react';
 import { AppContext } from '../context/AppContext';
+import { LanguageContext } from '../context/LanguageContext';
 
 class Bio extends Component {
 	static contextType = AppContext;
 
-	state = {
-		bio: '',
-	};
-
-	componentDidMount() {
-		const ctx = this.context;
-		if (ctx?.bio) {
-			this.setState({ bio: ctx.bio });
-		}
-	}
-
 	render() {
 		return (
-			<section className="container">
-				<h2 className="container__header">Bio</h2>
-				<div
-					className="container__wrapper"
-					dangerouslySetInnerHTML={{ __html: this.context.bio }}
-				/>
-			</section>
+			<LanguageContext.Consumer>
+				{({ lang, t }) => {
+					const ctx = this.context as any;
+					const html = (lang === 'ru' && ctx?.bio_ru) ? ctx.bio_ru : (ctx?.bio || '');
+					return (
+						<section className="container">
+							<h2 className="container__header">{t('bio')}</h2>
+							<div
+								className="container__wrapper"
+								dangerouslySetInnerHTML={{ __html: html }}
+							/>
+						</section>
+					);
+				}}
+			</LanguageContext.Consumer>
 		);
 	}
 }
