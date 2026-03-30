@@ -47,7 +47,7 @@ class Popup extends Component<PopupProps, PopupState> {
 		if (!disc.downloadLink) return;
 
 		this.setState({ descLoading: true });
-		fetch('/.netlify/functions/bandcamp-desc', {
+		fetch('/api/bandcamp-desc', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({ url: disc.downloadLink }),

@@ -45,7 +45,14 @@ class Gameboy extends Component {
 
 	async loadDataAndRenderApp(animation) {
 		try {
-			const res = await fetch('/data.json?t=' + Date.now());
+			const _ghOwner  = import.meta.env.VITE_GITHUB_OWNER;
+			const _ghRepo   = import.meta.env.VITE_GITHUB_REPO;
+			const _ghBranch = import.meta.env.VITE_GITHUB_BRANCH || 'main';
+			const dataUrl   = (_ghOwner && _ghRepo)
+				? `https://raw.githubusercontent.com/${_ghOwner}/${_ghRepo}/${_ghBranch}/public/data.json`
+				: '/data.json';
+
+			const res = await fetch(`${dataUrl}?t=` + Date.now());
 			const json = await res.json();
 
 			this.props.root.render(

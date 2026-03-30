@@ -1,0 +1,12 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
+  "rewrites": [
+    { "source": "/mup",        "destination": "https://stanislavche.github.io/mup/" },
+    { "source": "/mup/:path*", "destination": "https://stanislavche.github.io/mup/:path*" },
+    { "source": "/helloworld",        "destination": "https://stanislavche.github.io/helloworld/" },
+    { "source": "/helloworld/:path*", "destination": "https://stanislavche.github.io/helloworld/:path*" },
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}
+

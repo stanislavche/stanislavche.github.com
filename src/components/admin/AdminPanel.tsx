@@ -72,6 +72,14 @@ const ADMIN_KEY = 'stn_admin_auth';
 // На Netlify: Site settings → Environment variables → VITE_ADMIN_PASSWORD
 const DEFAULT_PASS = import.meta.env.VITE_ADMIN_PASSWORD as string | undefined;
 
+// URL для загрузки данных (GitHub Raw — без ребилда при изменениях)
+const _ghOwner  = import.meta.env.VITE_GITHUB_OWNER;
+const _ghRepo   = import.meta.env.VITE_GITHUB_REPO;
+const _ghBranch = import.meta.env.VITE_GITHUB_BRANCH || 'main';
+const DATA_URL  = (_ghOwner && _ghRepo)
+    ? `https://raw.githubusercontent.com/${_ghOwner}/${_ghRepo}/${_ghBranch}/public/data.json`
+    : '/data.json';
+
 // ─── Main Component ───────────────────────────────────────────────────────────
 
 export default function AdminPanel() {
@@ -86,7 +94,7 @@ export default function AdminPanel() {
     const [deployStatus, setDeployStatus] = useState<{ ok: boolean; msg: string } | null>(null);
 
     useEffect(() => {
-        fetch('/data.json')
+        fetch(`${DATA_URL}?t=${Date.now()}`)
             .then(r => r.json())
             .then(d => { setData(d); setLoading(false); })
             .catch(() => setLoading(false));
@@ -116,14 +124,14 @@ export default function AdminPanel() {
         setDeploying(true);
         setDeployStatus(null);
         try {
-            const res = await fetch('/.netlify/functions/save-data', {
+            const res = await fetch('/api/save-data', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ password: pw, data }),
             });
             const json = await res.json();
             if (res.ok) {
-                setDeployStatus({ ok: true, msg: '✓ Сохранено! Сайт пересобирается (~1 мин)' });
+                setDeployStatus({ ok: true, msg: '✓ Сохранено! Данные обновятся при следующем открытии сайта.' });
             } else {
                 setDeployStatus({ ok: false, msg: `✗ Ошибка: ${json.error}` });
             }
@@ -651,7 +659,7 @@ function UrlResolver({ onApply }: {
         if (!url.trim()) return;
         setLoading(true); setError(null); setResult(null);
         try {
-            const res = await fetch('/.netlify/functions/resolve-player', {
+            const res = await fetch('/api/resolve-player', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ url: url.trim() }),
@@ -808,7 +816,7 @@ function ImageUpload({ onUploaded, folder = 'albums', label = 'Загрузит�
 
             const pw = password || DEFAULT_PASS || '';
 
-            const res = await fetch('/.netlify/functions/upload-image', {
+            const res = await fetch('/api/upload-image', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

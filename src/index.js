@@ -13,7 +13,16 @@ const root = ReactDOMClient.createRoot(document.getElementById("root"));
 const gameboy = ReactDOMClient.createRoot(document.getElementById("animation"));
 
 // Загружаем JSON
-fetch('/data.json')
+// Если заданы VITE_GITHUB_OWNER и VITE_GITHUB_REPO — берём данные прямо из GitHub Raw.
+// Тогда изменения в админке отражаются БЕЗ пересборки сайта (экономия build-минут).
+const _ghOwner  = import.meta.env.VITE_GITHUB_OWNER;
+const _ghRepo   = import.meta.env.VITE_GITHUB_REPO;
+const _ghBranch = import.meta.env.VITE_GITHUB_BRANCH || 'main';
+const DATA_URL  = (_ghOwner && _ghRepo)
+    ? `https://raw.githubusercontent.com/${_ghOwner}/${_ghRepo}/${_ghBranch}/public/data.json`
+    : '/data.json';
+
+fetch(`${DATA_URL}?t=${Date.now()}`)
 	.then((res) => res.json())
 	.then((data) => {
 		if (

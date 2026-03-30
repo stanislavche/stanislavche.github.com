@@ -4,6 +4,12 @@
 
 [build.environment]
   CI = "false"
+  # Добавь в Netlify → Site settings → Environment variables:
+  #   VITE_GITHUB_OWNER  = твой_логин_github
+  #   VITE_GITHUB_REPO   = название_репозитория
+  #   VITE_GITHUB_BRANCH = main
+  # Тогда data.json будет грузиться напрямую из GitHub Raw
+  # и сайт НЕ будет пересобираться при каждом сохранении в админке.
 
 [functions]
   directory = "netlify/functions"
