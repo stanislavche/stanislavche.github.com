@@ -11,12 +11,32 @@ import { LanguageProvider } from './context/LanguageContext';
 const isCmsRoute = window.location.pathname.startsWith('/cms') || window.location.pathname.startsWith('/admin');
 
 if (isCmsRoute) {
-	// На страницах CMS/Admin — своя иконка, без анимированного фавикона
+	// Фавикон
 	const favicon = document.getElementById('dynamic-favicon');
-	if (favicon) {
-		favicon.href = '/cms/icon.png';
-		favicon.type = 'image/png';
-	}
+	if (favicon) { favicon.href = '/cms/icon.png'; favicon.type = 'image/png'; }
+
+	// PWA-теги для "Добавить на экран Домой" (iOS / Android)
+	const head = document.head;
+	const addMeta = (name, content) => {
+		const m = document.createElement('meta');
+		m.name = name; m.content = content;
+		head.appendChild(m);
+	};
+	const addLink = (rel, href, extra = {}) => {
+		const l = document.createElement('link');
+		l.rel = rel; l.href = href;
+		Object.assign(l, extra);
+		head.appendChild(l);
+	};
+	addMeta('apple-mobile-web-app-capable', 'yes');
+	addMeta('apple-mobile-web-app-status-bar-style', 'black-translucent');
+	addMeta('apple-mobile-web-app-title', 'S_TN Admin');
+	addMeta('mobile-web-app-capable', 'yes');
+	addMeta('theme-color', '#0d0d0d');
+	addLink('apple-touch-icon', '/cms/icon.png');
+	addLink('manifest', '/cms/manifest.json');
+
+	document.title = 'S_TN Admin';
 } else {
 	Utils.setAnimatedFavicon();
 }
@@ -39,9 +59,13 @@ fetch(`${DATA_URL}?t=${Date.now()}`)
 	.then((data) => {
 		if (
 			isCmsRoute ||
+			localStorage.getItem('stn_gameboy_shown') === '1' ||
 			window.navigator.userAgent.indexOf("Edge") > -1 ||
 			/iPad|iPhone|iPod/.test(navigator.userAgent)
 		) {
+			// Анимация пропускается — сразу включаем фоновый шум
+			document.querySelector('.wrapper')?.classList.add('active');
+
 			// CMS/Admin и iPhone: сразу рендерим App без анимации
 			root.render(
 				<React.StrictMode>

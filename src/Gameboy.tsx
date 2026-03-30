@@ -64,6 +64,7 @@ class Gameboy extends Component {
 				</LanguageProvider>
 			);
 
+			localStorage.setItem('stn_gameboy_shown', '1');
 			animation.destroy();
 		} catch (err) {
 			console.error("Ошибка загрузки данных:", err);
