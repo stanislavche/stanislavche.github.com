@@ -53,7 +53,7 @@ class Gameboy extends Component {
 				? `https://raw.githubusercontent.com/${_ghOwner}/${_ghRepo}/${_ghBranch}/public/data.json`
 				: '/data.json';
 
-			const res = await fetch(`${dataUrl}?t=` + Date.now());
+			const res = await fetch(`${dataUrl}?t=${Date.now()}`);
 			const json = await res.json();
 
 			this.props.root.render(
