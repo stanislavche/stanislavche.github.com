@@ -33,14 +33,31 @@ const DATA_URL  = (_ghOwner && _ghRepo)
     ? `https://raw.githubusercontent.com/${_ghOwner}/${_ghRepo}/${_ghBranch}/public/data.json`
     : '/data.json';
 
-fetch(`${DATA_URL}?t=${Date.now()}`)
-	.then((res) => res.json())
+const fetchWithFallback = () => {
+	const controller = new AbortController();
+	const timeout = setTimeout(() => controller.abort(), 6000);
+
+	return fetch(`${DATA_URL}?t=${Date.now()}`, { signal: controller.signal })
+		.then((res) => {
+			clearTimeout(timeout);
+			if (!res.ok) throw new Error(`HTTP ${res.status}`);
+			return res.json();
+		})
+		.catch((err) => {
+			clearTimeout(timeout);
+			if (DATA_URL === '/data.json') throw err; // уже локальный — бросаем дальше
+			console.warn('GitHub Raw недоступен, fallback на /data.json', err);
+			return fetch(`/data.json?t=${Date.now()}`).then((r) => r.json());
+		});
+};
+
+fetchWithFallback()
 	.then((data) => {
 		if (
 			isCmsRoute ||
 			localStorage.getItem('stn_gameboy_shown') === '1' ||
 			window.navigator.userAgent.indexOf("Edge") > -1 ||
-			/iPad|iPhone|iPod/.test(navigator.userAgent)
+			/iPad|iPhone|iPod|Android/i.test(navigator.userAgent)
 		) {
 			// Анимация пропускается — сразу включаем фоновый шум
 			document.querySelector('.wrapper')?.classList.add('active');
@@ -66,8 +83,18 @@ fetch(`${DATA_URL}?t=${Date.now()}`)
 	})
 	.catch((err) => {
 		console.error("Ошибка загрузки data.json", err);
-		// fallback
-		root.render(<div>Error loading data</div>);
+		root.render(
+			<div style={{ color: '#f7e6e4', fontFamily: 'monospace', padding: '2rem', textAlign: 'center' }}>
+				<p>⚠ Ошибка загрузки данных</p>
+				<p style={{ fontSize: '0.8em', opacity: 0.6 }}>{String(err)}</p>
+				<button
+					onClick={() => window.location.reload()}
+					style={{ marginTop: '1rem', padding: '0.5rem 1.5rem', cursor: 'pointer' }}
+				>
+					Повторить
+				</button>
+			</div>
+		);
 	});
 
 serviceWorker.unregister();
