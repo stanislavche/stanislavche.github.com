@@ -5,6 +5,9 @@
 
   **React 18 · TypeScript · Vite · SCSS · Vercel**
 
+  [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+  [![ROMs: Non-Commercial](https://img.shields.io/badge/ROMs-Non--Commercial-blue.svg)](./LICENSE.md)
+
   > Персональный сайт Стаса / **S_TN** / **Stress_TN** — чип-музыканта и автора саундтреков к видеоиграм.  
   > Все данные хранятся в одном JSON-файле и управляются через встроенную CMS-панель без пересборки кода.
 
@@ -677,10 +680,32 @@ npm test
 
 ---
 
+---
+
+## Лицензия / License
+
+Проект создан в **исследовательских и образовательных целях**.  
+Все материалы (код, ассеты, ROM-образы, LSDJ-киты) распространяются на условиях:
+
+**[Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](./LICENSE.md)**
+
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+
+- ✅ Свободное использование в учебных и некоммерческих целях
+- ✅ Распространение с донатами
+- ✅ Изучение и адаптация кода
+- ❌ Коммерческое использование без разрешения
+
+💼 По вопросам коммерческого использования: **stress_tn@yahoo.com**
+
+> Сторонние зависимости (React, Vite и др.) распространяются на условиях собственных лицензий.
+
+---
+
 <div align="center">
   <br/>
   <img src="./public/images/extra/boy.gif" alt="S_TN" width="40" />
   <br/>
-  <sub>All rights belong to S_TN</sub>
+  <sub>© S_TN (Stress_TN) — CC BY-NC 4.0 — stress_tn@yahoo.com</sub>
 </div>
 
